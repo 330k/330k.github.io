@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雑記帳</title>
+<meta name="description" content="自転車ツーリングの記録やソフトウェアの配布、Mathematicaをメインにしたプログラミングの覚書や日ごろの雑感など。">
+<meta name="generator" content="Hugo 0.21" />
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+<link rel="alternate" type="application/rss+xml" title="330k info Feed" href="https://330k.github.io/categories/%E9%9B%91%E8%A8%98%E5%B8%B3/index.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/scripts.js"></script>
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body body-left-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="330k info" rel="home">
+						<h1 class="logo__title">330k info</h1>
+						
+					</a>
+				</div>
+			</div>
+			<hr class="divider">
+		</header>
+		<div class="wrapper clearfix">
+
+
+	<div class="main-content list content" role="main">
+		<header class="page-header">
+			<h1 class="page-header__title">雑記帳</h1>
+		</header>
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/aggregate-metadata-from-all-pdf-office-documents/" rel="bookmark">Tikaを使って指定したディレクトリ以下の全ファイルのメタデータを収集</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2015-11-29T00:00:00">November 29, 2015</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			会社で外部に公開しているPDFファイルの作成者やタイトルにおかしいもの(社名が間違っている etc.)があることに気づき、 会社のファイルサーバにあるWord、Excel、PowerPoint、PDFファイルのメタ情報を一覧で出力し、 Excelにインポートして変なメタ情報が設定されていないかチェックするためのスクリプトを作ってみた。
+準備 まずはapacheからTikaをダウンロード(執筆時点では1.11が最新)
+wget http://ftp.jaist.ac.jp/pub/apache/tika/tika-app-1.11.jar  全メタデータを収集 とにかく全部のメタデータを収集したいときは、tikaのjarファイルと同じディレクトリに以下のようなスクリプトを配置。 検索対象のディレクトリは3行目で指定する。
+#!/bin/bash dir=~/Documents/ output=metadata.xml port=12345 tmpfile=temp.txt java -jar tika-app-1.11.jar -s -x --port $port &gt; $tmpfile &amp; procid=$! sleep 1 echo &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;utf-8\&quot; ?&gt;&quot; &gt; $output echo &quot;&lt;files&gt;&quot; &gt;&gt; $output find &quot;$dir&quot; -iname &quot;*.pdf&quot; -o -iname &quot;*.doc&quot; -o -iname &quot;*.doc?&quot; -o -iname &quot;*.xls&quot; -o -iname &quot;*.xls?&quot; -o -iname &quot;*.ppt&quot; -o -iname &quot;*.ppt?&quot; | while read i do echo &quot;&lt;file&gt;&quot; &gt;&gt; $output echo &quot; &lt;filepath&gt;&lt;!
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/what_l2_forwarding_ssl_vpn_protects/" rel="bookmark">仮想的な専用線という言葉にだまされた残念な技術者</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2015-11-29T00:00:00">November 29, 2015</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			例によってパワハラを受けた研修先で最初に受けたパワハラが、 リモートアクセスのSSL-VPNに関する技術的な質問をした時のことだった。
+研修先の会社ではJuniper社(現PulseSecure社)のSSL-VPN製品を導入しており、 クライアントPC側にはNetwork Connectというソフトウェアをインストールしていた。
+これはL2フォワーディング方式のSSL-VPNで、起動するとネットワークアダプタに仮想NICが追加される。 仮想NIC経由で通信することで外部からでも社内LANに接続できる。
+研修先企業では外出時にSSL-VPNの接続を義務付けている、という話になったときのことだった。
+ パワハラ上司(自称ITエンジニア)「外出先のホテルなどでは社内システムにアクセスしない時も絶対にVPNで接続してからインターネットに接続しろ。」
+ 私「なぜですか？」
+ パワハラ上司「同じネットワークにいるコンピュータから盗聴や攻撃をされるだろ！」
+ 私「HTTPSでないHTTPは確かに盗聴されますが、SSL-VPNで接続したところで攻撃は受けるのではないですか？」
+ パワハラ上司「VPNは仮想的に専用線を張るんだ！」
+ 私「仮想的に専用線を張ったところで物理的には元のネットワークにいますよね？」
+ パワハラ上司「専用線で接続したら攻撃されない。だから仮想的に専用線を張ってるんだから攻撃されない！」
+ 私「(喩え話じゃなくてちゃんと技術的な回答がほしいんだが…)」
+ パワハラ上司「ちょっとは調べてから質問しろ」
+パワハラ上司「俺の時間もタダじゃねえんだぞ！」
+パワハラ上司「間違ったら『はい、すみません』でいいんだ。ほれ、早く言え！」
+ 私「はい、すみません。」
+  とまあ、これが今思い返すと調子に乗らせる原因だったかもしれない。 研修先の自称ITエンジニアの技術力に疑念を持った最初の出来事だった。
+Network Connect起動時に作成される仮想NICがメトリックで優先されるように設定されるので、 VPN接続後のクライアント発の通信はすべて仮想NIC経由となる。
+ただ私が疑念に抱いたのは、同じ物理ネットワークの他の端末から通信が来た場合は、元の物理NICから応答するのではないか、という点だ。
+具体例としては、クライアントPCでファイル共有を有効にしていた場合、 SSL-VPNで接続していても同じネットワークにいる端末から共有しているファイルが見えてしまうのではないか。
+技術者なら実際に試してみるべき、ということで、実験してみた。
+ クライアントOS: Windows 7 64bit クライアントPC: ファイル共有ON 物理ネットワーク環境: 来客用Wi-Fi(普通の家庭用Wi-Fiルータと同じ環境) SSL-VPNクライアント: Pulse Secure 5.2 (Network Connectの後継のJunos Pulseの後継) SSL-VPNアライアンス: MAG2600  という環境でSSL-VPNを接続した後、 同じ物理ネットワークの他のPCから共有されたファイルが見えるかどうかを確かめてみた。
+結果: 見えた　NetBIOS名でもアクセス可能
+物理NICに割り当てられたIPアドレスを使ってもアクセスできたが、NetBIOSによる名前解決もできた。 ということはUDPのブロードキャストにも物理NICから応答する、ということが分かった。
+物理NICが普通の通信が出来ないとカプセル化したパケットの通信もできない、というのは 普通に考えればわかると思うのだが、残念ながらパワハラエンジニアの知識レベルはその程度だった、ということか。
+結論としては、下記の通り。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/exchange-st-5703-to-sl-r400/" rel="bookmark">ST-5703の変速機構が破損したのでWレバーに交換</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2015-11-08T02:43:00">November 08, 2015</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			先月の軽井沢〜直江津のあと、2年ぶりに自転車をオーバーホールした。
+その一環でシフトワイヤーケーブルの交換を行ったところ、フロントディレイラーの調子がおかしい。
+フロントトリプルなので、インナー⇛センター⇛アウターは問題なく変速できるのだが、 アウター⇛センターに変速しようとすると、「バキッ、ガッチャン」と音がして、一気にインナーまで落ちてしまうか、 まったく変速操作を受け付けなくなるか、のどちらかの症状が発生。
+ネットで調べると、記 ： シマノ105 STI左レバー ST-5703不調 と同じように、ワイヤー先端のタイコが外れてしまっていた。
+何回ワイヤーのタイコの位置を直してもタイコが外れて変速操作の不調が治らない。 さて、何とかならないかと思いながら何回か変速操作をしていたところ、レバーの隙間から以下の写真のような部品が落ちてきた。
+ シマノの説明書を見ても該当する部品は見当たらないし、よく見ると穴の周囲は削れているし、 あれ？もしかして、完全に壊れちゃった？
+とはいえ、STIレバーは結構お値段がするもので、amazonで25000円くらいする。 それに今のコンポも6年目で走行距離が16000km程度(あまり走れていないな・・・)なので、そろそろ一式換装しようか、と考えていたところ。
+一式交換するとなると、11s対応のホイールも交換が必要になり20万円程度の出費を覚悟しなければならないし、 なによりせっかく来月の初めに取った遅めの夏休みに間に合わない。
+一晩考えた後、「フロントだけならWレバーでしばらく乗り切ってからコンポを一式換装しよう」ということにした。
+というわけで、早速amazonでSL-R400を購入。お盆だったがナチュラムからは翌日届いた。
+ 早速説明書を読みながら取り付け。取り付け作業の中で、説明書から日本語のページを探すのが一番手間取った。
+あとはワイヤーの通し方の説明が全くないことに困惑(STIレバーの説明書には詳しく書いてあるのに)。 だが実物を見てみたら説明が不要なくらい簡単な構造であることが分かった。
+ 手でクランクを回しながら変速操作をしてみると、フリクションの独特な操作感は確かにハマるものがある。 面倒なワイヤーの調整も不要。これは楽しいかもしれない。
+とりあえず来月に予定しているロングツーリングはこれで乗り切ってみる。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/first-review-of-recon-jet/" rel="bookmark">Recon JETを試してみた</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2015-10-26T00:00:00">October 26, 2015</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			購入したのはかなり早いタイミングだったが、なかなか試すことができなかったRecon JET。
+やっと自転車で走るときにつけて使い心地はどんなものか試すことが出来た。 ANT+対応の心拍計などは持っていないので、Recon JET単体でのテスト。
+つけ心地  普通のサングラスに比べればやはりパッドが当たる部分が痛くなるが、耐えられないほどではない 日本は車道の左側通行なので、視界の右下をディスプレイに遮られると、後方確認がしにくい  GPS  測位が遅い(m-241に比べて10分以上捕捉に時間がかかることもある) 測位の精度はm-241と同等以上(下記マップは障害物がほとんどない荒川CRを走行したとき) ただし、積算距離の精度は低い(１箇所でも位置がずれると、そのせいで距離が大きく計算される)  Recon JET(赤線)とm-241(青線)のGPSログ比較。
+   var map = new google.maps.Map(document.getElementById('map-canvas')); var ctaLayer = new google.maps.KmlLayer({ url: "https:\/\/330k.github.io\/\/essay\/first-review-of-recon-jet\/2015081602.kml" }); ctaLayer.setMap(map);  バッテリー  最大2時間半しかもたない 予備のバッテリーを持っていても、1日中走行するには耐えられない  カメラ  解像度は低いので、携帯電話のほうがよっぽどまし。 動画は撮影時間を予め15秒や1分などと予め設定してから撮影をスタートするので、使いどころが難しい。  荒川CRで実際に撮影した画像と動画
+ マップ  黒背景に道路が暗い灰色で表示されるので非常に見にくい 道路名や何号線かなどが表示されないため道に迷った時や知らない土地では無力  Recon Uplink  Recon JETを接続すると自動で記録をWeb上に上げてくれる 今までの走行記録(距離、平均速度、獲得標高など)をブラウザで見れるのは便利なので、 毎日ガチで2時間の練習ばかりする人であれば有用かもしれない  総評  サイコンの代替になるにはまだまだ性能不足(特にバッテリー)。 カメラやマップもRecon JETを使うくらいなら携帯電話(スマートフォン)のほうが断然良い。  ということで、残念ながら現時点ではロングツーリングのお供にはなれなかった。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/nhk-contract-cancellation-and-communication-cost-saving/" rel="bookmark">NHKの受信契約を解除し受信料と通信料金を抑える</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2015-10-18T00:00:00">October 18, 2015</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			現在所持している携帯電話は、2013年11月に購入した京セラ製のURBANO L01。
+これにはワンセグ機能が付いているため、NHKの営業センターの人に見つかり、
+ 「テレビを所持していなくてもワンセグ機能付きの携帯電話を所持しているだけで契約が必要です」
+ と言われ、渋々NHKとワンセグのみ受信契約をした。
+契約した時から、毎月割がなくなる2015年11月にワンセグ機能がない機種に変更することを決意していたが、 なんとauから出ているAndroidスマートフォンは(TORQUE G01を除き)すべてワンセグ機能が付いている。
+ワンセグ機能がついていないのはiPhoneとFx0のみだが、
+ iPhoneのSafariでは拙作のGPXでのルート作成ができず(ダウンロードができない)、 FirefoxOSでは多分GPXファイルの作成はできるが、地図ロイドやrmapsに相当するような地図アプリがありそうにない。  私は15年近くauユーザーなので、キャリアメール(@ezweb.ne.jp)も変えたくない(変更の連絡が面倒)。
+要件をまとめると、
+ ワンセグ機能が付いていないこと(NHKのワンセグ契約を解約するため) 今までの電話番号とキャリアメールのアドレスを維持すること Android端末であること(GPXファイルが作成でき、表示するアプリがあること) 電話は発信・着信ともにめったにしない データ通信も家と会社にはWi-Fiがあるので、月1GBも使わない  という条件で、携帯電話の通信料とNHKに払う受信料のトータルを削減したい。
+方針 上の要件を解決するため、色々と検討した結果、以下のような方針とした。
+ ワンセグ機能がないSIMフリー端末を購入 MVNOの格安SIMを新規に契約 格安SIMはデータ通信のみ IP電話アプリ(050PlusやSMARTalk)を入れて050の番号で音声通話はできるようにする auの端末はLTEフラットを解除し、電話番号とメールアドレスを維持するための最低限の契約だけ残して実家に置く (実家にはテレビがあり、NHKと契約しているので、ワンセグ受信設備があっても大丈夫) 現在のau電話番号への着信は、SMARTalkの050番号へ転送するように設定し、新端末で着信できるようにする (転送時にauの通話料がかかるが、ほとんど着信もしない) auのキャリアメール(ezweb.ne.jp)はGmailで送受信するように設定  選んだもの  SIMフリー端末 : ASUS ZenFone 2 Laser SIMカード : DMM Mobile データSIM ライトプラン(月額477円) IP電話 : SMARTalk  ヨドバシカメラやビックカメラの実店舗で触ってみたところ、 ZenFone 2 LaserよりP8liteのほうが手に持ってしっくりくるも印象だったが、 microSDXCに対応しているという一点だけでZenFone 2 Laserに決定した。
+SIMカードは当時データ通信1GB/月で一番安いもの。
+IP電話は、ほとんど通話をしないため、通話料金ではなく月額が無料のSMARTalkを選択。
+経費(受信料 + 通信費)の変化 通信費がどれだけ節約できるかをまとめると下表のようになった。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/exchange-canti-lever-brake-to-mini-v-brake/" rel="bookmark">カンチレバーブレーキをミニVブレーキに換装</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2015-10-18T00:00:00">October 18, 2015</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			私が現在乗っている自転車はSURLYのCROSS-CHECKで、一応シクロクロスの分類に入る。 なので、購入時はカンチレバーブレーキ(CaneCreek SCX-5)を付けていた(当時はミニVはなかった)。
+5年間はシューをSwiss stopに交換するなどして使用してきたが、
+ パワーロスが大きく、長い下り道などで手が疲れる(握力がなくなり下り道で休憩することも) チドリまでのワイヤー長さと、左右のブレーキ間のワイヤー長さの2箇所を調整する必要があり、難しい。 特にフロントでブレーキ時にビビる(ガタつく)ため、スムーズに止まれない。 (当初はフロントフォークの剛性不足かと思ったが、今回の交換で良くなったので、 おそらくチドリでワイヤーを引く構造による剛性不足と考えられる)  という問題に悩まされてきた。
+一応フォローしておくと、制動力自体には不安はなかった(握力が続く限りは)。
+ところが、シマノがミニVブレーキを発売した、というのを遅ればせながら知った。
+ネットではCROSS-CHECKへの取り付け例は見つけられたものの、 自分のブレーキレバー(5700系105)で引けるかどうかは調べきれなかったが、交換を決意。
+早速Amazonで、105グレードのBR-R573とブレーキケーブルセットを購入して交換した。
+交換作業は上記のページで詳しく解説されているので割愛。 交換後は下の写真(リア)のようになり、タイヤとのクリアランスは十分。 付属品の90度のバナナではワイヤーが横に出すぎたため、自在バナナに変更。
+ 交換後、荒川CRと都内の一般道を40kmほど試走してみた。 その結果、
+ ブレーキレバーを軽く握れるようになった。 制動力も強すぎることはなく、コントローラブル(シューは付属のシマノ製)。 ブレーキング時のビビリ、ガタつきがなくなり、スムーズに止まれるようになった。 ワイヤーの引きしろが少ないので、リムとシューの間のクリアランス調整はシビア。 だが、調整箇所が1箇所になったため調整作業の難易度はむしろ少し下がった。  と、概ね交換した目的を果たせた。
+唯一のデメリットとしては、ホイール(リム)に振れが生じるとすぐにシューと接触してしまうこと。 ロングライドではニップル回しも持っていったほうが良さそうだ。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/upload_recorded_mp3_files_to_youtube/" rel="bookmark">秘密録音した音声ファイルをYoutubeにバックアップ</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2015-10-15T00:00:00">October 15, 2015</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			私はパワハラ対策として、毎日ICレコーダーを使って秘密録音を実施している。 ただ、毎日10時間を超える録音時間のため、32kbpsで録音しても1日あたり200MB弱の音声ファイルがHDDに追加されていき、HDDの容量を圧迫していく。
+そこで、バックアップを兼ねて動画化してYoutubeにアップロードするようにし、 HDDの空き容量が減ってきたらオリジナルの録音ファイルを消去していくことにした。
+ffmpeg(avconv)を使い、以下の手順で実施する。
+ 適当に画像ファイルを作成する 画像ファイルから無音声の動画ファイル(再生時間24時間)を作成する 無音声の動画ファイルと、毎日録音した音声ファイルを結合する 結合した動画ファイルをYoutubeにアップロード  具体的には、適当にblank.pngという名前で640x480とか好みのサイズで画像を作成し、以下のコマンドで24時間の無音声動画ファイル(blank24.mov)を作成。
+avconv -y -loop 1 -r 1 -i blank.png -t 86400 blank24.mov  これでフレームレート1 fps、動画時間が24時間(86400秒)の無音声動画ファイルblank24.movができる。 私の環境では5分程度かかったが、このファイルは1度作っておけば何度でも使えるので、最初の1回だけ待てば良い。
+次に、この無音声の動画ファイル(blank24.mov)と、録音した音声ファイル(input.mp3)を結合する。
+avconv -y -i blank24.mov -i input.mp3 -vcodec copy -acodec copy -shortest output.mov  -shortestオプションを加えているので、24時間のblank24.movと音声ファイルの時間のうち、短い方の時間でoutput.movが作成される。
+動画になったことにより、元のMP3ファイルよりもファイルサイズが1割ほど増える。 私の環境では12時間程度録音したものからでも1分程度のエンコード時間で動画ファイルを作成できた。
+ちなみに出来上がりの動画ファイルのコンテナがMOVなのは、録音した音声ファイルの拡張子が、 ICレコーダーで録音したMP3、Androidの録音アプリのmp4、iPhoneの録音アプリのm4aと3種類あったため、 それと競合しないコンテナ形式を選んだ。
+また、無音声動画ファイル(blank24.mov)を作成せず、1コマンドで静止画と音声ファイルを結合することも可能だが、 都度動画部分のエンコードが発生するため時間がかかる。
+毎日音声ファイルが増えていくような状況では、予め無音声動画ファイルをつくっておき、 -vcodec copyとすることで再エンコードを省略すれば、毎日の処理が高速化できる。
+ただし、Youtubeの制限により、15分の制限を解除したアカウントでも、動画の最長時間は12時間に制限される。 したがって、私は以下のようなシェルスクリプトを書いて実行している。
+#!/bin/bash find ./ -iname &quot;*.mp3&quot; -o -iname &quot;*.mp4&quot; -o -iname &quot;*.m4a&quot; | while read i do hour=`avconv -i &quot;$i&quot; 2&gt;&amp;1 | grep Duration | sed -E &quot;s/.
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/augue-against-power-harassment-bully/" rel="bookmark">言いがかりを付けられたので切り返してみた</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2015-08-28T00:00:00">August 28, 2015</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			今朝、以前パワハラを受けていた研修先(以下G社とする)の人間からメールが来た。 要約すると、以下の内容になる。
+ 撤去作業終わりました
+**社(私の会社)の作業なので一般常識的に事前に連絡するのが筋です
+ 確かに自分の会社が発注した作業で、G社側でネットワーク機器の撤去作業があったのだが、当然私は事前に連絡を行っていた。 それを忘れている自分を棚に上げ、偉そうにこちらに「一般常識」を説いてきた。
+他にも研修中は私に対して
+ 「間違ったらすぐに『はい、すみません』と言え！！」
+「報・連・相をきちんとしろ！！」
+「社会人として失格だ！」
+ と怒鳴られ続けてきた。
+以前は研修中ということで下請け同然に扱われることを甘受していたが、 現在は研修期間は終了しており、下請けのように扱われる道理はない。
+また、研修中は連日のパワハラで疲弊しきっていたが、研修終了と共に精神的に回復してきたので、 一発切り返すことにしてみた。
+ 私は事前に連絡していますので、筋は通してあります。
+筋を通すという意味では、御社が原因で弊社のシステム移管が遅れていると他社経由で聞きましたが、 御社からは何の連絡もありません。
+こちらに筋を通せ、とおっしゃるならば、 御社も筋を通すべきではないでしょうか。
+もちろん私の論理に間違いがあれば、ご指摘ください。
+弊社としては御社との関係を悪化させる意図はございませんが、 御社の一方的な態度は弊社に限らず、相手に良い印象を与えないと考えます。
+ 研修先の人間がまともな人間であるならば、
+ 私に反論する 間違いを認める  のいずれかの連絡が来るはずだが、メールを送信して8時間たった現時点では来ていない。
+私には「『間違ったらはい、すみません』と言え！」と怒鳴り続けていたのだが、 やはり自分たちの間違いを認めて自省できるような人間ではなかったようだ。
+さて、今後の彼らの対応について予想してみる。
+恐らくだがいつもの彼らのやり口から、私のメールへの対応は反論でも謝罪でもなく、 そんなことを言うと、○○してやらんぞ！ もしくは ○○してやるぞ！ という脅迫を行ってくると予想する。
+これは現在もG社にユーザーサポート業務を一部委託していることを盾に取った脅迫だ。
+とはいえ、その対価として高額な「経営指導料」なるものをG社には支払っている。
+ただ、これが相場の4倍程度の値段で、しかも対応時間は平日の日中に限る、というものなので、 東証一部上場のG社は監査法人に経営指導料について突かれると痛い(不正な利益供与と疑われる)のではないか。
+今後、進捗があれば追記していきたい。
+増長した人間が言う「一般常識」とは何なのか、「社会人」とはどういう行動をするのだろうか。面白そうだ。
+後日談(2週間後)
+今のところ面白い展開にはならずにすんでいる。 G社は私が休暇を取っている間に、私の上司にきちんと状況を説明しに来たらしい。
+G社から私への謝罪はないものの、その後の電話の対応は非常に丁寧になった。 監査法人のコンプライアンス通報窓口へ送るメールの文面を準備していたのだが、送らずに済みそうだ。
+今後も続くと良いが・・・
+後日談その2(2ヶ月後)
+やはり彼らは嫌がらせを行ってきた。
+残念ながら私の予想は当たり、 「延長の連絡がないから今月(10月)でメールサーバの契約を切るぞ」 と一方的に通告してきた。 (現在使用しているメールサーバはクラウド型のメールサービスで、過去の経緯からG社と自分の会社で共有している)
+事前に「10月以降の支払いはG社と弊社のアカウント数に按分した額をG社から請求する」と取り決めてあるので、 今回のG社の行為は契約違反であり、もしかしたら脅迫罪にもなるかもしれない。
+さらに、私の会社で使用している分だけアカウント数が減っても メールサーバの利用料金は変わらないため、G社側にコスト削減などのメリットはない。 完全に嫌がらせ目的であり悪質である。
+もう少ししたらメールサーバも切り替えるので、ようやく完全に縁が切れる。
+心置きなく温めておいた監査法人への通報メールを送信した。
+後日談その3(2ヶ月半後)
+どうも監査法人が動いたらしい。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/install-windows-10-to-panasonic-letsnote-cf-n10/" rel="bookmark">Windows 10を早速テストしてみた</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2015-08-04T00:00:00">August 04, 2015</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			Windows Insider Programに登録していたので、7/31に「Windows 10がでたよ〜」というメールがGabe Aulからやってきた。
+ゆくゆくは更新プログラムが提供されるけど、早く試したい人は「メディア作成ツール」をダウンロードして使うといいよ、 とのことなので、会社で余っていたPCにインストールしてみた。
+インストール  機種: Panasonic Let&rsquo;s Note CF-N10(法人向けモデル) Windows 7 32bit版からのアップグレード Office 2010、Adobe Acrobat Pro XI、トレンドマイクロウイルスバスターがインストール済み  インストール方法は基本的に http://ascii.jp/elem/000/001/034/1034923/ の通り。 ※現在は直接ISOファイルがダウンロードできる模様
+ただし、指示に従って進めていると、以下の2つのソフトウェアをアンインストールしなさい、と出てくる。
+ Intel&reg; Dynamic Power Performance Management Realtek High Definition Audio Driver  Realtekの方は、「アンインストール」ボタンをクリックすればOK。
+Intelの方は、 http://answers.microsoft.com/ja-jp/windows/forum/windows_8-windows_install/windows-8/cefec781-59a2-4f78-925a-0b34c70b53b7?auth=1 に情報がある。
+Let&rsquo;s Noteの場合、 C:\util2\drivers\etm\DppmCleaner.bat、もしくはLPOSetting.jsを実行する、とあるが、 CF-N10の場合はバージョンが違うためか存在しない。
+仕方がないので、時期の近い他機種向けのドライバーをインストールして、上記のLPOSetting.jsを実行することで解決。 その後しばらく待てば、無事Windows 10へのアップグレードが完了した。
+インストール結果 現在のところ、インストール後の結果は以下の通り。
+ ActiveDirectoryへの参加　→　○成功 グループポリシーの適用　→　△ユーザーの構成のみ有効、コンピュータの構成は有効にならない (ただし、ドメインコントローラ側(Windows Server 2012R2)でのシミュレーションでは適用されるはず) Office 2010の起動　→　△起動は成功(Outlookの設定情報は引き継げず) Adobe Acrobat Pro XIの起動　→　○成功(ただしデフォルトではEdgeでPDFを開く) ウイルスバスター　→　○問題なく動作している模様(リアルタイム検索、パターンファイルのアップデート) BitLockerによるドライブの暗号化　→　○成功(運良くCF-N10もTPMを積んでいた)  その他感想  起動時間はWindows 7とあまり変わらない感触 シャットダウンは早くなった印象 たまに画面の文字がボケる(ClearTypeの設定をいじっても変わらず) 現状ではGPOでコンピュータの構成が効いていないので、クライアント側かサーバ側で対応するタイミングが来るまでは様子見。  Aug.
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/how-to-take-files-out-from-company/" rel="bookmark">会社から外部へのファイル・データ持ち出し対策</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2015-07-19T00:00:00">July 19, 2015</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			ベネッセの子会社での情報漏えい事件では、スマートフォンを使ってデータをPCから取り出していたらしい。 そこで、私の研修先の会社の社内SE部門の人たちは、以下の内部者によるファイルやデータの持ち出し対策を行っていた。
+ 資産管理ソフト(SKYSEA Client View)を導入  USBメモリやスマートフォンを挿しても書き込めないように設定 ネットワーク経由でもSKYSEAにログが残るからわかる  SKYSEAの機能で知らない機器がネットワークに接続されても検知できる(ただし、よく仕組みはわかっていない模様) Webフィルタリングソフト(InterSafe CATS)も導入 会社のメールサーバ経由での送受信メールはすべて保管  M&amp;Aアドバイザリーという業務の特性からとにかく情報漏えい対策にお金はかけており、 セキュリティには相当な自信をお持ちでいらっしゃった。
+ただ、素人目からしても抜け道がいくつか見えたので、研修を終えて自分の会社に戻った瞬間に以下に対して策を講じた。
+ Bluetoothが使い放題で、右クリックして「送る」メニューをするだけで簡単にファイル送信可能。 またOfficeのBluetoothアドイン経由でも送信可能。 ※SKYSEAにはBluetoothに接続する機器を制限する機能があるが、iPhoneとのテザリングや無線マウス、キーボードを使用している人がいるので研修先企業では禁止にできなかった。 ネットワークの共有(ICS)や、SoftAPにより個人端末を社内LANへ接続可能 ※SKYSEAにはネットワークに登録されていないMACアドレスの端末が接続されたことを検知・遮断する機能あり。だが直接外部端末を社内ネットワークに接続しない(PCでNAPTを行う)場合は、SKYSEAでは検知不可能。 IISをインストールし、AdHocやWiFi Directで接続されると外部端末からアクセスしての持ち出しが可能。 ※SKYSEAはユーザが新たなソフトウェアをインストールすると検知できる。しかし、SKYSEAのサーバにIISも入れる必要があるためデフォルトだとIISがホワイトリストに入ってしまう。 Hyper-Vをインストールして仮想マシン経由でアクセスされると制限が効かず、ログも残らない。 各ユーザに管理者権限を与えているので、デフォルトで管理共有が有効になっており、外部端末からアクセスして持ちだし可能。 ※SKYSEAには共有フォルダの作成を制限できる機能はあるが、インストール時点で作成されていた場合は禁止できない。 NTFSのジャンクションと上記の方法(ICS、SoftAP、IIS)の組み合わせで、ローカルファイルへのアクセスに見せかけてファイルサーバのファイルも持ち出し可能なので、 ログを見てもファイルサーバからデータを持ちだしたことが分からない。 会社では携帯電話にiPhoneを採用しており、クライアントPCにはバックアップ用にiTunesをインストールしている。 構成プロファイルでApple Storeの使用を禁止しているが、  iTunesを使ってPCからApple Storeのアプリを自由にインストール可能 しかもiTunesのファイル共有機能も有効なので、iPhone経由でいくらでも外部に持ち出せる  標準ブラウザとしてFirefoxを採用しているが、Firefox Syncで個人アカウントを作成し、ブックマークやパスワードを個人PCと同期可能。 テキスト情報ならブックマークに見せかけて同期すれば持ち出せる。 Google Chromeで個人のGoogleアカウントとしてログイン、同期可能なので、Firefox Syncと同様にいろいろ持ち出せる。 また、Google Cloud Printにより家のプリンタに出力することも可能。 Google ChromeではInterSafe CATSとSKYSEAの組み合わせではログ取得ができないので、 InterSafe CATSに引っかからないウェブサイトであれば、ファイルをアップロードし放題。ログも残らない。 ※これはSKYSEAの問題ではなく、InterSafe CATSのフィルタリングがかなりエグい仕組みのため &gt; Feb. 6 2016 追記: InterSafe CATS 4.3以降はこの競合問題は解決した Skype.exeを実行不可にしているものの、Skype for Business(Lync)はスルーなので、ファイル送信し放題 また、「Skype.exe」という名前のファイルを実行禁止・ファイル名変更禁止したりできるが、それでも抜け道はある ※SKYSEAはexeファイルのハッシュ値でブラックリストを作成できる　⇔　1bitでも違うexeファイルを作れば抜けられる  ※はSKYSEAの製品自体が悪いわけではないことの説明。 私はSKYSEAはいい買い物だったと思っているので誤解なきよう。
+		</div>
+	</div>
+</article>
+
+
+		
+<div class="pagination clearfix">
+	<a class="pagination__item pagination__item--prev" href="/categories/%E9%9B%91%E8%A8%98%E5%B8%B3/">«</a>
+	<span class="pagination__item pagination__item--current">2/5</span>
+	<a class="pagination__item pagination__item--next" href="/categories/%E9%9B%91%E8%A8%98%E5%B8%B3/page/3/">»</a>
+</div>
+
+	</div>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+<div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
+		<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://330k.github.io/" />
+	</form>
+</div>
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/essay/input_backslach_with_us_keyboard_layout/">英語版Windows PE環境でバックスラッシュを入力</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/xubuntu1604_snort_base/">Xubuntu 16.04 &#43; Snortで簡易IDS構築</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/create_zip_file_with_wsh_jscript/">Windows標準機能でZIPファイルの作成</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/detect_submittion_to_private_mail_from_gmail/">Gmail (G Suite)でフリーメールアドレスへの送信を検知</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/make_font_embedded_pdf_from_edinet/">EDINETが生成するPDFにフォントを埋め込む</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/performance_degration_of_kanjo_bugyo/">勘定奉行の性能劣化に対処</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/rescue_gps_log_from_binary_data_of_holux_m241/">m-241のバイナリデータからトラックログを吸い出す</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/manage_firefox_settings_with_group_policy_without_gpo_for_firefox/">Firefoxをグループポリシーで管理する</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/convert-dvd-to-mpeg-in-a-batch-file/">ffmpegでDVDをMPEGファイルに変換</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/change-c-compiler-in-mathematica/">CompileするCコンパイラを変更する</a></li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/%e3%82%bd%e3%83%95%e3%83%88%e3%82%a6%e3%82%a7%e3%82%a2">ソフトウェア</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e8%87%aa%e8%bb%a2%e8%bb%8a">自転車</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e9%9b%91%e8%a8%98%e5%b8%b3">雑記帳</a></li>
+		</ul>
+	</div>
+</div>
+	
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/330k" target="_blank">
+				<svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+	</div>
+</div>
+	
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget__link widget__link--taglist" href="/tags/.net" title=".net">.net (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/bat" title="bat">bat (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/chrome" title="chrome">chrome (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/gmail" title="gmail">gmail (2)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/google-maps" title="google-maps">google-maps (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/gps" title="gps">gps (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/gpx" title="gpx">gpx (5)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/hta" title="hta">hta (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/java" title="java">java (2)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/javascript" title="javascript">javascript (3)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mathematica" title="mathematica">mathematica (17)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/powerpoint" title="powerpoint">powerpoint (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/sql" title="sql">sql (3)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/ubuntu" title="ubuntu">ubuntu (6)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/vba" title="vba">vba (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/wsh" title="wsh">wsh (2)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e3%82%a2%e3%83%ab%e3%82%b4%e3%83%aa%e3%82%ba%e3%83%a0" title="アルゴリズム">アルゴリズム (4)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%84%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0" title="ツーリング">ツーリング (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%91%e3%83%af%e3%83%8f%e3%83%a9" title="パワハラ">パワハラ (5)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e7%94%9f%e6%b4%bb" title="生活">生活 (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e7%a4%be%e5%86%85se" title="社内se">社内se (10)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e8%87%aa%e8%bb%a2%e8%bb%8a" title="自転車">自転車 (9)</a>
+	</div>
+</div>
+</aside>
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2017 330k info. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+</body>
+</html>

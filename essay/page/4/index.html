@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essays</title>
+<meta name="description" content="自転車ツーリングの記録やソフトウェアの配布、Mathematicaをメインにしたプログラミングの覚書や日ごろの雑感など。">
+<meta name="generator" content="Hugo 0.21" />
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+<link rel="alternate" type="application/rss+xml" title="330k info Feed" href="https://330k.github.io/essay/index.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/scripts.js"></script>
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body body-left-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="330k info" rel="home">
+						<h1 class="logo__title">330k info</h1>
+						
+					</a>
+				</div>
+			</div>
+			<hr class="divider">
+		</header>
+		<div class="wrapper clearfix">
+
+
+	<div class="main-content list content" role="main">
+		<header class="page-header">
+			<h1 class="page-header__title">Essays</h1>
+		</header>
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/read-and-write-a-local-file-with-wolfram-cdf-player/" rel="bookmark">Wolfram CDF Playerでローカルファイルの読み込みと書き込みを行う</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2013-10-18T00:00:00">October 18, 2013</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			[Wolfram CDF Player を汎用する]()にあるように、 CDF PlayerでもJ/Linkを使えばローカルファイルの読み込み、書き込みができる(※CDFファイルの作成にはMathematicaが必要)。
+上記リンク先ではテキストファイルを読み込む例が載っているが、バイナリファイルとして読み込んでImportStringを使えば、 Mathematicaが対応している形式すべてのファイルを読み込むことができる。
+J/Linkでバイナリファイルを読み込むときのポイントとしては、
+ &ldquo;[B&rdquo;というクラス名でbyte型の配列を作ってBufferedInputStream.read(byte[])で一気に読み込むことで高速化 読み込んだbyte[]がMathematicaに入った時に符号付き整数で扱われるため、FromCharacterCodeに突っ込む前に0〜255になるように修正  が挙げられる。
+一方、CDF PlayerではExportのみならずExportStringが使えない(ImportStringは使えるのに)ので、書き込むほうは不自由が残る。 ここではテキストと画像(BMP、PNG、JPEG)に限って保存する関数を作ってみた。
+ImportWithJLink[filepath_?(FileExistsQ[FindFile[#]] &amp;), format_] := ( Needs[&quot;JLink`&quot;]; JLink`InstallJava[]; JLink`JavaBlock[ Module[{br, byte, result}, br = JLink`JavaNew[&quot;java.io.BufferedInputStream&quot;, JLink`JavaNew[&quot;java.io.FileInputStream&quot;, FindFile@filepath]]; byte = JLink`JavaNew[&quot;[B&quot;, {FileByteCount[FindFile@filepath]}]; br@read[byte]; result = ImportString[ FromCharacterCode[ JLink`JavaObjectToExpression[byte] /. x_?Negative :&gt; x + 256], format]; br@close[]; result]]); ExportWithJLink[filepath_, string_String, format : &quot;Text&quot;] := ( Needs[&quot;JLink`&quot;]; JLink`InstallJava[]; JLink`JavaBlock[ Module[{bw}, bw = JLink`JavaNew[&quot;java.io.BufferedWriter&quot;, JLink`JavaNew[&quot;java.io.FileWriter&quot;, filepath] ]; bw@write[string]; bw@close[]; filepath ] ]); ExportWithJLink[filepath_, image_, format : &quot;PNG&quot; | &quot;BMP&quot; | &quot;JPG&quot;] := ( Needs[&quot;JLink`&quot;]; JLink`InstallJava[]; JLink`JavaBlock[ JLink`LoadJavaClass[&quot;javax.
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/make-a-movie-with-mathematica-and-ffmpeg/" rel="bookmark">ffmpeg&#43;Mathematicaで動画ファイルを作成する</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2013-09-27T00:04:00">September 27, 2013</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			MathematicaのExportでAVIなどの動画ファイルを作成することは簡単に可能だが、 いかんせんすべてのフレームの画像を作成してからファイルに書きだすので、フレーム数に比例してメモリの使用量が多くなってしまう。 そのため長いムービーの作成は困難であった。
+そこで、ffmpeg(avconv)と併用することでメモリ使用量を抑えつつ、長編の動画ファイルを制作する。 具体的には、
+ ffmpegで標準入力から読み込ませるOutputStreamオブジェクトを作成する BinaryWriteでそのストリームに各フレームの画像を書き込む 終わったらCloseでストリームを閉じる  とする。ここで、各フレーム画像の形式をPPMにしないとうまく動作しなかった(BMP、PNGなどではなぜか動作せず)。
+例えば、以下のようにするとtest001.aviができあがる。
+s = OpenWrite[ &quot;!ffmpeg -y -vcodec ppm -f image2pipe -i - -vcodec rawvideo test001.avi&quot;, BinaryFormat -&gt; True]; Do[ BinaryWrite[s, ExportString[ Plot[Sin[x + i], {x, 0, 2 Pi} , ImageSize -&gt; {640, 480} , PlotRange -&gt; {{0, 2 Pi}, {-1, 1}} , Frame -&gt; True] , &quot;PPM&quot;]] , {i, 0, 2 Pi, Pi/50} ]; Close[s]  Exportと同じような使い勝手の関数ExportMovieを作るとこんな感じになる。
+Options[ExportMovie] = { &quot;FrameRate&quot; -&gt; 25, &quot;VideoCodecOption&quot; -&gt; &quot;-vcodec rawvideo&quot;, &quot;ExportOptions&quot; -&gt; {} }; ExportMovie[outputfilepath_String, expr_, {i_Symbol, imin_: 1, imax_, di_: 1}, OptionsPattern[]] := Module[{stream}, stream = OpenWrite[ ToString[ StringForm[ &quot;!
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/process-blob-and-multibyte-string-from-sqlite-with-mathematica/" rel="bookmark">MathematicaからSQLiteでBLOBとマルチバイト文字列を扱う</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2012-10-14T00:00:00">October 14, 2012</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			ドキュメントにはないものの、MathematicaではSQLiteを扱うことができる。 しかしながら、BLOB型や文字列で日本語などを扱うには少し工夫が必要なので、メモ。
+BLOB型 select 直接BLOB型をselectすると$Failedが返ってくるので、hex関数で16進文字列として返す。
+db = Database`OpenDatabase[sqlitefilepath]; rs = Database`QueryDatabase[db, &quot;select hex(column_name) from table_name&quot;];  これを16進文字列→数値→バイト列→文字列と変換して、最後にImportStringで読み込むと、Mathematicaで読み込める。
+ImportSQLiteBLOB[hex_, format_] := ImportString[ FromCharacterCode[IntegerDigits[FromDigits[hex, 16], 256]], format]; ImportSQLiteBLOB[rs[[1, 1]], &quot;PNG&quot;]  insert insertする場合には逆に、データをExportStringで文字列に変換→バイト列→16進文字列と変換し&rdquo;x&rsquo;&ldquo;と&rdquo;&lsquo;&ldquo;で囲う。
+ExportSQLiteBLOB[expr_, format_] := StringJoin[&quot;x'&quot;, IntegerString[ToCharacterCode[ExportString[expr, format]], 16, 2], &quot;'&quot;]; Database`QueryDatabase[db, &quot;insert into table_name values (&quot; &lt;&gt; ExportSQLiteBLOB[Plot[Sin[x], {x, 0, Pi}], &quot;PNG&quot;] &lt;&gt; &quot;)&quot;];  マルチバイト文字列 select 日本語などマルチバイト文字列が入っていても適切に変換してくれないので、自前で変換する。
+ImportSQLiteString[str_] := FromCharacterCode[ToCharacterCode[str], &quot;UTF8&quot;]; rs = Database`QueryDatabase[db, &quot;select column_name from table_name&quot;]; ImportSQLiteString[rs[[1, 1]]]  insert そのまま突っ込むとエラーが出るので、変換してから突っ込む。ついでにシングルクォーテーションをエスケープしておく。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/how-to-make-mathematica8-process-japanese-on-ubuntu-1204-ltf-64bit/" rel="bookmark">Mathematica on Ubuntu 12.04 LTSで日本語関連のトラブル</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2012-10-09T00:00:00">October 09, 2012</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			Mathematica 8 Home Edition 日本語版をUbuntu 12.04 LTS 64bit版にインストールしたところ、
+ ディレクトリ、ファイル名に日本語が含まれるノートブックファイル(.nb)を開けない ディレクトリ、ファイル名に日本語が含まれるとImport/Exportできない、FileNamesで列挙できない ノートブック中に日本語を入力できない $SystemCharacterEncoding、$CharacterEncodingが&rdquo;EUC-JP&rdquo;になっている  などの言語関連の不具合があった。
+これから作るノートブックは英語だけで書けば済むが、今までに作ったノートブックファイルが開けないのがつらい。 一応Wolframのサポートにはメールを出したが、期待できそうになかった。
+/usr/local/Wolram/以下のファイルで関係有りそうなものを試行錯誤していじった結果、以下の方法で対処できたのでメモ。
+ /usr/local/Wolfram/Mathematica/8.0/Executables以下の起動用スクリプトファイルMathematica、mathematicaの「LANG=ja_JP.eucJP」を「LANG=en_US.UTF-8」などに適当に変更orコメントアウト /usr/local/Wolfram/Mathematica/8.0/SystemFiles/CharacterEncodings/UTF-8.mの内容をISO8859-1.mにコピー  $SystemCharacterEncoding、$CharacterEncodingは&rdquo;ISO8859-1&rdquo;になってしまうのが気持ち悪いが、とりあえず実用上問題がなくなった。
+あとは本当にISO8859-1の文字コードで書かれたファイルを読み込むことができなくなってしまうが、扱う機会はないので良しとする。
+Oct. 7 2016 追記
+4年越しにWolfram Researchから連絡が来た。
+ In May 2012 you reported an issue with Mathematica wherein Mathematica was unable to open files from folders with non-English cahracters in the name. We believe that the issue has been resolved in the current release of Mathematica.
+Thank you for your report and we look forward to a continued, productive relationship with you.
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/format-floating-number-for-s-dyna-with-java/" rel="bookmark">LS-DYNA用の浮動小数点数をフォーマット</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2012-08-25T08:56:00">August 25, 2012</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			LS-DYNAのキーワードファイルを書きだすプログラムを書いたところ、浮動小数点数を固定文字数(10文字)にフォーマットする所でつまづいた。 具体的には
+ String.formatやDecimalFormatの動作が遅い(String.formatよりはDecimalFormatのほうが速いが) 文字数を10文字に制限することが難しい(絶対値の大小比較を行なって桁数ごとに条件分岐をしても、四捨五入によって意図しない文字数(11文字)になる)  という問題にあたった。そこでdoubleから長さ10の文字列を力技で書きだすロジックを自作した。特徴は以下の通り。
+ 正の時は先頭にスペース、負の時は先頭に&rdquo;-&ldquo;を入れる 10文字の制限の中で最も有効桁数が大きくなるようにフォーマット 四捨五入はしない！ DecimalFormatの15倍高速(もう少し工夫はできるが)  private static String formatFloat10(double d){ char[] c = new char[10]; double a; if(d == 0.0){ return &quot; 0.0000000&quot;; } if(d &lt; 0){ c[0] = '-'; a = -d; }else{ c[0] = ' '; a = d; } int m = (int)Math.floor(Math.log10(a)); if(m &lt;= -100){ for(int i = 1; i &lt; 1 - m; i++) a *= 10; c[1] = (char)('0' + Math.
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/how-to-read-and-write-24bit-bitmap-files-with-vba/" rel="bookmark">VBAでビットマップ(bmp)を読み書き</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2010-09-22T00:00:00">September 22, 2010</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			会社のPCでは自由にソフトウェアをインストールすることができないので、業務で使いそうなものはExcel VBAで自作していくことにした。 まずは手始めに24ビットビットマップの読み書きを行う標準モジュールを作成した。 VBAの機能のみで実装しており、外部のライブラリには依存しない。
+使い方  以下のソースをOfficeのマクロで標準モジュールとしてプロジェクトへ追加する。 ReadBitmap(&ldquo;C:***.bmp&rdquo;)で、RGBTRIPLE型の2次元配列が返る。 読み込みは一応1, 4, 8, 24, 32ビットのビットマップファイルに対応。 WriteBitmap24(&ldquo;C:***.bmp&rdquo;)で24ビットのビットマップファイルを書き込む。 おまけ機能として、ReadGIFJPEGでGIFとJPEGファイルも読み込みにも対応。  ' Bitmap module by 330k ' Copyright (C) 2010 330k, All rights reserved. Option Explicit Public Type RGBTRIPLE rgbBlue As Byte rgbGreen As Byte rgbRed As Byte End Type Private Type RGBQUAD rgbBlue As Byte rgbGreen As Byte rgbRed As Byte rgbReserved As Byte End Type Private Type BITMAPFILEHEADER bfType As String * 2 bfSize As Long bfReserved1 As Integer bfReserved2 As Integer bjOffBits As Long End Type Private Type BitmapInfoHeader biSize As Long biWidth As Long biHeight As Long biPlanes As Integer biBitCount As Integer biCompression As Long biSizeImaze As Long biXPixPerMeter As Long biYPixPerMeter As Long biClrUsed As Long biClrImporant As Long End Type ' Read a bitmap file (1, 4, 8, 24 and 32 bit) and return image as 2-dimension array of RGBTriple Public Function ReadBitmap(strFileName As String) As RGBTRIPLE() Dim i As Long Dim j As Long Dim n As Long Dim intFileNumber As Integer Dim bjHeader As BITMAPFILEHEADER Dim biHeader As BitmapInfoHeader Dim lngColors As Long Dim rgbData() As RGBTRIPLE Dim rgbTemp As RGBTRIPLE Dim rgbTable3() As RGBTRIPLE Dim rgbTable4() As RGBQUAD Dim bytTemp As Byte intFileNumber = FreeFile() Open strFileName For Binary As intFileNumber Get intFileNumber, , bjHeader Get intFileNumber, , biHeader ReDim rgbData(0 To biHeader.
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/how-to-optimize-mathematica-programs/" rel="bookmark">Mathematicaにおけるプログラムの高速化手法</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2009-12-14T22:39:00">December 14, 2009</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			Mathematicaにおいてプログラムの実行速度を最適化する際の項目を思いつく限り挙げてみた。 高速化に関する公式のドキュメントはこちら。
+関数型パラダイムで書く 必然的に組み込み関数を多く使い、リストをまとめて操作することになるので手続き型で書くより速くなることが多い。 コード量も少なくなって読みやすくなるので、よほどのことでない限りMathematicaでは関数型で書く。
+具体的には、手続き型ループ構文(Do, For, Whileなど)をやめて、MapやThreadを使うようにする。
+出来る限り組み込みの関数を使う 組み込み関数でできることは出来る限りやらせる。 ドキュメントを探すと、Mathematicaは意外と多くのものが組み込みでできるようになっている。
+リストは全体をまとめて扱う 大概のループの中身はリストへの関数の適用や、テンソルの演算などに帰着する。
+四則演算はリストにそのまま適用可能。 内積はDot、外積はCrossがあるし、それらを一般化したInner、Outerといった関数もある。
+Mathematicaでは個々の要素に対する操作は記述しなくてもよい場合が多い。
+myDifferences1[v_] := Table[v[[i + 1]] - v[[i]], {i, Length[v] - 1}]; (* 個々の要素を操作する *) myDifferences2[v_] := Most[RotateLeft[v] - v]; (* リスト全体をまとめて操作する *) {Timing[myDifferences1[#];], Timing[myDifferences2[#];], Timing[Differences[#];]} &amp;[RandomReal[{0, 5}, 5000000]] {{1.919, Null}, {0.296, Null}, {0.187, Null}}  リストの要素数変更を避ける 手続き型で要素数が分からないリストを生成するには、ReapとSowを用いる。AppendToやPrependToは厳禁。
+myPrimeChoice1[n_] := Module[{r = {}, i}, Do[If[PrimeQ[i], AppendTo[r, i]], {i, n}]; r]; myPrimeChoice2[n_] := Module[{i}, Reap[Do[If[PrimeQ[i], Sow[i]], {i, n}]][[2, 1]]]; {Timing[myPrimeChoice1[200000];], Timing[myPrimeChoice2[200000];]} {{3.
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/explicit-runge-kutta-butcher-tableau/" rel="bookmark">陽的Runge-Kutta法のButcher tableau</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2009-12-05T00:00:00">December 05, 2009</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			 Explicit Runge-Kutta法の公式はいくつか知られているが、高次の公式になるほどButcher配列の項数が増えるため論文に誤植が多くなる。 それに気づかないまま実際に使うと、プログラムは正しく組めているはずなのに思うように精度が上がらないという落とし穴にはまってしまう。
+覚書として、以下に代表的と思われる公式のButcher tableauをまとめる。
+以下のButcher tableauはMathematica 8のNumericalDifferentialEquationAnalysisパッケージに含まれるRungeKuttaOrderConditionsで所定の次数条件を達成していることを確認しており、誤植が入り込まないようにそのままMathematica上で画像化している。
+使用したMathematicaノートブックはこちら。 必要な人はダウンロードして自分で計算して確認した後に使用してほしい。
+MathematicaにCやFortranのソースコード形式で吐かせるのが確実。
+※注意事項
+公式の名前や出典に関しては自信がないので、鵜呑みにしないこと。
+1段1次 Euler法  2段2次 修正Euler法  Heun法  Ralston法 3段3次 Heunの3次法  Kuttaの3次法  Ralstonの3次法 4段4次 古典的Runge-Kutta法  6段5次 Runge-Kutta-Fehlberg法のうち5次の部分  Runge-Kutta-Nystroemのうち5次の部分  Butcherによる5次公式を3つ     7段6次 Hammudによるもの  9段7次 Shanksによるもの  CooperとVernerによる7次公式  11段8次 CooperとVernerによる8次公式  16段9次 Vernerによる埋め込み型公式のうち9次のもの  
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/extend-import-and-export-of-mathematica7/" rel="bookmark">Mathematica 7でImportおよびExportを拡張する</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2009-11-23T00:00:00">November 23, 2009</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			MathematicaではImportやExportを使って様々な形式のファイルを読み書きできるが、 標準で対応していないファイル形式についても自分でローダやライタを作り、 それをImportやExportに対応させる方法がExtending Import &amp; Export (Wolfram Library Archive)において解説されている。
+しかしこの文書は2003年のもので以前はExperimental`RegisterConverterという関数で登録すればよかったのだが、 この関数はMathematica 7にはない。
+Names[&quot;*`*Register*&quot;]  などとして探し回ったところ、
+ ImportExport`RegisterFormat ImportExport`RegisterExport ImportExport`RegisterImport  というそれらしいものを見つけた。
+早速
+ClearAttributes[ImportExport`RegisterFormat, ReadProtected]  として読込みプロテクトを解除してどういう動作をするのか調べたところ、
+ ImportExport`RegisterFormat[&ldquo;ファイルフォーマット名&rdquo;]としてファイルフォーマットを登録 ImportExport`RegisterImport[&ldquo;ファイルフォーマット名&rdquo;, myImport]で自前のローダmyImportをImportに登録 ImportExport`RegisterExport[&ldquo;ファイルフォーマット名&rdquo;, myExport]で自前のライタmyExportをExportに登録  という使い方をするようだ。ファイルフォーマット名は&rdquo;GPX&rdquo;でも&rdquo;KML&rdquo;でも&rdquo;JSON&rdquo;でも好きな名前を付けていい。
+myImportやmyExportの書式は以前と変わっていないようで、
+myImport[filename_String, options___?OptionQ] := Module[{...},...] myExport[filename_String, expression_, options___?OptionQ] := Module[{...},...]  でいい模様。
+ImportExport`RegisterFormatには以下のオプションがある。
+ BinaryFormat : バイナリファイルならTrue、そうでなければFalse。 ImportExport`Encoding : よくわからないが、標準では&rdquo;BASE64&rdquo;、&rdquo;BZIP2&rdquo;、&rdquo;GZIP&rdquo;、&rdquo;UUE&rdquo;だけでTrueになっている。 ImportExport`Extensions : 対応する拡張子またはそのリスト。{&rdquo;.nb&rdquo;,&rdquo;.html&rdquo;}などと指定する。 AlphaChannel : アルファチャンネルを使う画像かどうか？Exportの際のラスタライズに関係するかも。JPEG2000やPNGなどでTrueになっている。  ただ、ImportExportExtensionsに拡張子を指定して登録しても、Exportでは大丈夫だがImportではうまく判別されない。 ImportExportRegisterImportの動作についてもう少し調べる必要がある。
+Wolfram Researchが新しいドキュメントを出してくれれば早いのだけれど…。
+Feb. 20 2010追記
+Importで自動判別させる方法が判明。
+FileFormatDump`AddFormat[&quot;ファイルフォーマット名&quot;, bin, bundle, archive, encoding, magic, ext, mime, test, bundletestfunc]  として、判別するときに用いられる関数のほか、MIMEタイプも登録できる模様。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/attention-to-show-data-in-combination-of-google-sites-and-google-analytics/" rel="bookmark">Google Sites &#43; Google Analyticsで「サイト上のデータ表示」は要注意</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2009-11-15T00:00:00">November 15, 2009</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			Google SitesではGoogle Analyticsを用いる設定が簡単にできるが、Google Analyticsの「サイト上のデータ表示」を行うと「閉じる」をクリックしても何の反応がない。 画面にレイヤーが重なっていろいろなデータが表示されてしまう状態から抜けられない。
+ネットを調べたところ、「閉じる」が見つからないために同じような現象に遭遇している事例は見つかったが、 「閉じる」をクリックしても、
+_siteOverlay._close()  をアドレスバーに打ち込んでもダメだった。 おそらくGoogle Sitesを利用している場合特有の現象なのだろう。
+この現象が発生することを確認したブラウザは
+ Google Chrome 4.0.237.0 Mozilla Firefox 3.5.5 Opera 10 Internet Explorer 8  で、いずれもOSはWindows Vista(32ビット)。ちなみにIE8ではレイアウトも崩れていた。
+仕方がないので_siteOverlay.close()の中身をちょっと調べた。
+function () { var domain, cookiePath; if (GLOBAL_window._udo) { domain = GLOBAL_window._udo; } else if (GLOBAL_window._gat &amp;&amp; GLOBAL_window._gat._gasoDomain) { domain = GLOBAL_window._gat._gasoDomain; } if (domain) { domain = domain[$$PROP_replace](&quot;domain=&quot;, &quot;&quot;)[$$PROP_replace](&quot;;&quot;, &quot;&quot;)[$$PROP_replace](/ /g, &quot;&quot;); } if (GLOBAL_window._utcp) { cookiePath = GLOBAL_window._utcp; } else if (GLOBAL_window.
+		</div>
+	</div>
+</article>
+
+
+		
+<div class="pagination clearfix">
+	<a class="pagination__item pagination__item--prev" href="/essay/page/3/">«</a>
+	<span class="pagination__item pagination__item--current">4/5</span>
+	<a class="pagination__item pagination__item--next" href="/essay/page/5/">»</a>
+</div>
+
+	</div>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+<div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
+		<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://330k.github.io/" />
+	</form>
+</div>
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/essay/input_backslach_with_us_keyboard_layout/">英語版Windows PE環境でバックスラッシュを入力</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/xubuntu1604_snort_base/">Xubuntu 16.04 &#43; Snortで簡易IDS構築</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/create_zip_file_with_wsh_jscript/">Windows標準機能でZIPファイルの作成</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/detect_submittion_to_private_mail_from_gmail/">Gmail (G Suite)でフリーメールアドレスへの送信を検知</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/make_font_embedded_pdf_from_edinet/">EDINETが生成するPDFにフォントを埋め込む</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/performance_degration_of_kanjo_bugyo/">勘定奉行の性能劣化に対処</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/rescue_gps_log_from_binary_data_of_holux_m241/">m-241のバイナリデータからトラックログを吸い出す</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/manage_firefox_settings_with_group_policy_without_gpo_for_firefox/">Firefoxをグループポリシーで管理する</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/convert-dvd-to-mpeg-in-a-batch-file/">ffmpegでDVDをMPEGファイルに変換</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/change-c-compiler-in-mathematica/">CompileするCコンパイラを変更する</a></li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/%e3%82%bd%e3%83%95%e3%83%88%e3%82%a6%e3%82%a7%e3%82%a2">ソフトウェア</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e8%87%aa%e8%bb%a2%e8%bb%8a">自転車</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e9%9b%91%e8%a8%98%e5%b8%b3">雑記帳</a></li>
+		</ul>
+	</div>
+</div>
+	
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/330k" target="_blank">
+				<svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+	</div>
+</div>
+	
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget__link widget__link--taglist" href="/tags/.net" title=".net">.net (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/bat" title="bat">bat (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/chrome" title="chrome">chrome (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/gmail" title="gmail">gmail (2)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/google-maps" title="google-maps">google-maps (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/gps" title="gps">gps (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/gpx" title="gpx">gpx (5)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/hta" title="hta">hta (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/java" title="java">java (2)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/javascript" title="javascript">javascript (3)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mathematica" title="mathematica">mathematica (17)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/powerpoint" title="powerpoint">powerpoint (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/sql" title="sql">sql (3)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/ubuntu" title="ubuntu">ubuntu (6)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/vba" title="vba">vba (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/wsh" title="wsh">wsh (2)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e3%82%a2%e3%83%ab%e3%82%b4%e3%83%aa%e3%82%ba%e3%83%a0" title="アルゴリズム">アルゴリズム (4)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%84%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0" title="ツーリング">ツーリング (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%91%e3%83%af%e3%83%8f%e3%83%a9" title="パワハラ">パワハラ (5)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e7%94%9f%e6%b4%bb" title="生活">生活 (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e7%a4%be%e5%86%85se" title="社内se">社内se (10)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e8%87%aa%e8%bb%a2%e8%bb%8a" title="自転車">自転車 (9)</a>
+	</div>
+</div>
+</aside>
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2017 330k info. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+</body>
+</html>

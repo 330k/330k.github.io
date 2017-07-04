@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雑記帳</title>
+<meta name="description" content="自転車ツーリングの記録やソフトウェアの配布、Mathematicaをメインにしたプログラミングの覚書や日ごろの雑感など。">
+<meta name="generator" content="Hugo 0.21" />
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+<link rel="alternate" type="application/rss+xml" title="330k info Feed" href="https://330k.github.io/categories/%E9%9B%91%E8%A8%98%E5%B8%B3/index.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/scripts.js"></script>
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body body-left-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="330k info" rel="home">
+						<h1 class="logo__title">330k info</h1>
+						
+					</a>
+				</div>
+			</div>
+			<hr class="divider">
+		</header>
+		<div class="wrapper clearfix">
+
+
+	<div class="main-content list content" role="main">
+		<header class="page-header">
+			<h1 class="page-header__title">雑記帳</h1>
+		</header>
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/input_backslach_with_us_keyboard_layout/" rel="bookmark">英語版Windows PE環境でバックスラッシュを入力</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2017-06-06T06:48:00">June 06, 2017</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			会社のPCではHDD暗号化ソフトのSecureDocを使用しているが、先日1台のPCが起動しなくなったため、リカバリーディスクを使っての救出を行った際のメモ。
+SecureDocのリカバリーディスクはWindows PEベースなのだが、海外の製品なので当然英語キーボード。 起動しなくなったPCのHDDの中身は運良く復旧できそうだったのだが、 データをネットワーク経由で回収しようとしたところネットワーク設定画面でバックスラッシュが入力できなくてハマった。
+5分ほどキーボードを押しまくった後、Altキーと文字コード入力で行けることに気がついた。
+Alt押す → テンキー9 → テンキー2 → Alt離す
+で無事入力できた。
+ただ、LetsNoteのNICをWindows PEでは認識できず無駄足に。 結局USBメモリ経由で回収した。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/xubuntu1604_snort_base/" rel="bookmark">Xubuntu 16.04 &#43; Snortで簡易IDS構築</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2017-06-06T06:37:00">June 06, 2017</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			ウイルス等に侵入された後の対策として、IDSやIPS製品の紹介をベンダーから受けたが、正直なところ価格が高かったのと、検知されるメッセージがSnort由来のものが多い気がしたので、自分でSnortを構築して商用製品との差を調べてみることにした。
+構築環境  PC : 余っていたノートPC Panasonic LetsNote CF-NX1 OS : Xubuntu 16.04.2 (LetsNoteの有線LANと無線LANのNICを認識できる可能性が高いディストリビューションとして選択) ルータ : Yamaha RTX810 IDSとして運用(ミラーポートの通信を監視)  手順 基本的に、以下のドキュメント通りでOK。
+Snort 2.9.9.x on Ubuntu 14 -16
+LetsNoteでは有線LANのNICはenp0s25、無線LANはwlp2s0となった。
+注意点は以下の通り。
+#rule_url=https://www.snort.org/reg-rules/|snortrules-snapshot.tar.gz|&lt;oinkcode&gt; → rule_url=https://www.snort.org/rules/|snortrules-snapshot.tar.gz|&lt;oinkcode&gt;  ※微妙にURLが変わっているので注意
+#sudo /usr/local/bin/pulledpork.pl -c /etc/snort/pulledpork.conf -l → sudo /usr/local/bin/pulledpork.pl -c /etc/snort/pulledpork.conf -l -o /etc/snort/rules/snort.rules  ※-oオプションが必要と怒られた
+有線LAN(enp0s25)はミラーポートから受信だけできれば良いので、 /etc/network/interfacesを編集して使われていないネットワークのアドレスを適当に設定。 管理の通信やBASEによるログを眺めるためには無線(wlp2s0)を使用する。
+RTX810はhttp://www.rtpro.yamaha.co.jp/RT/manual/rt-common/setup/lan_port-mirroring.html を参照してミラーポートを設定。
+ 設定(ポート1と2をポート4にミラー) lan port-mirroring lan1 4 in 1 2 out 1 2 解除 no lan port-mirroring lan1  結果 一応IDSとして構築できたので、現在はログを見て様子見。今のところのメモは以下。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/create_zip_file_with_wsh_jscript/" rel="bookmark">Windows標準機能でZIPファイルの作成</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2017-05-08T22:37:00">May 08, 2017</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			JScriptで複数のテキストファイルを書き出し、それをZIPでまとめたかったので作成。 VBAやVBScript版を参考に作ってみた。
+参考サイト : http://kiq-creator.com/blog/?eid=33
+複数のファイルをZIP圧縮する際のコツとしては、CopyHereをするたびに待機すること。 CopyHereは非同期なので、すぐにJS側に制御が返ってくるが、 複数のファイルを一気にCopyHereしようとすると、「読み取りできません」とエラーが出る。
+使い方 以下のコード中のcreateZipFileを自分のスクリプトにコピー&amp;ペーストして
+createZipFile( &quot;zipファイルのパス&quot;, [&quot;圧縮対象ファイルのパス1&quot;, &quot;圧縮対象ファイルのパス2&quot;, ...])  とすればOK。 もしくは以下のコードをメモ帳で拡張子をjsにして保存すれば、ドラッグ&amp;ドロップでzipファイルを作成(右クリック→送る→圧縮フォルダーとほぼ同じ動作)。
+注意事項 ディレクトリには対応してません。またWindows標準では暗号化ZIPは作成できません。 また圧縮対象ファイルの存在チェック等もやってないので、必要であればエラーハンドリング処理を追加してください。
+/** Windows 標準機能でZipファイルを作成するWSH(JScript) Copyright 330k This software is released under the MIT License. http://opensource.org/licenses/mit-license.php */ var args = []; for(var i = 0; i &lt; WScript.Arguments.length; i++){ args.push(WScript.Arguments(i)); } var zipfile = args[0].replace(/(.+)\.(.+?)$/, &quot;$1.zip&quot;); createZipFile(zipfile, args); function createZipFile(zipFilePath, sourceFiles){ var shell = WScript.CreateObject(&quot;Shell.Application&quot;); var fso = WScript.CreateObject(&quot;Scripting.FileSystemObject&quot;); var file = fso.
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/detect_submittion_to_private_mail_from_gmail/" rel="bookmark">Gmail (G Suite)でフリーメールアドレスへの送信を検知</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2016-11-29T20:45:00">November 29, 2016</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			 会社ではG Suite(旧Google Apps for Works)を導入しているが、 ある社員が個人のGmailアドレスに会社の情報の入ったメールを送信していた。
+幸いPCで操作していたためPCのログ監視ソフト(SKYSEA Client View)で検知し、当該従業員に注意することができた。 ただ、同じことを会社支給のiPhoneでやられた場合に無力だったことに気づいたので、G Suite側でも対策を実施。
+設定方法は以下の通り。
+ 「管理コンソール」の「アプリ」→「Gmail」→「詳細設定」と進む 「コンテンツ コンプライアンス」を追加 影響を受けるメールは「送信」にチェック 「次の一部がメールに一致する場合」を選択 「任意のエンベロープ受信者」が「いずれかの単語に一致する」にhttp://powerbiz.jp/abiz/tips/archives/26/ などから検知対象とするドメイン一覧を取得してスペース区切りにしたものを設定する (1000文字を超える場合は1000文字以内に収まるよう複数に分けて登録)   「上記の表現に一致する場合は、次の処理を行います」には「メッセージを変更」を選択 「その他の送信先」「受信者を追加」で配信先に管理者用のメールアドレスを設定(エイリアスにしておくとフィルタ作成で便利)   設定ができたら保存する(※全ユーザに適用されるまで1時間程度かかる) 管理者用のGmailの設定で、8で設定したアドレスに来たものをフィルタしてラベルをつけるようにしておく  注意事項  設定ミスすると全ユーザのメールが影響を受けるので、テスト用のOUを作ってから検証してから全ユーザに適用する コンテンツコンプライアンスでは、クレジットカード番号やパスポート番号が含まれたメールを検知可能 残念ながら執筆時点(Nov. 29 2016)では日本のマイナンバーの検知機能はない  
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/make_font_embedded_pdf_from_edinet/" rel="bookmark">EDINETが生成するPDFにフォントを埋め込む</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2016-11-11T23:00:00">November 11, 2016</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			EDINETで出力したPDFを会社のプレスリリースで掲載したところ、iPhoneで閲覧できない、という問題が発生した。
+PDFファイルを見てみると、日本語フォントが埋め込まれていない(下図)。
+ そのため、iPhoneなどMS系の日本語フォントがない環境では、日本語部分が真っ白の閲覧できないものになっていた。 ちなみに、Ubuntuでは別の日本語書体で代替表示された。
+ ご丁寧に印刷も低解像度に限られている(上図)。
+他社のプレスリリースを探してみると、そのままのPDFが使われていたところが多かったが、 中には低解像度で印刷して1ページが1枚の画像になったPDFも見つかった。苦労の痕跡が・・・。
+本来はそのようなPDFを作成するEDINETのシステムが悪いのだが、上の人間は「iPhoneでも見れるようにしろ」と聞かない。
+Google先生に聞いてみると、Macで見れないという2011年の投稿が見つかったので、昔からEDINETは変わっていないらしい。 続けて解決策を探すと、「PDFのセキュリティ設定を無視するビューアをつかって仮想PDFプリンタに印刷する」という方法で解決できることが分かった。
+PDFのセキュリティ設定を無視するビューアで代表的なものはEdgeやFirefox(2016年11月現在)。従って
+ Windows 10なら、EdgeでPDFを開いてプリンタにMicrosoft Print to PDFを選択して印刷 Windows 7でもAcrobatなどの仮想PDFプリンタがあれば、Firefoxで開いて仮想PDFプリンタに印刷  という手順でフォントを埋め込んだPDFを作成できた。(下図はEdge + Microsoft Print to PDFで作成したもの)
+ ちなみに、このようにして作成したPDFは法的に問題ないのか弁護士の人に聞いてみたところ、OKらしい。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/performance_degration_of_kanjo_bugyo/" rel="bookmark">勘定奉行の性能劣化に対処</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2016-11-06T17:22:00">November 06, 2016</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			社内では会計システムに勘定奉行(ネットワーク版)を使っているが、 担当者から「勘定奉行で仕訳帳の表示に20秒くらいかかる」と言われたので調査してみた。
+その担当者のPC固有の問題かどうかを切り分けるため別のPCから同様の操作を行ってみたところ、同じ症状が発生した。 ということは、サーバ側に問題がありそう。
+勘定奉行のクライアントは生のSQL文をサーバに発行する仕組みなので、 Wiresharkでパケットをキャプチャすることで発行されたSQL文を把握することができる。
+その状態でサーバ側の負荷を測定してみると、特定のSQL文の処理に時間がかかっていることが分かった。
+勘定奉行ではSQL Serverをバックエンドに使っているので、 「SQL Server パフォーマンス」などでGoogle先生に聞いてみると、以下のページがヒット。
+どうする？ SQL Server のクエリ パフォーマンスが低下した！
+これに従い、サーバ上でSQL Server Management Studioを起動し、勘定奉行で使用しているデータベースで
+sp_updatestats  としたところ、1秒程度で処理が完了するようになった。 上記ページには各テーブル単位での統計情報更新や、実行プランの再作成、インデックスの再構築の方法も書かれているが、今回は行わなかった。
+このようにSQL文を直接叩きに行く方法は多分メーカ(OBC)では非推奨だと思うが、 クライアント側にsp_updatestatsを発行するメニューくらいつけてほしいものだ。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/rescue_gps_log_from_binary_data_of_holux_m241/" rel="bookmark">m-241のバイナリデータからトラックログを吸い出す</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2016-09-22T07:14:00">September 22, 2016</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			GPSロガー(Holux m-241)のメモリが破損しているのか、 実は6月30日と7月3日の軽井沢→直江津ツーリングと、9月の西九州→佐多岬ツーリングでは、 ログが破損していたため、Googleのロケーション履歴を代用している。
+バイナリデータは一応吸い出せているようなので、その構造を調べると、 HOLUX m-241 LoggerUtility .trlファイル構造の覚書 より以下のような構造になっている。
+ 1レコード20バイトの固定長 時刻4バイト 緯度4バイト 経度4バイト 高度3バイト 速度4バイト チェックサム1バイト  また、m-241は時折書き込み先のメモリアドレスがずれることがあるようだ、との情報も見つかったため、 バイナリエディタで除いてみると、どうも4バイトずつずれて記録されたデータがあるようだった。
+そこで
+ レコードの先頭バイトを4バイトずつオフセットさせて読み込んでみる 緯度と経度が日本付近のものと思われるものを片っ端から拾う 時刻は整数型なのでとりあえず読み込む 高度、速度のデータは無視！  という方針でMathematicaのプログラムを書いてみた。
+data = Table[Module[{str, ret}, str = OpenRead[&quot;2016091200.bin&quot;, BinaryFormat -&gt; True]; (* 最初に余分にiバイト読み込んで先頭をずらす *) Do[ BinaryRead[str, &quot;Byte&quot;], {i} ]; (* バイナリ形式で読み込む *) ret = Cases[ MapIndexed[ {First[#2], Sequence @@ #1} &amp;, BinaryReadList[ str, {&quot;Integer32&quot;, &quot;Real32&quot;, &quot;Real32&quot;, &quot;Byte&quot;, &quot;Byte&quot;, &quot;Byte&quot;, &quot;Real32&quot;, &quot;Byte&quot;}] ], {count_, d_Integer, lat_Real, lon_Real, __} /; (30 &lt; lat &lt; 40 &amp;&amp; 125 &lt; lon &lt; 140) :&gt; {count, DateString[DatePlus[{1970, 1, 1, 0, 0, 0}, {d, &quot;Second&quot;}], {&quot;Year&quot;, &quot;-&quot;, &quot;Month&quot;, &quot;-&quot;, &quot;Day&quot;, &quot;T&quot;, &quot;Time&quot;, &quot;Z&quot;}], lat, lon}]; Close[str]; ret ], {i, 0, 19, 4}];  ※ 2016091200.
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/manage_firefox_settings_with_group_policy_without_gpo_for_firefox/" rel="bookmark">Firefoxをグループポリシーで管理する</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2016-07-12T22:07:00">July 12, 2016</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			公式の情報はこちら : https://www.mozilla.jp/business/faq/tech/setting-management/
+上記公式サイトにあるように、ActiveDirectory環境にあるFirefoxの設定を管理する場合、
+ クライアント側にアドオン(GPO for Firefox)をインストール サーバ側に管理用テンプレート(ADMファイル)を配置 グループポリシーエディタで設定を編集  という手順が推奨されている。ただ、この方法だと
+ 既存ユーザへの自動設定は不可(ユーザにアドオンをインストールしてもらう必要がある) ユーザがアドオンを無効化してしまう可能性がある 最新のバージョンで追加された設定項目がない場合がある  といったデメリットがあるので、公式サイト中で「MCD用設定ファイルでの実現」という方法で行うことにした。
+要件は以下の通り。
+ Firefoxアカウントを使ったパスワード等の同期をさせない 強制的に最新版にアップデートさせる たまにしか社内LANにアクセスしない端末でも設定を反映させたい (公式サイトの「すべてのクライアントの設定を管理者が一括して変更したい」では常時社内LANにアクセスできる端末である必要がある)  手順は以下の通り。
+ 「autoconfig.js」と「autoconfig.cfg」を公式サイトの例にしたがって記述  autoconfig.js
+pref(&quot;general.config.filename&quot;, &quot;autoconfig.cfg&quot;); pref(&quot;general.config.vendor&quot;, &quot;autoconfig&quot;); pref(&quot;general.config.obscure_value&quot;, 0);  autoconfig.cfg (ここではFirefoxアカウントによる同期の不許可と、自動アップデートの有効化を設定)
+lockPref(&quot;loop.enabled&quot;, false); lockPref(&quot;services.sync.enabled&quot;, false); lockPref(&quot;services.sync.engine.addons&quot;, false); lockPref(&quot;services.sync.engine.bookmarks&quot;, false); lockPref(&quot;services.sync.engine.history&quot;, false); lockPref(&quot;services.sync.engine.passwords&quot;, false); lockPref(&quot;services.sync.engine.prefs&quot;, false); lockPref(&quot;services.sync.engine.tabs&quot;, false); lockPref(&quot;app.update.enabled&quot;, true); lockPref(&quot;app.update.auto&quot;, true); lockPref(&quot;browser.search.update&quot;, true);   「autoconfig.js」と「autoconfig.cfg」を一般ユーザが読み取り可能なフォルダに配置 (例えば「\ドメインコントローラ\SYSVOL\ドメイン名\Deployment」など) グループポリシーの「コンピュータの構成」「基本設定」「Windowsの設定」「ファイル」を使い、 「autoconfig.js」と「autoconfig.cfg」を公式サイトで指定されたフォルダに配置。    64bit版Windowsに32bit版Firefoxがインストールされている場合は、「項目レベルで対象化する」にチェックし、 「Processor_Architecture」に「AMD64」を設定し、「%PROGRAMFILES(X86)%\Mozilla Firefox」に配置する。 ※ 両方ある場合は2つずつ設定する     最後に実際にクライアントPCにファイルが反映され、Firefoxのabout:configで設定されていることを確認
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/convert-dvd-to-mpeg-in-a-batch-file/" rel="bookmark">ffmpegでDVDをMPEGファイルに変換</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2015-12-17T20:49:00">December 17, 2015</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			 社内でアシスタントからDVDをPCで再生できるようにしたい、という要望を受けたので、 DVDを入れて起動するだけのバッチファイルを作ってみた。
+DVDの中身のVTS_01_1.VOB, VTS_01_2.VOBというファイルをffmpegの-iオプションに指定すれば良いのだが、 パイプ記号「|」を使ってファイル名を連結しなければならない。 ただ、バッチファイル中でパイプ記号が入ると上手く連結できないので、 試行錯誤の結果、一旦「$$」という文字を挟んで連結した後、パイプ記号に変換、という手順になった。
+使い方  以下のテキストをメモ帳にコピー＆ペースト 下のテキスト中でFドライブを指定している部分を各自のドライブ名に変更 拡張子をbatにして保存 DVDを入れてバッチファイルを起動  原則としてバッチファイルと同じフォルダにdvd_yyyymmdd.mpegというファイルが出来上がる
+@ECHO OFF ECHO DVDから普通の動画ファイルへ変換を行います。 ECHO DVDがFドライブに入っていることを確認してください。 PAUSE SET A= FOR %%F IN (&quot;F:\VIDEO_TS\VTS_01_*.VOB&quot;) DO CALL SET A=%%A%%$$%%F SET TIME_TMP=%TIME: =0% SET NOW=%DATE:/=%%TIME_TMP:~0,2%%TIME_TMP:~3,2%%TIME_TMP:~6,2% SET B=&quot;%A:$$=|%&quot; ffmpeg -i &quot;concat:%B:~2,-1%&quot; -target ntsc-dvd -vcodec copy -acodec copy dvd_%NOW%.mpeg ECHO 変換が終了しました。 ECHO 出力ファイル: %~dp0 dvd_%NOW%.mpeg PAUSE  
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/change-c-compiler-in-mathematica/" rel="bookmark">CompileするCコンパイラを変更する</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2015-12-08T17:40:00">December 08, 2015</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			Mathematica 8から、CompileでCコンパイラを使って直接ネイティブコードにコンパイルできるようになった。 使用するCコンパイラは、
+Needs[&quot;CCompilerDriver`&quot;]; CCompilerDriver`$CCompiler = { &quot;Name&quot; -&gt; &quot;GCC&quot;, &quot;Compiler&quot; -&gt; CCompilerDriver`GCCCompiler`GCCCompiler, &quot;CompilerInstallation&quot; -&gt; &quot;/usr/bin&quot;, &quot;CompilerName&quot; -&gt; Automatic };  というように、CCompilerDriver`$CCompilerを変更して指定する。
+以前からのCompile(&ldquo;WVM&rdquo;)と、各コンパイラの比較のため、ベンチマークを行ってみた。 検証環境は以下の通り。
+ CPU: Intel Core-i7 3770 (インテル® HT テクノロジー ON) OS: Ubuntu 14.04 LTS 64bit Memory: 16 GB DDR3 1333 MHz  検証するCコンパイラは、GCC、Intel C++ Compiler、Clangの3種類。
+ gcc: (Ubuntu 4.8.4-2ubuntu1~14.04) 4.8.4 icc: icc (ICC) 14.0.3 20140422 clang: Ubuntu clang version 3.4-1ubuntu3 (tags/RELEASE_34/final) (based on LLVM 3.4)  Mathematicaコードは以下。1/i^2を総和してπ^2/6を求める単純な計算を行った。 ※私の環境ではICCは/media/storage/intel/compserxe/binにインストールしているので下記コードを使用する場合は注意。
+		</div>
+	</div>
+</article>
+
+
+		
+<div class="pagination clearfix">
+	<span class="pagination__item pagination__item--current">1/5</span>
+	<a class="pagination__item pagination__item--next" href="/categories/%E9%9B%91%E8%A8%98%E5%B8%B3/page/2/">»</a>
+</div>
+
+	</div>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+<div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
+		<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://330k.github.io/" />
+	</form>
+</div>
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/essay/input_backslach_with_us_keyboard_layout/">英語版Windows PE環境でバックスラッシュを入力</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/xubuntu1604_snort_base/">Xubuntu 16.04 &#43; Snortで簡易IDS構築</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/create_zip_file_with_wsh_jscript/">Windows標準機能でZIPファイルの作成</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/detect_submittion_to_private_mail_from_gmail/">Gmail (G Suite)でフリーメールアドレスへの送信を検知</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/make_font_embedded_pdf_from_edinet/">EDINETが生成するPDFにフォントを埋め込む</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/performance_degration_of_kanjo_bugyo/">勘定奉行の性能劣化に対処</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/rescue_gps_log_from_binary_data_of_holux_m241/">m-241のバイナリデータからトラックログを吸い出す</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/manage_firefox_settings_with_group_policy_without_gpo_for_firefox/">Firefoxをグループポリシーで管理する</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/convert-dvd-to-mpeg-in-a-batch-file/">ffmpegでDVDをMPEGファイルに変換</a></li>
+			<li class="widget__item"><a class="widget__link" href="/essay/change-c-compiler-in-mathematica/">CompileするCコンパイラを変更する</a></li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/%e3%82%bd%e3%83%95%e3%83%88%e3%82%a6%e3%82%a7%e3%82%a2">ソフトウェア</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e8%87%aa%e8%bb%a2%e8%bb%8a">自転車</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e9%9b%91%e8%a8%98%e5%b8%b3">雑記帳</a></li>
+		</ul>
+	</div>
+</div>
+	
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/330k" target="_blank">
+				<svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#fff"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+	</div>
+</div>
+	
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget__link widget__link--taglist" href="/tags/.net" title=".net">.net (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/bat" title="bat">bat (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/chrome" title="chrome">chrome (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/gmail" title="gmail">gmail (2)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/google-maps" title="google-maps">google-maps (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/gps" title="gps">gps (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/gpx" title="gpx">gpx (5)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/hta" title="hta">hta (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/java" title="java">java (2)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/javascript" title="javascript">javascript (3)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mathematica" title="mathematica">mathematica (17)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/powerpoint" title="powerpoint">powerpoint (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/sql" title="sql">sql (3)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/ubuntu" title="ubuntu">ubuntu (6)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/vba" title="vba">vba (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/wsh" title="wsh">wsh (2)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e3%82%a2%e3%83%ab%e3%82%b4%e3%83%aa%e3%82%ba%e3%83%a0" title="アルゴリズム">アルゴリズム (4)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%84%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0" title="ツーリング">ツーリング (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%91%e3%83%af%e3%83%8f%e3%83%a9" title="パワハラ">パワハラ (5)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e7%94%9f%e6%b4%bb" title="生活">生活 (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e7%a4%be%e5%86%85se" title="社内se">社内se (10)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e8%87%aa%e8%bb%a2%e8%bb%8a" title="自転車">自転車 (9)</a>
+	</div>
+</div>
+</aside>
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2017 330k info. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+</body>
+</html>

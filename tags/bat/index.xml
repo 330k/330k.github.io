@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bat on 330k info</title>
+    <link>https://330k.github.io/tags/bat/</link>
+    <description>Recent content in Bat on 330k info</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Dec 2015 20:49:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://330k.github.io/tags/bat/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ffmpegでDVDをMPEGファイルに変換</title>
+      <link>https://330k.github.io/essay/convert-dvd-to-mpeg-in-a-batch-file/</link>
+      <pubDate>Thu, 17 Dec 2015 20:49:00 +0900</pubDate>
+      
+      <guid>https://330k.github.io/essay/convert-dvd-to-mpeg-in-a-batch-file/</guid>
+      <description> 社内でアシスタントからDVDをPCで再生できるようにしたい、という要望を受けたので、 DVDを入れて起動するだけのバッチファイルを作ってみた。
+DVDの中身のVTS_01_1.VOB, VTS_01_2.VOBというファイルをffmpegの-iオプションに指定すれば良いのだが、 パイプ記号「|」を使ってファイル名を連結しなければならない。 ただ、バッチファイル中でパイプ記号が入ると上手く連結できないので、 試行錯誤の結果、一旦「$$」という文字を挟んで連結した後、パイプ記号に変換、という手順になった。
+使い方  以下のテキストをメモ帳にコピー＆ペースト 下のテキスト中でFドライブを指定している部分を各自のドライブ名に変更 拡張子をbatにして保存 DVDを入れてバッチファイルを起動  原則としてバッチファイルと同じフォルダにdvd_yyyymmdd.mpegというファイルが出来上がる
+@ECHO OFF ECHO DVDから普通の動画ファイルへ変換を行います。 ECHO DVDがFドライブに入っていることを確認してください。 PAUSE SET A= FOR %%F IN (&amp;quot;F:\VIDEO_TS\VTS_01_*.VOB&amp;quot;) DO CALL SET A=%%A%%$$%%F SET TIME_TMP=%TIME: =0% SET NOW=%DATE:/=%%TIME_TMP:~0,2%%TIME_TMP:~3,2%%TIME_TMP:~6,2% SET B=&amp;quot;%A:$$=|%&amp;quot; ffmpeg -i &amp;quot;concat:%B:~2,-1%&amp;quot; -target ntsc-dvd -vcodec copy -acodec copy dvd_%NOW%.mpeg ECHO 変換が終了しました。 ECHO 出力ファイル: %~dp0 dvd_%NOW%.mpeg PAUSE  </description>
+    </item>
+    
+  </channel>
+</rss>
