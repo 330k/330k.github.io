@@ -98,14 +98,46 @@
 </figure>
 
 
-<p>計算方法|誤差の絶対値
--:-|&ndash;:
-GeoDistance(&ldquo;Vincenty75&rdquo;)|7.119 * 10^-12
-GeoDistance(&ldquo;Robbin61&rdquo;)|9.536 * 10^-1
-GeoDistance(&ldquo;ExtendedNewtonRaphson&rdquo;)|1.247 * 10^-6
-ヒュベニの式|2.022 * 10^1
-測量計算サイト計算式|6.682 * 10^-3
-完全球体モデル|6.410 * 10^-3</p>
+<table>
+<thead>
+<tr>
+<th>計算方法</th>
+<th>誤差の絶対値</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>GeoDistance(&ldquo;Vincenty75&rdquo;)</td>
+<td>7.119 * 10^-12</td>
+</tr>
+
+<tr>
+<td>GeoDistance(&ldquo;Robbin61&rdquo;)</td>
+<td>9.536 * 10^-1</td>
+</tr>
+
+<tr>
+<td>GeoDistance(&ldquo;ExtendedNewtonRaphson&rdquo;)</td>
+<td>1.247 * 10^-6</td>
+</tr>
+
+<tr>
+<td>ヒュベニの式</td>
+<td>2.022 * 10^1</td>
+</tr>
+
+<tr>
+<td>測量計算サイト計算式</td>
+<td>6.682 * 10^-3</td>
+</tr>
+
+<tr>
+<td>完全球体モデル</td>
+<td>6.410 * 10^-3</td>
+</tr>
+</tbody>
+</table>
 
 <p>以上の結果からわかることをまとめると、</p>
 
@@ -129,15 +161,75 @@ GeoDistance(&ldquo;ExtendedNewtonRaphson&rdquo;)|1.247 * 10^-6
 <p>Google Mapsで枕崎駅から稚内駅まで一般道路のみの経路を計算させ、その結果を400点に削減したものを用いた。
 使用したデータは<a href="makurazaki_wakkanai_reduced.gpx">makurazaki_wakkanai_reduced.gpx</a>である。</p>
 
-<p>計算方法|計算された距離(m)|誤差|計算時間 (ms)|計算時間(Compile使用時) (ms)
--:-|&ndash;:|&ndash;:|&ndash;:|&ndash;:
-GeographicLib|2,541,657.039 259 448|-|212 (JLink使用)|-
-GeoDistance(&ldquo;Vincenty75&rdquo;)|2,541,657.039 264 922|2.154 * 10 ^ -12|500|-
-GeoDistance(&ldquo;Robbin61&rdquo;)|2,538,452.677 040 755|1.261 * 10 ^ -3|672|-
-GeoDistance(&ldquo;ExtendedNewtonRaphson&rdquo;)|2,541,656.533 178 208|1.991 * 10 ^ -7|516|-
-ヒュベニの式|2,541,657.194 841 664|6.121 * 10 ^ -8|152|0.36
-測量計算サイト計算式|2,541,657.039 253 852|2.202 * 10 ^ -12|124|0.56
-完全球体モデル|2,544,345.085 547 101|1.058 * 10 ^ -3|12|0.32</p>
+<table>
+<thead>
+<tr>
+<th>計算方法</th>
+<th>計算された距離(m)</th>
+<th>誤差</th>
+<th>計算時間 (ms)</th>
+<th>計算時間(Compile使用時) (ms)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>GeographicLib</td>
+<td>2,541,657.039 259 448</td>
+<td>-</td>
+<td>212 (JLink使用)</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>GeoDistance(&ldquo;Vincenty75&rdquo;)</td>
+<td>2,541,657.039 264 922</td>
+<td>2.154 * 10 ^ -12</td>
+<td>500</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>GeoDistance(&ldquo;Robbin61&rdquo;)</td>
+<td>2,538,452.677 040 755</td>
+<td>1.261 * 10 ^ -3</td>
+<td>672</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>GeoDistance(&ldquo;ExtendedNewtonRaphson&rdquo;)</td>
+<td>2,541,656.533 178 208</td>
+<td>1.991 * 10 ^ -7</td>
+<td>516</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>ヒュベニの式</td>
+<td>2,541,657.194 841 664</td>
+<td>6.121 * 10 ^ -8</td>
+<td>152</td>
+<td>0.36</td>
+</tr>
+
+<tr>
+<td>測量計算サイト計算式</td>
+<td>2,541,657.039 253 852</td>
+<td>2.202 * 10 ^ -12</td>
+<td>124</td>
+<td>0.56</td>
+</tr>
+
+<tr>
+<td>完全球体モデル</td>
+<td>2,544,345.085 547 101</td>
+<td>1.058 * 10 ^ -3</td>
+<td>12</td>
+<td>0.32</td>
+</tr>
+</tbody>
+</table>
 
 <p>この表から、ヒュベニの式は7桁程度の精度が出ているが、
 Google Maps APIのDirections Serviceで得られる緯度と経度の精度は7〜8桁(小数点以下5桁)なので、

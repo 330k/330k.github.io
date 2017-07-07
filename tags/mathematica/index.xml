@@ -109,11 +109,7 @@ backPropagation[pct : perceptron[w : {__}], x_List, teach_List, rate_: 1] := Mod
 y = xの直線上にあれば正確ということだが、GeoDistanceの&amp;rdquo;Robbin61&amp;rdquo;では1万kmを超えると実際よりも極端に短く計算してしまうようだ。
 またヒュベニの式は実際よりも長く計算することが多く、そのような場合について調べてみると高緯度になるほど誤差が大きくなることが分かった。
 同じ計算結果を誤差についてプロットしたものが下図である。また表は各計算方法の最大誤差である。
- 計算方法|誤差の絶対値 -:-|&amp;ndash;: GeoDistance(&amp;ldquo;Vincenty75&amp;rdquo;)|7.119 * 10^-12 GeoDistance(&amp;ldquo;Robbin61&amp;rdquo;)|9.536 * 10^-1 GeoDistance(&amp;ldquo;ExtendedNewtonRaphson&amp;rdquo;)|1.247 * 10^-6 ヒュベニの式|2.022 * 10^1 測量計算サイト計算式|6.682 * 10^-3 完全球体モデル|6.410 * 10^-3
-以上の結果からわかることをまとめると、
- MathematicaのGeoDistanceで最も精度が良いのはデフォルトのVincenty75で、常に11桁程度の精度を持っている。 Robbin61は1万km以内でも2桁程度で、1万kmを超えると実用にならない(誤差95%)。 ExtendedNewtonRaphsonは5桁程度の精度。 高緯度(極付近)が含まれる場合はヒュベニの式は精度が出ない(誤差2000%(!))。 測量計算サイトの計算式は1万kmまでは10桁程度の精度が出ていたが、1万kmを超えると2桁程度(誤差0.7%)まで一気に落ちる。 完全球体として計算する、Google EarthやGoogle Mapsの計算は2桁の精度(誤差0.6%)。  ただし、測量計算サイトの計算式については、測量計算サイトのフォームに入力して計算させると常にほぼ正しい結果が返ってくるので、ドキュメントと異なる計算が行われているのではないかと考えられる。 反復計算の収束閾値を変えてみても結果はほぼ変わらなかった。
-日本付近におけるパスの長さを計算する場合の精度と計算時間 次に、もう少し実用的(ここでいう実用的とは専門家ではなく一般人にとって)な場合を考えて、 鹿児島県の枕崎から北海道の稚内までの運転経路の道のりの長さを計算させてみた。
-Google Mapsで枕崎駅から稚内駅まで一般道路のみの経路を計算させ、その結果を400点に削減したものを用いた。 使用したデータはmakurazaki_wakkanai_reduced.</description>
+    計算方法 誤差の絶対値     GeoDistance(&amp;ldquo;Vincenty75&amp;rdquo;) 7.119 * 10^-12   GeoDistance(&amp;ldquo;Robbin61&amp;rdquo;) 9.536 * 10^-1   GeoDistance(&amp;ldquo;ExtendedNewtonRaphson&amp;rdquo;) 1.247 * 10^-6   ヒュベニの式 2.022 * 10^1   測量計算サイト計算式 6.682 * 10^-3   完全球体モデル 6.</description>
     </item>
     
     <item>
