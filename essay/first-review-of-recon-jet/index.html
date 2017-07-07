@@ -74,15 +74,21 @@ ANT+対応の心拍計などは持っていないので、Recon JET単体での�
 <p>Recon JET(赤線)とm-241(青線)のGPSログ比較。</p>
 
 <div id="map-canvas" style="width: 100%; height:500px; margin:0; padding: 0"></div>
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyCir56M7J9LT4-3wDVgG8etGo_HPSMWVBk"></script>
 <script>
-  var map = new google.maps.Map(document.getElementById('map-canvas'));
-  var ctaLayer = new google.maps.KmlLayer({
+function initMap(){
+  var map,
+    ctaLayer;
+  map = new google.maps.Map(document.getElementById("map-canvas"), {
+    center: {lat: 35.6832581, lng: 139.7555827},
+    zoom: 8
+  });
+  ctaLayer = new google.maps.KmlLayer({
     url: "\/essay\/first-review-of-recon-jet\/2015081602.kml"
   });
   ctaLayer.setMap(map);
+}
 </script>
-
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCir56M7J9LT4-3wDVgG8etGo_HPSMWVBk&callback=initMap" async defer></script>
 
 <h2 id="バッテリー">バッテリー</h2>
 
