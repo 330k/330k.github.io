@@ -959,6 +959,16 @@ A = {ax, ay}; B = {bx, by}; P = {px, py}; H = {x, y}; Solve[{ (H - A).(P - H) ==
     </item>
     
     <item>
+      <title>2009年02月08日 お台場ポタリング</title>
+      <link>https://330k.github.io/bicycle/touring/20090208-odaiba/</link>
+      <pubDate>Sun, 08 Feb 2009 21:41:14 +0900</pubDate>
+      
+      <guid>https://330k.github.io/bicycle/touring/20090208-odaiba/</guid>
+      <description>  function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/330k.github.io\/\/bicycle\/touring\/20090208-odaiba\/20090208.kml&#34; }); ctaLayer.setMap(map); }   譲ってもらったロードレーサーに慣れるため、 翌週用事のあった東京ガス深川グラウンドまでの道の下見を兼ねて、 海が見える方向を目指して気ままに走った。
+        </description>
+    </item>
+    
+    <item>
       <title>2008年08月18日 相模湖</title>
       <link>https://330k.github.io/bicycle/touring/20080818-sagamiko/</link>
       <pubDate>Mon, 18 Aug 2008 00:00:00 +0900</pubDate>
