@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VBAでビットマップ(bmp)を読み書き</title>
+<title>2009年03月08日～10日 今市</title>
 <meta name="description" content="自転車ツーリングの記録やソフトウェアの配布、Mathematicaをメインにしたプログラミングの覚書や日ごろの雑感など。">
 <meta name="generator" content="Hugo 0.21" />
 
@@ -39,284 +39,205 @@
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">VBAでビットマップ(bmp)を読み書き</h1>
+			<h1 class="post__title">2009年03月08日～10日 今市</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2010-09-22T00:00:00">September 22, 2010</time>
+				<time class="post__meta-date" datetime="2009-03-08T21:41:45">March 08, 2009</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-					<a class="meta-categories__link" href="/categories/%e9%9b%91%e8%a8%98%e5%b8%b3" rel="category">雑記帳</a></span>
+					<a class="meta-categories__link" href="/categories/%e8%87%aa%e8%bb%a2%e8%bb%8a" rel="category">自転車</a></span>
 			</p>
 		</header>
 		<div class="post__content clearfix">
 			
 
-<p>会社のPCでは自由にソフトウェアをインストールすることができないので、業務で使いそうなものはExcel VBAで自作していくことにした。
-まずは手始めに24ビットビットマップの読み書きを行う標準モジュールを作成した。
-VBAの機能のみで実装しており、外部のライブラリには依存しない。</p>
+<div id="map-canvas" style="width: 100%; height:500px; margin:0; padding: 0"></div>
+<script>
+function initMap(){
+  var map,
+    ctaLayer;
+  map = new google.maps.Map(document.getElementById("map-canvas"), {
+    center: {lat: 35.6832581, lng: 139.7555827},
+    zoom: 8
+  });
+  ctaLayer = new google.maps.KmlLayer({
+    url: "https:\/\/330k.github.io\/\/bicycle\/touring\/20090308-10-imaichi\/20090308-10.kml"
+  });
+  ctaLayer.setMap(map);
+}
+</script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCir56M7J9LT4-3wDVgG8etGo_HPSMWVBk&callback=initMap" async defer></script>
 
-<h2 id="使い方">使い方</h2>
+<p>ホッケー部の後輩たちが今市(栃木県日光市)にある今市青少年スポーツセンターで合宿をする、とのことなので、先輩OBと2人で自転車で参加することになった。</p>
+
+<h2 id="1日目">1日目</h2>
+
+<p>天候が最大の不安であったが、なんとか雨は降らない模様。
+先輩OBが住む北千住駅前で9時に待ち合わせのため、ホッケー用のウェアや靴をパニアバッグに詰め込んで自宅を8時過ぎに出発。</p>
+
+<p>明治通りを王子駅まですすみ、その後荒川まで北上、あとは荒川河川敷のサイクリングロードを千住大橋まで行ってから南に行って北千住駅まで走った。</p>
+
+<p>先輩と合流したら、江戸川サイクリングロードを目指す。
+下町の細い路地に多少迷いながらも江戸川に到着、あとはサイクリングロードを飛ばすだけ・・・と思っていたが、
+強烈な向かい風(季節風)
+単調な上り坂 (川沿いだから)
+休憩のタイミングがとりづらい(信号がない)
+ため思ったようには進めず、巡航速度も20km/hそこそこ。</p>
+
+
+<figure >
+    
+        <img src="CA3A0001.jpg" />
+    
+    
+</figure>
+
+
+<p>そのため当初は江戸川サイクリングロード→利根渡良瀬サイクリングロード→思川サイクリングロードと進む予定だったがサイクリングロードメインのルートは断念し、国道16号に出て吉野家で昼食をとった後、国道4号バイパスを通ることに。
+国道4号バイパスは側道が広くて自転車にとっては非常に走りやすい。
+ただ物資補給のために立ち寄りたいコンビニが少なかった。</p>
+
+<p>
+<figure >
+    
+        <img src="CA3A0003.jpg" />
+    
+    
+</figure>
+
+
+<figure >
+    
+        <img src="CA3A0008.jpg" />
+    
+    
+</figure>
+</p>
+
+<p>順調に埼玉県→茨城県→栃木県と進み、しばらくして国道4号旧道に入り、雀宮駅前にある1日目の宿に到着。</p>
+
+
+<figure >
+    
+        <img src="CA3A0017.jpg" />
+    
+    
+</figure>
+
+
+<p>自転車をホテルに置いた後、電車で宇都宮に行って餃子を食べて翌日に備えた。</p>
 
 <ul>
-<li>以下のソースをOfficeのマクロで標準モジュールとしてプロジェクトへ追加する。</li>
-<li>ReadBitmap(&ldquo;C:***.bmp&rdquo;)で、RGBTRIPLE型の2次元配列が返る。</li>
-<li>読み込みは一応1, 4, 8, 24, 32ビットのビットマップファイルに対応。</li>
-<li>WriteBitmap24(&ldquo;C:***.bmp&rdquo;)で24ビットのビットマップファイルを書き込む。</li>
-<li>おまけ機能として、ReadGIFJPEGでGIFとJPEGファイルも読み込みにも対応。</li>
+<li>走行時間 : 6時間3分26秒</li>
+<li>走行距離 : 119.45km</li>
+<li>平均速度 : 19.7km/h</li>
+<li>最高速度 : 41.5km/h</li>
 </ul>
 
-<pre><code class="language-VBScript">' Bitmap module by 330k
-' Copyright (C) 2010 330k, All rights reserved.
-Option Explicit
+<h2 id="2日目">2日目</h2>
 
-Public Type RGBTRIPLE
-    rgbBlue As Byte
-    rgbGreen As Byte
-    rgbRed As Byte
-End Type
+<p>朝起きたところ夜に雨が降った様子もなく、路面の状態は良好。
+いざ今市青少年スポーツセンターへ。</p>
 
-Private Type RGBQUAD
-    rgbBlue As Byte
-    rgbGreen As Byte
-    rgbRed As Byte
-    rgbReserved As Byte
-End Type
-Private Type BITMAPFILEHEADER
-    bfType As String * 2
-    bfSize As Long
-    bfReserved1 As Integer
-    bfReserved2 As Integer
-    bjOffBits As Long
-End Type
-Private Type BitmapInfoHeader
-    biSize As Long
-    biWidth As Long
-    biHeight As Long
-    biPlanes As Integer
-    biBitCount As Integer
-    biCompression As Long
-    biSizeImaze As Long
-    biXPixPerMeter As Long
-    biYPixPerMeter As Long
-    biClrUsed As Long
-    biClrImporant As Long
-End Type
+<p>朝9時半に宿を出発・・・のはずが、先輩の自転車の後輪がパンクしていたため、その場で修理し結局10時に出発。</p>
 
-' Read a bitmap file (1, 4, 8, 24 and 32 bit) and return image as 2-dimension array of RGBTriple
-Public Function ReadBitmap(strFileName As String) As RGBTRIPLE()
-    Dim i As Long
-    Dim j As Long
-    Dim n As Long
-    Dim intFileNumber As Integer
-    Dim bjHeader As BITMAPFILEHEADER
-    Dim biHeader As BitmapInfoHeader
-    Dim lngColors As Long
-    Dim rgbData() As RGBTRIPLE
-    Dim rgbTemp As RGBTRIPLE
-    Dim rgbTable3() As RGBTRIPLE
-    Dim rgbTable4() As RGBQUAD
-    Dim bytTemp As Byte
-    
-    intFileNumber = FreeFile()
-    Open strFileName For Binary As intFileNumber
-        Get intFileNumber, , bjHeader
-        Get intFileNumber, , biHeader
-        
-        ReDim rgbData(0 To biHeader.biHeight - 1, 0 To biHeader.biWidth - 1) As RGBTRIPLE
-        n = (4 - (-(Int(-biHeader.biWidth * (biHeader.biBitCount / 8))) Mod 4)) Mod 4
-        lngColors = IIf(biHeader.biClrUsed = 0, 2 ^ biHeader.biBitCount, biHeader.biClrUsed)
-        
-        Select Case biHeader.biBitCount
-        Case 1
-            ReDim rgbTable4(0 To lngColors - 1) As RGBQUAD
-            Get intFileNumber, , rgbTable4
-            rgbTable3 = ConvertRGBQuadToRGBTriple(rgbTable4)
-            
-            For i = UBound(rgbData, 1) To 0 Step -1
-                For j = 0 To UBound(rgbData, 2) Step 8
-                    Get intFileNumber, , bytTemp
-                    
-                    rgbData(i, j) = rgbTable3(bytTemp \ 128)
-                    If j + 1 &lt;= UBound(rgbData, 2) Then rgbData(i, j + 1) = rgbTable3(bytTemp \ 64 And 1)
-                    If j + 2 &lt;= UBound(rgbData, 2) Then rgbData(i, j + 2) = rgbTable3(bytTemp \ 32 And 1)
-                    If j + 3 &lt;= UBound(rgbData, 2) Then rgbData(i, j + 3) = rgbTable3(bytTemp \ 16 And 1)
-                    If j + 4 &lt;= UBound(rgbData, 2) Then rgbData(i, j + 4) = rgbTable3(bytTemp \ 8 And 1)
-                    If j + 5 &lt;= UBound(rgbData, 2) Then rgbData(i, j + 5) = rgbTable3(bytTemp \ 4 And 1)
-                    If j + 6 &lt;= UBound(rgbData, 2) Then rgbData(i, j + 6) = rgbTable3(bytTemp \ 2 And 1)
-                    If j + 7 &lt;= UBound(rgbData, 2) Then rgbData(i, j + 7) = rgbTable3(bytTemp And 1)
-                    
-                Next
-                For j = 1 To n
-                    Get intFileNumber, , bytTemp
-                Next
-            Next
-            
-        Case 4
-            ReDim rgbTable4(0 To lngColors - 1) As RGBQUAD
-            Get intFileNumber, , rgbTable4
-            rgbTable3 = ConvertRGBQuadToRGBTriple(rgbTable4)
-            
-            For i = UBound(rgbData, 1) To 0 Step -1
-                For j = 0 To UBound(rgbData, 2) Step 2
-                    Get intFileNumber, , bytTemp
-                    
-                    rgbData(i, j) = rgbTable3(bytTemp \ 16)
-                    If j + 1 &lt;= UBound(rgbData, 2) Then rgbData(i, j + 1) = rgbTable3(bytTemp And 15)
-                Next
-                For j = 1 To n
-                    Get intFileNumber, , bytTemp
-                Next
-            Next
-            
-        Case 8
-            ReDim rgbTable4(0 To lngColors - 1) As RGBQUAD
-            Get intFileNumber, , rgbTable4
-            rgbTable3 = ConvertRGBQuadToRGBTriple(rgbTable4)
-            
-            For i = UBound(rgbData, 1) To 0 Step -1
-                For j = 0 To UBound(rgbData, 2)
-                    Get intFileNumber, , bytTemp
-                    rgbData(i, j) = rgbTable3(bytTemp)
-                Next
-                For j = 1 To n
-                    Get intFileNumber, , bytTemp
-                Next
-            Next
-            
-        Case 24
-            For i = UBound(rgbData, 1) To 0 Step -1
-                For j = 0 To UBound(rgbData, 2)
-                    Get intFileNumber, , rgbData(i, j)
-                Next
-                For j = 1 To n
-                    Get intFileNumber, , bytTemp
-                Next
-            Next
-            
-        Case 32
-            ReDim rgbTable4(0 To biHeader.biHeight - 1, 0 To biHeader.biWidth - 1) As RGBQUAD
-            
-            Get intFileNumber, , rgbTable4
-            rgbData = ConvertRGBQuadToRGBTriple2(rgbTable4)
-            
-        End Select
-    Close
-    
-    ReadBitmap = rgbData
-End Function
+<p>国道4号旧道から国道119号へと日光街道をひたすら進む。
+宇都宮市街地を抜けると上り坂がきつくなる。</p>
 
-' Write a bitmap file (24-bit only) from 2-dimension array of RGBTriple
-Public Sub WriteBitmap24(strFileName As String, rgbData() As RGBTRIPLE)
-    Dim i As Long
-    Dim j As Long
-    Dim n As Long
-    Dim lngWidth As Long
-    Dim lngHeight As Long
-    Dim intFileNumber As Integer
-    Dim bjHeader As BITMAPFILEHEADER
-    Dim biHeader As BitmapInfoHeader
-    Dim bytTemp As Byte
-    
-    lngHeight = UBound(rgbData, 1) + 1
-    lngWidth = UBound(rgbData, 2) + 1
-    n = (4 - (lngWidth * 3 Mod 4)) Mod 4
-    
-    With bjHeader
-        .bfType = &quot;BM&quot;
-        .bfSize = Len(bjHeader) + Len(biHeader) + 3 * lngHeight * lngWidth
-        .bjOffBits = Len(bjHeader) + Len(biHeader)
-    End With
-    With biHeader
-        .biSize = 40
-        .biWidth = lngWidth
-        .biHeight = lngHeight
-        .biPlanes = 1
-        .biBitCount = 24
-        .biCompression = 0
-        .biSizeImaze = 3 * lngHeight * lngWidth
-        .biXPixPerMeter = 3780
-        .biYPixPerMeter = 3780
-        .biClrUsed = 0
-        .biClrImporant = 0
-    End With
-    
-    If Len(Dir(strFileName)) Then
-        Kill strFileName
-    End If
-    
-    intFileNumber = FreeFile()
-    Open strFileName For Binary As intFileNumber
-        Put intFileNumber, , bjHeader
-        Put intFileNumber, , biHeader
-        
-        For i = lngHeight - 1 To 0 Step -1
-            For j = 0 To lngWidth - 1
-                Put intFileNumber, , rgbData(i, j)
-            Next
-            For j = 1 To n
-                Put intFileNumber, , bytTemp
-            Next
-        Next
-    Close
-End Sub
+<p>地図に書いてあるセブンイレブンに着いたら休憩しよう、と坂を登り続けていたら、
+交差点で「今市青少年スポーツセンター 2.3km→」という標識に出くわす。
+気がつかないうちにセブンイレブンを通過していたようだ。</p>
 
-' Read GIF or JPEG files as RGBTRIPLE()
-Public Function ReadGIFJPEG(strFileName As String) As RGBTRIPLE()
-    Dim objPicture As IPictureDisp
-    Dim strTempFile As String
-    
-    Set objPicture = LoadPicture(strFileName)
-    strTempFile = GetTempName()
-    
-    SavePicture objPicture, strTempFile
-    
-    ReadGIFJPEG = ReadBitmap(strTempFile)
-    
-    Kill strTempFile
-End Function
 
-' Private Functions
-Private Function ConvertRGBQuadToRGBTriple(rgbSource() As RGBQUAD) As RGBTRIPLE()
-    Dim i As Long
-    Dim j As Long
-    Dim rgbResult() As RGBTRIPLE
+<figure >
     
-    ReDim rgbResult(0 To UBound(rgbSource, 1)) As RGBTRIPLE
+        <img src="CA3A0023.jpg" />
     
-    For i = 0 To UBound(rgbSource, 1)
-        rgbResult(i).rgbBlue = rgbSource(i).rgbBlue
-        rgbResult(i).rgbGreen = rgbSource(i).rgbGreen
-        rgbResult(i).rgbRed = rgbSource(i).rgbRed
-    Next
     
-    ConvertRGBQuadToRGBTriple = rgbResult
-End Function
+</figure>
 
-Private Function ConvertRGBQuadToRGBTriple2(rgbSource() As RGBQUAD) As RGBTRIPLE()
-    Dim i As Long
-    Dim j As Long
-    Dim rgbResult() As RGBTRIPLE
+
+<p>正午過ぎに今市青少年スポーツセンターに到着したら、ちょうど現役部員も到着したところだった。</p>
+
+<p>スポーツセンター近くの蕎麦屋で鴨南蛮そばをいただき、午後は現役部員の練習に混ざった。</p>
+
+
+<figure >
     
-    ReDim rgbResult(0 To UBound(rgbSource, 1), 0 To UBound(rgbSource, 2)) As RGBTRIPLE
+        <img src="CA3A0032.jpg" />
     
-    For i = 0 To UBound(rgbSource, 1)
-        For j = 0 To UBound(rgbSource, 2)
-            rgbResult(i, j).rgbBlue = rgbSource(i, j).rgbBlue
-            rgbResult(i, j).rgbGreen = rgbSource(i, j).rgbGreen
-            rgbResult(i, j).rgbRed = rgbSource(i, j).rgbRed
-        Next
-    Next
     
-    ConvertRGBQuadToRGBTriple2 = rgbResult
-End Function
-</code></pre>
+</figure>
+
+
+<ul>
+<li>走行時間 : 1時間24分28秒</li>
+<li>走行距離 : 29.83km</li>
+<li>平均速度 : 21.2km/h</li>
+<li>最高速度 : 44.8km/h</li>
+</ul>
+
+<h2 id="3日目">3日目</h2>
+
+<p>午前中はホッケーの練習、昼食後腹がこなれてきた14時15分に出発。
+一気に東京を目指す。
+一緒に来た先輩OBはさらに福島のほうへ向かうとのことで、帰路は1人旅。</p>
+
+<p>往路で苦労して上った坂を一気に下ったが、宇都宮市街地までの20kmは平均30km/hを超えていた。
+途中雀の宮で1日目の宿によって、部屋に置き忘れていたバスタオルを回収。洗濯までしていただいていた。</p>
+
+<p>16時30分、45kmほど走ったところで小金井のマクドナルドで30分ほど小休憩。
+シェイクとアップルパイで糖分を補給。
+先輩はもう今日の目的地に到着したとのメールが来る。</p>
+
+<p>
+<figure >
+    
+        <img src="CA3A0034.jpg" />
+    
+    
+</figure>
+
+
+<figure >
+    
+        <img src="CA3A0035.jpg" />
+    
+    
+</figure>
+</p>
+
+<p>茨城県に入ったら空は真っ暗になり、初めての郊外長距離ナイトライドに突入。
+夜間に都心方面へ向かう車は少ないので車道でも走りやすい区間が続くが、郊外では街灯が少なく、対向車のライトなしでは路面がほとんど見えない。
+ナイトライドするときにはTOPEAKのムーンシャインのような20wクラスのランプが必要だと痛感した。</p>
+
+<p>日光街道沿いにはキロメートルポストが設置されているが、宇都宮では「東京まで99km」だったのが、進むにつれてどんどん数字が減っていくのはモチベーション維持には良い。
+だいたい15km走るごとにコンビニによって休憩と物資の補給を行いながら順調に国道4号旧道を進む。</p>
+
+<p>19時45分、走行距離が85kmとなり、埼玉県幸手市でバーミヤンに入って夕食をとる。</p>
+
+<p>その後国道4号はバイパスと合流し、自動車専用道路のような自転車が通れなさそうな道に変わる。
+大型車がばんばん通過するのだが、歩道もない。
+夜間で自転車進入禁止の標識を見逃していただけかもしれないが、側道を見つけたので避難する。</p>
+
+<p>いつのまにか東京都に入り、南千住で明治通りに入って100km以上走ってきた国道4号とお別れ。
+その後は田端駅を通って不忍通りまで抜け、あとはいつもの通学ルート。</p>
+
+<p>走行距離が130kmを超えたあたりから膝が悲鳴を上げてきたものの、23時20分に自宅へ到着。</p>
+
+<ul>
+<li>走行時間:5時間50分2秒</li>
+<li>走行距離:137.18km</li>
+<li>平均速度:23.5km/h</li>
+<li>最高速度:41.8km/h</li>
+</ul>
 
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/vba/" rel="tag">VBA</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/%E3%83%84%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0/" rel="tag">ツーリング</a></li>
 	</ul>
 </div>
 
@@ -325,10 +246,10 @@ End Function
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/essay/how-to-optimize-mathematica-programs/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Mathematicaにおけるプログラムの高速化手法</p></a>
+		<a class="post-nav__link" href="/bicycle/touring/20090208-odaiba/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">2009年02月08日 お台場ポタリング</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/essay/format-floating-number-for-s-dyna-with-java/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">LS-DYNA用の浮動小数点数をフォーマット</p></a>
+		<a class="post-nav__link" href="/bicycle/equipments/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">携行品・装備品</p></a>
 	</div>
 </nav>
 
