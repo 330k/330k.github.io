@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wsh on 330k info</title>
-    <link>https://330k.github.io/tags/wsh/</link>
+    <link>https://www2.330k.info/tags/wsh/</link>
     <description>Recent content in Wsh on 330k info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 08 May 2017 22:37:00 +0900</lastBuildDate>
     
-	<atom:link href="https://330k.github.io/tags/wsh/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www2.330k.info/tags/wsh/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Windows標準機能でZIPファイルの作成</title>
-      <link>https://330k.github.io/essay/create_zip_file_with_wsh_jscript/</link>
+      <link>https://www2.330k.info/essay/create_zip_file_with_wsh_jscript/</link>
       <pubDate>Mon, 08 May 2017 22:37:00 +0900</pubDate>
       
-      <guid>https://330k.github.io/essay/create_zip_file_with_wsh_jscript/</guid>
+      <guid>https://www2.330k.info/essay/create_zip_file_with_wsh_jscript/</guid>
       <description>JScriptで複数のテキストファイルを書き出し、それをZIPでまとめたかったので作成。 VBAやVBScript版を参考に作ってみた。
 参考サイト : http://kiq-creator.com/blog/?eid=33
 複数のファイルをZIP圧縮する際のコツとしては、CopyHereをするたびに待機すること。 CopyHereは非同期なので、すぐにJS側に制御が返ってくるが、 複数のファイルを一気にCopyHereしようとすると、「読み取りできません」とエラーが出る。
@@ -28,10 +28,10 @@ createZipFile( &amp;quot;zipファイルのパス&amp;quot;, [&amp;quot;圧縮�
     
     <item>
       <title>WSUSなしでWindows 10の広告をWindows Updateから非表示にする</title>
-      <link>https://330k.github.io/essay/disable_specific_windows_update_without_wsus/</link>
+      <link>https://www2.330k.info/essay/disable_specific_windows_update_without_wsus/</link>
       <pubDate>Wed, 08 Jul 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://330k.github.io/essay/disable_specific_windows_update_without_wsus/</guid>
+      <guid>https://www2.330k.info/essay/disable_specific_windows_update_without_wsus/</guid>
       <description>先月頃から、Windows 7の通知領域に「Windows 10を入手する」とか「無料アップグレードを予約」とかいう邪魔なMicrosoftの広告が入るようになってきた。 社内SEとしてはユーザに勝手にOSをアップグレードされるわけにはいかないので、消し去りたい。
 ネットを探してみると、やはり同様の悩みを持つ人は多いらしく、結論としては、
  GWX.exeとGWXUX.exeをタスクマネージャで強制終了する インストールされたWindows Updateの「KB3035583」をアンインストールする 再度Windows Updateがインストールさせようとしてくるので、KB3035583を右クリックして「非表示」にする  ということらしい。 → 参考サイト: 「Windows10を入手する」の通知が消えない＼(^o^)／

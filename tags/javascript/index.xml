@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javascript on 330k info</title>
-    <link>https://330k.github.io/tags/javascript/</link>
+    <link>https://www2.330k.info/tags/javascript/</link>
     <description>Recent content in Javascript on 330k info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 27 Jun 2017 22:42:38 +0900</lastBuildDate>
     
-	<atom:link href="https://330k.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www2.330k.info/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Unicodeステガノグラフィ with JavaScript</title>
-      <link>https://330k.github.io/software/plain-text-steganography-with-unicode/</link>
+      <link>https://www2.330k.info/software/plain-text-steganography-with-unicode/</link>
       <pubDate>Tue, 27 Jun 2017 22:42:38 +0900</pubDate>
       
-      <guid>https://330k.github.io/software/plain-text-steganography-with-unicode/</guid>
+      <guid>https://www2.330k.info/software/plain-text-steganography-with-unicode/</guid>
       <description>概要 ゼロ幅文字を使ってUnicodeのプレーンテキストにステガノグラフィを施す、 ブラウザのJavaScriptで動作するライブラリを書いてみた。 参考にしたのは以下のサイト
  [ZERO WIDTH SPACE を使って Unicode ステガノグラフィ]() [Unicode Text Steganography Encoders/Decoders]()  特徴としては以下の通り。
  デフォルトではゼロ幅文字として4種類を使用(U+200C, U+200D, U+202C, U+FEFF)し、2種類の時よりもエンコード後の文字数を減少(それでも1文字埋め込むために8文字増える) 使用する文字種はライブラリの使用者側で指定可能 使用する文字種に応じて自動的にコード長を変更(例: 2種類のときは1字(16bit)が16字になり、8種類のときは6字になる) 漢字とひらがな、カタカナの間や英単語間にゼロ幅文字を埋め込むことで、できる限り単語検索を邪魔しない(厳密には異なるUnicodeブロック間に挿入する。非英語の欧州の言語や、サロゲートペアを使用する文字の前後には単語内でも挿入される) 埋め込む位置は毎回ランダム 元の文章、隠しテキストともに多言語対応(全部UTF-16としてJavaScriptで扱っているため) GitHubのものは任意のバイナリデータにも対応  ダウンロードや、サイトに使用する際は以下のURLからどうぞ。
@@ -31,10 +31,10 @@ GitHubにアップロードした方はバイナリデータにも対応。 こ�
     
     <item>
       <title>Windows標準機能でZIPファイルの作成</title>
-      <link>https://330k.github.io/essay/create_zip_file_with_wsh_jscript/</link>
+      <link>https://www2.330k.info/essay/create_zip_file_with_wsh_jscript/</link>
       <pubDate>Mon, 08 May 2017 22:37:00 +0900</pubDate>
       
-      <guid>https://330k.github.io/essay/create_zip_file_with_wsh_jscript/</guid>
+      <guid>https://www2.330k.info/essay/create_zip_file_with_wsh_jscript/</guid>
       <description>JScriptで複数のテキストファイルを書き出し、それをZIPでまとめたかったので作成。 VBAやVBScript版を参考に作ってみた。
 参考サイト : http://kiq-creator.com/blog/?eid=33
 複数のファイルをZIP圧縮する際のコツとしては、CopyHereをするたびに待機すること。 CopyHereは非同期なので、すぐにJS側に制御が返ってくるが、 複数のファイルを一気にCopyHereしようとすると、「読み取りできません」とエラーが出る。
@@ -46,10 +46,10 @@ createZipFile( &amp;quot;zipファイルのパス&amp;quot;, [&amp;quot;圧縮�
     
     <item>
       <title>Douglas-Peucker向けの優先度付きキュー実装の検討</title>
-      <link>https://330k.github.io/essay/implement-of-priority-queue-for-douglas-peucker-simplify-algorithm/</link>
+      <link>https://www2.330k.info/essay/implement-of-priority-queue-for-douglas-peucker-simplify-algorithm/</link>
       <pubDate>Thu, 29 May 2014 00:00:00 +0900</pubDate>
       
-      <guid>https://330k.github.io/essay/implement-of-priority-queue-for-douglas-peucker-simplify-algorithm/</guid>
+      <guid>https://www2.330k.info/essay/implement-of-priority-queue-for-douglas-peucker-simplify-algorithm/</guid>
       <description>折れ線を間引くで書いたように、 Douglas-Peuckerアルゴリズムを改良して指定した点数まで点を削減して折れ線を簡略化する場合、 優先度付きキューを使うことになる。
 このアルゴリズムでは
  始点と終点を結ぶ線分で最も距離が大きな点P1を選ぶ 始点と点P1を結ぶ線分で距離最大となる点P2をキューに登録(優先度は点P2と線分の距離) 点P1と終点を結ぶ線分で距離最大となる点P3をキューに登録(優先度は点P3と線分の距離) キューから距離が最大(=優先度最大)の点を選んで、2に戻る  という手順となるため、「キューに2つ登録して、1つ取り出す」ということを繰り返すことになる。

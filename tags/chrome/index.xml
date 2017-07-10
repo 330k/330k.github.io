@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chrome on 330k info</title>
-    <link>https://330k.github.io/tags/chrome/</link>
+    <link>https://www2.330k.info/tags/chrome/</link>
     <description>Recent content in Chrome on 330k info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 27 Jun 2017 22:34:45 +0900</lastBuildDate>
     
-	<atom:link href="https://330k.github.io/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www2.330k.info/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Gmailをeml形式で保存するChrome拡張機能</title>
-      <link>https://330k.github.io/software/save-as-eml-for-gmail-chrome-extension/</link>
+      <link>https://www2.330k.info/software/save-as-eml-for-gmail-chrome-extension/</link>
       <pubDate>Tue, 27 Jun 2017 22:34:45 +0900</pubDate>
       
-      <guid>https://330k.github.io/software/save-as-eml-for-gmail-chrome-extension/</guid>
+      <guid>https://www2.330k.info/software/save-as-eml-for-gmail-chrome-extension/</guid>
       <description> Gmailの機能拡充により標準で可能になったため、拡張機能の配布を終了しました
 概要 会社でGoogle Apps for Workを導入したところ、「Outlookの時はメールをD&amp;amp;Dで保存できたのに、Gmailになってできなくなった」とのクレームが出てきた。 経理の外注先や監査法人とのやりとりの際に、メールを含む関連資料1式をやりとりするニーズがあるらしい。 Googleで検索すると、「メッセージのソースを表示」→「拡張子をemlにしてメモ帳などで保存」とする方法がみつかった(関連リンク参照)が、 ユーザからは「面倒だ」「拡張子って何？」との声が・・・。
 誰か作ってるだろうと思って探してみたが、意外なことに私の調べた限りではそのような拡張機能が見つからなかったので、自分で作ってみた。

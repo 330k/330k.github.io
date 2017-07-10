@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sql on 330k info</title>
-    <link>https://330k.github.io/tags/sql/</link>
+    <link>https://www2.330k.info/tags/sql/</link>
     <description>Recent content in Sql on 330k info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 27 Jun 2017 22:42:14 +0900</lastBuildDate>
     
-	<atom:link href="https://330k.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www2.330k.info/tags/sql/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>HTA SQLツール</title>
-      <link>https://330k.github.io/software/hta-sql-tool/</link>
+      <link>https://www2.330k.info/software/hta-sql-tool/</link>
       <pubDate>Tue, 27 Jun 2017 22:42:14 +0900</pubDate>
       
-      <guid>https://330k.github.io/software/hta-sql-tool/</guid>
+      <guid>https://www2.330k.info/software/hta-sql-tool/</guid>
       <description>概要 今は廃れたHTA(HTML Application)で書いた、汎用SQLツールです。 Windows上で動作し、
  CSVファイル(*.csv) Excelファイル(.xls、.xlsx、.xlsm、.xlsb) Accessファイル(*.mdb)  などをADODB経由で開いてSQLクエリを実行できます。
 CSVファイルはディレクトリ⇔データベース、CSVファイル⇔テーブルとして扱われ、 ExcelファイルはExcelブック⇔データベース、シート⇔テーブルとして扱われます。
@@ -28,10 +28,10 @@ CSVファイルはディレクトリ⇔データベース、CSVファイル⇔�
     
     <item>
       <title>勘定奉行の性能劣化に対処</title>
-      <link>https://330k.github.io/essay/performance_degration_of_kanjo_bugyo/</link>
+      <link>https://www2.330k.info/essay/performance_degration_of_kanjo_bugyo/</link>
       <pubDate>Sun, 06 Nov 2016 17:22:00 +0900</pubDate>
       
-      <guid>https://330k.github.io/essay/performance_degration_of_kanjo_bugyo/</guid>
+      <guid>https://www2.330k.info/essay/performance_degration_of_kanjo_bugyo/</guid>
       <description>社内では会計システムに勘定奉行(ネットワーク版)を使っているが、 担当者から「勘定奉行で仕訳帳の表示に20秒くらいかかる」と言われたので調査してみた。
 その担当者のPC固有の問題かどうかを切り分けるため別のPCから同様の操作を行ってみたところ、同じ症状が発生した。 ということは、サーバ側に問題がありそう。
 勘定奉行のクライアントは生のSQL文をサーバに発行する仕組みなので、 Wiresharkでパケットをキャプチャすることで発行されたSQL文を把握することができる。
@@ -45,10 +45,10 @@ sp_updatestats  としたところ、1秒程度で処理が完了するように
     
     <item>
       <title>MathematicaからSQLiteでBLOBとマルチバイト文字列を扱う</title>
-      <link>https://330k.github.io/essay/process-blob-and-multibyte-string-from-sqlite-with-mathematica/</link>
+      <link>https://www2.330k.info/essay/process-blob-and-multibyte-string-from-sqlite-with-mathematica/</link>
       <pubDate>Sun, 14 Oct 2012 00:00:00 +0900</pubDate>
       
-      <guid>https://330k.github.io/essay/process-blob-and-multibyte-string-from-sqlite-with-mathematica/</guid>
+      <guid>https://www2.330k.info/essay/process-blob-and-multibyte-string-from-sqlite-with-mathematica/</guid>
       <description>ドキュメントにはないものの、MathematicaではSQLiteを扱うことができる。 しかしながら、BLOB型や文字列で日本語などを扱うには少し工夫が必要なので、メモ。
 BLOB型 select 直接BLOB型をselectすると$Failedが返ってくるので、hex関数で16進文字列として返す。
 db = Database`OpenDatabase[sqlitefilepath]; rs = Database`QueryDatabase[db, &amp;quot;select hex(column_name) from table_name&amp;quot;];  これを16進文字列→数値→バイト列→文字列と変換して、最後にImportStringで読み込むと、Mathematicaで読み込める。

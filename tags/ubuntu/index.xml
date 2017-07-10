@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubuntu on 330k info</title>
-    <link>https://330k.github.io/tags/ubuntu/</link>
+    <link>https://www2.330k.info/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on 330k info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Jun 2017 06:37:00 +0900</lastBuildDate>
     
-	<atom:link href="https://330k.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www2.330k.info/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Xubuntu 16.04 &#43; Snortで簡易IDS構築</title>
-      <link>https://330k.github.io/essay/xubuntu1604_snort_base/</link>
+      <link>https://www2.330k.info/essay/xubuntu1604_snort_base/</link>
       <pubDate>Tue, 06 Jun 2017 06:37:00 +0900</pubDate>
       
-      <guid>https://330k.github.io/essay/xubuntu1604_snort_base/</guid>
+      <guid>https://www2.330k.info/essay/xubuntu1604_snort_base/</guid>
       <description>ウイルス等に侵入された後の対策として、IDSやIPS製品の紹介をベンダーから受けたが、正直なところ価格が高かったのと、検知されるメッセージがSnort由来のものが多い気がしたので、自分でSnortを構築して商用製品との差を調べてみることにした。
 構築環境  PC : 余っていたノートPC Panasonic LetsNote CF-NX1 OS : Xubuntu 16.04.2 (LetsNoteの有線LANと無線LANのNICを認識できる可能性が高いディストリビューションとして選択) ルータ : Yamaha RTX810 IDSとして運用(ミラーポートの通信を監視)  手順 基本的に、以下のドキュメント通りでOK。
 Snort 2.9.9.x on Ubuntu 14 -16
@@ -31,10 +31,10 @@ RTX810はhttp://www.rtpro.yamaha.co.jp/RT/manual/rt-common/setup/lan_port-mirror
     
     <item>
       <title>Tikaを使って指定したディレクトリ以下の全ファイルのメタデータを収集</title>
-      <link>https://330k.github.io/essay/aggregate-metadata-from-all-pdf-office-documents/</link>
+      <link>https://www2.330k.info/essay/aggregate-metadata-from-all-pdf-office-documents/</link>
       <pubDate>Sun, 29 Nov 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://330k.github.io/essay/aggregate-metadata-from-all-pdf-office-documents/</guid>
+      <guid>https://www2.330k.info/essay/aggregate-metadata-from-all-pdf-office-documents/</guid>
       <description>会社で外部に公開しているPDFファイルの作成者やタイトルにおかしいもの(社名が間違っている etc.)があることに気づき、 会社のファイルサーバにあるWord、Excel、PowerPoint、PDFファイルのメタ情報を一覧で出力し、 Excelにインポートして変なメタ情報が設定されていないかチェックするためのスクリプトを作ってみた。
 準備 まずはapacheからTikaをダウンロード(執筆時点では1.11が最新)
 wget http://ftp.jaist.ac.jp/pub/apache/tika/tika-app-1.11.jar  全メタデータを収集 とにかく全部のメタデータを収集したいときは、tikaのjarファイルと同じディレクトリに以下のようなスクリプトを配置。 検索対象のディレクトリは3行目で指定する。
@@ -43,10 +43,10 @@ wget http://ftp.jaist.ac.jp/pub/apache/tika/tika-app-1.11.jar  全メタデー�
     
     <item>
       <title>秘密録音した音声ファイルをYoutubeにバックアップ</title>
-      <link>https://330k.github.io/essay/upload_recorded_mp3_files_to_youtube/</link>
+      <link>https://www2.330k.info/essay/upload_recorded_mp3_files_to_youtube/</link>
       <pubDate>Thu, 15 Oct 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://330k.github.io/essay/upload_recorded_mp3_files_to_youtube/</guid>
+      <guid>https://www2.330k.info/essay/upload_recorded_mp3_files_to_youtube/</guid>
       <description>私はパワハラ対策として、毎日ICレコーダーを使って秘密録音を実施している。 ただ、毎日10時間を超える録音時間のため、32kbpsで録音しても1日あたり200MB弱の音声ファイルがHDDに追加されていき、HDDの容量を圧迫していく。
 そこで、バックアップを兼ねて動画化してYoutubeにアップロードするようにし、 HDDの空き容量が減ってきたらオリジナルの録音ファイルを消去していくことにした。
 ffmpeg(avconv)を使い、以下の手順で実施する。
@@ -64,10 +64,10 @@ avconv -y -i blank24.mov -i input.mp3 -vcodec copy -acodec copy -shortest output
     
     <item>
       <title>3Dグラフィックスが正常に表示されない問題</title>
-      <link>https://330k.github.io/essay/3d-graphics-not-showed-in-ubuntu-mathematica/</link>
+      <link>https://www2.330k.info/essay/3d-graphics-not-showed-in-ubuntu-mathematica/</link>
       <pubDate>Fri, 09 Jan 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://330k.github.io/essay/3d-graphics-not-showed-in-ubuntu-mathematica/</guid>
+      <guid>https://www2.330k.info/essay/3d-graphics-not-showed-in-ubuntu-mathematica/</guid>
       <description>たまたま私の環境の問題かもしれないが、
  Intel Core-i7 3770 Ubuntu 14.04 LTS Mathematica 8.0.4 Home Edition  という環境で、Mathematicaのノートブック上でPlot3DなどのGraphics3Dオブジェクトが、 うまく表示できないことに悩まされていたが、その解決法が分かった。
 メニューの「編集」→「環境設定」から、「詳細」タブを開き、「オプションインスペクタを開く」をクリック。  オプションインスペクタでは「グラフィックス設定」「RenderingOptions」内の&amp;rdquo;Graphics3DRenderingEngine&amp;rdquo;を デフォルトの&amp;rdquo;Automatic&amp;rdquo;から&amp;rdquo;Software&amp;rdquo;に変更する。  私の場合は以上で上手く行った。 Windowsではこのようなことはなかったのだが・・・。</description>
@@ -75,10 +75,10 @@ avconv -y -i blank24.mov -i input.mp3 -vcodec copy -acodec copy -shortest output
     
     <item>
       <title>ファイル名順にソートしてzipファイルを作成する</title>
-      <link>https://330k.github.io/essay/create-zip-with-alphabetical-order/</link>
+      <link>https://www2.330k.info/essay/create-zip-with-alphabetical-order/</link>
       <pubDate>Mon, 30 Dec 2013 04:36:00 +0900</pubDate>
       
-      <guid>https://330k.github.io/essay/create-zip-with-alphabetical-order/</guid>
+      <guid>https://www2.330k.info/essay/create-zip-with-alphabetical-order/</guid>
       <description>自炊した書籍をzipで作成する際、普通に圧縮すると変な順番で格納されてしまう。 実用上ほとんど問題はないのだが、なんとなくファイル名順に格納したかったので、そのやり方をメモ。
 ls -1 ディレクトリ名 | zip -@rjDo0 圧縮ファイル名.zip  やっていることは
  lsに-1オプションをつけてファイル1行ずつでファイル名を出力(デフォルトでは文字コード順) zipに-@オプションをつけ、標準入力にファイル名を渡して圧縮(残りのオプションはお好みで)  findを使って行うときは、もう少し工夫が必要で、以下のように findの-print0オプションとsortの-zオプション、xargsの-0オプションでNull文字区切りでファイル名を出力→ソート→圧縮とする。
@@ -87,10 +87,10 @@ find ./ -type f -print0 | sort -z | xargs -0 zip -@rjDo0 圧縮ファイル名.z
     
     <item>
       <title>Mathematica on Ubuntu 12.04 LTSで日本語関連のトラブル</title>
-      <link>https://330k.github.io/essay/how-to-make-mathematica8-process-japanese-on-ubuntu-1204-ltf-64bit/</link>
+      <link>https://www2.330k.info/essay/how-to-make-mathematica8-process-japanese-on-ubuntu-1204-ltf-64bit/</link>
       <pubDate>Tue, 09 Oct 2012 00:00:00 +0900</pubDate>
       
-      <guid>https://330k.github.io/essay/how-to-make-mathematica8-process-japanese-on-ubuntu-1204-ltf-64bit/</guid>
+      <guid>https://www2.330k.info/essay/how-to-make-mathematica8-process-japanese-on-ubuntu-1204-ltf-64bit/</guid>
       <description>Mathematica 8 Home Edition 日本語版をUbuntu 12.04 LTS 64bit版にインストールしたところ、
  ディレクトリ、ファイル名に日本語が含まれるノートブックファイル(.nb)を開けない ディレクトリ、ファイル名に日本語が含まれるとImport/Exportできない、FileNamesで列挙できない ノートブック中に日本語を入力できない $SystemCharacterEncoding、$CharacterEncodingが&amp;rdquo;EUC-JP&amp;rdquo;になっている  などの言語関連の不具合があった。
 これから作るノートブックは英語だけで書けば済むが、今までに作ったノートブックファイルが開けないのがつらい。 一応Wolframのサポートにはメールを出したが、期待できそうになかった。
