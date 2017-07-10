@@ -271,8 +271,7 @@ data = Table[Module[{str, ret}, str = OpenRead[&amp;quot;2016091200.bin&amp;quot
  Googleマップでルートを作成 GMapToGPXでGPXファイルにする カシミール3Dで基盤地図情報(標高)で標高データを追加 累積標高などを確認 Androidの地図ロイドなどに取り込んでツーリング中に確認  というやり方でルートを検討・確認していた。
 だが&amp;rdquo;新しいGoogleマップ&amp;rdquo;になってから、GMapToGPXが使えなくなってしまったので、 Google Maps API v3を使ってGPXのトラックを生成する、簡単なプログラムを書いてみた。
 スマートフォンのブラウザ(標準ブラウザ、Chrome、Firefox)でも動作するので、ツーリングなどの出先でもルートを作成可能。
-注意事項  Chrome(Ubuntu, Windows 7, Windows 10)、Firefox(Ubuntu, Windows 7)、IE 11、Edgeで動作確認しています。 Google Maps APIの制限により、途中に設定できる地点は8箇所までです。 Internet Explorer 8ではダウンロードができません。テキストボックスに生成されたGPXテキストをコピーし、メモ帳などに貼り付けutf8で保存してください。 Internet Explorer 9, 10は未確認です。 iOSのSafariではGPXファイルのダウンロードができません。  ##主な更新・修正点
- 地図ロイドやルートラボに合わせ、簡略化後の点数を800点と8000点にした。(May 26 2014) Douglas-Peuckerのアルゴリズムで優先度付きキューの実装を変更し、高速化。(May 26 2014) 間引き時にメルカトル図法で投影した座標に対してDouglas-Peuckerを適用するように変更。(Jun 6 2014) モバイル版、フルスクリーン版をGitHubにホスティング先を変更。(Mar 13 2015) IEとEdgeでの動作状況を追記。(Oct.</description>
+注意事項  Chrome(Ubuntu, Windows 7, Windows 10)、Firefox(Ubuntu, Windows 7)、IE 11、Edgeで動作確認しています。 Google Maps APIの制限により、途中に設定できる地点は8箇所までです。 Internet Explorer 8ではダウンロードができません。テキストボックスに生成されたGPXテキストをコピーし、メモ帳などに貼り付けutf8で保存してください。 Internet Explorer 9, 10は未確認です。 iOSのSafariではGPXファイルのダウンロードができません。  主な更新・修正点  地図ロイドやルートラボに合わせ、簡略化後の点数を800点と8000点にした。(May 26 2014) Douglas-Peuckerのアルゴリズムで優先度付きキューの実装を変更し、高速化。(May 26 2014) 間引き時にメルカトル図法で投影した座標に対してDouglas-Peuckerを適用するように変更。(Jun 6 2014) モバイル版、フルスクリーン版をGitHubにホスティング先を変更。(Mar 13 2015) IEとEdgeでの動作状況を追記。(Oct.</description>
     </item>
     
     <item>
