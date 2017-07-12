@@ -6,10 +6,164 @@
     <description>Recent content in ツーリング on 330k info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Jul 2010 21:43:32 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 04 May 2011 21:46:59 +0900</lastBuildDate>
     
 	<atom:link href="https://www2.330k.info/tags/%E3%83%84%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2011年05月04日〜08日 紀伊半島一周</title>
+      <link>https://www2.330k.info/bicycle/touring/20110504-08-kii-peninsula/</link>
+      <pubDate>Wed, 04 May 2011 21:46:59 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20110504-08-kii-peninsula/</guid>
+      <description>function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20110504-08-kii-peninsula\/20110504-08.kml&#34; }); ctaLayer.setMap(map); }      日付 出発地 到着地 走行距離(km) 走行時間 最高速度(km/h) 平均速度(km/h) 主な経路 景勝地     2011年5月4日 東海 志摩 165.81 6:14:26 55.0 26.6 R23, R42    2011年5月5日 志摩 新宮 190.00 8:30:00 55.7 22.4 R42    2011年5月6日 新宮 御坊 163.</description>
+    </item>
+    
+    <item>
+      <title>2011年04月30日 御前崎</title>
+      <link>https://www2.330k.info/bicycle/touring/20110430-omaezaki/</link>
+      <pubDate>Sat, 30 Apr 2011 21:46:31 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20110430-omaezaki/</guid>
+      <description>  function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20110430-omaezaki\/20110501.kml&#34; }); ctaLayer.setMap(map); }      日付 出発地 到着地 走行距離(km) 走行時間 最高速度(km/h) 平均速度(km/h) 主な経路 景勝地     2011年4月30日 弁天島 焼津 117.83 4:32:08 62.0 26.0 R150 御前崎                    </description>
+    </item>
+    
+    <item>
+      <title>2011年01月09日 渥美半島表浜街道</title>
+      <link>https://www2.330k.info/bicycle/touring/20110109-atsumi-peninsula/</link>
+      <pubDate>Sun, 09 Jan 2011 21:46:16 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20110109-atsumi-peninsula/</guid>
+      <description>  function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20110109-atsumi-peninsula\/20110109.kml&#34; }); ctaLayer.setMap(map); }              </description>
+    </item>
+    
+    <item>
+      <title>2010年11月21日 三河湾一周</title>
+      <link>https://www2.330k.info/bicycle/touring/20101121-mikawa-wan/</link>
+      <pubDate>Sun, 21 Nov 2010 21:45:58 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20101121-mikawa-wan/</guid>
+      <description>  function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20101121-mikawa-wan\/20101121.kml&#34; }); ctaLayer.setMap(map); }          </description>
+    </item>
+    
+    <item>
+      <title>2010年11月20日 香嵐渓</title>
+      <link>https://www2.330k.info/bicycle/touring/20101120-kourankei/</link>
+      <pubDate>Sat, 20 Nov 2010 21:45:45 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20101120-kourankei/</guid>
+      <description>  function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20101120-kourankei\/20101120.kml&#34; }); ctaLayer.setMap(map); }             </description>
+    </item>
+    
+    <item>
+      <title>2010年09月26日 琵琶湖一周</title>
+      <link>https://www2.330k.info/bicycle/touring/20100926-biwako-lake/</link>
+      <pubDate>Sun, 26 Sep 2010 21:45:31 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20100926-biwako-lake/</guid>
+      <description>  function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20100926-biwako-lake\/20100926.kml&#34; }); ctaLayer.setMap(map); }                 </description>
+    </item>
+    
+    <item>
+      <title>2010年09月19日～20日 名古屋～金沢</title>
+      <link>https://www2.330k.info/bicycle/touring/20100919-20-nagoya-kanazawa/</link>
+      <pubDate>Sun, 19 Sep 2010 21:45:14 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20100919-20-nagoya-kanazawa/</guid>
+      <description>function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20100919-20-nagoya-kanazawa\/20100919.kml&#34; }); ctaLayer.setMap(map); }   日本海側に行くなら冬になる前にしなくては！ということで思いつきで金沢まで行ってみた。 敦賀で1泊して金沢まで行き、帰りは輪行した。
+1日目(名古屋～敦賀) まずは養老の滝に行く時にも使ったルートで、名古屋から国道1号→国道155号→愛知県道125号と通って木曽三川を越え、国道258号を北上して関ヶ原を目指す。 このあたりは探せばもう少し平坦なルートが有るかもしれない。
+ 関ヶ原古戦場に寄ってみたら鉄砲隊の実演イベントをやっていたようだが、天候があまり良くなかったので先を急いだ。
+ 関ヶ原からは延々と国道365号を進む。 途中何箇所か道幅が狭いところがあったものの、高低差があまりないためスピードに乗ってどんどん進めた。
+しかし、木之本に到着したあたりで雨がパラつきはじめ、ルートを変更。 当初は国道365号をそのまま進んで旧北陸本線のトンネル(片側通行1.4km)を突破する予定だったが、雨がひどくなった場合に即座に輪行できるように国道8号を進んで琵琶湖を少し回って塩津から北上することにした。
+賤ヶ岳トンネルは琵琶湖一周ルートでも回避されることが多い、ということは知っていたので、旧道を登る。
+ 塩津からはへばりながらもなんとか福井県に到達。
+ 18時過ぎに敦賀に到着して、気比の松原などを観光した。
+  走行時間: 5時間42分11秒 走行距離: 138.88 km 平均速度: 24.3 km/h 最高速度: 61.0 km/h  2日目(敦賀～金沢) 朝8時に出発しようとしていたら、後輪がパンクしていた。 原因は少し尖った石を踏みつけていたことのようで、パッチを当てて携帯ポンプで空気を入れることで1時間ほどロス。
+まずは気比神宮を外側だけ観光。
+ 金ヶ崎トンネルの手前で、昔ながらの洗濯場をはじめて見た。
+ なお、金ヶ崎トンネルの歩道にどうやって行くのかは非常に分かりにくかった。</description>
+    </item>
+    
+    <item>
+      <title>2010年09月04日～05日 名古屋～高森</title>
+      <link>https://www2.330k.info/bicycle/touring/20100904-05-nagoya-takamori/</link>
+      <pubDate>Sat, 04 Sep 2010 21:44:58 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20100904-05-nagoya-takamori/</guid>
+      <description>function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20100904-05-nagoya-takamori\/20100904-05.kml&#34; }); ctaLayer.setMap(map); }   母親の実家が現住所から140kmちょっとの丁度いい場所にあるので、峠をいくつか越えてきた。 2日間の合計獲得標高は10000mを超えたが、膝が痛むこともなく走破できたのはやはりドロップハンドルとSPDの効果だろう。
+1日目(往路) 午前4時過ぎに出発。 まずは国道155号を豊田市まで進み、次に国道153号(飯田街道)に入る。 国道153号に入ったところからどんどん山を上り、いくつかトンネルをくぐる(足助トンネル、新観音トンネル、大野瀬トンネル)。
+    地図に峠の名前は載ってないものの、2箇所ほど上り下りがあった。
+大野瀬トンネルを抜けると長野県下伊那郡根羽村に到達。
+ 工事中で道路がせまくなっていたため走りにくかったが、それ以上に延々と続く登り坂でペースがどんどん落ちた。 ちょうど昼時になったので根羽村と平谷村の中間にある(地形的には峠だと思うが名前は不明)ネバーランドで昼食休憩。
+ エネルギを補給したところで、往路の最高到達点となる治部坂峠(1187m)に挑む・・・が、昼食を消化しきれていなかったのか、猛烈な日差しのためかペースは一向に上がらず、500mおきに休憩せざるを得ない事態に。 なんとか自転車を押して歩くという最終手段を取ることはなく、治部坂峠を制覇。
+ 治部坂峠を下る間でなんとか回復し、最後の峠である寒原峠(1073m)も勢いで乗り越える。
+ ちなみに写真には下り勾配7%が7.5km先までとなっているが、実際には10km程度あり、その間はずっと60km/h超で走行した。
+その後は国道153号→国道256号→伊那南部広域農道(南信州フルーツライン)を通り、14時30分に無事到着。
+ 走行時間 : 6時間40分58秒 走行距離 : 143.74 km 平均速度 : 21.5 km/h 最高速度 : 65.8 km/h  2日目(復路) 往路では下った寒原峠からの勾配7%、長さ10kmを復路で登る気にはとてもならなかったので、中央アルプスを越えて木曽谷方面から帰ることにした。</description>
+    </item>
+    
+    <item>
+      <title>2010年08月07日 伊勢神宮&amp;伊勢湾一周</title>
+      <link>https://www2.330k.info/bicycle/touring/20100807-isejinguu-isewanisshuu/</link>
+      <pubDate>Sat, 07 Aug 2010 21:44:48 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20100807-isejinguu-isewanisshuu/</guid>
+      <description>function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20100807-isejinguu-isewanisshuu\/20100807.kml&#34; }); ctaLayer.setMap(map); }   新しいシクロクロスバイク(SURLY CROSS-CHECK)が手に入ったので、ずっと温めていた伊勢湾を反時計回りに一周+伊勢神宮参りを決行。
+目的は
+ 伊勢神宮に参拝して交通安全を祈願すること これまでの走行距離の限界に挑戦すること 9月30日に廃止される伊勢湾フェリーに乗船すること  の3つ。 鳥羽発の最終フェリーが15時20分となるため、あまりゆっくりできない。
+出発は6時40分。 国道247号を北上し、今回は東海通に入って西進。弥富市で国道1号に入って木曽三川を渡り、三重県に入る。 四日市に入ってすぐ国道23号に入るも、大型車が大量に走っていて自転車には危険だったため、田んぼの中を走る道を適当に走る。
+ 鈴鹿あたりから国道23号に復帰し、ひたすら南下。 松阪市に入ってからは国道42号→三重県道37号と、伊勢神宮外宮へ最短距離ルートを走る。
+なんとか13時前に外宮に到着。
+    足早に参拝して、13時20分に外宮を出発。内宮へ急ぐ。
+13時55分に内宮到着。 内宮からフェリー乗り場までは20kmちょっと。15時20分発のフェリーに乗るには10分前までにはフェリー乗り場に到着して乗船したい。 移動時間が1時間として14時10分に内宮を発たなければ。
+    今回の目的の1つをきっちり果たす。
+ 結局内宮を出発したのは14時20分。やばい。
+最短ルートである三重県道37号線を鳥羽方面へ急ぐ・・・と行きたいところだが、ここにきて延々と登り坂が続く。 なんとか25km/h以上をキープしつつ登りきり、その後平均50km/h程度で一気に海岸まで下る。
+15時12分にフェリー乗り場にたどり着き、乗船券は船内発売という形で伊勢湾フェリーに飛び乗った。
+ フェリーは16時10分に伊良湖へ到着。
+ 乗船前に記念撮影できなかったので、伊良湖でフェリー(右側)を撮る。 ちなみにこの伊勢湾フェリーは今年(2010年)9月30日で廃止されるので、その前に乗っておきたかった。</description>
+    </item>
+    
+    <item>
+      <title>2010年07月19日 養老の滝</title>
+      <link>https://www2.330k.info/bicycle/touring/20100719-yourounotaki/</link>
+      <pubDate>Mon, 19 Jul 2010 21:44:20 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20100719-yourounotaki/</guid>
+      <description>function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20100719-yourounotaki\/20100719.kml&#34; }); ctaLayer.setMap(map); }   浜名湖に行ったときの日焼けがひどかったため、3連休の2日目は休んで、3連休最終日は同僚と養老の滝まで行くことにした。 ルートは名古屋までは国道247号を北上し、その後国道1号を西進、その後国道155号などを通って国道258号と岐阜県道56号を北上というルート。
+9時に寮を出発し、広い道路を淡々と走る。 岐阜県、三重県との県境で、木曽三川を次々と横断。
+       愛知県から岐阜県、三重県と次々と新しい県に突入。 ただし三重県区間は短く、すぐにまた岐阜県に戻ることになる。
+ 国道258号と岐阜県道56号は小規模のアップダウンを繰り返す。 同僚が徐々に登坂で遅れるようになり、頂上付近で同僚を待つ。
+ 13時前に養老の滝の駐車場に到着。 駐車場の係員に尋ねて、駐車場の端っこに駐輪させてもらった。 そこからは徒歩で養老の滝を目指す。
+ 同僚はこの時点でへばりきってしまったいた。
+ 3連休最終日ということもあって、家族連れで賑わっていた。
+ 1.5kmほど歩いて、13時17分ついに養老の滝に到着。
+ 滝と駐車場の中間地点にある茶屋で昼食をとってエネルギを補給。 同僚に残された体力に不安があるため、帰りはできるかぎり平地を走り、いざとなれば同僚の実家(愛知県西部)に駆け込めるルートに変更。
+休憩を入れながらだましだまし走ったものの・・・
+ 実家まであと5kmというところ(走行距離80km)で同僚の両足が痙攣し、ついにドロップアウト。 このあと同僚の実家から車を出してもらい、回収してもらった。
+自分は自転車で同僚の実家まで追いかけ、同僚の様子を確認したのち、寮まで1人で帰った。
+反省点としては、同僚の初めてのロングライドとして100km超を走らせるは少し無理だったかもしれないというところ。 まずは50km程度からのほうがいいかもしれない。
+ 走行時間 : 7時間30分58秒 走行距離 : 130.</description>
+    </item>
+    
+    <item>
+      <title>2010年07月17日 浜名湖&amp;浜名湖周遊自転車道</title>
+      <link>https://www2.330k.info/bicycle/touring/20100717-hamanako-hamanakocyclingroad/</link>
+      <pubDate>Sat, 17 Jul 2010 21:43:51 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20100717-hamanako-hamanakocyclingroad/</guid>
+      <description>function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20100717-hamanako-hamanakocyclingroad\/20100717.kml&#34; }); ctaLayer.setMap(map); }   6月中旬に新しい自転車を注文したのだが、まだまだ納車されないようなので、3連休はルイガノのクロスバイクと過ごすことになった。 どこに行こうか、と考えてとりあえず3連休初日は浜名湖にうなぎでも食べに行って精をつけることにした。
+   寮を8時に出発し、トロトロと国道1号を東進して11時頃に豊橋を通過、12時20分頃に静岡県に初めて突入。
+ 遠州灘が見える区間はあまりなかった。自転車はバイパス区間を通行できないので、旧道を進む。
+ だいぶお腹も減ってきた13時、ようやく浜名湖(弁天島)に到着。でもお目当てのうな丼屋まではまだ遠い。
+    浜名湖周遊自転車道を通って浜名湖畔を快走。 それにしても天気が良く、青空と浜名湖はとても良く映える。
+ 14時、ようやくうな丼にありつけた。 ちなみに本来はツーリングマップルに載っている「志ぶき」という店が目当てだったのだが、昼時を過ぎても行列ができていたので諦めた。
+   昼食後に愛宕神社へお参り。
+ 浜名湖周遊自転車道をひたすら走る。 浜名湖周遊自転車道は全線が自転車道として独立しているわけではなく、ところどころ車道を走るところもあるのだが、何箇所か自転車道の入り口が分からなかった。
+   自転車道の終点、三ヶ日からは天竜浜名湖鉄道に乗り、輪行で帰宅した。
+ 走行距離 : 128.5 km 走行時間 : 7時間02分53秒 平均速度 : 18.</description>
+    </item>
     
     <item>
       <title>2010年07月04日 知多半島一周</title>
