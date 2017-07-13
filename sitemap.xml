@@ -233,6 +233,31 @@
   </url>
   
   <url>
+    <loc>https://www2.330k.info/bicycle/touring/20120430-0506-nagoya-kagoshima/</loc>
+    <lastmod>2012-04-30T21:48:15+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www2.330k.info/bicycle/touring/20120320-biwako-lake/</loc>
+    <lastmod>2012-03-20T21:48:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www2.330k.info/bicycle/touring/20110923-25-nara-kyoto/</loc>
+    <lastmod>2011-09-23T21:47:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www2.330k.info/bicycle/touring/20110718-norikura/</loc>
+    <lastmod>2011-07-18T21:47:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www2.330k.info/bicycle/touring/20110521-inuyama-castle/</loc>
+    <lastmod>2011-05-21T21:47:15+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www2.330k.info/bicycle/touring/20110504-08-kii-peninsula/</loc>
     <lastmod>2011-05-04T21:46:59+09:00</lastmod>
   </url>
@@ -527,7 +552,7 @@
   
   <url>
     <loc>https://www2.330k.info/tags/%E3%83%84%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0/</loc>
-    <lastmod>2011-05-04T21:46:59+09:00</lastmod>
+    <lastmod>2012-04-30T21:48:15+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -550,13 +575,13 @@
   </url>
   
   <url>
-    <loc>https://www2.330k.info/tags/%E8%87%AA%E8%BB%A2%E8%BB%8A/</loc>
+    <loc>https://www2.330k.info/categories/%E8%87%AA%E8%BB%A2%E8%BB%8A/</loc>
     <lastmod>2017-06-27T22:10:24+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www2.330k.info/categories/%E8%87%AA%E8%BB%A2%E8%BB%8A/</loc>
+    <loc>https://www2.330k.info/tags/%E8%87%AA%E8%BB%A2%E8%BB%8A/</loc>
     <lastmod>2017-06-27T22:10:24+09:00</lastmod>
     <priority>0</priority>
   </url>

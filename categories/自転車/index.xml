@@ -41,6 +41,52 @@ USB充電器 FUJITSU FSC321FX USB⇔NiMH充電池(eneloop)の充電ができる�
     </item>
     
     <item>
+      <title>2012年04月30日〜05月06日 名古屋〜鹿児島</title>
+      <link>https://www2.330k.info/bicycle/touring/20120430-0506-nagoya-kagoshima/</link>
+      <pubDate>Mon, 30 Apr 2012 21:48:15 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20120430-0506-nagoya-kagoshima/</guid>
+      <description>function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20120430-0506-nagoya-kagoshima\/20120428-0506.kml&#34; }); ctaLayer.setMap(map); }      日付 出発地 到着地 走行距離(km) 走行時間 最高速度(km/h) 平均速度(km/h) 主な経路 景勝地     2012年4月28日 東海市 枚方 179.78 7:11:21 57.8 25.0 R1 鈴鹿峠   2012年4月29日 枚方 播州赤穂 152.35 6:11:30 52.6 24.6 R1, R2, R250    2012年4月30日 播州赤穂 妹尾 66.</description>
+    </item>
+    
+    <item>
+      <title>2012年03月20日 琵琶湖一周</title>
+      <link>https://www2.330k.info/bicycle/touring/20120320-biwako-lake/</link>
+      <pubDate>Tue, 20 Mar 2012 21:48:01 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20120320-biwako-lake/</guid>
+      <description>  function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20120320-biwako-lake\/20120320.kml&#34; }); ctaLayer.setMap(map); }   2回めのビワイチ。今回は琵琶湖大橋を渡ってショートカットした。
+                 </description>
+    </item>
+    
+    <item>
+      <title>2011年09月23日〜25日 奈良・京都</title>
+      <link>https://www2.330k.info/bicycle/touring/20110923-25-nara-kyoto/</link>
+      <pubDate>Fri, 23 Sep 2011 21:47:45 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20110923-25-nara-kyoto/</guid>
+      <description>function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20110923-25-nara-kyoto\/20110923-25.kml&#34; }); ctaLayer.setMap(map); }      日付 出発地 到着地 走行距離(km) 走行時間 最高速度(km/h) 平均速度(km/h) 主な経路 景勝地     2011年9月23日 東海市 伊賀上野 82.96 3:30:38 59.6 23.6 R1, R25    2011年9月24日 伊賀上野 奈良 75.50   #N/A R25 法隆寺   2011年9月25日 奈良 京都 44.</description>
+    </item>
+    
+    <item>
+      <title>2011年07月18日 乗鞍</title>
+      <link>https://www2.330k.info/bicycle/touring/20110718-norikura/</link>
+      <pubDate>Mon, 18 Jul 2011 21:47:24 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20110718-norikura/</guid>
+      <description>  function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20110718-norikura\/20110718.kml&#34; }); ctaLayer.setMap(map); }                              </description>
+    </item>
+    
+    <item>
+      <title>2011年05月21日 犬山城</title>
+      <link>https://www2.330k.info/bicycle/touring/20110521-inuyama-castle/</link>
+      <pubDate>Sat, 21 May 2011 21:47:15 +0900</pubDate>
+      
+      <guid>https://www2.330k.info/bicycle/touring/20110521-inuyama-castle/</guid>
+      <description>  function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/bicycle\/touring\/20110521-inuyama-castle\/20110521.kml&#34; }); ctaLayer.setMap(map); }          </description>
+    </item>
+    
+    <item>
       <title>2011年05月04日〜08日 紀伊半島一周</title>
       <link>https://www2.330k.info/bicycle/touring/20110504-08-kii-peninsula/</link>
       <pubDate>Wed, 04 May 2011 21:46:59 +0900</pubDate>
