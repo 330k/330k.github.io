@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>パワハラ on 330k info</title>
-    <link>https://www2.330k.info/tags/%E3%83%91%E3%83%AF%E3%83%8F%E3%83%A9/</link>
+    <link>https://www.330k.info/tags/%E3%83%91%E3%83%AF%E3%83%8F%E3%83%A9/</link>
     <description>Recent content in パワハラ on 330k info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 29 Nov 2015 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="https://www2.330k.info/tags/%E3%83%91%E3%83%AF%E3%83%8F%E3%83%A9/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.330k.info/tags/%E3%83%91%E3%83%AF%E3%83%8F%E3%83%A9/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>仮想的な専用線という言葉にだまされた残念な技術者</title>
-      <link>https://www2.330k.info/essay/what_l2_forwarding_ssl_vpn_protects/</link>
+      <link>https://www.330k.info/essay/what_l2_forwarding_ssl_vpn_protects/</link>
       <pubDate>Sun, 29 Nov 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/what_l2_forwarding_ssl_vpn_protects/</guid>
+      <guid>https://www.330k.info/essay/what_l2_forwarding_ssl_vpn_protects/</guid>
       <description>例によってパワハラを受けた研修先で最初に受けたパワハラが、 リモートアクセスのSSL-VPNに関する技術的な質問をした時のことだった。
 研修先の会社ではJuniper社(現PulseSecure社)のSSL-VPN製品を導入しており、 クライアントPC側にはNetwork Connectというソフトウェアをインストールしていた。
 これはL2フォワーディング方式のSSL-VPNで、起動するとネットワークアダプタに仮想NICが追加される。 仮想NIC経由で通信することで外部からでも社内LANに接続できる。
@@ -47,10 +47,10 @@ Network Connect起動時に作成される仮想NICがメトリックで優先�
     
     <item>
       <title>秘密録音した音声ファイルをYoutubeにバックアップ</title>
-      <link>https://www2.330k.info/essay/upload_recorded_mp3_files_to_youtube/</link>
+      <link>https://www.330k.info/essay/upload_recorded_mp3_files_to_youtube/</link>
       <pubDate>Thu, 15 Oct 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/upload_recorded_mp3_files_to_youtube/</guid>
+      <guid>https://www.330k.info/essay/upload_recorded_mp3_files_to_youtube/</guid>
       <description>私はパワハラ対策として、毎日ICレコーダーを使って秘密録音を実施している。 ただ、毎日10時間を超える録音時間のため、32kbpsで録音しても1日あたり200MB弱の音声ファイルがHDDに追加されていき、HDDの容量を圧迫していく。
 そこで、バックアップを兼ねて動画化してYoutubeにアップロードするようにし、 HDDの空き容量が減ってきたらオリジナルの録音ファイルを消去していくことにした。
 ffmpeg(avconv)を使い、以下の手順で実施する。
@@ -68,10 +68,10 @@ avconv -y -i blank24.mov -i input.mp3 -vcodec copy -acodec copy -shortest output
     
     <item>
       <title>言いがかりを付けられたので切り返してみた</title>
-      <link>https://www2.330k.info/essay/augue-against-power-harassment-bully/</link>
+      <link>https://www.330k.info/essay/augue-against-power-harassment-bully/</link>
       <pubDate>Fri, 28 Aug 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/augue-against-power-harassment-bully/</guid>
+      <guid>https://www.330k.info/essay/augue-against-power-harassment-bully/</guid>
       <description>今朝、以前パワハラを受けていた研修先(以下G社とする)の人間からメールが来た。 要約すると、以下の内容になる。
  撤去作業終わりました
 **社(私の会社)の作業なので一般常識的に事前に連絡するのが筋です
@@ -115,10 +115,10 @@ G社から私への謝罪はないものの、その後の電話の対応は非�
     
     <item>
       <title>日本企業における成果主義とパワハラ</title>
-      <link>https://www2.330k.info/essay/results-oriented-approach-of-japan-companies-and-power-harassment/</link>
+      <link>https://www.330k.info/essay/results-oriented-approach-of-japan-companies-and-power-harassment/</link>
       <pubDate>Wed, 15 Jul 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/results-oriented-approach-of-japan-companies-and-power-harassment/</guid>
+      <guid>https://www.330k.info/essay/results-oriented-approach-of-japan-companies-and-power-harassment/</guid>
       <description>今年の5月までの半年間、研修先の企業で
  自分がミスをしたり、言いがかりをつける格好の餌を与える 相手がひたすら満足するまで怒鳴りつける しばらくしたら、定番の以下の言い訳をする  「さっきのは悪気はなかった」 「お前の為を思って怒ったんだ」   のループを繰り返していた。
 周りや相手の上司に現状を訴えても、「あいつが怒りは愛があるから良いんだ」と言われる。
@@ -137,10 +137,10 @@ G社から私への謝罪はないものの、その後の電話の対応は非�
     
     <item>
       <title>パワハラ対策の秘密録音にはICレコーダがベスト</title>
-      <link>https://www2.330k.info/essay/use_ic_recorder_for_power_harassment/</link>
+      <link>https://www.330k.info/essay/use_ic_recorder_for_power_harassment/</link>
       <pubDate>Wed, 08 Jul 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/use_ic_recorder_for_power_harassment/</guid>
+      <guid>https://www.330k.info/essay/use_ic_recorder_for_power_harassment/</guid>
       <description>ITエンジニアとしてキャリアチェンジしたため、転職した直後から、研修として別の企業の社内SEのチームに入ることになった。
 ただ、そこには典型的なパワハラ指導者がいた。
 連日パワハラを受けたり、他の人が受けるのを狭い部屋で聞かされ続け、 精神安定剤や抗不安薬、睡眠薬がないとやっていけないようになってしまった。

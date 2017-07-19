@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mathematica on 330k info</title>
-    <link>https://www2.330k.info/tags/mathematica/</link>
+    <link>https://www.330k.info/tags/mathematica/</link>
     <description>Recent content in Mathematica on 330k info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 22 Sep 2016 07:14:00 +0900</lastBuildDate>
     
-	<atom:link href="https://www2.330k.info/tags/mathematica/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.330k.info/tags/mathematica/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>m-241のバイナリデータからトラックログを吸い出す</title>
-      <link>https://www2.330k.info/essay/rescue_gps_log_from_binary_data_of_holux_m241/</link>
+      <link>https://www.330k.info/essay/rescue_gps_log_from_binary_data_of_holux_m241/</link>
       <pubDate>Thu, 22 Sep 2016 07:14:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/rescue_gps_log_from_binary_data_of_holux_m241/</guid>
+      <guid>https://www.330k.info/essay/rescue_gps_log_from_binary_data_of_holux_m241/</guid>
       <description>GPSロガー(Holux m-241)のメモリが破損しているのか、 実は6月30日と7月3日の軽井沢→直江津ツーリングと、9月の西九州→佐多岬ツーリングでは、 ログが破損していたため、Googleのロケーション履歴を代用している。
 バイナリデータは一応吸い出せているようなので、その構造を調べると、 HOLUX m-241 LoggerUtility .trlファイル構造の覚書 より以下のような構造になっている。
  1レコード20バイトの固定長 時刻4バイト 緯度4バイト 経度4バイト 高度3バイト 速度4バイト チェックサム1バイト  また、m-241は時折書き込み先のメモリアドレスがずれることがあるようだ、との情報も見つかったため、 バイナリエディタで除いてみると、どうも4バイトずつずれて記録されたデータがあるようだった。
@@ -27,10 +27,10 @@ data = Table[Module[{str, ret}, str = OpenRead[&amp;quot;2016091200.bin&amp;quot
     
     <item>
       <title>CompileするCコンパイラを変更する</title>
-      <link>https://www2.330k.info/essay/change-c-compiler-in-mathematica/</link>
+      <link>https://www.330k.info/essay/change-c-compiler-in-mathematica/</link>
       <pubDate>Tue, 08 Dec 2015 17:40:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/change-c-compiler-in-mathematica/</guid>
+      <guid>https://www.330k.info/essay/change-c-compiler-in-mathematica/</guid>
       <description>Mathematica 8から、CompileでCコンパイラを使って直接ネイティブコードにコンパイルできるようになった。 使用するCコンパイラは、
 Needs[&amp;quot;CCompilerDriver`&amp;quot;]; CCompilerDriver`$CCompiler = { &amp;quot;Name&amp;quot; -&amp;gt; &amp;quot;GCC&amp;quot;, &amp;quot;Compiler&amp;quot; -&amp;gt; CCompilerDriver`GCCCompiler`GCCCompiler, &amp;quot;CompilerInstallation&amp;quot; -&amp;gt; &amp;quot;/usr/bin&amp;quot;, &amp;quot;CompilerName&amp;quot; -&amp;gt; Automatic };  というように、CCompilerDriver`$CCompilerを変更して指定する。
 以前からのCompile(&amp;ldquo;WVM&amp;rdquo;)と、各コンパイラの比較のため、ベンチマークを行ってみた。 検証環境は以下の通り。
@@ -40,10 +40,10 @@ Needs[&amp;quot;CCompilerDriver`&amp;quot;]; CCompilerDriver`$CCompiler = { &amp
     
     <item>
       <title>3Dグラフィックスが正常に表示されない問題</title>
-      <link>https://www2.330k.info/essay/3d-graphics-not-showed-in-ubuntu-mathematica/</link>
+      <link>https://www.330k.info/essay/3d-graphics-not-showed-in-ubuntu-mathematica/</link>
       <pubDate>Fri, 09 Jan 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/3d-graphics-not-showed-in-ubuntu-mathematica/</guid>
+      <guid>https://www.330k.info/essay/3d-graphics-not-showed-in-ubuntu-mathematica/</guid>
       <description>たまたま私の環境の問題かもしれないが、
  Intel Core-i7 3770 Ubuntu 14.04 LTS Mathematica 8.0.4 Home Edition  という環境で、Mathematicaのノートブック上でPlot3DなどのGraphics3Dオブジェクトが、 うまく表示できないことに悩まされていたが、その解決法が分かった。
 メニューの「編集」→「環境設定」から、「詳細」タブを開き、「オプションインスペクタを開く」をクリック。  オプションインスペクタでは「グラフィックス設定」「RenderingOptions」内の&amp;rdquo;Graphics3DRenderingEngine&amp;rdquo;を デフォルトの&amp;rdquo;Automatic&amp;rdquo;から&amp;rdquo;Software&amp;rdquo;に変更する。  私の場合は以上で上手く行った。 Windowsではこのようなことはなかったのだが・・・。</description>
@@ -51,10 +51,10 @@ Needs[&amp;quot;CCompilerDriver`&amp;quot;]; CCompilerDriver`$CCompiler = { &amp
     
     <item>
       <title>Mathematicaで論文用の図やグラフを作成するときのまとめ</title>
-      <link>https://www2.330k.info/essay/how-to-create-graphs-for-papers-with-mathematica/</link>
+      <link>https://www.330k.info/essay/how-to-create-graphs-for-papers-with-mathematica/</link>
       <pubDate>Sun, 14 Dec 2014 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/how-to-create-graphs-for-papers-with-mathematica/</guid>
+      <guid>https://www.330k.info/essay/how-to-create-graphs-for-papers-with-mathematica/</guid>
       <description>Mathematicaで作る図やグラフは美しいんだ！ということを伝えたいので、 もう数年も前になるが、修士論文を書くときにMathematicaで作るグラフにこだわった点を思い出しながらまとめてみる。
 論文を書くために使うソフトウェア 私はpLaTeXで論文を書いたが、研究室ではWordが推奨されていた。 図表の番号を管理する必要や図表の位置がずれて飛んでいってしまうといった事態も起きないし、目次や索引、参考文献リストの作成も自動でできる。 ただ、Wordだと添削をしやすいのは確か。
 MathematicaでExportする画像の形式 Mathematicaでは多様な画像ファイル形式でExportできるが、論文用のグラフでは多分PNG、EPS、PDFから選択することになると思う。 各画像形式を比較すると、それぞれ以下の特徴がある。
@@ -74,10 +74,10 @@ Frame -&amp;gt; True  を指定して枠のついたグラフにする。
     
     <item>
       <title>Mathematicaでパーセプトロンとバックプロパゲーション</title>
-      <link>https://www2.330k.info/essay/implement_perceptron_and_backpropagation_with_mathematica/</link>
+      <link>https://www.330k.info/essay/implement_perceptron_and_backpropagation_with_mathematica/</link>
       <pubDate>Mon, 14 Jul 2014 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/implement_perceptron_and_backpropagation_with_mathematica/</guid>
+      <guid>https://www.330k.info/essay/implement_perceptron_and_backpropagation_with_mathematica/</guid>
       <description>拙作のリバーシプログラムViglaは高校時代に作ったものだが、 評価関数は手の広さと辺の形を適当に数値化したものであるためにあまり強いプログラムにはできなかった。
 当時から強いリバーシプログラムは辺や隅のパターンを評価していることは知ってはいたものの、理解出来ずじまいだった。
 今回もう一度挑戦してみようと思い、まずはMathematicaでパーセプトロンとバックプロパゲーションによる学習を実装してみた。
@@ -95,10 +95,10 @@ backPropagation[pct : perceptron[w : {__}], x_List, teach_List, rate_: 1] := Mod
     
     <item>
       <title>GeoDistanceとその他の測地線距離算出式の精度</title>
-      <link>https://www2.330k.info/essay/precision-of-mathematica-geodistance-and-geographical-distance-formula/</link>
+      <link>https://www.330k.info/essay/precision-of-mathematica-geodistance-and-geographical-distance-formula/</link>
       <pubDate>Sat, 07 Jun 2014 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/precision-of-mathematica-geodistance-and-geographical-distance-formula/</guid>
+      <guid>https://www.330k.info/essay/precision-of-mathematica-geodistance-and-geographical-distance-formula/</guid>
       <description>Mathematicaには2点の緯度と経度を与えて、その間の測地線距離を返す関数としてGeoDistanceがある。 しかしながら、ここで書かれているように、その精度には疑問が呈されているようだ。
 他の有名な測地線距離の計算方法として、
  ヒュベニの式(カシミール3Dが採用しているが、英語圏では情報が見つからない) 国土地理院の測量計算サイトの計算式のついてのドキュメントを実装したもの 完全な球体とみなして計算(Google EarthやGoogle Maps API v3のcomputeDistanceBetweenが採用、haversine formula)  が見つかったので、GeoDistanceのMethodオプション3種類(&amp;ldquo;Vincenty75&amp;rdquo;, &amp;ldquo;Robbin61&amp;rdquo;, &amp;ldquo;ExtendedNewtonRaphson&amp;rdquo;)と上記の3種類の計算方法の合計6種類について精度を評価してみた。
@@ -114,10 +114,10 @@ y = xの直線上にあれば正確ということだが、GeoDistanceの&amp;rd
     
     <item>
       <title>Wolfram CDF Playerでローカルファイルの読み込みと書き込みを行う</title>
-      <link>https://www2.330k.info/essay/read-and-write-a-local-file-with-wolfram-cdf-player/</link>
+      <link>https://www.330k.info/essay/read-and-write-a-local-file-with-wolfram-cdf-player/</link>
       <pubDate>Fri, 18 Oct 2013 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/read-and-write-a-local-file-with-wolfram-cdf-player/</guid>
+      <guid>https://www.330k.info/essay/read-and-write-a-local-file-with-wolfram-cdf-player/</guid>
       <description>[Wolfram CDF Player を汎用する]()にあるように、 CDF PlayerでもJ/Linkを使えばローカルファイルの読み込み、書き込みができる(※CDFファイルの作成にはMathematicaが必要)。
 上記リンク先ではテキストファイルを読み込む例が載っているが、バイナリファイルとして読み込んでImportStringを使えば、 Mathematicaが対応している形式すべてのファイルを読み込むことができる。
 J/Linkでバイナリファイルを読み込むときのポイントとしては、
@@ -128,10 +128,10 @@ ImportWithJLink[filepath_?(FileExistsQ[FindFile[#]] &amp;amp;), format_] := ( Ne
     
     <item>
       <title>ffmpeg&#43;Mathematicaで動画ファイルを作成する</title>
-      <link>https://www2.330k.info/essay/make-a-movie-with-mathematica-and-ffmpeg/</link>
+      <link>https://www.330k.info/essay/make-a-movie-with-mathematica-and-ffmpeg/</link>
       <pubDate>Fri, 27 Sep 2013 00:04:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/make-a-movie-with-mathematica-and-ffmpeg/</guid>
+      <guid>https://www.330k.info/essay/make-a-movie-with-mathematica-and-ffmpeg/</guid>
       <description>MathematicaのExportでAVIなどの動画ファイルを作成することは簡単に可能だが、 いかんせんすべてのフレームの画像を作成してからファイルに書きだすので、フレーム数に比例してメモリの使用量が多くなってしまう。 そのため長いムービーの作成は困難であった。
 そこで、ffmpeg(avconv)と併用することでメモリ使用量を抑えつつ、長編の動画ファイルを制作する。 具体的には、
  ffmpegで標準入力から読み込ませるOutputStreamオブジェクトを作成する BinaryWriteでそのストリームに各フレームの画像を書き込む 終わったらCloseでストリームを閉じる  とする。ここで、各フレーム画像の形式をPPMにしないとうまく動作しなかった(BMP、PNGなどではなぜか動作せず)。
@@ -142,10 +142,10 @@ Options[ExportMovie] = { &amp;quot;FrameRate&amp;quot; -&amp;gt; 25, &amp;quot;V
     
     <item>
       <title>MathematicaからSQLiteでBLOBとマルチバイト文字列を扱う</title>
-      <link>https://www2.330k.info/essay/process-blob-and-multibyte-string-from-sqlite-with-mathematica/</link>
+      <link>https://www.330k.info/essay/process-blob-and-multibyte-string-from-sqlite-with-mathematica/</link>
       <pubDate>Sun, 14 Oct 2012 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/process-blob-and-multibyte-string-from-sqlite-with-mathematica/</guid>
+      <guid>https://www.330k.info/essay/process-blob-and-multibyte-string-from-sqlite-with-mathematica/</guid>
       <description>ドキュメントにはないものの、MathematicaではSQLiteを扱うことができる。 しかしながら、BLOB型や文字列で日本語などを扱うには少し工夫が必要なので、メモ。
 BLOB型 select 直接BLOB型をselectすると$Failedが返ってくるので、hex関数で16進文字列として返す。
 db = Database`OpenDatabase[sqlitefilepath]; rs = Database`QueryDatabase[db, &amp;quot;select hex(column_name) from table_name&amp;quot;];  これを16進文字列→数値→バイト列→文字列と変換して、最後にImportStringで読み込むと、Mathematicaで読み込める。
@@ -156,10 +156,10 @@ ImportSQLiteString[str_] := FromCharacterCode[ToCharacterCode[str], &amp;quot;UT
     
     <item>
       <title>Mathematica on Ubuntu 12.04 LTSで日本語関連のトラブル</title>
-      <link>https://www2.330k.info/essay/how-to-make-mathematica8-process-japanese-on-ubuntu-1204-ltf-64bit/</link>
+      <link>https://www.330k.info/essay/how-to-make-mathematica8-process-japanese-on-ubuntu-1204-ltf-64bit/</link>
       <pubDate>Tue, 09 Oct 2012 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/how-to-make-mathematica8-process-japanese-on-ubuntu-1204-ltf-64bit/</guid>
+      <guid>https://www.330k.info/essay/how-to-make-mathematica8-process-japanese-on-ubuntu-1204-ltf-64bit/</guid>
       <description>Mathematica 8 Home Edition 日本語版をUbuntu 12.04 LTS 64bit版にインストールしたところ、
  ディレクトリ、ファイル名に日本語が含まれるノートブックファイル(.nb)を開けない ディレクトリ、ファイル名に日本語が含まれるとImport/Exportできない、FileNamesで列挙できない ノートブック中に日本語を入力できない $SystemCharacterEncoding、$CharacterEncodingが&amp;rdquo;EUC-JP&amp;rdquo;になっている  などの言語関連の不具合があった。
 これから作るノートブックは英語だけで書けば済むが、今までに作ったノートブックファイルが開けないのがつらい。 一応Wolframのサポートにはメールを出したが、期待できそうになかった。
@@ -174,10 +174,10 @@ Thank you for your report and we look forward to a continued, productive relatio
     
     <item>
       <title>Mathematicaにおけるプログラムの高速化手法</title>
-      <link>https://www2.330k.info/essay/how-to-optimize-mathematica-programs/</link>
+      <link>https://www.330k.info/essay/how-to-optimize-mathematica-programs/</link>
       <pubDate>Mon, 14 Dec 2009 22:39:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/how-to-optimize-mathematica-programs/</guid>
+      <guid>https://www.330k.info/essay/how-to-optimize-mathematica-programs/</guid>
       <description>Mathematicaにおいてプログラムの実行速度を最適化する際の項目を思いつく限り挙げてみた。 高速化に関する公式のドキュメントはこちら。
 関数型パラダイムで書く 必然的に組み込み関数を多く使い、リストをまとめて操作することになるので手続き型で書くより速くなることが多い。 コード量も少なくなって読みやすくなるので、よほどのことでない限りMathematicaでは関数型で書く。
 具体的には、手続き型ループ構文(Do, For, Whileなど)をやめて、MapやThreadを使うようにする。
@@ -191,10 +191,10 @@ myPrimeChoice1[n_] := Module[{r = {}, i}, Do[If[PrimeQ[i], AppendTo[r, i]], {i, 
     
     <item>
       <title>Mathematica 7でImportおよびExportを拡張する</title>
-      <link>https://www2.330k.info/essay/extend-import-and-export-of-mathematica7/</link>
+      <link>https://www.330k.info/essay/extend-import-and-export-of-mathematica7/</link>
       <pubDate>Mon, 23 Nov 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/extend-import-and-export-of-mathematica7/</guid>
+      <guid>https://www.330k.info/essay/extend-import-and-export-of-mathematica7/</guid>
       <description>MathematicaではImportやExportを使って様々な形式のファイルを読み書きできるが、 標準で対応していないファイル形式についても自分でローダやライタを作り、 それをImportやExportに対応させる方法がExtending Import &amp;amp; Export (Wolfram Library Archive)において解説されている。
 しかしこの文書は2003年のもので以前はExperimental`RegisterConverterという関数で登録すればよかったのだが、 この関数はMathematica 7にはない。
 Names[&amp;quot;*`*Register*&amp;quot;]  などとして探し回ったところ、
@@ -214,10 +214,10 @@ FileFormatDump`AddFormat[&amp;quot;ファイルフォーマット名&amp;quot;, 
     
     <item>
       <title>多角形の内外判定</title>
-      <link>https://www2.330k.info/essay/takakugatanonaigaihantei/</link>
+      <link>https://www.330k.info/essay/takakugatanonaigaihantei/</link>
       <pubDate>Thu, 29 Oct 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/takakugatanonaigaihantei/</guid>
+      <guid>https://www.330k.info/essay/takakugatanonaigaihantei/</guid>
       <description>ある点が多角形の内側にあるのか外側にあるのかを判定するには主に
  ある点から直線をひいて多角形の辺と何回交差するか判定する(偶数回なら外、奇数回なら中) ある点から多角形の各頂点を順番に見ていったときに何回転するか  の2つの方法がある。
 しかし辺との交差回数をカウントするのは、直線と辺が平行だったり、頂点で交差したりする場合などに特別な配慮が必要なので、 ここでは2番目の方法で実装する。
@@ -231,10 +231,10 @@ InsidePolygonQ[poly : {{_, _} ..}, p : {_, _}] := Module[ {argsum}, argsum = Rou
     
     <item>
       <title>16ビットアプリケーションの標準入出力をリダイレクト</title>
-      <link>https://www2.330k.info/essay/how-to-redirect-standard-input-output-of-16bit-application/</link>
+      <link>https://www.330k.info/essay/how-to-redirect-standard-input-output-of-16bit-application/</link>
       <pubDate>Mon, 26 Oct 2009 21:47:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/how-to-redirect-standard-input-output-of-16bit-application/</guid>
+      <guid>https://www.330k.info/essay/how-to-redirect-standard-input-output-of-16bit-application/</guid>
       <description>FORTRANで書かれた古いMS-DOSプログラムを.NET/Linkを使ってMathematicaから操るパッケージを作っていたところ、 Process.StartInfo.RedirectStandardInputやRedirectStandardOutputにTrueを設定してもまったく標準入出力をリダイレクトできなかった。(※OSはVista 32bit)
 いろいろ試してみたところ、16ビットのプログラムだとリダイレクトができないらしいということが分かった。 さてどうしたものかとさらにいろいろ打開策を探してみた結果、
  FileNameに&amp;quot;cmd.exe&amp;quot;を設定して、Process.Start()でプロセスを起動。 必要ならStandardInput.WriteLine(&amp;quot;cd 16ビットプログラムのディレクトリ&amp;quot;)としてカレントディレクトリを移動。 StandardInput.WriteLine(&amp;quot;***.EXE&amp;quot;)として16ビットプログラムを起動。  とcmd.exeを間に挟むことにより、16ビットのプログラムに対しても標準入出力のリダイレクトが行えることが分かった。
@@ -244,10 +244,10 @@ outputs = {}; outputhandler[o_, args_] := Module[ {data = args@Data}, AppendTo[o
     
     <item>
       <title>GPXファイルを読み込む</title>
-      <link>https://www2.330k.info/essay/import-gpx-file-in-mathematica/</link>
+      <link>https://www.330k.info/essay/import-gpx-file-in-mathematica/</link>
       <pubDate>Sun, 25 Oct 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/import-gpx-file-in-mathematica/</guid>
+      <guid>https://www.330k.info/essay/import-gpx-file-in-mathematica/</guid>
       <description>MathematicaでGPXファイルを読み込んで解釈する方法のメモ。
 対象となるGPXファイルを
 xml = Import[filepath, &amp;quot;XML&amp;quot;];  でまずXMLとして読み込んでおいて、
@@ -259,10 +259,10 @@ Mathematica 8からは標準でGPXをImport可能になった。</description>
     
     <item>
       <title>友愛数を列挙する</title>
-      <link>https://www2.330k.info/essay/enumurate-amicable-numbers-with-mathematica/</link>
+      <link>https://www.330k.info/essay/enumurate-amicable-numbers-with-mathematica/</link>
       <pubDate>Sun, 25 Oct 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/enumurate-amicable-numbers-with-mathematica/</guid>
+      <guid>https://www.330k.info/essay/enumurate-amicable-numbers-with-mathematica/</guid>
       <description>Mathematicaで友愛数を列挙するプログラム例として以下のようなものが見受けられる。
 yakuwa[n_] := DivisorSigma[1, n] - n; Do[If[(yakuwa[yakuwa[k]] == k) &amp;amp;&amp;amp; (yakuwa[k] != k), Print[{k, yakuwa[k]}]], {k, 1, 1000}];  しかし、Doでループを回してPrintで書き出していくのはMathematica的に美しくないと思う。
 Mathematicaなら関数型プログラミングとパターンマッチを用いるのが良いと思うので、私なら以下のように書く。
@@ -273,10 +273,10 @@ Cases[NestList[DivisorSigma[1, #] - # &amp;amp;, #, 5] &amp;amp; /@ Range[100000
     
     <item>
       <title>折れ線を間引く</title>
-      <link>https://www2.330k.info/essay/oresenwomabiku/</link>
+      <link>https://www.330k.info/essay/oresenwomabiku/</link>
       <pubDate>Sat, 24 Oct 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/oresenwomabiku/</guid>
+      <guid>https://www.330k.info/essay/oresenwomabiku/</guid>
       <description>読み込んだGPSログのデータを間引きたい、と思って調べたところ、 (Ramer-)Douglas-Peuckerのアルゴリズムというものがあることが分かった。
 基本的な考え方は、
  折れ線の始点と終点を結ぶ線分と各点の距離を求める。 すべての点との距離が許容誤差ε以内に入っていれば始点と終点だけを返して終了。 そうでなければ距離が最大の点Pを1つ選択。 始点から点Pまでの折れ線と、点Pから終点までの折れ線のそれぞれについてまた1から処理する。  という再帰的なもの。

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Essays on 330k info</title>
-    <link>https://www2.330k.info/essay/</link>
+    <link>https://www.330k.info/essay/</link>
     <description>Recent content in Essays on 330k info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Jun 2017 06:48:00 +0900</lastBuildDate>
     
-	<atom:link href="https://www2.330k.info/essay/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.330k.info/essay/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>英語版Windows PE環境でバックスラッシュを入力</title>
-      <link>https://www2.330k.info/essay/input_backslach_with_us_keyboard_layout/</link>
+      <link>https://www.330k.info/essay/input_backslach_with_us_keyboard_layout/</link>
       <pubDate>Tue, 06 Jun 2017 06:48:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/input_backslach_with_us_keyboard_layout/</guid>
+      <guid>https://www.330k.info/essay/input_backslach_with_us_keyboard_layout/</guid>
       <description>会社のPCではHDD暗号化ソフトのSecureDocを使用しているが、先日1台のPCが起動しなくなったため、リカバリーディスクを使っての救出を行った際のメモ。
 SecureDocのリカバリーディスクはWindows PEベースなのだが、海外の製品なので当然英語キーボード。 起動しなくなったPCのHDDの中身は運良く復旧できそうだったのだが、 データをネットワーク経由で回収しようとしたところネットワーク設定画面でバックスラッシュが入力できなくてハマった。
 5分ほどキーボードを押しまくった後、Altキーと文字コード入力で行けることに気がついた。
@@ -27,10 +27,10 @@ Alt押す → テンキー9 → テンキー2 → Alt離す
     
     <item>
       <title>Xubuntu 16.04 &#43; Snortで簡易IDS構築</title>
-      <link>https://www2.330k.info/essay/xubuntu1604_snort_base/</link>
+      <link>https://www.330k.info/essay/xubuntu1604_snort_base/</link>
       <pubDate>Tue, 06 Jun 2017 06:37:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/xubuntu1604_snort_base/</guid>
+      <guid>https://www.330k.info/essay/xubuntu1604_snort_base/</guid>
       <description>ウイルス等に侵入された後の対策として、IDSやIPS製品の紹介をベンダーから受けたが、正直なところ価格が高かったのと、検知されるメッセージがSnort由来のものが多い気がしたので、自分でSnortを構築して商用製品との差を調べてみることにした。
 構築環境  PC : 余っていたノートPC Panasonic LetsNote CF-NX1 OS : Xubuntu 16.04.2 (LetsNoteの有線LANと無線LANのNICを認識できる可能性が高いディストリビューションとして選択) ルータ : Yamaha RTX810 IDSとして運用(ミラーポートの通信を監視)  手順 基本的に、以下のドキュメント通りでOK。
 Snort 2.9.9.x on Ubuntu 14 -16
@@ -45,10 +45,10 @@ RTX810はhttp://www.rtpro.yamaha.co.jp/RT/manual/rt-common/setup/lan_port-mirror
     
     <item>
       <title>Windows標準機能でZIPファイルの作成</title>
-      <link>https://www2.330k.info/essay/create_zip_file_with_wsh_jscript/</link>
+      <link>https://www.330k.info/essay/create_zip_file_with_wsh_jscript/</link>
       <pubDate>Mon, 08 May 2017 22:37:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/create_zip_file_with_wsh_jscript/</guid>
+      <guid>https://www.330k.info/essay/create_zip_file_with_wsh_jscript/</guid>
       <description>JScriptで複数のテキストファイルを書き出し、それをZIPでまとめたかったので作成。 VBAやVBScript版を参考に作ってみた。
 参考サイト : http://kiq-creator.com/blog/?eid=33
 複数のファイルをZIP圧縮する際のコツとしては、CopyHereをするたびに待機すること。 CopyHereは非同期なので、すぐにJS側に制御が返ってくるが、 複数のファイルを一気にCopyHereしようとすると、「読み取りできません」とエラーが出る。
@@ -60,10 +60,10 @@ createZipFile( &amp;quot;zipファイルのパス&amp;quot;, [&amp;quot;圧縮�
     
     <item>
       <title>Gmail (G Suite)でフリーメールアドレスへの送信を検知</title>
-      <link>https://www2.330k.info/essay/detect_submittion_to_private_mail_from_gmail/</link>
+      <link>https://www.330k.info/essay/detect_submittion_to_private_mail_from_gmail/</link>
       <pubDate>Tue, 29 Nov 2016 20:45:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/detect_submittion_to_private_mail_from_gmail/</guid>
+      <guid>https://www.330k.info/essay/detect_submittion_to_private_mail_from_gmail/</guid>
       <description> 会社ではG Suite(旧Google Apps for Works)を導入しているが、 ある社員が個人のGmailアドレスに会社の情報の入ったメールを送信していた。
 幸いPCで操作していたためPCのログ監視ソフト(SKYSEA Client View)で検知し、当該従業員に注意することができた。 ただ、同じことを会社支給のiPhoneでやられた場合に無力だったことに気づいたので、G Suite側でも対策を実施。
 設定方法は以下の通り。
@@ -72,10 +72,10 @@ createZipFile( &amp;quot;zipファイルのパス&amp;quot;, [&amp;quot;圧縮�
     
     <item>
       <title>EDINETが生成するPDFにフォントを埋め込む</title>
-      <link>https://www2.330k.info/essay/make_font_embedded_pdf_from_edinet/</link>
+      <link>https://www.330k.info/essay/make_font_embedded_pdf_from_edinet/</link>
       <pubDate>Fri, 11 Nov 2016 23:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/make_font_embedded_pdf_from_edinet/</guid>
+      <guid>https://www.330k.info/essay/make_font_embedded_pdf_from_edinet/</guid>
       <description>EDINETで出力したPDFを会社のプレスリリースで掲載したところ、iPhoneで閲覧できない、という問題が発生した。
 PDFファイルを見てみると、日本語フォントが埋め込まれていない(下図)。
  そのため、iPhoneなどMS系の日本語フォントがない環境では、日本語部分が真っ白の閲覧できないものになっていた。 ちなみに、Ubuntuでは別の日本語書体で代替表示された。
@@ -90,10 +90,10 @@ PDFのセキュリティ設定を無視するビューアで代表的なもの�
     
     <item>
       <title>勘定奉行の性能劣化に対処</title>
-      <link>https://www2.330k.info/essay/performance_degration_of_kanjo_bugyo/</link>
+      <link>https://www.330k.info/essay/performance_degration_of_kanjo_bugyo/</link>
       <pubDate>Sun, 06 Nov 2016 17:22:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/performance_degration_of_kanjo_bugyo/</guid>
+      <guid>https://www.330k.info/essay/performance_degration_of_kanjo_bugyo/</guid>
       <description>社内では会計システムに勘定奉行(ネットワーク版)を使っているが、 担当者から「勘定奉行で仕訳帳の表示に20秒くらいかかる」と言われたので調査してみた。
 その担当者のPC固有の問題かどうかを切り分けるため別のPCから同様の操作を行ってみたところ、同じ症状が発生した。 ということは、サーバ側に問題がありそう。
 勘定奉行のクライアントは生のSQL文をサーバに発行する仕組みなので、 Wiresharkでパケットをキャプチャすることで発行されたSQL文を把握することができる。
@@ -107,10 +107,10 @@ sp_updatestats  としたところ、1秒程度で処理が完了するように
     
     <item>
       <title>m-241のバイナリデータからトラックログを吸い出す</title>
-      <link>https://www2.330k.info/essay/rescue_gps_log_from_binary_data_of_holux_m241/</link>
+      <link>https://www.330k.info/essay/rescue_gps_log_from_binary_data_of_holux_m241/</link>
       <pubDate>Thu, 22 Sep 2016 07:14:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/rescue_gps_log_from_binary_data_of_holux_m241/</guid>
+      <guid>https://www.330k.info/essay/rescue_gps_log_from_binary_data_of_holux_m241/</guid>
       <description>GPSロガー(Holux m-241)のメモリが破損しているのか、 実は6月30日と7月3日の軽井沢→直江津ツーリングと、9月の西九州→佐多岬ツーリングでは、 ログが破損していたため、Googleのロケーション履歴を代用している。
 バイナリデータは一応吸い出せているようなので、その構造を調べると、 HOLUX m-241 LoggerUtility .trlファイル構造の覚書 より以下のような構造になっている。
  1レコード20バイトの固定長 時刻4バイト 緯度4バイト 経度4バイト 高度3バイト 速度4バイト チェックサム1バイト  また、m-241は時折書き込み先のメモリアドレスがずれることがあるようだ、との情報も見つかったため、 バイナリエディタで除いてみると、どうも4バイトずつずれて記録されたデータがあるようだった。
@@ -121,10 +121,10 @@ data = Table[Module[{str, ret}, str = OpenRead[&amp;quot;2016091200.bin&amp;quot
     
     <item>
       <title>Firefoxをグループポリシーで管理する</title>
-      <link>https://www2.330k.info/essay/manage_firefox_settings_with_group_policy_without_gpo_for_firefox/</link>
+      <link>https://www.330k.info/essay/manage_firefox_settings_with_group_policy_without_gpo_for_firefox/</link>
       <pubDate>Tue, 12 Jul 2016 22:07:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/manage_firefox_settings_with_group_policy_without_gpo_for_firefox/</guid>
+      <guid>https://www.330k.info/essay/manage_firefox_settings_with_group_policy_without_gpo_for_firefox/</guid>
       <description>公式の情報はこちら : https://www.mozilla.jp/business/faq/tech/setting-management/
 上記公式サイトにあるように、ActiveDirectory環境にあるFirefoxの設定を管理する場合、
  クライアント側にアドオン(GPO for Firefox)をインストール サーバ側に管理用テンプレート(ADMファイル)を配置 グループポリシーエディタで設定を編集  という手順が推奨されている。ただ、この方法だと
@@ -138,10 +138,10 @@ lockPref(&amp;quot;loop.enabled&amp;quot;, false); lockPref(&amp;quot;services.s
     
     <item>
       <title>ffmpegでDVDをMPEGファイルに変換</title>
-      <link>https://www2.330k.info/essay/convert-dvd-to-mpeg-in-a-batch-file/</link>
+      <link>https://www.330k.info/essay/convert-dvd-to-mpeg-in-a-batch-file/</link>
       <pubDate>Thu, 17 Dec 2015 20:49:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/convert-dvd-to-mpeg-in-a-batch-file/</guid>
+      <guid>https://www.330k.info/essay/convert-dvd-to-mpeg-in-a-batch-file/</guid>
       <description> 社内でアシスタントからDVDをPCで再生できるようにしたい、という要望を受けたので、 DVDを入れて起動するだけのバッチファイルを作ってみた。
 DVDの中身のVTS_01_1.VOB, VTS_01_2.VOBというファイルをffmpegの-iオプションに指定すれば良いのだが、 パイプ記号「|」を使ってファイル名を連結しなければならない。 ただ、バッチファイル中でパイプ記号が入ると上手く連結できないので、 試行錯誤の結果、一旦「$$」という文字を挟んで連結した後、パイプ記号に変換、という手順になった。
 使い方  以下のテキストをメモ帳にコピー＆ペースト 下のテキスト中でFドライブを指定している部分を各自のドライブ名に変更 拡張子をbatにして保存 DVDを入れてバッチファイルを起動  原則としてバッチファイルと同じフォルダにdvd_yyyymmdd.mpegというファイルが出来上がる
@@ -150,10 +150,10 @@ DVDの中身のVTS_01_1.VOB, VTS_01_2.VOBというファイルをffmpegの-iオ�
     
     <item>
       <title>CompileするCコンパイラを変更する</title>
-      <link>https://www2.330k.info/essay/change-c-compiler-in-mathematica/</link>
+      <link>https://www.330k.info/essay/change-c-compiler-in-mathematica/</link>
       <pubDate>Tue, 08 Dec 2015 17:40:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/change-c-compiler-in-mathematica/</guid>
+      <guid>https://www.330k.info/essay/change-c-compiler-in-mathematica/</guid>
       <description>Mathematica 8から、CompileでCコンパイラを使って直接ネイティブコードにコンパイルできるようになった。 使用するCコンパイラは、
 Needs[&amp;quot;CCompilerDriver`&amp;quot;]; CCompilerDriver`$CCompiler = { &amp;quot;Name&amp;quot; -&amp;gt; &amp;quot;GCC&amp;quot;, &amp;quot;Compiler&amp;quot; -&amp;gt; CCompilerDriver`GCCCompiler`GCCCompiler, &amp;quot;CompilerInstallation&amp;quot; -&amp;gt; &amp;quot;/usr/bin&amp;quot;, &amp;quot;CompilerName&amp;quot; -&amp;gt; Automatic };  というように、CCompilerDriver`$CCompilerを変更して指定する。
 以前からのCompile(&amp;ldquo;WVM&amp;rdquo;)と、各コンパイラの比較のため、ベンチマークを行ってみた。 検証環境は以下の通り。
@@ -163,10 +163,10 @@ Needs[&amp;quot;CCompilerDriver`&amp;quot;]; CCompilerDriver`$CCompiler = { &amp
     
     <item>
       <title>Tikaを使って指定したディレクトリ以下の全ファイルのメタデータを収集</title>
-      <link>https://www2.330k.info/essay/aggregate-metadata-from-all-pdf-office-documents/</link>
+      <link>https://www.330k.info/essay/aggregate-metadata-from-all-pdf-office-documents/</link>
       <pubDate>Sun, 29 Nov 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/aggregate-metadata-from-all-pdf-office-documents/</guid>
+      <guid>https://www.330k.info/essay/aggregate-metadata-from-all-pdf-office-documents/</guid>
       <description>会社で外部に公開しているPDFファイルの作成者やタイトルにおかしいもの(社名が間違っている etc.)があることに気づき、 会社のファイルサーバにあるWord、Excel、PowerPoint、PDFファイルのメタ情報を一覧で出力し、 Excelにインポートして変なメタ情報が設定されていないかチェックするためのスクリプトを作ってみた。
 準備 まずはapacheからTikaをダウンロード(執筆時点では1.11が最新)
 wget http://ftp.jaist.ac.jp/pub/apache/tika/tika-app-1.11.jar  全メタデータを収集 とにかく全部のメタデータを収集したいときは、tikaのjarファイルと同じディレクトリに以下のようなスクリプトを配置。 検索対象のディレクトリは3行目で指定する。
@@ -175,10 +175,10 @@ wget http://ftp.jaist.ac.jp/pub/apache/tika/tika-app-1.11.jar  全メタデー�
     
     <item>
       <title>仮想的な専用線という言葉にだまされた残念な技術者</title>
-      <link>https://www2.330k.info/essay/what_l2_forwarding_ssl_vpn_protects/</link>
+      <link>https://www.330k.info/essay/what_l2_forwarding_ssl_vpn_protects/</link>
       <pubDate>Sun, 29 Nov 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/what_l2_forwarding_ssl_vpn_protects/</guid>
+      <guid>https://www.330k.info/essay/what_l2_forwarding_ssl_vpn_protects/</guid>
       <description>例によってパワハラを受けた研修先で最初に受けたパワハラが、 リモートアクセスのSSL-VPNに関する技術的な質問をした時のことだった。
 研修先の会社ではJuniper社(現PulseSecure社)のSSL-VPN製品を導入しており、 クライアントPC側にはNetwork Connectというソフトウェアをインストールしていた。
 これはL2フォワーディング方式のSSL-VPNで、起動するとネットワークアダプタに仮想NICが追加される。 仮想NIC経由で通信することで外部からでも社内LANに接続できる。
@@ -209,10 +209,10 @@ Network Connect起動時に作成される仮想NICがメトリックで優先�
     
     <item>
       <title>ST-5703の変速機構が破損したのでWレバーに交換</title>
-      <link>https://www2.330k.info/essay/exchange-st-5703-to-sl-r400/</link>
+      <link>https://www.330k.info/essay/exchange-st-5703-to-sl-r400/</link>
       <pubDate>Sun, 08 Nov 2015 02:43:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/exchange-st-5703-to-sl-r400/</guid>
+      <guid>https://www.330k.info/essay/exchange-st-5703-to-sl-r400/</guid>
       <description>先月の軽井沢〜直江津のあと、2年ぶりに自転車をオーバーホールした。
 その一環でシフトワイヤーケーブルの交換を行ったところ、フロントディレイラーの調子がおかしい。
 フロントトリプルなので、インナー⇛センター⇛アウターは問題なく変速できるのだが、 アウター⇛センターに変速しようとすると、「バキッ、ガッチャン」と音がして、一気にインナーまで落ちてしまうか、 まったく変速操作を受け付けなくなるか、のどちらかの症状が発生。
@@ -231,23 +231,23 @@ Network Connect起動時に作成される仮想NICがメトリックで優先�
     
     <item>
       <title>Recon JETを試してみた</title>
-      <link>https://www2.330k.info/essay/first-review-of-recon-jet/</link>
+      <link>https://www.330k.info/essay/first-review-of-recon-jet/</link>
       <pubDate>Mon, 26 Oct 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/first-review-of-recon-jet/</guid>
+      <guid>https://www.330k.info/essay/first-review-of-recon-jet/</guid>
       <description>購入したのはかなり早いタイミングだったが、なかなか試すことができなかったRecon JET。
 やっと自転車で走るときにつけて使い心地はどんなものか試すことが出来た。 ANT+対応の心拍計などは持っていないので、Recon JET単体でのテスト。
 つけ心地  普通のサングラスに比べればやはりパッドが当たる部分が痛くなるが、耐えられないほどではない 日本は車道の左側通行なので、視界の右下をディスプレイに遮られると、後方確認がしにくい  GPS  測位が遅い(m-241に比べて10分以上捕捉に時間がかかることもある) 測位の精度はm-241と同等以上(下記マップは障害物がほとんどない荒川CRを走行したとき) ただし、積算距離の精度は低い(１箇所でも位置がずれると、そのせいで距離が大きく計算される)  Recon JET(赤線)とm-241(青線)のGPSログ比較。
-  function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www2.330k.info\/\/essay\/first-review-of-recon-jet\/2015081602.kml&#34; }); ctaLayer.setMap(map); }   バッテリー  最大2時間半しかもたない 予備のバッテリーを持っていても、1日中走行するには耐えられない  カメラ  解像度は低いので、携帯電話のほうがよっぽどまし。 動画は撮影時間を予め15秒や1分などと予め設定してから撮影をスタートするので、使いどころが難しい。  荒川CRで実際に撮影した画像と動画
+  function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www.330k.info\/\/essay\/first-review-of-recon-jet\/2015081602.kml&#34; }); ctaLayer.setMap(map); }   バッテリー  最大2時間半しかもたない 予備のバッテリーを持っていても、1日中走行するには耐えられない  カメラ  解像度は低いので、携帯電話のほうがよっぽどまし。 動画は撮影時間を予め15秒や1分などと予め設定してから撮影をスタートするので、使いどころが難しい。  荒川CRで実際に撮影した画像と動画
  マップ  黒背景に道路が暗い灰色で表示されるので非常に見にくい 道路名や何号線かなどが表示されないため道に迷った時や知らない土地では無力  Recon Uplink  Recon JETを接続すると自動で記録をWeb上に上げてくれる 今までの走行記録(距離、平均速度、獲得標高など)をブラウザで見れるのは便利なので、 毎日ガチで2時間の練習ばかりする人であれば有用かもしれない  総評  サイコンの代替になるにはまだまだ性能不足(特にバッテリー)。 カメラやマップもRecon JETを使うくらいなら携帯電話(スマートフォン)のほうが断然良い。  ということで、残念ながら現時点ではロングツーリングのお供にはなれなかった。</description>
     </item>
     
     <item>
       <title>NHKの受信契約を解除し受信料と通信料金を抑える</title>
-      <link>https://www2.330k.info/essay/nhk-contract-cancellation-and-communication-cost-saving/</link>
+      <link>https://www.330k.info/essay/nhk-contract-cancellation-and-communication-cost-saving/</link>
       <pubDate>Sun, 18 Oct 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/nhk-contract-cancellation-and-communication-cost-saving/</guid>
+      <guid>https://www.330k.info/essay/nhk-contract-cancellation-and-communication-cost-saving/</guid>
       <description>現在所持している携帯電話は、2013年11月に購入した京セラ製のURBANO L01。
 これにはワンセグ機能が付いているため、NHKの営業センターの人に見つかり、
  「テレビを所持していなくてもワンセグ機能付きの携帯電話を所持しているだけで契約が必要です」
@@ -266,10 +266,10 @@ IP電話は、ほとんど通話をしないため、通話料金ではなく月
     
     <item>
       <title>カンチレバーブレーキをミニVブレーキに換装</title>
-      <link>https://www2.330k.info/essay/exchange-canti-lever-brake-to-mini-v-brake/</link>
+      <link>https://www.330k.info/essay/exchange-canti-lever-brake-to-mini-v-brake/</link>
       <pubDate>Sun, 18 Oct 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/exchange-canti-lever-brake-to-mini-v-brake/</guid>
+      <guid>https://www.330k.info/essay/exchange-canti-lever-brake-to-mini-v-brake/</guid>
       <description>私が現在乗っている自転車はSURLYのCROSS-CHECKで、一応シクロクロスの分類に入る。 なので、購入時はカンチレバーブレーキ(CaneCreek SCX-5)を付けていた(当時はミニVはなかった)。
 5年間はシューをSwiss stopに交換するなどして使用してきたが、
  パワーロスが大きく、長い下り道などで手が疲れる(握力がなくなり下り道で休憩することも) チドリまでのワイヤー長さと、左右のブレーキ間のワイヤー長さの2箇所を調整する必要があり、難しい。 特にフロントでブレーキ時にビビる(ガタつく)ため、スムーズに止まれない。 (当初はフロントフォークの剛性不足かと思ったが、今回の交換で良くなったので、 おそらくチドリでワイヤーを引く構造による剛性不足と考えられる)  という問題に悩まされてきた。
@@ -285,10 +285,10 @@ IP電話は、ほとんど通話をしないため、通話料金ではなく月
     
     <item>
       <title>秘密録音した音声ファイルをYoutubeにバックアップ</title>
-      <link>https://www2.330k.info/essay/upload_recorded_mp3_files_to_youtube/</link>
+      <link>https://www.330k.info/essay/upload_recorded_mp3_files_to_youtube/</link>
       <pubDate>Thu, 15 Oct 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/upload_recorded_mp3_files_to_youtube/</guid>
+      <guid>https://www.330k.info/essay/upload_recorded_mp3_files_to_youtube/</guid>
       <description>私はパワハラ対策として、毎日ICレコーダーを使って秘密録音を実施している。 ただ、毎日10時間を超える録音時間のため、32kbpsで録音しても1日あたり200MB弱の音声ファイルがHDDに追加されていき、HDDの容量を圧迫していく。
 そこで、バックアップを兼ねて動画化してYoutubeにアップロードするようにし、 HDDの空き容量が減ってきたらオリジナルの録音ファイルを消去していくことにした。
 ffmpeg(avconv)を使い、以下の手順で実施する。
@@ -306,10 +306,10 @@ avconv -y -i blank24.mov -i input.mp3 -vcodec copy -acodec copy -shortest output
     
     <item>
       <title>言いがかりを付けられたので切り返してみた</title>
-      <link>https://www2.330k.info/essay/augue-against-power-harassment-bully/</link>
+      <link>https://www.330k.info/essay/augue-against-power-harassment-bully/</link>
       <pubDate>Fri, 28 Aug 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/augue-against-power-harassment-bully/</guid>
+      <guid>https://www.330k.info/essay/augue-against-power-harassment-bully/</guid>
       <description>今朝、以前パワハラを受けていた研修先(以下G社とする)の人間からメールが来た。 要約すると、以下の内容になる。
  撤去作業終わりました
 **社(私の会社)の作業なので一般常識的に事前に連絡するのが筋です
@@ -353,10 +353,10 @@ G社から私への謝罪はないものの、その後の電話の対応は非�
     
     <item>
       <title>Windows 10を早速テストしてみた</title>
-      <link>https://www2.330k.info/essay/install-windows-10-to-panasonic-letsnote-cf-n10/</link>
+      <link>https://www.330k.info/essay/install-windows-10-to-panasonic-letsnote-cf-n10/</link>
       <pubDate>Tue, 04 Aug 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/install-windows-10-to-panasonic-letsnote-cf-n10/</guid>
+      <guid>https://www.330k.info/essay/install-windows-10-to-panasonic-letsnote-cf-n10/</guid>
       <description>Windows Insider Programに登録していたので、7/31に「Windows 10がでたよ〜」というメールがGabe Aulからやってきた。
 ゆくゆくは更新プログラムが提供されるけど、早く試したい人は「メディア作成ツール」をダウンロードして使うといいよ、 とのことなので、会社で余っていたPCにインストールしてみた。
 インストール  機種: Panasonic Let&amp;rsquo;s Note CF-N10(法人向けモデル) Windows 7 32bit版からのアップグレード Office 2010、Adobe Acrobat Pro XI、トレンドマイクロウイルスバスターがインストール済み  インストール方法は基本的に http://ascii.jp/elem/000/001/034/1034923/ の通り。 ※現在は直接ISOファイルがダウンロードできる模様
@@ -371,10 +371,10 @@ Let&amp;rsquo;s Noteの場合、 C:\util2\drivers\etm\DppmCleaner.bat、もし�
     
     <item>
       <title>会社から外部へのファイル・データ持ち出し対策</title>
-      <link>https://www2.330k.info/essay/how-to-take-files-out-from-company/</link>
+      <link>https://www.330k.info/essay/how-to-take-files-out-from-company/</link>
       <pubDate>Sun, 19 Jul 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/how-to-take-files-out-from-company/</guid>
+      <guid>https://www.330k.info/essay/how-to-take-files-out-from-company/</guid>
       <description>ベネッセの子会社での情報漏えい事件では、スマートフォンを使ってデータをPCから取り出していたらしい。 そこで、私の研修先の会社の社内SE部門の人たちは、以下の内部者によるファイルやデータの持ち出し対策を行っていた。
  資産管理ソフト(SKYSEA Client View)を導入  USBメモリやスマートフォンを挿しても書き込めないように設定 ネットワーク経由でもSKYSEAにログが残るからわかる  SKYSEAの機能で知らない機器がネットワークに接続されても検知できる(ただし、よく仕組みはわかっていない模様) Webフィルタリングソフト(InterSafe CATS)も導入 会社のメールサーバ経由での送受信メールはすべて保管  M&amp;amp;Aアドバイザリーという業務の特性からとにかく情報漏えい対策にお金はかけており、 セキュリティには相当な自信をお持ちでいらっしゃった。
 ただ、素人目からしても抜け道がいくつか見えたので、研修を終えて自分の会社に戻った瞬間に以下に対して策を講じた。
@@ -383,10 +383,10 @@ Let&amp;rsquo;s Noteの場合、 C:\util2\drivers\etm\DppmCleaner.bat、もし�
     
     <item>
       <title>日本企業における成果主義とパワハラ</title>
-      <link>https://www2.330k.info/essay/results-oriented-approach-of-japan-companies-and-power-harassment/</link>
+      <link>https://www.330k.info/essay/results-oriented-approach-of-japan-companies-and-power-harassment/</link>
       <pubDate>Wed, 15 Jul 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/results-oriented-approach-of-japan-companies-and-power-harassment/</guid>
+      <guid>https://www.330k.info/essay/results-oriented-approach-of-japan-companies-and-power-harassment/</guid>
       <description>今年の5月までの半年間、研修先の企業で
  自分がミスをしたり、言いがかりをつける格好の餌を与える 相手がひたすら満足するまで怒鳴りつける しばらくしたら、定番の以下の言い訳をする  「さっきのは悪気はなかった」 「お前の為を思って怒ったんだ」   のループを繰り返していた。
 周りや相手の上司に現状を訴えても、「あいつが怒りは愛があるから良いんだ」と言われる。
@@ -405,10 +405,10 @@ Let&amp;rsquo;s Noteの場合、 C:\util2\drivers\etm\DppmCleaner.bat、もし�
     
     <item>
       <title>WSUSなしでWindows 10の広告をWindows Updateから非表示にする</title>
-      <link>https://www2.330k.info/essay/disable_specific_windows_update_without_wsus/</link>
+      <link>https://www.330k.info/essay/disable_specific_windows_update_without_wsus/</link>
       <pubDate>Wed, 08 Jul 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/disable_specific_windows_update_without_wsus/</guid>
+      <guid>https://www.330k.info/essay/disable_specific_windows_update_without_wsus/</guid>
       <description>先月頃から、Windows 7の通知領域に「Windows 10を入手する」とか「無料アップグレードを予約」とかいう邪魔なMicrosoftの広告が入るようになってきた。 社内SEとしてはユーザに勝手にOSをアップグレードされるわけにはいかないので、消し去りたい。
 ネットを探してみると、やはり同様の悩みを持つ人は多いらしく、結論としては、
  GWX.exeとGWXUX.exeをタスクマネージャで強制終了する インストールされたWindows Updateの「KB3035583」をアンインストールする 再度Windows Updateがインストールさせようとしてくるので、KB3035583を右クリックして「非表示」にする  ということらしい。 → 参考サイト: 「Windows10を入手する」の通知が消えない＼(^o^)／
@@ -422,10 +422,10 @@ Taskkill /IM GWX.exe /F Taskkill /IM GWXUX.exe /F wusa.exe /uninstall /kb:303558
     
     <item>
       <title>パワハラ対策の秘密録音にはICレコーダがベスト</title>
-      <link>https://www2.330k.info/essay/use_ic_recorder_for_power_harassment/</link>
+      <link>https://www.330k.info/essay/use_ic_recorder_for_power_harassment/</link>
       <pubDate>Wed, 08 Jul 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/use_ic_recorder_for_power_harassment/</guid>
+      <guid>https://www.330k.info/essay/use_ic_recorder_for_power_harassment/</guid>
       <description>ITエンジニアとしてキャリアチェンジしたため、転職した直後から、研修として別の企業の社内SEのチームに入ることになった。
 ただ、そこには典型的なパワハラ指導者がいた。
 連日パワハラを受けたり、他の人が受けるのを狭い部屋で聞かされ続け、 精神安定剤や抗不安薬、睡眠薬がないとやっていけないようになってしまった。
@@ -441,10 +441,10 @@ Windows標準のサウンドレコーダー(ノートPC、会社ではLetsNote�
     
     <item>
       <title>Recon Jetが届いたので初期登録をしようとしたら、Windows 8.1も必要だった</title>
-      <link>https://www2.330k.info/essay/shipment-of-recon-jet-and-uplink-needs-windows/</link>
+      <link>https://www.330k.info/essay/shipment-of-recon-jet-and-uplink-needs-windows/</link>
       <pubDate>Wed, 20 May 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/shipment-of-recon-jet-and-uplink-needs-windows/</guid>
+      <guid>https://www.330k.info/essay/shipment-of-recon-jet-and-uplink-needs-windows/</guid>
       <description>2年近く前にパイロット版を予約していたRecon Jetが手元に到着した。 発送はFedEx。
    日付 できごと     2015年4月29日 Recon社(カナダ リッチモンド)を出荷   2015年4月30日 バンクーバー   2015年5月01日 メンフィス空港から空輸   2015年5月02日 成田空港に到着   2015年5月03日 税関通過   2015年5月07日 平日のため受け取れず、FedExに電話して土曜日の午後を希望   2015年5月09日 無事到着(国内の配送は西濃運輸)    箱を開けたらこのような感じ(携帯での撮影のため画質はご容赦を)
     説明書を読むと、
@@ -455,10 +455,10 @@ Windows標準のサウンドレコーダー(ノートPC、会社ではLetsNote�
     
     <item>
       <title>3Dグラフィックスが正常に表示されない問題</title>
-      <link>https://www2.330k.info/essay/3d-graphics-not-showed-in-ubuntu-mathematica/</link>
+      <link>https://www.330k.info/essay/3d-graphics-not-showed-in-ubuntu-mathematica/</link>
       <pubDate>Fri, 09 Jan 2015 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/3d-graphics-not-showed-in-ubuntu-mathematica/</guid>
+      <guid>https://www.330k.info/essay/3d-graphics-not-showed-in-ubuntu-mathematica/</guid>
       <description>たまたま私の環境の問題かもしれないが、
  Intel Core-i7 3770 Ubuntu 14.04 LTS Mathematica 8.0.4 Home Edition  という環境で、Mathematicaのノートブック上でPlot3DなどのGraphics3Dオブジェクトが、 うまく表示できないことに悩まされていたが、その解決法が分かった。
 メニューの「編集」→「環境設定」から、「詳細」タブを開き、「オプションインスペクタを開く」をクリック。  オプションインスペクタでは「グラフィックス設定」「RenderingOptions」内の&amp;rdquo;Graphics3DRenderingEngine&amp;rdquo;を デフォルトの&amp;rdquo;Automatic&amp;rdquo;から&amp;rdquo;Software&amp;rdquo;に変更する。  私の場合は以上で上手く行った。 Windowsではこのようなことはなかったのだが・・・。</description>
@@ -466,10 +466,10 @@ Windows標準のサウンドレコーダー(ノートPC、会社ではLetsNote�
     
     <item>
       <title>Mathematicaで論文用の図やグラフを作成するときのまとめ</title>
-      <link>https://www2.330k.info/essay/how-to-create-graphs-for-papers-with-mathematica/</link>
+      <link>https://www.330k.info/essay/how-to-create-graphs-for-papers-with-mathematica/</link>
       <pubDate>Sun, 14 Dec 2014 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/how-to-create-graphs-for-papers-with-mathematica/</guid>
+      <guid>https://www.330k.info/essay/how-to-create-graphs-for-papers-with-mathematica/</guid>
       <description>Mathematicaで作る図やグラフは美しいんだ！ということを伝えたいので、 もう数年も前になるが、修士論文を書くときにMathematicaで作るグラフにこだわった点を思い出しながらまとめてみる。
 論文を書くために使うソフトウェア 私はpLaTeXで論文を書いたが、研究室ではWordが推奨されていた。 図表の番号を管理する必要や図表の位置がずれて飛んでいってしまうといった事態も起きないし、目次や索引、参考文献リストの作成も自動でできる。 ただ、Wordだと添削をしやすいのは確か。
 MathematicaでExportする画像の形式 Mathematicaでは多様な画像ファイル形式でExportできるが、論文用のグラフでは多分PNG、EPS、PDFから選択することになると思う。 各画像形式を比較すると、それぞれ以下の特徴がある。
@@ -489,10 +489,10 @@ Frame -&amp;gt; True  を指定して枠のついたグラフにする。
     
     <item>
       <title>Mathematicaでパーセプトロンとバックプロパゲーション</title>
-      <link>https://www2.330k.info/essay/implement_perceptron_and_backpropagation_with_mathematica/</link>
+      <link>https://www.330k.info/essay/implement_perceptron_and_backpropagation_with_mathematica/</link>
       <pubDate>Mon, 14 Jul 2014 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/implement_perceptron_and_backpropagation_with_mathematica/</guid>
+      <guid>https://www.330k.info/essay/implement_perceptron_and_backpropagation_with_mathematica/</guid>
       <description>拙作のリバーシプログラムViglaは高校時代に作ったものだが、 評価関数は手の広さと辺の形を適当に数値化したものであるためにあまり強いプログラムにはできなかった。
 当時から強いリバーシプログラムは辺や隅のパターンを評価していることは知ってはいたものの、理解出来ずじまいだった。
 今回もう一度挑戦してみようと思い、まずはMathematicaでパーセプトロンとバックプロパゲーションによる学習を実装してみた。
@@ -510,10 +510,10 @@ backPropagation[pct : perceptron[w : {__}], x_List, teach_List, rate_: 1] := Mod
     
     <item>
       <title>GeoDistanceとその他の測地線距離算出式の精度</title>
-      <link>https://www2.330k.info/essay/precision-of-mathematica-geodistance-and-geographical-distance-formula/</link>
+      <link>https://www.330k.info/essay/precision-of-mathematica-geodistance-and-geographical-distance-formula/</link>
       <pubDate>Sat, 07 Jun 2014 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/precision-of-mathematica-geodistance-and-geographical-distance-formula/</guid>
+      <guid>https://www.330k.info/essay/precision-of-mathematica-geodistance-and-geographical-distance-formula/</guid>
       <description>Mathematicaには2点の緯度と経度を与えて、その間の測地線距離を返す関数としてGeoDistanceがある。 しかしながら、ここで書かれているように、その精度には疑問が呈されているようだ。
 他の有名な測地線距離の計算方法として、
  ヒュベニの式(カシミール3Dが採用しているが、英語圏では情報が見つからない) 国土地理院の測量計算サイトの計算式のついてのドキュメントを実装したもの 完全な球体とみなして計算(Google EarthやGoogle Maps API v3のcomputeDistanceBetweenが採用、haversine formula)  が見つかったので、GeoDistanceのMethodオプション3種類(&amp;ldquo;Vincenty75&amp;rdquo;, &amp;ldquo;Robbin61&amp;rdquo;, &amp;ldquo;ExtendedNewtonRaphson&amp;rdquo;)と上記の3種類の計算方法の合計6種類について精度を評価してみた。
@@ -529,10 +529,10 @@ y = xの直線上にあれば正確ということだが、GeoDistanceの&amp;rd
     
     <item>
       <title>Douglas-Peucker向けの優先度付きキュー実装の検討</title>
-      <link>https://www2.330k.info/essay/implement-of-priority-queue-for-douglas-peucker-simplify-algorithm/</link>
+      <link>https://www.330k.info/essay/implement-of-priority-queue-for-douglas-peucker-simplify-algorithm/</link>
       <pubDate>Thu, 29 May 2014 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/implement-of-priority-queue-for-douglas-peucker-simplify-algorithm/</guid>
+      <guid>https://www.330k.info/essay/implement-of-priority-queue-for-douglas-peucker-simplify-algorithm/</guid>
       <description>折れ線を間引くで書いたように、 Douglas-Peuckerアルゴリズムを改良して指定した点数まで点を削減して折れ線を簡略化する場合、 優先度付きキューを使うことになる。
 このアルゴリズムでは
  始点と終点を結ぶ線分で最も距離が大きな点P1を選ぶ 始点と点P1を結ぶ線分で距離最大となる点P2をキューに登録(優先度は点P2と線分の距離) 点P1と終点を結ぶ線分で距離最大となる点P3をキューに登録(優先度は点P3と線分の距離) キューから距離が最大(=優先度最大)の点を選んで、2に戻る  という手順となるため、「キューに2つ登録して、1つ取り出す」ということを繰り返すことになる。
@@ -546,10 +546,10 @@ Firefox 29 on Ubuntu 12.04 LTS 64bit    n Sequential      Douglas-PeuckerArray.<
     
     <item>
       <title>ファイル名順にソートしてzipファイルを作成する</title>
-      <link>https://www2.330k.info/essay/create-zip-with-alphabetical-order/</link>
+      <link>https://www.330k.info/essay/create-zip-with-alphabetical-order/</link>
       <pubDate>Mon, 30 Dec 2013 04:36:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/create-zip-with-alphabetical-order/</guid>
+      <guid>https://www.330k.info/essay/create-zip-with-alphabetical-order/</guid>
       <description>自炊した書籍をzipで作成する際、普通に圧縮すると変な順番で格納されてしまう。 実用上ほとんど問題はないのだが、なんとなくファイル名順に格納したかったので、そのやり方をメモ。
 ls -1 ディレクトリ名 | zip -@rjDo0 圧縮ファイル名.zip  やっていることは
  lsに-1オプションをつけてファイル1行ずつでファイル名を出力(デフォルトでは文字コード順) zipに-@オプションをつけ、標準入力にファイル名を渡して圧縮(残りのオプションはお好みで)  findを使って行うときは、もう少し工夫が必要で、以下のように findの-print0オプションとsortの-zオプション、xargsの-0オプションでNull文字区切りでファイル名を出力→ソート→圧縮とする。
@@ -558,10 +558,10 @@ find ./ -type f -print0 | sort -z | xargs -0 zip -@rjDo0 圧縮ファイル名.z
     
     <item>
       <title>Wolfram CDF Playerでローカルファイルの読み込みと書き込みを行う</title>
-      <link>https://www2.330k.info/essay/read-and-write-a-local-file-with-wolfram-cdf-player/</link>
+      <link>https://www.330k.info/essay/read-and-write-a-local-file-with-wolfram-cdf-player/</link>
       <pubDate>Fri, 18 Oct 2013 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/read-and-write-a-local-file-with-wolfram-cdf-player/</guid>
+      <guid>https://www.330k.info/essay/read-and-write-a-local-file-with-wolfram-cdf-player/</guid>
       <description>[Wolfram CDF Player を汎用する]()にあるように、 CDF PlayerでもJ/Linkを使えばローカルファイルの読み込み、書き込みができる(※CDFファイルの作成にはMathematicaが必要)。
 上記リンク先ではテキストファイルを読み込む例が載っているが、バイナリファイルとして読み込んでImportStringを使えば、 Mathematicaが対応している形式すべてのファイルを読み込むことができる。
 J/Linkでバイナリファイルを読み込むときのポイントとしては、
@@ -572,10 +572,10 @@ ImportWithJLink[filepath_?(FileExistsQ[FindFile[#]] &amp;amp;), format_] := ( Ne
     
     <item>
       <title>ffmpeg&#43;Mathematicaで動画ファイルを作成する</title>
-      <link>https://www2.330k.info/essay/make-a-movie-with-mathematica-and-ffmpeg/</link>
+      <link>https://www.330k.info/essay/make-a-movie-with-mathematica-and-ffmpeg/</link>
       <pubDate>Fri, 27 Sep 2013 00:04:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/make-a-movie-with-mathematica-and-ffmpeg/</guid>
+      <guid>https://www.330k.info/essay/make-a-movie-with-mathematica-and-ffmpeg/</guid>
       <description>MathematicaのExportでAVIなどの動画ファイルを作成することは簡単に可能だが、 いかんせんすべてのフレームの画像を作成してからファイルに書きだすので、フレーム数に比例してメモリの使用量が多くなってしまう。 そのため長いムービーの作成は困難であった。
 そこで、ffmpeg(avconv)と併用することでメモリ使用量を抑えつつ、長編の動画ファイルを制作する。 具体的には、
  ffmpegで標準入力から読み込ませるOutputStreamオブジェクトを作成する BinaryWriteでそのストリームに各フレームの画像を書き込む 終わったらCloseでストリームを閉じる  とする。ここで、各フレーム画像の形式をPPMにしないとうまく動作しなかった(BMP、PNGなどではなぜか動作せず)。
@@ -586,10 +586,10 @@ Options[ExportMovie] = { &amp;quot;FrameRate&amp;quot; -&amp;gt; 25, &amp;quot;V
     
     <item>
       <title>MathematicaからSQLiteでBLOBとマルチバイト文字列を扱う</title>
-      <link>https://www2.330k.info/essay/process-blob-and-multibyte-string-from-sqlite-with-mathematica/</link>
+      <link>https://www.330k.info/essay/process-blob-and-multibyte-string-from-sqlite-with-mathematica/</link>
       <pubDate>Sun, 14 Oct 2012 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/process-blob-and-multibyte-string-from-sqlite-with-mathematica/</guid>
+      <guid>https://www.330k.info/essay/process-blob-and-multibyte-string-from-sqlite-with-mathematica/</guid>
       <description>ドキュメントにはないものの、MathematicaではSQLiteを扱うことができる。 しかしながら、BLOB型や文字列で日本語などを扱うには少し工夫が必要なので、メモ。
 BLOB型 select 直接BLOB型をselectすると$Failedが返ってくるので、hex関数で16進文字列として返す。
 db = Database`OpenDatabase[sqlitefilepath]; rs = Database`QueryDatabase[db, &amp;quot;select hex(column_name) from table_name&amp;quot;];  これを16進文字列→数値→バイト列→文字列と変換して、最後にImportStringで読み込むと、Mathematicaで読み込める。
@@ -600,10 +600,10 @@ ImportSQLiteString[str_] := FromCharacterCode[ToCharacterCode[str], &amp;quot;UT
     
     <item>
       <title>Mathematica on Ubuntu 12.04 LTSで日本語関連のトラブル</title>
-      <link>https://www2.330k.info/essay/how-to-make-mathematica8-process-japanese-on-ubuntu-1204-ltf-64bit/</link>
+      <link>https://www.330k.info/essay/how-to-make-mathematica8-process-japanese-on-ubuntu-1204-ltf-64bit/</link>
       <pubDate>Tue, 09 Oct 2012 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/how-to-make-mathematica8-process-japanese-on-ubuntu-1204-ltf-64bit/</guid>
+      <guid>https://www.330k.info/essay/how-to-make-mathematica8-process-japanese-on-ubuntu-1204-ltf-64bit/</guid>
       <description>Mathematica 8 Home Edition 日本語版をUbuntu 12.04 LTS 64bit版にインストールしたところ、
  ディレクトリ、ファイル名に日本語が含まれるノートブックファイル(.nb)を開けない ディレクトリ、ファイル名に日本語が含まれるとImport/Exportできない、FileNamesで列挙できない ノートブック中に日本語を入力できない $SystemCharacterEncoding、$CharacterEncodingが&amp;rdquo;EUC-JP&amp;rdquo;になっている  などの言語関連の不具合があった。
 これから作るノートブックは英語だけで書けば済むが、今までに作ったノートブックファイルが開けないのがつらい。 一応Wolframのサポートにはメールを出したが、期待できそうになかった。
@@ -618,10 +618,10 @@ Thank you for your report and we look forward to a continued, productive relatio
     
     <item>
       <title>LS-DYNA用の浮動小数点数をフォーマット</title>
-      <link>https://www2.330k.info/essay/format-floating-number-for-s-dyna-with-java/</link>
+      <link>https://www.330k.info/essay/format-floating-number-for-s-dyna-with-java/</link>
       <pubDate>Sat, 25 Aug 2012 08:56:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/format-floating-number-for-s-dyna-with-java/</guid>
+      <guid>https://www.330k.info/essay/format-floating-number-for-s-dyna-with-java/</guid>
       <description>LS-DYNAのキーワードファイルを書きだすプログラムを書いたところ、浮動小数点数を固定文字数(10文字)にフォーマットする所でつまづいた。 具体的には
  String.formatやDecimalFormatの動作が遅い(String.formatよりはDecimalFormatのほうが速いが) 文字数を10文字に制限することが難しい(絶対値の大小比較を行なって桁数ごとに条件分岐をしても、四捨五入によって意図しない文字数(11文字)になる)  という問題にあたった。そこでdoubleから長さ10の文字列を力技で書きだすロジックを自作した。特徴は以下の通り。
  正の時は先頭にスペース、負の時は先頭に&amp;rdquo;-&amp;ldquo;を入れる 10文字の制限の中で最も有効桁数が大きくなるようにフォーマット 四捨五入はしない！ DecimalFormatの15倍高速(もう少し工夫はできるが)  private static String formatFloat10(double d){ char[] c = new char[10]; double a; if(d == 0.0){ return &amp;quot; 0.0000000&amp;quot;; } if(d &amp;lt; 0){ c[0] = &#39;-&#39;; a = -d; }else{ c[0] = &#39; &#39;; a = d; } int m = (int)Math.floor(Math.log10(a)); if(m &amp;lt;= -100){ for(int i = 1; i &amp;lt; 1 - m; i++) a *= 10; c[1] = (char)(&#39;0&#39; + Math.</description>
@@ -629,20 +629,20 @@ Thank you for your report and we look forward to a continued, productive relatio
     
     <item>
       <title>VBAでビットマップ(bmp)を読み書き</title>
-      <link>https://www2.330k.info/essay/how-to-read-and-write-24bit-bitmap-files-with-vba/</link>
+      <link>https://www.330k.info/essay/how-to-read-and-write-24bit-bitmap-files-with-vba/</link>
       <pubDate>Wed, 22 Sep 2010 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/how-to-read-and-write-24bit-bitmap-files-with-vba/</guid>
+      <guid>https://www.330k.info/essay/how-to-read-and-write-24bit-bitmap-files-with-vba/</guid>
       <description>会社のPCでは自由にソフトウェアをインストールすることができないので、業務で使いそうなものはExcel VBAで自作していくことにした。 まずは手始めに24ビットビットマップの読み書きを行う標準モジュールを作成した。 VBAの機能のみで実装しており、外部のライブラリには依存しない。
 使い方  以下のソースをOfficeのマクロで標準モジュールとしてプロジェクトへ追加する。 ReadBitmap(&amp;ldquo;C:***.bmp&amp;rdquo;)で、RGBTRIPLE型の2次元配列が返る。 読み込みは一応1, 4, 8, 24, 32ビットのビットマップファイルに対応。 WriteBitmap24(&amp;ldquo;C:***.bmp&amp;rdquo;)で24ビットのビットマップファイルを書き込む。 おまけ機能として、ReadGIFJPEGでGIFとJPEGファイルも読み込みにも対応。  &#39; Bitmap module by 330k &#39; Copyright (C) 2010 330k, All rights reserved. Option Explicit Public Type RGBTRIPLE rgbBlue As Byte rgbGreen As Byte rgbRed As Byte End Type Private Type RGBQUAD rgbBlue As Byte rgbGreen As Byte rgbRed As Byte rgbReserved As Byte End Type Private Type BITMAPFILEHEADER bfType As String * 2 bfSize As Long bfReserved1 As Integer bfReserved2 As Integer bjOffBits As Long End Type Private Type BitmapInfoHeader biSize As Long biWidth As Long biHeight As Long biPlanes As Integer biBitCount As Integer biCompression As Long biSizeImaze As Long biXPixPerMeter As Long biYPixPerMeter As Long biClrUsed As Long biClrImporant As Long End Type &#39; Read a bitmap file (1, 4, 8, 24 and 32 bit) and return image as 2-dimension array of RGBTriple Public Function ReadBitmap(strFileName As String) As RGBTRIPLE() Dim i As Long Dim j As Long Dim n As Long Dim intFileNumber As Integer Dim bjHeader As BITMAPFILEHEADER Dim biHeader As BitmapInfoHeader Dim lngColors As Long Dim rgbData() As RGBTRIPLE Dim rgbTemp As RGBTRIPLE Dim rgbTable3() As RGBTRIPLE Dim rgbTable4() As RGBQUAD Dim bytTemp As Byte intFileNumber = FreeFile() Open strFileName For Binary As intFileNumber Get intFileNumber, , bjHeader Get intFileNumber, , biHeader ReDim rgbData(0 To biHeader.</description>
     </item>
     
     <item>
       <title>Mathematicaにおけるプログラムの高速化手法</title>
-      <link>https://www2.330k.info/essay/how-to-optimize-mathematica-programs/</link>
+      <link>https://www.330k.info/essay/how-to-optimize-mathematica-programs/</link>
       <pubDate>Mon, 14 Dec 2009 22:39:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/how-to-optimize-mathematica-programs/</guid>
+      <guid>https://www.330k.info/essay/how-to-optimize-mathematica-programs/</guid>
       <description>Mathematicaにおいてプログラムの実行速度を最適化する際の項目を思いつく限り挙げてみた。 高速化に関する公式のドキュメントはこちら。
 関数型パラダイムで書く 必然的に組み込み関数を多く使い、リストをまとめて操作することになるので手続き型で書くより速くなることが多い。 コード量も少なくなって読みやすくなるので、よほどのことでない限りMathematicaでは関数型で書く。
 具体的には、手続き型ループ構文(Do, For, Whileなど)をやめて、MapやThreadを使うようにする。
@@ -656,10 +656,10 @@ myPrimeChoice1[n_] := Module[{r = {}, i}, Do[If[PrimeQ[i], AppendTo[r, i]], {i, 
     
     <item>
       <title>陽的Runge-Kutta法のButcher tableau</title>
-      <link>https://www2.330k.info/essay/explicit-runge-kutta-butcher-tableau/</link>
+      <link>https://www.330k.info/essay/explicit-runge-kutta-butcher-tableau/</link>
       <pubDate>Sat, 05 Dec 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/explicit-runge-kutta-butcher-tableau/</guid>
+      <guid>https://www.330k.info/essay/explicit-runge-kutta-butcher-tableau/</guid>
       <description> Explicit Runge-Kutta法の公式はいくつか知られているが、高次の公式になるほどButcher配列の項数が増えるため論文に誤植が多くなる。 それに気づかないまま実際に使うと、プログラムは正しく組めているはずなのに思うように精度が上がらないという落とし穴にはまってしまう。
 覚書として、以下に代表的と思われる公式のButcher tableauをまとめる。
 以下のButcher tableauはMathematica 8のNumericalDifferentialEquationAnalysisパッケージに含まれるRungeKuttaOrderConditionsで所定の次数条件を達成していることを確認しており、誤植が入り込まないようにそのままMathematica上で画像化している。
@@ -672,10 +672,10 @@ MathematicaにCやFortranのソースコード形式で吐かせるのが確実�
     
     <item>
       <title>Mathematica 7でImportおよびExportを拡張する</title>
-      <link>https://www2.330k.info/essay/extend-import-and-export-of-mathematica7/</link>
+      <link>https://www.330k.info/essay/extend-import-and-export-of-mathematica7/</link>
       <pubDate>Mon, 23 Nov 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/extend-import-and-export-of-mathematica7/</guid>
+      <guid>https://www.330k.info/essay/extend-import-and-export-of-mathematica7/</guid>
       <description>MathematicaではImportやExportを使って様々な形式のファイルを読み書きできるが、 標準で対応していないファイル形式についても自分でローダやライタを作り、 それをImportやExportに対応させる方法がExtending Import &amp;amp; Export (Wolfram Library Archive)において解説されている。
 しかしこの文書は2003年のもので以前はExperimental`RegisterConverterという関数で登録すればよかったのだが、 この関数はMathematica 7にはない。
 Names[&amp;quot;*`*Register*&amp;quot;]  などとして探し回ったところ、
@@ -695,10 +695,10 @@ FileFormatDump`AddFormat[&amp;quot;ファイルフォーマット名&amp;quot;, 
     
     <item>
       <title>Google Sites &#43; Google Analyticsで「サイト上のデータ表示」は要注意</title>
-      <link>https://www2.330k.info/essay/attention-to-show-data-in-combination-of-google-sites-and-google-analytics/</link>
+      <link>https://www.330k.info/essay/attention-to-show-data-in-combination-of-google-sites-and-google-analytics/</link>
       <pubDate>Sun, 15 Nov 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/attention-to-show-data-in-combination-of-google-sites-and-google-analytics/</guid>
+      <guid>https://www.330k.info/essay/attention-to-show-data-in-combination-of-google-sites-and-google-analytics/</guid>
       <description>Google SitesではGoogle Analyticsを用いる設定が簡単にできるが、Google Analyticsの「サイト上のデータ表示」を行うと「閉じる」をクリックしても何の反応がない。 画面にレイヤーが重なっていろいろなデータが表示されてしまう状態から抜けられない。
 ネットを調べたところ、「閉じる」が見つからないために同じような現象に遭遇している事例は見つかったが、 「閉じる」をクリックしても、
 _siteOverlay._close()  をアドレスバーに打ち込んでもダメだった。 おそらくGoogle Sitesを利用している場合特有の現象なのだろう。
@@ -710,10 +710,10 @@ function () { var domain, cookiePath; if (GLOBAL_window._udo) { domain = GLOBAL_
     
     <item>
       <title>多角形の内外判定</title>
-      <link>https://www2.330k.info/essay/takakugatanonaigaihantei/</link>
+      <link>https://www.330k.info/essay/takakugatanonaigaihantei/</link>
       <pubDate>Thu, 29 Oct 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/takakugatanonaigaihantei/</guid>
+      <guid>https://www.330k.info/essay/takakugatanonaigaihantei/</guid>
       <description>ある点が多角形の内側にあるのか外側にあるのかを判定するには主に
  ある点から直線をひいて多角形の辺と何回交差するか判定する(偶数回なら外、奇数回なら中) ある点から多角形の各頂点を順番に見ていったときに何回転するか  の2つの方法がある。
 しかし辺との交差回数をカウントするのは、直線と辺が平行だったり、頂点で交差したりする場合などに特別な配慮が必要なので、 ここでは2番目の方法で実装する。
@@ -727,10 +727,10 @@ InsidePolygonQ[poly : {{_, _} ..}, p : {_, _}] := Module[ {argsum}, argsum = Rou
     
     <item>
       <title>簡易ハンディGPSによるあしあとデータの時刻情報</title>
-      <link>https://www2.330k.info/essay/leap-second-in-au-handy-gps-ashiato-data/</link>
+      <link>https://www.330k.info/essay/leap-second-in-au-handy-gps-ashiato-data/</link>
       <pubDate>Tue, 27 Oct 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/leap-second-in-au-handy-gps-ashiato-data/</guid>
+      <guid>https://www.330k.info/essay/leap-second-in-au-handy-gps-ashiato-data/</guid>
       <description>au携帯電話に入っている地図ビューアーの簡易ハンディGPS機能によって取得したGPSログ(あしあとデータ)は、
 本ファイルは、地図ビューアーにより出力されたGPS情報ファイルです。 出力日時:2009/10/27 08:56:46 +0900 +++GPSログ+++ 940669002,139.604988,35.833148  という形式になっており、「+++GPSログ+++」以下の行に時刻、経度、緯度の順番に記録される。
 GPSでは時刻を1980年1月6日0時0分0秒(GMT)からの秒数として表すが、au携帯電話の場合はこれに9時間を足した秒数になる。
@@ -745,10 +745,10 @@ DatePlus[DateList[{1980, 1, 6, 0, 0, 0}], {940669002, &amp;quot;Second&amp;quot;
     
     <item>
       <title>16ビットアプリケーションの標準入出力をリダイレクト</title>
-      <link>https://www2.330k.info/essay/how-to-redirect-standard-input-output-of-16bit-application/</link>
+      <link>https://www.330k.info/essay/how-to-redirect-standard-input-output-of-16bit-application/</link>
       <pubDate>Mon, 26 Oct 2009 21:47:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/how-to-redirect-standard-input-output-of-16bit-application/</guid>
+      <guid>https://www.330k.info/essay/how-to-redirect-standard-input-output-of-16bit-application/</guid>
       <description>FORTRANで書かれた古いMS-DOSプログラムを.NET/Linkを使ってMathematicaから操るパッケージを作っていたところ、 Process.StartInfo.RedirectStandardInputやRedirectStandardOutputにTrueを設定してもまったく標準入出力をリダイレクトできなかった。(※OSはVista 32bit)
 いろいろ試してみたところ、16ビットのプログラムだとリダイレクトができないらしいということが分かった。 さてどうしたものかとさらにいろいろ打開策を探してみた結果、
  FileNameに&amp;quot;cmd.exe&amp;quot;を設定して、Process.Start()でプロセスを起動。 必要ならStandardInput.WriteLine(&amp;quot;cd 16ビットプログラムのディレクトリ&amp;quot;)としてカレントディレクトリを移動。 StandardInput.WriteLine(&amp;quot;***.EXE&amp;quot;)として16ビットプログラムを起動。  とcmd.exeを間に挟むことにより、16ビットのプログラムに対しても標準入出力のリダイレクトが行えることが分かった。
@@ -758,10 +758,10 @@ outputs = {}; outputhandler[o_, args_] := Module[ {data = args@Data}, AppendTo[o
     
     <item>
       <title>GPXファイルを読み込む</title>
-      <link>https://www2.330k.info/essay/import-gpx-file-in-mathematica/</link>
+      <link>https://www.330k.info/essay/import-gpx-file-in-mathematica/</link>
       <pubDate>Sun, 25 Oct 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/import-gpx-file-in-mathematica/</guid>
+      <guid>https://www.330k.info/essay/import-gpx-file-in-mathematica/</guid>
       <description>MathematicaでGPXファイルを読み込んで解釈する方法のメモ。
 対象となるGPXファイルを
 xml = Import[filepath, &amp;quot;XML&amp;quot;];  でまずXMLとして読み込んでおいて、
@@ -773,10 +773,10 @@ Mathematica 8からは標準でGPXをImport可能になった。</description>
     
     <item>
       <title>友愛数を列挙する</title>
-      <link>https://www2.330k.info/essay/enumurate-amicable-numbers-with-mathematica/</link>
+      <link>https://www.330k.info/essay/enumurate-amicable-numbers-with-mathematica/</link>
       <pubDate>Sun, 25 Oct 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/enumurate-amicable-numbers-with-mathematica/</guid>
+      <guid>https://www.330k.info/essay/enumurate-amicable-numbers-with-mathematica/</guid>
       <description>Mathematicaで友愛数を列挙するプログラム例として以下のようなものが見受けられる。
 yakuwa[n_] := DivisorSigma[1, n] - n; Do[If[(yakuwa[yakuwa[k]] == k) &amp;amp;&amp;amp; (yakuwa[k] != k), Print[{k, yakuwa[k]}]], {k, 1, 1000}];  しかし、Doでループを回してPrintで書き出していくのはMathematica的に美しくないと思う。
 Mathematicaなら関数型プログラミングとパターンマッチを用いるのが良いと思うので、私なら以下のように書く。
@@ -787,10 +787,10 @@ Cases[NestList[DivisorSigma[1, #] - # &amp;amp;, #, 5] &amp;amp; /@ Range[100000
     
     <item>
       <title>折れ線を間引く</title>
-      <link>https://www2.330k.info/essay/oresenwomabiku/</link>
+      <link>https://www.330k.info/essay/oresenwomabiku/</link>
       <pubDate>Sat, 24 Oct 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/oresenwomabiku/</guid>
+      <guid>https://www.330k.info/essay/oresenwomabiku/</guid>
       <description>読み込んだGPSログのデータを間引きたい、と思って調べたところ、 (Ramer-)Douglas-Peuckerのアルゴリズムというものがあることが分かった。
 基本的な考え方は、
  折れ線の始点と終点を結ぶ線分と各点の距離を求める。 すべての点との距離が許容誤差ε以内に入っていれば始点と終点だけを返して終了。 そうでなければ距離が最大の点Pを1つ選択。 始点から点Pまでの折れ線と、点Pから終点までの折れ線のそれぞれについてまた1から処理する。  という再帰的なもの。

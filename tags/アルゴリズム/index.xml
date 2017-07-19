@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>アルゴリズム on 330k info</title>
-    <link>https://www2.330k.info/tags/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/</link>
+    <link>https://www.330k.info/tags/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/</link>
     <description>Recent content in アルゴリズム on 330k info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 29 May 2014 00:00:00 +0900</lastBuildDate>
     
-	<atom:link href="https://www2.330k.info/tags/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.330k.info/tags/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Douglas-Peucker向けの優先度付きキュー実装の検討</title>
-      <link>https://www2.330k.info/essay/implement-of-priority-queue-for-douglas-peucker-simplify-algorithm/</link>
+      <link>https://www.330k.info/essay/implement-of-priority-queue-for-douglas-peucker-simplify-algorithm/</link>
       <pubDate>Thu, 29 May 2014 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/implement-of-priority-queue-for-douglas-peucker-simplify-algorithm/</guid>
+      <guid>https://www.330k.info/essay/implement-of-priority-queue-for-douglas-peucker-simplify-algorithm/</guid>
       <description>折れ線を間引くで書いたように、 Douglas-Peuckerアルゴリズムを改良して指定した点数まで点を削減して折れ線を簡略化する場合、 優先度付きキューを使うことになる。
 このアルゴリズムでは
  始点と終点を結ぶ線分で最も距離が大きな点P1を選ぶ 始点と点P1を結ぶ線分で距離最大となる点P2をキューに登録(優先度は点P2と線分の距離) 点P1と終点を結ぶ線分で距離最大となる点P3をキューに登録(優先度は点P3と線分の距離) キューから距離が最大(=優先度最大)の点を選んで、2に戻る  という手順となるため、「キューに2つ登録して、1つ取り出す」ということを繰り返すことになる。
@@ -30,10 +30,10 @@ Firefox 29 on Ubuntu 12.04 LTS 64bit    n Sequential      Douglas-PeuckerArray.<
     
     <item>
       <title>陽的Runge-Kutta法のButcher tableau</title>
-      <link>https://www2.330k.info/essay/explicit-runge-kutta-butcher-tableau/</link>
+      <link>https://www.330k.info/essay/explicit-runge-kutta-butcher-tableau/</link>
       <pubDate>Sat, 05 Dec 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/explicit-runge-kutta-butcher-tableau/</guid>
+      <guid>https://www.330k.info/essay/explicit-runge-kutta-butcher-tableau/</guid>
       <description> Explicit Runge-Kutta法の公式はいくつか知られているが、高次の公式になるほどButcher配列の項数が増えるため論文に誤植が多くなる。 それに気づかないまま実際に使うと、プログラムは正しく組めているはずなのに思うように精度が上がらないという落とし穴にはまってしまう。
 覚書として、以下に代表的と思われる公式のButcher tableauをまとめる。
 以下のButcher tableauはMathematica 8のNumericalDifferentialEquationAnalysisパッケージに含まれるRungeKuttaOrderConditionsで所定の次数条件を達成していることを確認しており、誤植が入り込まないようにそのままMathematica上で画像化している。
@@ -46,10 +46,10 @@ MathematicaにCやFortranのソースコード形式で吐かせるのが確実�
     
     <item>
       <title>多角形の内外判定</title>
-      <link>https://www2.330k.info/essay/takakugatanonaigaihantei/</link>
+      <link>https://www.330k.info/essay/takakugatanonaigaihantei/</link>
       <pubDate>Thu, 29 Oct 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/takakugatanonaigaihantei/</guid>
+      <guid>https://www.330k.info/essay/takakugatanonaigaihantei/</guid>
       <description>ある点が多角形の内側にあるのか外側にあるのかを判定するには主に
  ある点から直線をひいて多角形の辺と何回交差するか判定する(偶数回なら外、奇数回なら中) ある点から多角形の各頂点を順番に見ていったときに何回転するか  の2つの方法がある。
 しかし辺との交差回数をカウントするのは、直線と辺が平行だったり、頂点で交差したりする場合などに特別な配慮が必要なので、 ここでは2番目の方法で実装する。
@@ -63,10 +63,10 @@ InsidePolygonQ[poly : {{_, _} ..}, p : {_, _}] := Module[ {argsum}, argsum = Rou
     
     <item>
       <title>折れ線を間引く</title>
-      <link>https://www2.330k.info/essay/oresenwomabiku/</link>
+      <link>https://www.330k.info/essay/oresenwomabiku/</link>
       <pubDate>Sat, 24 Oct 2009 00:00:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/oresenwomabiku/</guid>
+      <guid>https://www.330k.info/essay/oresenwomabiku/</guid>
       <description>読み込んだGPSログのデータを間引きたい、と思って調べたところ、 (Ramer-)Douglas-Peuckerのアルゴリズムというものがあることが分かった。
 基本的な考え方は、
  折れ線の始点と終点を結ぶ線分と各点の距離を求める。 すべての点との距離が許容誤差ε以内に入っていれば始点と終点だけを返して終了。 そうでなければ距離が最大の点Pを1つ選択。 始点から点Pまでの折れ線と、点Pから終点までの折れ線のそれぞれについてまた1から処理する。  という再帰的なもの。

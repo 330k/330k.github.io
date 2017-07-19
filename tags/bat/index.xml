@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bat on 330k info</title>
-    <link>https://www2.330k.info/tags/bat/</link>
+    <link>https://www.330k.info/tags/bat/</link>
     <description>Recent content in Bat on 330k info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 17 Dec 2015 20:49:00 +0900</lastBuildDate>
     
-	<atom:link href="https://www2.330k.info/tags/bat/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.330k.info/tags/bat/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ffmpegでDVDをMPEGファイルに変換</title>
-      <link>https://www2.330k.info/essay/convert-dvd-to-mpeg-in-a-batch-file/</link>
+      <link>https://www.330k.info/essay/convert-dvd-to-mpeg-in-a-batch-file/</link>
       <pubDate>Thu, 17 Dec 2015 20:49:00 +0900</pubDate>
       
-      <guid>https://www2.330k.info/essay/convert-dvd-to-mpeg-in-a-batch-file/</guid>
+      <guid>https://www.330k.info/essay/convert-dvd-to-mpeg-in-a-batch-file/</guid>
       <description> 社内でアシスタントからDVDをPCで再生できるようにしたい、という要望を受けたので、 DVDを入れて起動するだけのバッチファイルを作ってみた。
 DVDの中身のVTS_01_1.VOB, VTS_01_2.VOBというファイルをffmpegの-iオプションに指定すれば良いのだが、 パイプ記号「|」を使ってファイル名を連結しなければならない。 ただ、バッチファイル中でパイプ記号が入ると上手く連結できないので、 試行錯誤の結果、一旦「$$」という文字を挟んで連結した後、パイプ記号に変換、という手順になった。
 使い方  以下のテキストをメモ帳にコピー＆ペースト 下のテキスト中でFドライブを指定している部分を各自のドライブ名に変更 拡張子をbatにして保存 DVDを入れてバッチファイルを起動  原則としてバッチファイルと同じフォルダにdvd_yyyymmdd.mpegというファイルが出来上がる
