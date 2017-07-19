@@ -63,6 +63,26 @@
   </url>
   
   <url>
+    <loc>https://www2.330k.info/bicycle/touring/20170429-0505_nagoya_shirakawago_noto_peninshula_kanazawa/</loc>
+    <lastmod>2017-04-29T21:53:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www2.330k.info/bicycle/touring/20170318-brm318chiba-2lakes/</loc>
+    <lastmod>2017-03-18T21:53:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www2.330k.info/bicycle/touring/20170211-12-izu-peninsula/</loc>
+    <lastmod>2017-02-11T21:52:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www2.330k.info/bicycle/touring/20161231-20170102-first-sunrise-at-inubozaki/</loc>
+    <lastmod>2016-12-31T21:52:24+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www2.330k.info/essay/detect_submittion_to_private_mail_from_gmail/</loc>
     <lastmod>2016-11-29T20:45:00+09:00</lastmod>
   </url>
@@ -88,6 +108,11 @@
   </url>
   
   <url>
+    <loc>https://www2.330k.info/bicycle/touring/20160906-11-kokura-nagasaki-satamisaki/</loc>
+    <lastmod>2016-09-06T21:52:07+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www2.330k.info/software/create_gpx_with_google_maps/</loc>
     <lastmod>2016-08-06T00:00:00+09:00</lastmod>
   </url>
@@ -95,6 +120,16 @@
   <url>
     <loc>https://www2.330k.info/essay/manage_firefox_settings_with_group_policy_without_gpo_for_firefox/</loc>
     <lastmod>2016-07-12T22:07:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www2.330k.info/bicycle/touring/20160630-0703_karuizawa-naoetsu/</loc>
+    <lastmod>2016-06-30T21:51:44+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www2.330k.info/bicycle/touring/20160430-0506_okayama_shimanami_shikoku/</loc>
+    <lastmod>2016-04-30T21:51:30+09:00</lastmod>
   </url>
   
   <url>
@@ -140,6 +175,11 @@
   <url>
     <loc>https://www2.330k.info/essay/upload_recorded_mp3_files_to_youtube/</loc>
     <lastmod>2015-10-15T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www2.330k.info/bicycle/touring/20150830-0904-shimane-tottori/</loc>
+    <lastmod>2015-08-30T21:51:05+09:00</lastmod>
   </url>
   
   <url>
@@ -215,6 +255,26 @@
   <url>
     <loc>https://www2.330k.info/essay/make-a-movie-with-mathematica-and-ffmpeg/</loc>
     <lastmod>2013-09-27T00:04:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www2.330k.info/bicycle/touring/20130917-24-yokohama-tohoku-japan-sea-tappizaki/</loc>
+    <lastmod>2013-09-17T21:50:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www2.330k.info/bicycle/touring/20130820-21-naruto-muroto/</loc>
+    <lastmod>2013-08-20T21:50:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www2.330k.info/bicycle/touring/20130802-03-bousou-peninsula/</loc>
+    <lastmod>2013-08-02T21:50:06+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www2.330k.info/bicycle/touring/20130709-16-yokohama-tohoku-pacific-oomazaki/</loc>
+    <lastmod>2013-07-09T21:49:56+09:00</lastmod>
   </url>
   
   <url>
@@ -572,7 +632,7 @@
   
   <url>
     <loc>https://www2.330k.info/tags/%E3%83%84%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0/</loc>
-    <lastmod>2013-03-06T21:49:33+09:00</lastmod>
+    <lastmod>2017-04-29T21:53:24+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -595,13 +655,13 @@
   </url>
   
   <url>
-    <loc>https://www2.330k.info/tags/%E8%87%AA%E8%BB%A2%E8%BB%8A/</loc>
+    <loc>https://www2.330k.info/categories/%E8%87%AA%E8%BB%A2%E8%BB%8A/</loc>
     <lastmod>2017-06-27T22:10:24+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www2.330k.info/categories/%E8%87%AA%E8%BB%A2%E8%BB%8A/</loc>
+    <loc>https://www2.330k.info/tags/%E8%87%AA%E8%BB%A2%E8%BB%8A/</loc>
     <lastmod>2017-06-27T22:10:24+09:00</lastmod>
     <priority>0</priority>
   </url>
