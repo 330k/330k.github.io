@@ -48,6 +48,196 @@ ga('send', 'pageview');
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
+				<a href="/essay/make_font_embedded_pdf_from_edinet/" rel="bookmark">EDINETが生成するPDFにフォントを埋め込む</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2016-11-11T23:00:00">November 11, 2016</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			EDINETで出力したPDFを会社のプレスリリースで掲載したところ、iPhoneで閲覧できない、という問題が発生した。
+PDFファイルを見てみると、日本語フォントが埋め込まれていない(下図)。
+ そのため、iPhoneなどMS系の日本語フォントがない環境では、日本語部分が真っ白の閲覧できないものになっていた。 ちなみに、Ubuntuでは別の日本語書体で代替表示された。
+ ご丁寧に印刷も低解像度に限られている(上図)。
+他社のプレスリリースを探してみると、そのままのPDFが使われていたところが多かったが、 中には低解像度で印刷して1ページが1枚の画像になったPDFも見つかった。苦労の痕跡が・・・。
+本来はそのようなPDFを作成するEDINETのシステムが悪いのだが、上の人間は「iPhoneでも見れるようにしろ」と聞かない。
+Google先生に聞いてみると、Macで見れないという2011年の投稿が見つかったので、昔からEDINETは変わっていないらしい。 続けて解決策を探すと、「PDFのセキュリティ設定を無視するビューアをつかって仮想PDFプリンタに印刷する」という方法で解決できることが分かった。
+PDFのセキュリティ設定を無視するビューアで代表的なものはEdgeやFirefox(2016年11月現在)。従って
+ Windows 10なら、EdgeでPDFを開いてプリンタにMicrosoft Print to PDFを選択して印刷 Windows 7でもAcrobatなどの仮想PDFプリンタがあれば、Firefoxで開いて仮想PDFプリンタに印刷  という手順でフォントを埋め込んだPDFを作成できた。(下図はEdge + Microsoft Print to PDFで作成したもの)
+ ちなみに、このようにして作成したPDFは法的に問題ないのか弁護士の人に聞いてみたところ、OKらしい。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/performance_degration_of_kanjo_bugyo/" rel="bookmark">勘定奉行の性能劣化に対処</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2016-11-06T17:22:00">November 06, 2016</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			社内では会計システムに勘定奉行(ネットワーク版)を使っているが、 担当者から「勘定奉行で仕訳帳の表示に20秒くらいかかる」と言われたので調査してみた。
+その担当者のPC固有の問題かどうかを切り分けるため別のPCから同様の操作を行ってみたところ、同じ症状が発生した。 ということは、サーバ側に問題がありそう。
+勘定奉行のクライアントは生のSQL文をサーバに発行する仕組みなので、 Wiresharkでパケットをキャプチャすることで発行されたSQL文を把握することができる。
+その状態でサーバ側の負荷を測定してみると、特定のSQL文の処理に時間がかかっていることが分かった。
+勘定奉行ではSQL Serverをバックエンドに使っているので、 「SQL Server パフォーマンス」などでGoogle先生に聞いてみると、以下のページがヒット。
+どうする？ SQL Server のクエリ パフォーマンスが低下した！
+これに従い、サーバ上でSQL Server Management Studioを起動し、勘定奉行で使用しているデータベースで
+sp_updatestats  としたところ、1秒程度で処理が完了するようになった。 上記ページには各テーブル単位での統計情報更新や、実行プランの再作成、インデックスの再構築の方法も書かれているが、今回は行わなかった。
+このようにSQL文を直接叩きに行く方法は多分メーカ(OBC)では非推奨だと思うが、 クライアント側にsp_updatestatsを発行するメニューくらいつけてほしいものだ。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/rescue_gps_log_from_binary_data_of_holux_m241/" rel="bookmark">m-241のバイナリデータからトラックログを吸い出す</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2016-09-22T07:14:00">September 22, 2016</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			GPSロガー(Holux m-241)のメモリが破損しているのか、 実は6月30日と7月3日の軽井沢→直江津ツーリングと、9月の西九州→佐多岬ツーリングでは、 ログが破損していたため、Googleのロケーション履歴を代用している。
+バイナリデータは一応吸い出せているようなので、その構造を調べると、 HOLUX m-241 LoggerUtility .trlファイル構造の覚書 より以下のような構造になっている。
+ 1レコード20バイトの固定長 時刻4バイト 緯度4バイト 経度4バイト 高度3バイト 速度4バイト チェックサム1バイト  また、m-241は時折書き込み先のメモリアドレスがずれることがあるようだ、との情報も見つかったため、 バイナリエディタで除いてみると、どうも4バイトずつずれて記録されたデータがあるようだった。
+そこで
+ レコードの先頭バイトを4バイトずつオフセットさせて読み込んでみる 緯度と経度が日本付近のものと思われるものを片っ端から拾う 時刻は整数型なのでとりあえず読み込む 高度、速度のデータは無視！  という方針でMathematicaのプログラムを書いてみた。
+data = Table[Module[{str, ret}, str = OpenRead[&quot;2016091200.bin&quot;, BinaryFormat -&gt; True]; (* 最初に余分にiバイト読み込んで先頭をずらす *) Do[ BinaryRead[str, &quot;Byte&quot;], {i} ]; (* バイナリ形式で読み込む *) ret = Cases[ MapIndexed[ {First[#2], Sequence @@ #1} &amp;, BinaryReadList[ str, {&quot;Integer32&quot;, &quot;Real32&quot;, &quot;Real32&quot;, &quot;Byte&quot;, &quot;Byte&quot;, &quot;Byte&quot;, &quot;Real32&quot;, &quot;Byte&quot;}] ], {count_, d_Integer, lat_Real, lon_Real, __} /; (30 &lt; lat &lt; 40 &amp;&amp; 125 &lt; lon &lt; 140) :&gt; {count, DateString[DatePlus[{1970, 1, 1, 0, 0, 0}, {d, &quot;Second&quot;}], {&quot;Year&quot;, &quot;-&quot;, &quot;Month&quot;, &quot;-&quot;, &quot;Day&quot;, &quot;T&quot;, &quot;Time&quot;, &quot;Z&quot;}], lat, lon}]; Close[str]; ret ], {i, 0, 19, 4}];  ※ 2016091200.
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/bicycle/touring/20160906-11-kokura-nagasaki-satamisaki/" rel="bookmark">2016年09月06日〜11日 小倉〜長崎〜佐多岬</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2016-09-06T21:52:07">September 06, 2016</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById("map-canvas"), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: "https:\/\/www.330k.info\/\/bicycle\/touring\/20160906-11-kokura-nagasaki-satamisaki\/20160906-11_001.kml" }); ctaLayer.setMap(map); }      日付 出発地 到着地 走行距離(km) 走行時間 最高速度(km/h) 平均速度(km/h) 主な経路 景勝地     2016年9月6日 小倉 松浦 164.38 6:33:15 56.5 25.1 R3, R202, R204 虹の松原   2016年9月7日 松浦 諫早 156.93    R204, R202, R206, R34 平戸   2016年9月8日 諫早 熊本 147.
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/manage_firefox_settings_with_group_policy_without_gpo_for_firefox/" rel="bookmark">Firefoxをグループポリシーで管理する</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2016-07-12T22:07:00">July 12, 2016</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			公式の情報はこちら : https://www.mozilla.jp/business/faq/tech/setting-management/
+上記公式サイトにあるように、ActiveDirectory環境にあるFirefoxの設定を管理する場合、
+ クライアント側にアドオン(GPO for Firefox)をインストール サーバ側に管理用テンプレート(ADMファイル)を配置 グループポリシーエディタで設定を編集  という手順が推奨されている。ただ、この方法だと
+ 既存ユーザへの自動設定は不可(ユーザにアドオンをインストールしてもらう必要がある) ユーザがアドオンを無効化してしまう可能性がある 最新のバージョンで追加された設定項目がない場合がある  といったデメリットがあるので、公式サイト中で「MCD用設定ファイルでの実現」という方法で行うことにした。
+要件は以下の通り。
+ Firefoxアカウントを使ったパスワード等の同期をさせない 強制的に最新版にアップデートさせる たまにしか社内LANにアクセスしない端末でも設定を反映させたい (公式サイトの「すべてのクライアントの設定を管理者が一括して変更したい」では常時社内LANにアクセスできる端末である必要がある)  手順は以下の通り。
+ 「autoconfig.js」と「autoconfig.cfg」を公式サイトの例にしたがって記述  autoconfig.js
+pref(&quot;general.config.filename&quot;, &quot;autoconfig.cfg&quot;); pref(&quot;general.config.vendor&quot;, &quot;autoconfig&quot;); pref(&quot;general.config.obscure_value&quot;, 0);  autoconfig.cfg (ここではFirefoxアカウントによる同期の不許可と、自動アップデートの有効化を設定)
+lockPref(&quot;loop.enabled&quot;, false); lockPref(&quot;services.sync.enabled&quot;, false); lockPref(&quot;services.sync.engine.addons&quot;, false); lockPref(&quot;services.sync.engine.bookmarks&quot;, false); lockPref(&quot;services.sync.engine.history&quot;, false); lockPref(&quot;services.sync.engine.passwords&quot;, false); lockPref(&quot;services.sync.engine.prefs&quot;, false); lockPref(&quot;services.sync.engine.tabs&quot;, false); lockPref(&quot;app.update.enabled&quot;, true); lockPref(&quot;app.update.auto&quot;, true); lockPref(&quot;browser.search.update&quot;, true);   「autoconfig.js」と「autoconfig.cfg」を一般ユーザが読み取り可能なフォルダに配置 (例えば「\ドメインコントローラ\SYSVOL\ドメイン名\Deployment」など) グループポリシーの「コンピュータの構成」「基本設定」「Windowsの設定」「ファイル」を使い、 「autoconfig.js」と「autoconfig.cfg」を公式サイトで指定されたフォルダに配置。    64bit版Windowsに32bit版Firefoxがインストールされている場合は、「項目レベルで対象化する」にチェックし、 「Processor_Architecture」に「AMD64」を設定し、「%PROGRAMFILES(X86)%\Mozilla Firefox」に配置する。 ※ 両方ある場合は2つずつ設定する     最後に実際にクライアントPCにファイルが反映され、Firefoxのabout:configで設定されていることを確認
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/bicycle/touring/20160630-0703_karuizawa-naoetsu/" rel="bookmark">2016年06月30日〜07月03日 軽井沢〜直江津</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2016-06-30T21:51:44">June 30, 2016</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById("map-canvas"), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: "https:\/\/www.330k.info\/\/bicycle\/touring\/20160630-0703_karuizawa-naoetsu\/20160630-0703.kml" }); ctaLayer.setMap(map); }      日付 出発地 到着地 走行距離(km) 走行時間 最高速度(km/h) 平均速度(km/h) 主な経路 景勝地     2016年6月30日 東京 軽井沢 154.89 6:46:24 51.1 22.9 荒川CR, R17, R18    2016年7月3日 軽井沢 直江津 155.37 5:59:01 66.2 26.0 R18     会社の研修旅行が軽井沢で行われることになったので、それに合わせて自転車で前日入りすることにした。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/bicycle/touring/20160430-0506_okayama_shimanami_shikoku/" rel="bookmark">2016年04月30日〜05月06日 岡山-しまなみ海道-四国西側半周</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2016-04-30T21:51:30">April 30, 2016</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById("map-canvas"), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: "https:\/\/www.330k.info\/\/bicycle\/touring\/20160430-0506_okayama_shimanami_shikoku\/20160430-0506.kml" }); ctaLayer.setMap(map); }      日付 出発地 到着地 走行距離(km) 走行時間 最高速度(km/h) 平均速度(km/h) 主な経路 景勝地     2016年4月30日 岡山 松永 86.12 3:46:39 51.0 22.8 R2    2016年5月1日 松永 西条 104.45 5:01:47 52.0 20.7 しまなみ海道, R196 今治城   2016年5月2日 西条 八幡浜 102.
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/convert-dvd-to-mpeg-in-a-batch-file/" rel="bookmark">ffmpegでDVDをMPEGファイルに変換</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2015-12-17T20:49:00">December 17, 2015</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			 社内でアシスタントからDVDをPCで再生できるようにしたい、という要望を受けたので、 DVDを入れて起動するだけのバッチファイルを作ってみた。
+DVDの中身のVTS_01_1.VOB, VTS_01_2.VOBというファイルをffmpegの-iオプションに指定すれば良いのだが、 パイプ記号「|」を使ってファイル名を連結しなければならない。 ただ、バッチファイル中でパイプ記号が入ると上手く連結できないので、 試行錯誤の結果、一旦「$$」という文字を挟んで連結した後、パイプ記号に変換、という手順になった。
+使い方  以下のテキストをメモ帳にコピー＆ペースト 下のテキスト中でFドライブを指定している部分を各自のドライブ名に変更 拡張子をbatにして保存 DVDを入れてバッチファイルを起動  原則としてバッチファイルと同じフォルダにdvd_yyyymmdd.mpegというファイルが出来上がる
+@ECHO OFF ECHO DVDから普通の動画ファイルへ変換を行います。 ECHO DVDがFドライブに入っていることを確認してください。 PAUSE SET A= FOR %%F IN (&quot;F:\VIDEO_TS\VTS_01_*.VOB&quot;) DO CALL SET A=%%A%%$$%%F SET TIME_TMP=%TIME: =0% SET NOW=%DATE:/=%%TIME_TMP:~0,2%%TIME_TMP:~3,2%%TIME_TMP:~6,2% SET B=&quot;%A:$$=|%&quot; ffmpeg -i &quot;concat:%B:~2,-1%&quot; -target ntsc-dvd -vcodec copy -acodec copy dvd_%NOW%.mpeg ECHO 変換が終了しました。 ECHO 出力ファイル: %~dp0 dvd_%NOW%.mpeg PAUSE  
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/essay/change-c-compiler-in-mathematica/" rel="bookmark">CompileするCコンパイラを変更する</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2015-12-08T17:40:00">December 08, 2015</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			Mathematica 8から、CompileでCコンパイラを使って直接ネイティブコードにコンパイルできるようになった。 使用するCコンパイラは、
+Needs[&quot;CCompilerDriver`&quot;]; CCompilerDriver`$CCompiler = { &quot;Name&quot; -&gt; &quot;GCC&quot;, &quot;Compiler&quot; -&gt; CCompilerDriver`GCCCompiler`GCCCompiler, &quot;CompilerInstallation&quot; -&gt; &quot;/usr/bin&quot;, &quot;CompilerName&quot; -&gt; Automatic };  というように、CCompilerDriver`$CCompilerを変更して指定する。
+以前からのCompile(&ldquo;WVM&rdquo;)と、各コンパイラの比較のため、ベンチマークを行ってみた。 検証環境は以下の通り。
+ CPU: Intel Core-i7 3770 (インテル® HT テクノロジー ON) OS: Ubuntu 14.04 LTS 64bit Memory: 16 GB DDR3 1333 MHz  検証するCコンパイラは、GCC、Intel C++ Compiler、Clangの3種類。
+ gcc: (Ubuntu 4.8.4-2ubuntu1~14.04) 4.8.4 icc: icc (ICC) 14.0.3 20140422 clang: Ubuntu clang version 3.4-1ubuntu3 (tags/RELEASE_34/final) (based on LLVM 3.4)  Mathematicaコードは以下。1/i^2を総和してπ^2/6を求める単純な計算を行った。 ※私の環境ではICCは/media/storage/intel/compserxe/binにインストールしているので下記コードを使用する場合は注意。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
 				<a href="/essay/aggregate-metadata-from-all-pdf-office-documents/" rel="bookmark">Tikaを使って指定したディレクトリ以下の全ファイルのメタデータを収集</a>
 			</h3>
 			<div class="list__meta meta">
@@ -64,292 +254,12 @@ wget http://ftp.jaist.ac.jp/pub/apache/tika/tika-app-1.11.jar  全メタデー�
 	</div>
 </article>
 
-				<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/essay/what_l2_forwarding_ssl_vpn_protects/" rel="bookmark">仮想的な専用線という言葉にだまされた残念な技術者</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2015-11-29T00:00:00">November 29, 2015</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			例によってパワハラを受けた研修先で最初に受けたパワハラが、 リモートアクセスのSSL-VPNに関する技術的な質問をした時のことだった。
-研修先の会社ではJuniper社(現PulseSecure社)のSSL-VPN製品を導入しており、 クライアントPC側にはNetwork Connectというソフトウェアをインストールしていた。
-これはL2フォワーディング方式のSSL-VPNで、起動するとネットワークアダプタに仮想NICが追加される。 仮想NIC経由で通信することで外部からでも社内LANに接続できる。
-研修先企業では外出時にSSL-VPNの接続を義務付けている、という話になったときのことだった。
- パワハラ上司(自称ITエンジニア)「外出先のホテルなどでは社内システムにアクセスしない時も絶対にVPNで接続してからインターネットに接続しろ。」
- 私「なぜですか？」
- パワハラ上司「同じネットワークにいるコンピュータから盗聴や攻撃をされるだろ！」
- 私「HTTPSでないHTTPは確かに盗聴されますが、SSL-VPNで接続したところで攻撃は受けるのではないですか？」
- パワハラ上司「VPNは仮想的に専用線を張るんだ！」
- 私「仮想的に専用線を張ったところで物理的には元のネットワークにいますよね？」
- パワハラ上司「専用線で接続したら攻撃されない。だから仮想的に専用線を張ってるんだから攻撃されない！」
- 私「(喩え話じゃなくてちゃんと技術的な回答がほしいんだが…)」
- パワハラ上司「ちょっとは調べてから質問しろ」
-パワハラ上司「俺の時間もタダじゃねえんだぞ！」
-パワハラ上司「間違ったら『はい、すみません』でいいんだ。ほれ、早く言え！」
- 私「はい、すみません。」
-  とまあ、これが今思い返すと調子に乗らせる原因だったかもしれない。 研修先の自称ITエンジニアの技術力に疑念を持った最初の出来事だった。
-Network Connect起動時に作成される仮想NICがメトリックで優先されるように設定されるので、 VPN接続後のクライアント発の通信はすべて仮想NIC経由となる。
-ただ私が疑念に抱いたのは、同じ物理ネットワークの他の端末から通信が来た場合は、元の物理NICから応答するのではないか、という点だ。
-具体例としては、クライアントPCでファイル共有を有効にしていた場合、 SSL-VPNで接続していても同じネットワークにいる端末から共有しているファイルが見えてしまうのではないか。
-技術者なら実際に試してみるべき、ということで、実験してみた。
- クライアントOS: Windows 7 64bit クライアントPC: ファイル共有ON 物理ネットワーク環境: 来客用Wi-Fi(普通の家庭用Wi-Fiルータと同じ環境) SSL-VPNクライアント: Pulse Secure 5.2 (Network Connectの後継のJunos Pulseの後継) SSL-VPNアライアンス: MAG2600  という環境でSSL-VPNを接続した後、 同じ物理ネットワークの他のPCから共有されたファイルが見えるかどうかを確かめてみた。
-結果: 見えた　NetBIOS名でもアクセス可能
-物理NICに割り当てられたIPアドレスを使ってもアクセスできたが、NetBIOSによる名前解決もできた。 ということはUDPのブロードキャストにも物理NICから応答する、ということが分かった。
-物理NICが普通の通信が出来ないとカプセル化したパケットの通信もできない、というのは 普通に考えればわかると思うのだが、残念ながらパワハラエンジニアの知識レベルはその程度だった、ということか。
-結論としては、下記の通り。
-		</div>
-	</div>
-</article>
-
-				<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/essay/exchange-st-5703-to-sl-r400/" rel="bookmark">ST-5703の変速機構が破損したのでWレバーに交換</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2015-11-08T02:43:00">November 08, 2015</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			先月の軽井沢〜直江津のあと、2年ぶりに自転車をオーバーホールした。
-その一環でシフトワイヤーケーブルの交換を行ったところ、フロントディレイラーの調子がおかしい。
-フロントトリプルなので、インナー⇛センター⇛アウターは問題なく変速できるのだが、 アウター⇛センターに変速しようとすると、「バキッ、ガッチャン」と音がして、一気にインナーまで落ちてしまうか、 まったく変速操作を受け付けなくなるか、のどちらかの症状が発生。
-ネットで調べると、記 ： シマノ105 STI左レバー ST-5703不調 と同じように、ワイヤー先端のタイコが外れてしまっていた。
-何回ワイヤーのタイコの位置を直してもタイコが外れて変速操作の不調が治らない。 さて、何とかならないかと思いながら何回か変速操作をしていたところ、レバーの隙間から以下の写真のような部品が落ちてきた。
- シマノの説明書を見ても該当する部品は見当たらないし、よく見ると穴の周囲は削れているし、 あれ？もしかして、完全に壊れちゃった？
-とはいえ、STIレバーは結構お値段がするもので、amazonで25000円くらいする。 それに今のコンポも6年目で走行距離が16000km程度(あまり走れていないな・・・)なので、そろそろ一式換装しようか、と考えていたところ。
-一式交換するとなると、11s対応のホイールも交換が必要になり20万円程度の出費を覚悟しなければならないし、 なによりせっかく来月の初めに取った遅めの夏休みに間に合わない。
-一晩考えた後、「フロントだけならWレバーでしばらく乗り切ってからコンポを一式換装しよう」ということにした。
-というわけで、早速amazonでSL-R400を購入。お盆だったがナチュラムからは翌日届いた。
- 早速説明書を読みながら取り付け。取り付け作業の中で、説明書から日本語のページを探すのが一番手間取った。
-あとはワイヤーの通し方の説明が全くないことに困惑(STIレバーの説明書には詳しく書いてあるのに)。 だが実物を見てみたら説明が不要なくらい簡単な構造であることが分かった。
- 手でクランクを回しながら変速操作をしてみると、フリクションの独特な操作感は確かにハマるものがある。 面倒なワイヤーの調整も不要。これは楽しいかもしれない。
-とりあえず来月に予定しているロングツーリングはこれで乗り切ってみる。
-		</div>
-	</div>
-</article>
-
-				<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/essay/first-review-of-recon-jet/" rel="bookmark">Recon JETを試してみた</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2015-10-26T00:00:00">October 26, 2015</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			購入したのはかなり早いタイミングだったが、なかなか試すことができなかったRecon JET。
-やっと自転車で走るときにつけて使い心地はどんなものか試すことが出来た。 ANT+対応の心拍計などは持っていないので、Recon JET単体でのテスト。
-つけ心地  普通のサングラスに比べればやはりパッドが当たる部分が痛くなるが、耐えられないほどではない 日本は車道の左側通行なので、視界の右下をディスプレイに遮られると、後方確認がしにくい  GPS  測位が遅い(m-241に比べて10分以上捕捉に時間がかかることもある) 測位の精度はm-241と同等以上(下記マップは障害物がほとんどない荒川CRを走行したとき) ただし、積算距離の精度は低い(１箇所でも位置がずれると、そのせいで距離が大きく計算される)  Recon JET(赤線)とm-241(青線)のGPSログ比較。
-  function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById("map-canvas"), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: "https:\/\/www.330k.info\/\/essay\/first-review-of-recon-jet\/2015081602.kml" }); ctaLayer.setMap(map); }   バッテリー  最大2時間半しかもたない 予備のバッテリーを持っていても、1日中走行するには耐えられない  カメラ  解像度は低いので、携帯電話のほうがよっぽどまし。 動画は撮影時間を予め15秒や1分などと予め設定してから撮影をスタートするので、使いどころが難しい。  荒川CRで実際に撮影した画像と動画
- マップ  黒背景に道路が暗い灰色で表示されるので非常に見にくい 道路名や何号線かなどが表示されないため道に迷った時や知らない土地では無力  Recon Uplink  Recon JETを接続すると自動で記録をWeb上に上げてくれる 今までの走行記録(距離、平均速度、獲得標高など)をブラウザで見れるのは便利なので、 毎日ガチで2時間の練習ばかりする人であれば有用かもしれない  総評  サイコンの代替になるにはまだまだ性能不足(特にバッテリー)。 カメラやマップもRecon JETを使うくらいなら携帯電話(スマートフォン)のほうが断然良い。  ということで、残念ながら現時点ではロングツーリングのお供にはなれなかった。
-		</div>
-	</div>
-</article>
-
-				<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/essay/nhk-contract-cancellation-and-communication-cost-saving/" rel="bookmark">NHKの受信契約を解除し受信料と通信料金を抑える</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2015-10-18T00:00:00">October 18, 2015</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			現在所持している携帯電話は、2013年11月に購入した京セラ製のURBANO L01。
-これにはワンセグ機能が付いているため、NHKの営業センターの人に見つかり、
- 「テレビを所持していなくてもワンセグ機能付きの携帯電話を所持しているだけで契約が必要です」
- と言われ、渋々NHKとワンセグのみ受信契約をした。
-契約した時から、毎月割がなくなる2015年11月にワンセグ機能がない機種に変更することを決意していたが、 なんとauから出ているAndroidスマートフォンは(TORQUE G01を除き)すべてワンセグ機能が付いている。
-ワンセグ機能がついていないのはiPhoneとFx0のみだが、
- iPhoneのSafariでは拙作のGPXでのルート作成ができず(ダウンロードができない)、 FirefoxOSでは多分GPXファイルの作成はできるが、地図ロイドやrmapsに相当するような地図アプリがありそうにない。  私は15年近くauユーザーなので、キャリアメール(@ezweb.ne.jp)も変えたくない(変更の連絡が面倒)。
-要件をまとめると、
- ワンセグ機能が付いていないこと(NHKのワンセグ契約を解約するため) 今までの電話番号とキャリアメールのアドレスを維持すること Android端末であること(GPXファイルが作成でき、表示するアプリがあること) 電話は発信・着信ともにめったにしない データ通信も家と会社にはWi-Fiがあるので、月1GBも使わない  という条件で、携帯電話の通信料とNHKに払う受信料のトータルを削減したい。
-方針 上の要件を解決するため、色々と検討した結果、以下のような方針とした。
- ワンセグ機能がないSIMフリー端末を購入 MVNOの格安SIMを新規に契約 格安SIMはデータ通信のみ IP電話アプリ(050PlusやSMARTalk)を入れて050の番号で音声通話はできるようにする auの端末はLTEフラットを解除し、電話番号とメールアドレスを維持するための最低限の契約だけ残して実家に置く (実家にはテレビがあり、NHKと契約しているので、ワンセグ受信設備があっても大丈夫) 現在のau電話番号への着信は、SMARTalkの050番号へ転送するように設定し、新端末で着信できるようにする (転送時にauの通話料がかかるが、ほとんど着信もしない) auのキャリアメール(ezweb.ne.jp)はGmailで送受信するように設定  選んだもの  SIMフリー端末 : ASUS ZenFone 2 Laser SIMカード : DMM Mobile データSIM ライトプラン(月額477円) IP電話 : SMARTalk  ヨドバシカメラやビックカメラの実店舗で触ってみたところ、 ZenFone 2 LaserよりP8liteのほうが手に持ってしっくりくるも印象だったが、 microSDXCに対応しているという一点だけでZenFone 2 Laserに決定した。
-SIMカードは当時データ通信1GB/月で一番安いもの。
-IP電話は、ほとんど通話をしないため、通話料金ではなく月額が無料のSMARTalkを選択。
-経費(受信料 + 通信費)の変化 通信費がどれだけ節約できるかをまとめると下表のようになった。
-		</div>
-	</div>
-</article>
-
-				<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/essay/exchange-canti-lever-brake-to-mini-v-brake/" rel="bookmark">カンチレバーブレーキをミニVブレーキに換装</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2015-10-18T00:00:00">October 18, 2015</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			私が現在乗っている自転車はSURLYのCROSS-CHECKで、一応シクロクロスの分類に入る。 なので、購入時はカンチレバーブレーキ(CaneCreek SCX-5)を付けていた(当時はミニVはなかった)。
-5年間はシューをSwiss stopに交換するなどして使用してきたが、
- パワーロスが大きく、長い下り道などで手が疲れる(握力がなくなり下り道で休憩することも) チドリまでのワイヤー長さと、左右のブレーキ間のワイヤー長さの2箇所を調整する必要があり、難しい。 特にフロントでブレーキ時にビビる(ガタつく)ため、スムーズに止まれない。 (当初はフロントフォークの剛性不足かと思ったが、今回の交換で良くなったので、 おそらくチドリでワイヤーを引く構造による剛性不足と考えられる)  という問題に悩まされてきた。
-一応フォローしておくと、制動力自体には不安はなかった(握力が続く限りは)。
-ところが、シマノがミニVブレーキを発売した、というのを遅ればせながら知った。
-ネットではCROSS-CHECKへの取り付け例は見つけられたものの、 自分のブレーキレバー(5700系105)で引けるかどうかは調べきれなかったが、交換を決意。
-早速Amazonで、105グレードのBR-R573とブレーキケーブルセットを購入して交換した。
-交換作業は上記のページで詳しく解説されているので割愛。 交換後は下の写真(リア)のようになり、タイヤとのクリアランスは十分。 付属品の90度のバナナではワイヤーが横に出すぎたため、自在バナナに変更。
- 交換後、荒川CRと都内の一般道を40kmほど試走してみた。 その結果、
- ブレーキレバーを軽く握れるようになった。 制動力も強すぎることはなく、コントローラブル(シューは付属のシマノ製)。 ブレーキング時のビビリ、ガタつきがなくなり、スムーズに止まれるようになった。 ワイヤーの引きしろが少ないので、リムとシューの間のクリアランス調整はシビア。 だが、調整箇所が1箇所になったため調整作業の難易度はむしろ少し下がった。  と、概ね交換した目的を果たせた。
-唯一のデメリットとしては、ホイール(リム)に振れが生じるとすぐにシューと接触してしまうこと。 ロングライドではニップル回しも持っていったほうが良さそうだ。
-		</div>
-	</div>
-</article>
-
-				<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/essay/upload_recorded_mp3_files_to_youtube/" rel="bookmark">秘密録音した音声ファイルをYoutubeにバックアップ</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2015-10-15T00:00:00">October 15, 2015</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			私はパワハラ対策として、毎日ICレコーダーを使って秘密録音を実施している。 ただ、毎日10時間を超える録音時間のため、32kbpsで録音しても1日あたり200MB弱の音声ファイルがHDDに追加されていき、HDDの容量を圧迫していく。
-そこで、バックアップを兼ねて動画化してYoutubeにアップロードするようにし、 HDDの空き容量が減ってきたらオリジナルの録音ファイルを消去していくことにした。
-ffmpeg(avconv)を使い、以下の手順で実施する。
- 適当に画像ファイルを作成する 画像ファイルから無音声の動画ファイル(再生時間24時間)を作成する 無音声の動画ファイルと、毎日録音した音声ファイルを結合する 結合した動画ファイルをYoutubeにアップロード  具体的には、適当にblank.pngという名前で640x480とか好みのサイズで画像を作成し、以下のコマンドで24時間の無音声動画ファイル(blank24.mov)を作成。
-avconv -y -loop 1 -r 1 -i blank.png -t 86400 blank24.mov  これでフレームレート1 fps、動画時間が24時間(86400秒)の無音声動画ファイルblank24.movができる。 私の環境では5分程度かかったが、このファイルは1度作っておけば何度でも使えるので、最初の1回だけ待てば良い。
-次に、この無音声の動画ファイル(blank24.mov)と、録音した音声ファイル(input.mp3)を結合する。
-avconv -y -i blank24.mov -i input.mp3 -vcodec copy -acodec copy -shortest output.mov  -shortestオプションを加えているので、24時間のblank24.movと音声ファイルの時間のうち、短い方の時間でoutput.movが作成される。
-動画になったことにより、元のMP3ファイルよりもファイルサイズが1割ほど増える。 私の環境では12時間程度録音したものからでも1分程度のエンコード時間で動画ファイルを作成できた。
-ちなみに出来上がりの動画ファイルのコンテナがMOVなのは、録音した音声ファイルの拡張子が、 ICレコーダーで録音したMP3、Androidの録音アプリのmp4、iPhoneの録音アプリのm4aと3種類あったため、 それと競合しないコンテナ形式を選んだ。
-また、無音声動画ファイル(blank24.mov)を作成せず、1コマンドで静止画と音声ファイルを結合することも可能だが、 都度動画部分のエンコードが発生するため時間がかかる。
-毎日音声ファイルが増えていくような状況では、予め無音声動画ファイルをつくっておき、 -vcodec copyとすることで再エンコードを省略すれば、毎日の処理が高速化できる。
-ただし、Youtubeの制限により、15分の制限を解除したアカウントでも、動画の最長時間は12時間に制限される。 したがって、私は以下のようなシェルスクリプトを書いて実行している。
-#!/bin/bash find ./ -iname &quot;*.mp3&quot; -o -iname &quot;*.mp4&quot; -o -iname &quot;*.m4a&quot; | while read i do hour=`avconv -i &quot;$i&quot; 2&gt;&amp;1 | grep Duration | sed -E &quot;s/.
-		</div>
-	</div>
-</article>
-
-				<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/essay/augue-against-power-harassment-bully/" rel="bookmark">言いがかりを付けられたので切り返してみた</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2015-08-28T00:00:00">August 28, 2015</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			今朝、以前パワハラを受けていた研修先(以下G社とする)の人間からメールが来た。 要約すると、以下の内容になる。
- 撤去作業終わりました
-**社(私の会社)の作業なので一般常識的に事前に連絡するのが筋です
- 確かに自分の会社が発注した作業で、G社側でネットワーク機器の撤去作業があったのだが、当然私は事前に連絡を行っていた。 それを忘れている自分を棚に上げ、偉そうにこちらに「一般常識」を説いてきた。
-他にも研修中は私に対して
- 「間違ったらすぐに『はい、すみません』と言え！！」
-「報・連・相をきちんとしろ！！」
-「社会人として失格だ！」
- と怒鳴られ続けてきた。
-以前は研修中ということで下請け同然に扱われることを甘受していたが、 現在は研修期間は終了しており、下請けのように扱われる道理はない。
-また、研修中は連日のパワハラで疲弊しきっていたが、研修終了と共に精神的に回復してきたので、 一発切り返すことにしてみた。
- 私は事前に連絡していますので、筋は通してあります。
-筋を通すという意味では、御社が原因で弊社のシステム移管が遅れていると他社経由で聞きましたが、 御社からは何の連絡もありません。
-こちらに筋を通せ、とおっしゃるならば、 御社も筋を通すべきではないでしょうか。
-もちろん私の論理に間違いがあれば、ご指摘ください。
-弊社としては御社との関係を悪化させる意図はございませんが、 御社の一方的な態度は弊社に限らず、相手に良い印象を与えないと考えます。
- 研修先の人間がまともな人間であるならば、
- 私に反論する 間違いを認める  のいずれかの連絡が来るはずだが、メールを送信して8時間たった現時点では来ていない。
-私には「『間違ったらはい、すみません』と言え！」と怒鳴り続けていたのだが、 やはり自分たちの間違いを認めて自省できるような人間ではなかったようだ。
-さて、今後の彼らの対応について予想してみる。
-恐らくだがいつもの彼らのやり口から、私のメールへの対応は反論でも謝罪でもなく、 そんなことを言うと、○○してやらんぞ！ もしくは ○○してやるぞ！ という脅迫を行ってくると予想する。
-これは現在もG社にユーザーサポート業務を一部委託していることを盾に取った脅迫だ。
-とはいえ、その対価として高額な「経営指導料」なるものをG社には支払っている。
-ただ、これが相場の4倍程度の値段で、しかも対応時間は平日の日中に限る、というものなので、 東証一部上場のG社は監査法人に経営指導料について突かれると痛い(不正な利益供与と疑われる)のではないか。
-今後、進捗があれば追記していきたい。
-増長した人間が言う「一般常識」とは何なのか、「社会人」とはどういう行動をするのだろうか。面白そうだ。
-後日談(2週間後)
-今のところ面白い展開にはならずにすんでいる。 G社は私が休暇を取っている間に、私の上司にきちんと状況を説明しに来たらしい。
-G社から私への謝罪はないものの、その後の電話の対応は非常に丁寧になった。 監査法人のコンプライアンス通報窓口へ送るメールの文面を準備していたのだが、送らずに済みそうだ。
-今後も続くと良いが・・・
-後日談その2(2ヶ月後)
-やはり彼らは嫌がらせを行ってきた。
-残念ながら私の予想は当たり、 「延長の連絡がないから今月(10月)でメールサーバの契約を切るぞ」 と一方的に通告してきた。 (現在使用しているメールサーバはクラウド型のメールサービスで、過去の経緯からG社と自分の会社で共有している)
-事前に「10月以降の支払いはG社と弊社のアカウント数に按分した額をG社から請求する」と取り決めてあるので、 今回のG社の行為は契約違反であり、もしかしたら脅迫罪にもなるかもしれない。
-さらに、私の会社で使用している分だけアカウント数が減っても メールサーバの利用料金は変わらないため、G社側にコスト削減などのメリットはない。 完全に嫌がらせ目的であり悪質である。
-もう少ししたらメールサーバも切り替えるので、ようやく完全に縁が切れる。
-心置きなく温めておいた監査法人への通報メールを送信した。
-後日談その3(2ヶ月半後)
-どうも監査法人が動いたらしい。
-		</div>
-	</div>
-</article>
-
-				<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/essay/install-windows-10-to-panasonic-letsnote-cf-n10/" rel="bookmark">Windows 10を早速テストしてみた</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2015-08-04T00:00:00">August 04, 2015</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			Windows Insider Programに登録していたので、7/31に「Windows 10がでたよ〜」というメールがGabe Aulからやってきた。
-ゆくゆくは更新プログラムが提供されるけど、早く試したい人は「メディア作成ツール」をダウンロードして使うといいよ、 とのことなので、会社で余っていたPCにインストールしてみた。
-インストール  機種: Panasonic Let&rsquo;s Note CF-N10(法人向けモデル) Windows 7 32bit版からのアップグレード Office 2010、Adobe Acrobat Pro XI、トレンドマイクロウイルスバスターがインストール済み  インストール方法は基本的に http://ascii.jp/elem/000/001/034/1034923/ の通り。 ※現在は直接ISOファイルがダウンロードできる模様
-ただし、指示に従って進めていると、以下の2つのソフトウェアをアンインストールしなさい、と出てくる。
- Intel&reg; Dynamic Power Performance Management Realtek High Definition Audio Driver  Realtekの方は、「アンインストール」ボタンをクリックすればOK。
-Intelの方は、 http://answers.microsoft.com/ja-jp/windows/forum/windows_8-windows_install/windows-8/cefec781-59a2-4f78-925a-0b34c70b53b7?auth=1 に情報がある。
-Let&rsquo;s Noteの場合、 C:\util2\drivers\etm\DppmCleaner.bat、もしくはLPOSetting.jsを実行する、とあるが、 CF-N10の場合はバージョンが違うためか存在しない。
-仕方がないので、時期の近い他機種向けのドライバーをインストールして、上記のLPOSetting.jsを実行することで解決。 その後しばらく待てば、無事Windows 10へのアップグレードが完了した。
-インストール結果 現在のところ、インストール後の結果は以下の通り。
- ActiveDirectoryへの参加　→　○成功 グループポリシーの適用　→　△ユーザーの構成のみ有効、コンピュータの構成は有効にならない (ただし、ドメインコントローラ側(Windows Server 2012R2)でのシミュレーションでは適用されるはず) Office 2010の起動　→　△起動は成功(Outlookの設定情報は引き継げず) Adobe Acrobat Pro XIの起動　→　○成功(ただしデフォルトではEdgeでPDFを開く) ウイルスバスター　→　○問題なく動作している模様(リアルタイム検索、パターンファイルのアップデート) BitLockerによるドライブの暗号化　→　○成功(運良くCF-N10もTPMを積んでいた)  その他感想  起動時間はWindows 7とあまり変わらない感触 シャットダウンは早くなった印象 たまに画面の文字がボケる(ClearTypeの設定をいじっても変わらず) 現状ではGPOでコンピュータの構成が効いていないので、クライアント側かサーバ側で対応するタイミングが来るまでは様子見。  Aug.
-		</div>
-	</div>
-</article>
-
-				<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/essay/how-to-take-files-out-from-company/" rel="bookmark">会社から外部へのファイル・データ持ち出し対策</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2015-07-19T00:00:00">July 19, 2015</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			ベネッセの子会社での情報漏えい事件では、スマートフォンを使ってデータをPCから取り出していたらしい。 そこで、私の研修先の会社の社内SE部門の人たちは、以下の内部者によるファイルやデータの持ち出し対策を行っていた。
- 資産管理ソフト(SKYSEA Client View)を導入  USBメモリやスマートフォンを挿しても書き込めないように設定 ネットワーク経由でもSKYSEAにログが残るからわかる  SKYSEAの機能で知らない機器がネットワークに接続されても検知できる(ただし、よく仕組みはわかっていない模様) Webフィルタリングソフト(InterSafe CATS)も導入 会社のメールサーバ経由での送受信メールはすべて保管  M&amp;Aアドバイザリーという業務の特性からとにかく情報漏えい対策にお金はかけており、 セキュリティには相当な自信をお持ちでいらっしゃった。
-ただ、素人目からしても抜け道がいくつか見えたので、研修を終えて自分の会社に戻った瞬間に以下に対して策を講じた。
- Bluetoothが使い放題で、右クリックして「送る」メニューをするだけで簡単にファイル送信可能。 またOfficeのBluetoothアドイン経由でも送信可能。 ※SKYSEAにはBluetoothに接続する機器を制限する機能があるが、iPhoneとのテザリングや無線マウス、キーボードを使用している人がいるので研修先企業では禁止にできなかった。 ネットワークの共有(ICS)や、SoftAPにより個人端末を社内LANへ接続可能 ※SKYSEAにはネットワークに登録されていないMACアドレスの端末が接続されたことを検知・遮断する機能あり。だが直接外部端末を社内ネットワークに接続しない(PCでNAPTを行う)場合は、SKYSEAでは検知不可能。 IISをインストールし、AdHocやWiFi Directで接続されると外部端末からアクセスしての持ち出しが可能。 ※SKYSEAはユーザが新たなソフトウェアをインストールすると検知できる。しかし、SKYSEAのサーバにIISも入れる必要があるためデフォルトだとIISがホワイトリストに入ってしまう。 Hyper-Vをインストールして仮想マシン経由でアクセスされると制限が効かず、ログも残らない。 各ユーザに管理者権限を与えているので、デフォルトで管理共有が有効になっており、外部端末からアクセスして持ちだし可能。 ※SKYSEAには共有フォルダの作成を制限できる機能はあるが、インストール時点で作成されていた場合は禁止できない。 NTFSのジャンクションと上記の方法(ICS、SoftAP、IIS)の組み合わせで、ローカルファイルへのアクセスに見せかけてファイルサーバのファイルも持ち出し可能なので、 ログを見てもファイルサーバからデータを持ちだしたことが分からない。 会社では携帯電話にiPhoneを採用しており、クライアントPCにはバックアップ用にiTunesをインストールしている。 構成プロファイルでApple Storeの使用を禁止しているが、  iTunesを使ってPCからApple Storeのアプリを自由にインストール可能 しかもiTunesのファイル共有機能も有効なので、iPhone経由でいくらでも外部に持ち出せる  標準ブラウザとしてFirefoxを採用しているが、Firefox Syncで個人アカウントを作成し、ブックマークやパスワードを個人PCと同期可能。 テキスト情報ならブックマークに見せかけて同期すれば持ち出せる。 Google Chromeで個人のGoogleアカウントとしてログイン、同期可能なので、Firefox Syncと同様にいろいろ持ち出せる。 また、Google Cloud Printにより家のプリンタに出力することも可能。 Google ChromeではInterSafe CATSとSKYSEAの組み合わせではログ取得ができないので、 InterSafe CATSに引っかからないウェブサイトであれば、ファイルをアップロードし放題。ログも残らない。 ※これはSKYSEAの問題ではなく、InterSafe CATSのフィルタリングがかなりエグい仕組みのため &gt; Feb. 6 2016 追記: InterSafe CATS 4.3以降はこの競合問題は解決した Skype.exeを実行不可にしているものの、Skype for Business(Lync)はスルーなので、ファイル送信し放題 また、「Skype.exe」という名前のファイルを実行禁止・ファイル名変更禁止したりできるが、それでも抜け道はある ※SKYSEAはexeファイルのハッシュ値でブラックリストを作成できる　⇔　1bitでも違うexeファイルを作れば抜けられる  ※はSKYSEAの製品自体が悪いわけではないことの説明。 私はSKYSEAはいい買い物だったと思っているので誤解なきよう。
-		</div>
-	</div>
-</article>
-
 		
 
 		
 <div class="pagination clearfix">
 	<a class="pagination__item pagination__item--prev" href="/">«</a>
-	<span class="pagination__item pagination__item--current">2/5</span>
+	<span class="pagination__item pagination__item--current">2/9</span>
 	<a class="pagination__item pagination__item--next" href="/page/3/">»</a>
 </div>
 
@@ -372,16 +282,16 @@ Let&rsquo;s Noteの場合、 C:\util2\drivers\etm\DppmCleaner.bat、もしくは
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/bicycle/equipments/">携行品・装備品</a></li>
+			<li class="widget__item"><a class="widget__link" href="/bicycle/introduction/">自転車について</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/input_backslach_with_us_keyboard_layout/">英語版Windows PE環境でバックスラッシュを入力</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/xubuntu1604_snort_base/">Xubuntu 16.04 &#43; Snortで簡易IDS構築</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/create_zip_file_with_wsh_jscript/">Windows標準機能でZIPファイルの作成</a></li>
+			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170429-0505_nagoya_shirakawago_noto_peninshula_kanazawa/">2017年04月29日〜05月05日 東京→名古屋→岐阜→能登半島→金沢→米原</a></li>
+			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170318-brm318chiba-2lakes/">2017年03月18日 BRM318千葉200km 2レイク</a></li>
+			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170211-12-izu-peninsula/">2017年02月11日〜12日 伊豆半島</a></li>
+			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20161231-20170102-first-sunrise-at-inubozaki/">2016年12月31日〜2017年1月2日 初日の出ツーリング 犬吠埼</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/detect_submittion_to_private_mail_from_gmail/">Gmail (G Suite)でフリーメールアドレスへの送信を検知</a></li>
-			<li class="widget__item"><a class="widget__link" href="/essay/make_font_embedded_pdf_from_edinet/">EDINETが生成するPDFにフォントを埋め込む</a></li>
-			<li class="widget__item"><a class="widget__link" href="/essay/performance_degration_of_kanjo_bugyo/">勘定奉行の性能劣化に対処</a></li>
-			<li class="widget__item"><a class="widget__link" href="/essay/rescue_gps_log_from_binary_data_of_holux_m241/">m-241のバイナリデータからトラックログを吸い出す</a></li>
-			<li class="widget__item"><a class="widget__link" href="/essay/manage_firefox_settings_with_group_policy_without_gpo_for_firefox/">Firefoxをグループポリシーで管理する</a></li>
-			<li class="widget__item"><a class="widget__link" href="/essay/convert-dvd-to-mpeg-in-a-batch-file/">ffmpegでDVDをMPEGファイルに変換</a></li>
-			<li class="widget__item"><a class="widget__link" href="/essay/change-c-compiler-in-mathematica/">CompileするCコンパイラを変更する</a></li>
 		</ul>
 	</div>
 </div>

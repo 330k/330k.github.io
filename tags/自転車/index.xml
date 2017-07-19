@@ -6,20 +6,10 @@
     <description>Recent content in 自転車 on 330k info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Jun 2017 22:10:24 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 27 Jun 2017 22:19:26 +0900</lastBuildDate>
     
 	<atom:link href="https://www.330k.info/tags/%E8%87%AA%E8%BB%A2%E8%BB%8A/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>自転車について</title>
-      <link>https://www.330k.info/bicycle/introduction/</link>
-      <pubDate>Tue, 27 Jun 2017 22:10:24 +0900</pubDate>
-      
-      <guid>https://www.330k.info/bicycle/introduction/</guid>
-      <description>SURLY CROSS-CHECK (Aug. 2010 &amp;ndash;)  Nov. 20 2016 ついにブレーキ以外のコンポをDura-Ace(9100)化、ホイールもユーラスにしてしまった・・・。 SURLY cross-checkにDura-Ace、Vブレーキ、SPDペダルなんて組み合わせは他にいないだろうな。
-      パーツ 購入時 現在 備考     フレーム・フォーク Surly Crosscheck 460mm -    ヘッドパーツ Canecreek S3 -    ステム Thomson Elite X2 100mm -    ハンドルバー Salsa Short &amp;amp; Shallow 380mm -    シート(サドル) Selle Italia Yutaak -    シートポスト Thomson Elite -    ハブ(フロント) Shimano 105 HB-5700-L Campagnolo Eurus 完組    ハブ(リア) Shimano 105 FH-5700-L (完組Campagnolo Eurus)    スポーク DT-Swiss 型番不明 (完組Campagnolo Eurus)    リム DT-Swiss RR465 (完組Campagnolo Eurus)    タイヤ Schwalve Delta Cruiser 28C Continental GrandPrix 4000S II 25C    クランクセット Shimano 105 FC-5703-L 50-39-30T 170mm Shimano Dura-Ace FC-R9100 50-34T 170mm    ディレイラ(フロント) Shimano 105 FD-5703-S/M Shimano Dura-Ace FD-R9100    ディレイラ(リア) Shimano 105 RD-5700-GS Shimano Dura-Ace RD-R9100    カセットスプロケット Shimano 105 CS-5700 11-25T Shimano Dura-Ace CS-R9100 11-30T    ブレーキレバー Shimano 105 ST-5703 Shimano Dura-Ace ST-R9100    ブレーキ Canecreek SCX-5 Shimano 105 BR-R573 カンチレバーではビビリが発生したためミニV化   ペダル Shimano A-530 Shimano M-540     購入直後の感想  自転車に乗り始めて3年目、ついに自分がツーリングするための自転車をオーダーした。 その結果がこのSURLYのシクロクロスバイク。 長時間・長距離を走るべく、クロモリフレームにコンポーネントは105でフロントトリプル+リア11-25Tでワイドレンジのギアレシオを選択し、ついでに憧れだったSPD(ただし片面)にした。タイヤは悩んだが、とりあえず28Cにしておいた。</description>
-    </item>
     
     <item>
       <title>携行品・装備品</title>
@@ -38,6 +28,16 @@ USB充電器 FUJITSU FSC321FX USB⇔NiMH充電池(eneloop)の充電ができる�
 サイドバッグ ANTARES Konnix ST-950-P 池袋Y&amp;rsquo;s Roadに行ったら他のOSTRICHやdeuterなどのサイドバッグのほぼ半値と安かったので購入。 防水構造を謳ってはいるが基本的に雨の中では走らないので防水性能はまだ分からない。 リアキャリアのパイプにひっかけるプラスチック製のツメがちょっと心許ないが、容量は十分あり、反射材もついていて基本的には満足。
 テールランプ Blackburn Mars 4.0 これまた1WのLEDを使っていて明るいと評判のテールランプ。明るいがスイッチは非常に押しにくい。 1ヶ月少しの使用で、基板が異常発熱して電池ごとオシャカになった。 エネループを使っていたのがまずかったのか？ ネットで探してみても同じような症状を示す例は見当たらないので単なる個体差かもしれないが、もうこのメーカの製品は買わない。
 フロントバッグ mont-bell ツーリングフロントバッグ バックパックをなくすための試行錯誤の中で、フロントバッグの導入をしてみた。 結果・・・ハンドルが非常に重い。 またヘッドライトが取り付けられなくなったため、エクステンションバーが必要になり、更に重量増。 フロントの荷重が増えたため、フロントタイヤで異物を踏んづけてのパンクがしやすくなってしまった。 あと、なんというか・・・見た目のモンベル臭さが・・・。 ということで現在は使用せず。</description>
+    </item>
+    
+    <item>
+      <title>自転車について</title>
+      <link>https://www.330k.info/bicycle/introduction/</link>
+      <pubDate>Tue, 27 Jun 2017 22:10:24 +0900</pubDate>
+      
+      <guid>https://www.330k.info/bicycle/introduction/</guid>
+      <description>SURLY CROSS-CHECK (Aug. 2010 &amp;ndash;)  Nov. 20 2016 ついにブレーキ以外のコンポをDura-Ace(9100)化、ホイールもユーラスにしてしまった・・・。 SURLY cross-checkにDura-Ace、Vブレーキ、SPDペダルなんて組み合わせは他にいないだろうな。
+      パーツ 購入時 現在 備考     フレーム・フォーク Surly Crosscheck 460mm -    ヘッドパーツ Canecreek S3 -    ステム Thomson Elite X2 100mm -    ハンドルバー Salsa Short &amp;amp; Shallow 380mm -    シート(サドル) Selle Italia Yutaak -    シートポスト Thomson Elite -    ハブ(フロント) Shimano 105 HB-5700-L Campagnolo Eurus 完組    ハブ(リア) Shimano 105 FH-5700-L (完組Campagnolo Eurus)    スポーク DT-Swiss 型番不明 (完組Campagnolo Eurus)    リム DT-Swiss RR465 (完組Campagnolo Eurus)    タイヤ Schwalve Delta Cruiser 28C Continental GrandPrix 4000S II 25C    クランクセット Shimano 105 FC-5703-L 50-39-30T 170mm Shimano Dura-Ace FC-R9100 50-34T 170mm    ディレイラ(フロント) Shimano 105 FD-5703-S/M Shimano Dura-Ace FD-R9100    ディレイラ(リア) Shimano 105 RD-5700-GS Shimano Dura-Ace RD-R9100    カセットスプロケット Shimano 105 CS-5700 11-25T Shimano Dura-Ace CS-R9100 11-30T    ブレーキレバー Shimano 105 ST-5703 Shimano Dura-Ace ST-R9100    ブレーキ Canecreek SCX-5 Shimano 105 BR-R573 カンチレバーではビビリが発生したためミニV化   ペダル Shimano A-530 Shimano M-540     購入直後の感想  自転車に乗り始めて3年目、ついに自分がツーリングするための自転車をオーダーした。 その結果がこのSURLYのシクロクロスバイク。 長時間・長距離を走るべく、クロモリフレームにコンポーネントは105でフロントトリプル+リア11-25Tでワイドレンジのギアレシオを選択し、ついでに憧れだったSPD(ただし片面)にした。タイヤは悩んだが、とりあえず28Cにしておいた。</description>
     </item>
     
     <item>
