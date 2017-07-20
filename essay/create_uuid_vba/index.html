@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2017年03月18日 BRM318千葉200km 2レイク</title>
+<title>VBAでUUIDを生成</title>
 <meta name="description" content="自転車ツーリングの記録やソフトウェアの配布、Mathematicaをメインにしたプログラミングの覚書や日ごろの雑感など。">
 <meta name="generator" content="Hugo 0.21" />
 
@@ -41,8 +41,8 @@ ga('send', 'pageview');
 			
 <nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<ul class="menu__list">
-		<li class="menu__item menu__item--active"><a class="menu__link" href="/bicycle/">BICYCLES</a></li>
-		<li class="menu__item "><a class="menu__link" href="/essay/">ESSAYS</a></li>
+		<li class="menu__item "><a class="menu__link" href="/bicycle/">BICYCLES</a></li>
+		<li class="menu__item menu__item--active"><a class="menu__link" href="/essay/">ESSAYS</a></li>
 		<li class="menu__item "><a class="menu__link" href="/software/">SOFTWARES</a></li>
 	</ul>
 </nav>
@@ -54,118 +54,42 @@ ga('send', 'pageview');
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">2017年03月18日 BRM318千葉200km 2レイク</h1>
+			<h1 class="post__title">VBAでUUIDを生成</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2017-03-18T21:53:04">March 18, 2017</time>
+				<time class="post__meta-date" datetime="2017-07-20T20:57:38">July 20, 2017</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-					<a class="meta-categories__link" href="/categories/%e8%87%aa%e8%bb%a2%e8%bb%8a" rel="category">自転車</a></span>
+					<a class="meta-categories__link" href="/categories/%e9%9b%91%e8%a8%98%e5%b8%b3" rel="category">雑記帳</a></span>
 			</p>
 		</header>
 		<div class="post__content clearfix">
-			
+			<p>Excel VBAでUUID(GUID)を生成して使っている部分があったのだが、
+先日のWindows Updateを適用してから、
+<code>CreateObject(&quot;Scriptlet.TypeLib&quot;)</code>でエラーが出て使用できなくなってしまった。</p>
 
-<p>「ロングライドしてます」と一応言えるようになるため、初ブルベ参加してきた。
-他人が作るコースを正確に辿ることに不慣れなため、難易度低目のコースのBRM318千葉200kmに申し込み。</p>
+<p>ただ単にランダムなUUIDが生成できれば良いので、
+UUID v4を生成する関数を作った。</p>
 
-<div id="map-canvas" style="width: 100%; height:500px; margin:0; padding: 0"></div>
-<script>
-function initMap(){
-  var map,
-    ctaLayer;
-  map = new google.maps.Map(document.getElementById("map-canvas"), {
-    center: {lat: 35.6832581, lng: 139.7555827},
-    zoom: 8
-  });
-  ctaLayer = new google.maps.KmlLayer({
-    url: "https:\/\/www.330k.info\/\/bicycle\/touring\/20170318-brm318chiba-2lakes\/20170318.kml"
-  });
-  ctaLayer.setMap(map);
-}
-</script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCir56M7J9LT4-3wDVgG8etGo_HPSMWVBk&callback=initMap" async defer></script>
+<p>VBの乱数の精度としては24ビットらしいので、1回の乱数生成では最大16ビット使用するようにはしているが、
+乱数の品質はあまり高くないのでご注意を。</p>
 
-<h2 id="前日">前日</h2>
-
-<p>スタートの大洗海岸に当日朝に到着する方法がないので、
-前日の仕事を早めに切り上げて常磐線に乗り、勝田のビジネスホテルで前泊。
-しかも2泊することで当日スタート地点に持っていく荷物を減らして万端の準備。</p>
-
-<h2 id="当日">当日</h2>
-
-<p>朝6時45分にホテルを出て、11km離れたスタート地点まで走行。7時15分頃に到着。
-スタッフの方に捺印済みの権利放棄書を渡し、名簿に名前を記入、ブルベカードを受取って出走番号を記入。
-安全ピンと黒いフェルト布(20mm×60mmくらい)を渡されて、
-何に使うものなのか分からずスタッフに質問したところ、「喪章です」との回答が。</p>
-
-<p>その後ブリーフィング時にブルベの稲垣会長という方がNZで1200kmブルベ参加中に事故で亡くなったとの説明が。
-15日に起きた事故とのことだが、事前準備で精一杯で何も知らなかった。
-そういう理由で今回のブルベは全員が喪章を着けての走行をすることになったそうだ。</p>
-
-<p>写真は8:00スタートの車検。私は8:10スタート。ブレーキ、前後ライトとベルの確認をしてスタート。</p>
-
-
-<figure >
-    
-        <img src="IMG_1327.jpg" />
-    
-    
-</figure>
-
-
-<p>スタート直後は「まずは大洗鳥居下交差点を左、その次はマリンタワー交差点を右・・・」と唱えていたが、
-次第にグループが形成されていったため、前に人がいる限りはルートは安心・・・と思っていたら、
-ある交差点で2つ前の人が直進し、1つ前の人が左折した。
-事前にGarminにルートを作成しておいたので、私は左折した。
-直進した人は戻れたのだろうか・・・。</p>
-
-<p>PC1までは人が多かったが、休憩時間の配分が各々違うようで、PC2に着く頃にはだんだんとバラけてきた。</p>
-
-<p>
-<figure >
-    
-        <img src="IMG_1333.jpg" />
-    
-    
-</figure>
-
-
-<figure >
-    
-        <img src="IMG_1328.jpg" />
-    
-    
-</figure>
-</p>
-
-<p>霞ヶ浦沿いの平坦な道路を淡々と進む。右は通過チェックポイントのかすみがうら市水族館。
-回りの人の動きに従い、スタッフの人に自分の名前を告げればよいようだ。
-スタート前に自分が書いた名簿がある、ということはスタッフの人が大急ぎで持ってきている、ということか。</p>
-
-<p>その後は写真を撮る余裕もないまま、17時頃にゴール地点到着。
-スタッフの人にブルベカードを返してサインをしてゴール。</p>
-
-<p>認定タイムは8:50。途中ミスコースを2回したので走行距離は202.40kmだった。</p>
-
-
-<figure >
-    
-        <img src="IMG_1334.jpg" />
-    
-    
-</figure>
-
-
-<p>さすがに走りやすいルートが選ばれていて、走りやすい200kmだった。
-ゴール後、スタッフの人に「次は400kmどうですか？」と誘われたが、装備をもっと整えないと400kmは無理だな・・・。</p>
+<pre><code class="language-VBScript">Public Function GetUUID() As String
+    'GetUUID = Mid$(CreateObject(&quot;Scriptlet.TypeLib&quot;).GUID, 2, 36)
+    GetUUID = Right$(&quot;0000&quot; &amp; Hex(Rnd() * 65536), 4) &amp; Right$(&quot;0000&quot; &amp; Hex(Rnd() * 65536), 4)
+    GetUUID = GetUUID &amp; &quot;-&quot; &amp; Right$(&quot;0000&quot; &amp; Hex(Rnd() * 65536), 4)
+    GetUUID = GetUUID &amp; &quot;-4&quot; &amp; Right$(&quot;0000&quot; &amp; Hex(Rnd() * 65536), 3)
+    GetUUID = GetUUID &amp; &quot;-&quot; &amp; Right$(&quot;0000&quot; &amp; Hex(32768 + Rnd() * 16384), 4)
+    GetUUID = GetUUID &amp; &quot;-&quot; &amp; Right$(&quot;0000&quot; &amp; Hex(Rnd() * 65536), 4) &amp; Right$(&quot;0000&quot; &amp; Hex(Rnd() * 65536), 4) &amp; Right$(&quot;0000&quot; &amp; Hex(Rnd() * 65536), 4)
+End Function
+</code></pre>
 
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/%E3%83%84%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0/" rel="tag">ツーリング</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/vba/" rel="tag">VBA</a></li>
 	</ul>
 </div>
 
@@ -174,10 +98,10 @@ function initMap(){
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/bicycle/touring/20170211-12-izu-peninsula/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">2017年02月11日〜12日 伊豆半島</p></a>
+		<a class="post-nav__link" href="/essay/input_backslach_with_us_keyboard_layout/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">英語版Windows PE環境でバックスラッシュを入力</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/bicycle/touring/20170429-0505_nagoya_shirakawago_noto_peninshula_kanazawa/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">2017年04月29日〜05月05日 東京→名古屋→岐阜→能登半島→金沢→米原</p></a>
+		<a class="post-nav__link" href="/essay/zabbix_ricoh_printer_template_xml/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">RICOHプリンタ・複合機用のZabbix用テンプレート</p></a>
 	</div>
 </nav>
 

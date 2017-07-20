@@ -6,10 +6,22 @@
     <description>Recent content in Vba on 330k info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Sep 2010 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 20 Jul 2017 20:57:38 +0900</lastBuildDate>
     
 	<atom:link href="https://www.330k.info/tags/vba/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>VBAでUUIDを生成</title>
+      <link>https://www.330k.info/essay/create_uuid_vba/</link>
+      <pubDate>Thu, 20 Jul 2017 20:57:38 +0900</pubDate>
+      
+      <guid>https://www.330k.info/essay/create_uuid_vba/</guid>
+      <description>Excel VBAでUUID(GUID)を生成して使っている部分があったのだが、 先日のWindows Updateを適用してから、 CreateObject(&amp;quot;Scriptlet.TypeLib&amp;quot;)でエラーが出て使用できなくなってしまった。
+ただ単にランダムなUUIDが生成できれば良いので、 UUID v4を生成する関数を作った。
+VBの乱数の精度としては24ビットらしいので、1回の乱数生成では最大16ビット使用するようにはしているが、 乱数の品質はあまり高くないのでご注意を。
+Public Function GetUUID() As String &#39;GetUUID = Mid$(CreateObject(&amp;quot;Scriptlet.TypeLib&amp;quot;).GUID, 2, 36) GetUUID = Right$(&amp;quot;0000&amp;quot; &amp;amp; Hex(Rnd() * 65536), 4) &amp;amp; Right$(&amp;quot;0000&amp;quot; &amp;amp; Hex(Rnd() * 65536), 4) GetUUID = GetUUID &amp;amp; &amp;quot;-&amp;quot; &amp;amp; Right$(&amp;quot;0000&amp;quot; &amp;amp; Hex(Rnd() * 65536), 4) GetUUID = GetUUID &amp;amp; &amp;quot;-4&amp;quot; &amp;amp; Right$(&amp;quot;0000&amp;quot; &amp;amp; Hex(Rnd() * 65536), 3) GetUUID = GetUUID &amp;amp; &amp;quot;-&amp;quot; &amp;amp; Right$(&amp;quot;0000&amp;quot; &amp;amp; Hex(32768 + Rnd() * 16384), 4) GetUUID = GetUUID &amp;amp; &amp;quot;-&amp;quot; &amp;amp; Right$(&amp;quot;0000&amp;quot; &amp;amp; Hex(Rnd() * 65536), 4) &amp;amp; Right$(&amp;quot;0000&amp;quot; &amp;amp; Hex(Rnd() * 65536), 4) &amp;amp; Right$(&amp;quot;0000&amp;quot; &amp;amp; Hex(Rnd() * 65536), 4) End Function  </description>
+    </item>
     
     <item>
       <title>VBAでビットマップ(bmp)を読み書き</title>
