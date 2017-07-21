@@ -26,7 +26,7 @@ data = Table[Module[{str, ret}, str = OpenRead[&amp;quot;2016091200.bin&amp;quot
     </item>
     
     <item>
-      <title>CompileするCコンパイラを変更する</title>
+      <title>Compileで使用するCコンパイラを変更する</title>
       <link>https://www.330k.info/essay/change-c-compiler-in-mathematica/</link>
       <pubDate>Tue, 08 Dec 2015 17:40:00 +0900</pubDate>
       

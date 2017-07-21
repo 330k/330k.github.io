@@ -58,29 +58,6 @@ ga('send', 'pageview');
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/software/hta-sql-tool/" rel="bookmark">HTA SQLツール</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2017-06-27T22:42:14">June 27, 2017</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			概要 今は廃れたHTA(HTML Application)で書いた、汎用SQLツールです。 Windows上で動作し、
- CSVファイル(*.csv) Excelファイル(.xls、.xlsx、.xlsm、.xlsb) Accessファイル(*.mdb)  などをADODB経由で開いてSQLクエリを実行できます。
-CSVファイルはディレクトリ⇔データベース、CSVファイル⇔テーブルとして扱われ、 ExcelファイルはExcelブック⇔データベース、シート⇔テーブルとして扱われます。
-主に、SQLクエリを実行した結果をExcelに貼り付けて使用することを想定しており、 出力された表はExcelに貼り付けやすいようTSV形式で持っています。 select intoで直接ファイルに書き出すこともできます。
-スクリーンショット  ダウンロード Gistからダウンロード
-もしくは以下のソースコードをメモ帳にコピー＆ペーストし、拡張子をhtaに変更してください。
-&lt;html&gt; &lt;head&gt; &lt;!-- HTA SQL Tool by 330k Copyright (c) 2016 330k This software is released under the MIT License. http://opensource.org/licenses/mit-license.php --&gt; &lt;title&gt;HTA SQL Tool by 330k&lt;/title&gt; &lt;HTA:APPLICATION ID=&quot;USQLEXE&quot; APPLICATIONNAME=&quot;USQLEXE&quot; BORDER=&quot;thick&quot; BORDERSTYLE=&quot;normal&quot; CAPTION=&quot;yes&quot; ICON=&quot;C:\WINDOWS\system32\rsnotify.exe&quot; INNERBORDER=&quot;no&quot; MAXIMIZEBUTTON=&quot;yes&quot; MINIMIZEBUTTON=&quot;yes&quot; SHOWINTASKBAR=&quot;yes&quot; SINGLEINSTANCE=&quot;no&quot; SYSMENU=&quot;yes&quot; VERSION=&quot;1.0&quot; WINDOWSTATE=&quot;normal&quot; SCROLL=&quot;no&quot; SCROLLFLAT=&quot;no&quot; SELECTION=&quot;yes&quot; CONTEXTMENU=&quot;yes&quot; NAVIGABLE=&quot;yes&quot; /&gt; &lt;/head&gt; &lt;script type=&quot;text/javascript&quot;&gt; var doc = document; eval('var document = doc'); var shell = new ActiveXObject('WScript.
-		</div>
-	</div>
-</article>
-
-				<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
 				<a href="/essay/performance_degration_of_kanjo_bugyo/" rel="bookmark">勘定奉行の性能劣化に対処</a>
 			</h3>
 			<div class="list__meta meta">
@@ -98,6 +75,29 @@ CSVファイルはディレクトリ⇔データベース、CSVファイル⇔�
 これに従い、サーバ上でSQL Server Management Studioを起動し、勘定奉行で使用しているデータベースで
 sp_updatestats  としたところ、1秒程度で処理が完了するようになった。 上記ページには各テーブル単位での統計情報更新や、実行プランの再作成、インデックスの再構築の方法も書かれているが、今回は行わなかった。
 このようにSQL文を直接叩きに行く方法は多分メーカ(OBC)では非推奨だと思うが、 クライアント側にsp_updatestatsを発行するメニューくらいつけてほしいものだ。
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/software/hta-sql-tool/" rel="bookmark">HTA SQLツール</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2016-01-13T22:42:14">January 13, 2016</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			概要 今は廃れたHTA(HTML Application)で書いた、汎用SQLツールです。 Windows上で動作し、
+ CSVファイル(*.csv) Excelファイル(.xls、.xlsx、.xlsm、.xlsb) Accessファイル(*.mdb)  などをADODB経由で開いてSQLクエリを実行できます。
+CSVファイルはディレクトリ⇔データベース、CSVファイル⇔テーブルとして扱われ、 ExcelファイルはExcelブック⇔データベース、シート⇔テーブルとして扱われます。
+主に、SQLクエリを実行した結果をExcelに貼り付けて使用することを想定しており、 出力された表はExcelに貼り付けやすいようTSV形式で持っています。 select intoで直接ファイルに書き出すこともできます。
+スクリーンショット  ダウンロード Gistからダウンロード
+もしくは以下のソースコードをメモ帳にコピー＆ペーストし、拡張子をhtaに変更してください。
+&lt;html&gt; &lt;head&gt; &lt;!-- HTA SQL Tool by 330k Copyright (c) 2016 330k This software is released under the MIT License. http://opensource.org/licenses/mit-license.php --&gt; &lt;title&gt;HTA SQL Tool by 330k&lt;/title&gt; &lt;HTA:APPLICATION ID=&quot;USQLEXE&quot; APPLICATIONNAME=&quot;USQLEXE&quot; BORDER=&quot;thick&quot; BORDERSTYLE=&quot;normal&quot; CAPTION=&quot;yes&quot; ICON=&quot;C:\WINDOWS\system32\rsnotify.exe&quot; INNERBORDER=&quot;no&quot; MAXIMIZEBUTTON=&quot;yes&quot; MINIMIZEBUTTON=&quot;yes&quot; SHOWINTASKBAR=&quot;yes&quot; SINGLEINSTANCE=&quot;no&quot; SYSMENU=&quot;yes&quot; VERSION=&quot;1.0&quot; WINDOWSTATE=&quot;normal&quot; SCROLL=&quot;no&quot; SCROLLFLAT=&quot;no&quot; SELECTION=&quot;yes&quot; CONTEXTMENU=&quot;yes&quot; NAVIGABLE=&quot;yes&quot; /&gt; &lt;/head&gt; &lt;script type=&quot;text/javascript&quot;&gt; var doc = document; eval('var document = doc'); var shell = new ActiveXObject('WScript.
 		</div>
 	</div>
 </article>

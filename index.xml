@@ -36,105 +36,6 @@ Public Function GetUUID() As String &#39;GetUUID = Mid$(CreateObject(&amp;quot;S
     </item>
     
     <item>
-      <title>漢字コード変換モジュール for VB6/VBA</title>
-      <link>https://www.330k.info/software/kcconvert/</link>
-      <pubDate>Tue, 27 Jun 2017 22:43:13 +0900</pubDate>
-      
-      <guid>https://www.330k.info/software/kcconvert/</guid>
-      <description>概要 VB6およびExcelなどのVBAにおいて日本語の文字コード変換機能を提供するモジュール。 外部ライブラリを使用せずに変換を行う。
-以下の文字コード間の相互変換が可能。
- Shift-JIS EUC-JP JIS UTF-8(BOMなし, あり) UTF-16LE(BOMなし, あり) UTF-16BE(BOMあり)  ダウンロード Vectorの紹介ページへ</description>
-    </item>
-    
-    <item>
-      <title>あしあとデータ結合機</title>
-      <link>https://www.330k.info/software/ashiato-data/</link>
-      <pubDate>Tue, 27 Jun 2017 22:43:03 +0900</pubDate>
-      
-      <guid>https://www.330k.info/software/ashiato-data/</guid>
-      <description>概要 auの携帯電話の地図ビューアーの簡易ハンディGPS機能で取得したあしあとデータを結合し、GPXおよびKML形式に変換します。
-地図ビューアーで約2時間ごとにログを保存しなければならず、1日ログを取った後、複数のあしあとデータを結合するのが面倒だったため作成しました。
-GPXへの変換に際しては時刻情報を残しますので、カシミール3Dなどで速度履歴を見ることも可能です。
-ダウンロード Vectorの紹介ページへ</description>
-    </item>
-    
-    <item>
-      <title>Vigla</title>
-      <link>https://www.330k.info/software/vigla/</link>
-      <pubDate>Tue, 27 Jun 2017 22:42:49 +0900</pubDate>
-      
-      <guid>https://www.330k.info/software/vigla/</guid>
-      <description>概要 序盤は定石データベースを使用し、中盤を貧弱な評価関数で乗り切り、終盤は完全読みを行う、普通のコンピュータリバーシソフト。
- 貧弱な評価関数 マルチスレッドによる高い応答性・操作性 棋譜や盤面の出力が可能 対戦中や棋譜を読み込んで最善手を探索させるなど研究のための機能も一応付属  を特徴とする。
-ダウンロード Vectorの紹介ページへ</description>
-    </item>
-    
-    <item>
-      <title>Unicodeステガノグラフィ with JavaScript</title>
-      <link>https://www.330k.info/software/plain-text-steganography-with-unicode/</link>
-      <pubDate>Tue, 27 Jun 2017 22:42:38 +0900</pubDate>
-      
-      <guid>https://www.330k.info/software/plain-text-steganography-with-unicode/</guid>
-      <description>概要 ゼロ幅文字を使ってUnicodeのプレーンテキストにステガノグラフィを施す、 ブラウザのJavaScriptで動作するライブラリを書いてみた。 参考にしたのは以下のサイト
- ZERO WIDTH SPACE を使って Unicode ステガノグラフィ Unicode Text Steganography Encoders/Decoders  特徴としては以下の通り。
- デフォルトではゼロ幅文字として4種類を使用(U+200C, U+200D, U+202C, U+FEFF)し、2種類の時よりもエンコード後の文字数を減少(それでも1文字埋め込むために8文字増える) 使用する文字種はライブラリの使用者側で指定可能 使用する文字種に応じて自動的にコード長を変更(例: 2種類のときは1字(16bit)が16字になり、8種類のときは6字になる) 漢字とひらがな、カタカナの間や英単語間にゼロ幅文字を埋め込むことで、できる限り単語検索を邪魔しない(厳密には異なるUnicodeブロック間に挿入する。非英語の欧州の言語や、サロゲートペアを使用する文字の前後には単語内でも挿入される) 埋め込む位置は毎回ランダム 元の文章、隠しテキストともに多言語対応(全部UTF-16としてJavaScriptで扱っているため) GitHubのものは任意のバイナリデータにも対応  ダウンロードや、サイトに使用する際は以下のURLからどうぞ。
-https://www.330k.info/misc_tools/unicode_steganography.js
-ライセンスはMITライセンス。
-使い方は https://www.330k.info/misc_tools/unicode_steganography.html に書きました(英語です)。
-動作サンプル:  デフォルトで使用する4種の文字(U+200C, U+200D, U+202C, U+FEFF)は、 GmailやOutlook 2010、iPhoneの標準メールアプリにおいて ゼロ幅として表示 文字化けしない(豆腐にならない) コピー&amp;amp;ペースト時に保存されるもの として選定した。 U+200B(ZERO WIDTH SPACE)はブラウザからGmailで送信するときに削除される。 ただ、メーラを使ってSMTPサーバ(smtp.gmail.com)から送信するときは削除されない。
-Bidiを考慮せず左横書きに限定すれば、U+200E(LRM)やU+202B(LRO)などを追加できる。 FacebookやTwitterなど各アプリやウェブサイトの対応状況は参考サイトの2番目に詳しい。
-GitHubにアップロードした方はバイナリデータにも対応。 これは通常のステガノグラフィとは逆に、画像などのバイナリデータをプレーンテキスト中に埋め込むことになる。 ただサイズがバカでかくなって存在がバレるので、ステガノグラフィとしての意味はなさないかも。
-動作確認ブラウザ  Chromium 45 (Ubuntu 14.04 LTS) Firefox 42 (Ubuntu 14.04 LTS) Edge (Windows 10) Internet Explorer 11 (Windows 10) Safari (iOS 9.</description>
-    </item>
-    
-    <item>
-      <title>PPTX外部リンク抽出</title>
-      <link>https://www.330k.info/software/extract-exlinks-pptx/</link>
-      <pubDate>Tue, 27 Jun 2017 22:42:27 +0900</pubDate>
-      
-      <guid>https://www.330k.info/software/extract-exlinks-pptx/</guid>
-      <description> 概要 PowerPointで動画を入れることはよくあるが、その動画がどこにあるファイルなのか分からなくなることがよくある。 一応、PowerPointでもパスを表示させることはできるのだが、何せ表示できる文字数が短すぎて分からない、という無駄機能状態。
- ↑このように「ファイルへのリンクの編集」で表示させることはできるのだが、 深い階層のファイルを参照していると、表示しきれない。
-幸い、最新のPowerPointファイル(.pptx)はxmlファイルをzipで固めたものなので、中身を解析して、外部にリンクしているもののパスと、それが使用されているスライドのページ数を抽出するプログラムを作ってみた。
-ダウンロード ExtractPPTXExLink.jar
-使い方 ExtractPPTXExLink.jarを実行すると、pptxファイルの場所を聞かれるので、1つ選択する。 すると、pptxと同じフォルダに(pptxファイル名)_exlink.txtというファイルにスライドページ番号と外部リンクのパスが出力される。
-動作環境  Java 6以上があればOSは問わないはず Windows XP, 7, 8.1, 10, Ubuntu 14.04 LTSで一応動作を確認  </description>
-    </item>
-    
-    <item>
-      <title>HTA SQLツール</title>
-      <link>https://www.330k.info/software/hta-sql-tool/</link>
-      <pubDate>Tue, 27 Jun 2017 22:42:14 +0900</pubDate>
-      
-      <guid>https://www.330k.info/software/hta-sql-tool/</guid>
-      <description>概要 今は廃れたHTA(HTML Application)で書いた、汎用SQLツールです。 Windows上で動作し、
- CSVファイル(*.csv) Excelファイル(.xls、.xlsx、.xlsm、.xlsb) Accessファイル(*.mdb)  などをADODB経由で開いてSQLクエリを実行できます。
-CSVファイルはディレクトリ⇔データベース、CSVファイル⇔テーブルとして扱われ、 ExcelファイルはExcelブック⇔データベース、シート⇔テーブルとして扱われます。
-主に、SQLクエリを実行した結果をExcelに貼り付けて使用することを想定しており、 出力された表はExcelに貼り付けやすいようTSV形式で持っています。 select intoで直接ファイルに書き出すこともできます。
-スクリーンショット  ダウンロード Gistからダウンロード
-もしくは以下のソースコードをメモ帳にコピー＆ペーストし、拡張子をhtaに変更してください。
-&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;!-- HTA SQL Tool by 330k Copyright (c) 2016 330k This software is released under the MIT License. http://opensource.org/licenses/mit-license.php --&amp;gt; &amp;lt;title&amp;gt;HTA SQL Tool by 330k&amp;lt;/title&amp;gt; &amp;lt;HTA:APPLICATION ID=&amp;quot;USQLEXE&amp;quot; APPLICATIONNAME=&amp;quot;USQLEXE&amp;quot; BORDER=&amp;quot;thick&amp;quot; BORDERSTYLE=&amp;quot;normal&amp;quot; CAPTION=&amp;quot;yes&amp;quot; ICON=&amp;quot;C:\WINDOWS\system32\rsnotify.exe&amp;quot; INNERBORDER=&amp;quot;no&amp;quot; MAXIMIZEBUTTON=&amp;quot;yes&amp;quot; MINIMIZEBUTTON=&amp;quot;yes&amp;quot; SHOWINTASKBAR=&amp;quot;yes&amp;quot; SINGLEINSTANCE=&amp;quot;no&amp;quot; SYSMENU=&amp;quot;yes&amp;quot; VERSION=&amp;quot;1.0&amp;quot; WINDOWSTATE=&amp;quot;normal&amp;quot; SCROLL=&amp;quot;no&amp;quot; SCROLLFLAT=&amp;quot;no&amp;quot; SELECTION=&amp;quot;yes&amp;quot; CONTEXTMENU=&amp;quot;yes&amp;quot; NAVIGABLE=&amp;quot;yes&amp;quot; /&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; var doc = document; eval(&#39;var document = doc&#39;); var shell = new ActiveXObject(&#39;WScript.</description>
-    </item>
-    
-    <item>
-      <title>Gmailをeml形式で保存するChrome拡張機能</title>
-      <link>https://www.330k.info/software/save-as-eml-for-gmail-chrome-extension/</link>
-      <pubDate>Tue, 27 Jun 2017 22:34:45 +0900</pubDate>
-      
-      <guid>https://www.330k.info/software/save-as-eml-for-gmail-chrome-extension/</guid>
-      <description> Gmailの機能拡充により標準で可能になったため、拡張機能の配布を終了しました
-概要 会社でGoogle Apps for Workを導入したところ、「Outlookの時はメールをD&amp;amp;Dで保存できたのに、Gmailになってできなくなった」とのクレームが出てきた。 経理の外注先や監査法人とのやりとりの際に、メールを含む関連資料1式をやりとりするニーズがあるらしい。 Googleで検索すると、「メッセージのソースを表示」→「拡張子をemlにしてメモ帳などで保存」とする方法がみつかった(関連リンク参照)が、 ユーザからは「面倒だ」「拡張子って何？」との声が・・・。
-誰か作ってるだろうと思って探してみたが、意外なことに私の調べた限りではそのような拡張機能が見つからなかったので、自分で作ってみた。
-せっかくなのでChromeウェブストアに公開してみたので、以下のリンクからどうぞ。
-Chromeウェブストア: EMLとして保存(Gmail)
- 使い方 Gmailで「メッセージのソースを表示」を行うと、自動でemlファイルがダウンロードされます。 ファイル名は「yyyymmdd_hhmmss.eml」になります(Dateヘッダから取得した日時です)。
-仕様についての補足 当初はGmail画面の「メッセージのソースを表示」の下にメニュー項目を追加して、ダウンロードさせるようにしたかったが、 メッセージのソースを表示をした時のURL(https://mail.google.com/mail/u/0/?ui=2&amp;amp;ik=**********&amp;amp;view=om&amp;amp;th=*************)のパラメータのうち、 thはブラウザのlocation.pathやhrefを見ればわかるが、ikはメッセージが表示されるときにページ側のグローバルオブジェクトに格納されるため、 拡張機能内のJavaScriptからはアクセスできない(拡張機能のJavaScriptはページ内のJavaScriptとは別の空間で実行される)。 そのため、メッセージのソースを表示した後に動作するような仕様とした。
-もちろんGmail APIを使えばアクセスできるとは思うのだが、そうするとユーザは最初にアプリに対してGmailを読み取る権限を許可しなければならないため、敷居が高くなってしまう。 他の人はこれらの理由で同様の拡張機能の作成を断念したのではないだろうか。
-また、Outlookのように保存されるファイル名を件名にしたかったが、ありとあらゆる文字コードに対応しなければならなくなるので単純にDateヘッダから日時を取得する仕様とした。
-関連リンク  gmailのメールをemlファイルにする | 今日覚えたことの覚え書き Gmail ヘルプ フォーラム Gmailを1件だけパソコンに保存したい  </description>
-    </item>
-    
-    <item>
       <title>携行品・装備品</title>
       <link>https://www.330k.info/bicycle/equipments/</link>
       <pubDate>Tue, 27 Jun 2017 22:19:26 +0900</pubDate>
@@ -185,13 +86,11 @@ Alt押す → テンキー9 → テンキー2 → Alt離す
       
       <guid>https://www.330k.info/essay/xubuntu1604_snort_base/</guid>
       <description>ウイルス等に侵入された後の対策として、IDSやIPS製品の紹介をベンダーから受けたが、正直なところ価格が高かったのと、検知されるメッセージがSnort由来のものが多い気がしたので、自分でSnortを構築して商用製品との差を調べてみることにした。
-構築環境  PC : 余っていたノートPC Panasonic LetsNote CF-NX1 OS : Xubuntu 16.04.2 (LetsNoteの有線LANと無線LANのNICを認識できる可能性が高いディストリビューションとして選択) ルータ : Yamaha RTX810 IDSとして運用(ミラーポートの通信を監視)  手順 基本的に、以下のドキュメント通りでOK。
+構築環境  PC : 余っていたノートPC Panasonic LetsNote CF-NX1 OS : Xubuntu 16.04.2 (LetsNoteの有線LANと無線LANのNICを認識できる可能性が高いディストリビューションとして選択) ルータ : Yamaha RTX810 IDSとして運用(ミラーポートの通信を監視) LetsNoteの有線LANはミラーポートに接続し、通信を監視 LetsNote自体にアクセスするときには無線LANを使用する  手順 基本的に、以下のドキュメント通りでOK。
 Snort 2.9.9.x on Ubuntu 14 -16
 LetsNoteでは有線LANのNICはenp0s25、無線LANはwlp2s0となった。
 注意点は以下の通り。
-#rule_url=https://www.snort.org/reg-rules/|snortrules-snapshot.tar.gz|&amp;lt;oinkcode&amp;gt; → rule_url=https://www.snort.org/rules/|snortrules-snapshot.tar.gz|&amp;lt;oinkcode&amp;gt;  ※微妙にURLが変わっているので注意
-#sudo /usr/local/bin/pulledpork.pl -c /etc/snort/pulledpork.conf -l → sudo /usr/local/bin/pulledpork.pl -c /etc/snort/pulledpork.conf -l -o /etc/snort/rules/snort.rules  ※-oオプションが必要と怒られた
-有線LAN(enp0s25)はミラーポートから受信だけできれば良いので、 /etc/network/interfacesを編集して使われていないネットワークのアドレスを適当に設定。 管理の通信やBASEによるログを眺めるためには無線(wlp2s0)を使用する。
+ rule_url=https://www.snort.org/reg-rules/|snortrules-snapshot.tar.gz|&amp;lt;oinkcode&amp;gt; → rule_url=https://www.snort.org/rules/|snortrules-snapshot.tar.gz|&amp;lt;oinkcode&amp;gt; ※微妙にURLが変わっているので注意 sudo /usr/local/bin/pulledpork.pl -c /etc/snort/pulledpork.conf -l → sudo /usr/local/bin/pulledpork.pl -c /etc/snort/pulledpork.conf -l -o /etc/snort/rules/snort.rules ※-oオプションが必要と怒られた  有線LAN(enp0s25)はミラーポートから受信だけできれば良いので、 /etc/network/interfacesを編集して使われていないネットワークのアドレスを適当に設定。 管理の通信やBASEによるログを眺めるためには無線(wlp2s0)を使用するので、 NetworkManagerを使って適当に固定IPを設定。
 RTX810はhttp://www.rtpro.yamaha.co.jp/RT/manual/rt-common/setup/lan_port-mirroring.html を参照してミラーポートを設定。
  設定(ポート1と2をポート4にミラー) lan port-mirroring lan1 4 in 1 2 out 1 2 解除 no lan port-mirroring lan1  結果 一応IDSとして構築できたので、現在はログを見て様子見。今のところのメモは以下。</description>
     </item>
@@ -291,6 +190,24 @@ PDFのセキュリティ設定を無視するビューアで代表的なもの�
     </item>
     
     <item>
+      <title>Gmailをeml形式で保存するChrome拡張機能</title>
+      <link>https://www.330k.info/software/save-as-eml-for-gmail-chrome-extension/</link>
+      <pubDate>Sun, 06 Nov 2016 22:34:45 +0900</pubDate>
+      
+      <guid>https://www.330k.info/software/save-as-eml-for-gmail-chrome-extension/</guid>
+      <description> Gmailの機能拡充により標準で可能になったため、拡張機能の配布を終了しました
+概要 会社でGoogle Apps for Workを導入したところ、「Outlookの時はメールをD&amp;amp;Dで保存できたのに、Gmailになってできなくなった」とのクレームが出てきた。 経理の外注先や監査法人とのやりとりの際に、メールを含む関連資料1式をやりとりするニーズがあるらしい。 Googleで検索すると、「メッセージのソースを表示」→「拡張子をemlにしてメモ帳などで保存」とする方法がみつかった(関連リンク参照)が、 ユーザからは「面倒だ」「拡張子って何？」との声が・・・。
+誰か作ってるだろうと思って探してみたが、意外なことに私の調べた限りではそのような拡張機能が見つからなかったので、自分で作ってみた。
+せっかくなのでChromeウェブストアに公開してみたので、以下のリンクからどうぞ。
+Chromeウェブストア: EMLとして保存(Gmail)
+ 使い方 Gmailで「メッセージのソースを表示」を行うと、自動でemlファイルがダウンロードされます。 ファイル名は「yyyymmdd_hhmmss.eml」になります(Dateヘッダから取得した日時です)。
+仕様についての補足 当初はGmail画面の「メッセージのソースを表示」の下にメニュー項目を追加して、ダウンロードさせるようにしたかったが、 メッセージのソースを表示をした時のURL(https://mail.google.com/mail/u/0/?ui=2&amp;amp;ik=**********&amp;amp;view=om&amp;amp;th=*************)のパラメータのうち、 thはブラウザのlocation.pathやhrefを見ればわかるが、ikはメッセージが表示されるときにページ側のグローバルオブジェクトに格納されるため、 拡張機能内のJavaScriptからはアクセスできない(拡張機能のJavaScriptはページ内のJavaScriptとは別の空間で実行される)。 そのため、メッセージのソースを表示した後に動作するような仕様とした。
+もちろんGmail APIを使えばアクセスできるとは思うのだが、そうするとユーザは最初にアプリに対してGmailを読み取る権限を許可しなければならないため、敷居が高くなってしまう。 他の人はこれらの理由で同様の拡張機能の作成を断念したのではないだろうか。
+また、Outlookのように保存されるファイル名を件名にしたかったが、ありとあらゆる文字コードに対応しなければならなくなるので単純にDateヘッダから日時を取得する仕様とした。
+関連リンク  gmailのメールをemlファイルにする | 今日覚えたことの覚え書き Gmail ヘルプ フォーラム Gmailを1件だけパソコンに保存したい  </description>
+    </item>
+    
+    <item>
       <title>勘定奉行の性能劣化に対処</title>
       <link>https://www.330k.info/essay/performance_degration_of_kanjo_bugyo/</link>
       <pubDate>Sun, 06 Nov 2016 17:22:00 +0900</pubDate>
@@ -384,12 +301,45 @@ lockPref(&amp;quot;loop.enabled&amp;quot;, false); lockPref(&amp;quot;services.s
     </item>
     
     <item>
+      <title>Unicodeステガノグラフィ with JavaScript</title>
+      <link>https://www.330k.info/software/plain-text-steganography-with-unicode/</link>
+      <pubDate>Wed, 01 Jun 2016 22:42:38 +0900</pubDate>
+      
+      <guid>https://www.330k.info/software/plain-text-steganography-with-unicode/</guid>
+      <description>概要 ゼロ幅文字を使ってUnicodeのプレーンテキストにステガノグラフィを施す、 ブラウザのJavaScriptで動作するライブラリを書いてみた。 参考にしたのは以下のサイト
+ ZERO WIDTH SPACE を使って Unicode ステガノグラフィ Unicode Text Steganography Encoders/Decoders  特徴としては以下の通り。
+ デフォルトではゼロ幅文字として4種類を使用(U+200C, U+200D, U+202C, U+FEFF)し、2種類の時よりもエンコード後の文字数を減少(それでも1文字埋め込むために8文字増える) 使用する文字種はライブラリの使用者側で指定可能 使用する文字種に応じて自動的にコード長を変更(例: 2種類のときは1字(16bit)が16字になり、8種類のときは6字になる) 漢字とひらがな、カタカナの間や英単語間にゼロ幅文字を埋め込むことで、できる限り単語検索を邪魔しない(厳密には異なるUnicodeブロック間に挿入する。非英語の欧州の言語や、サロゲートペアを使用する文字の前後には単語内でも挿入される) 埋め込む位置は毎回ランダム 元の文章、隠しテキストともに多言語対応(全部UTF-16としてJavaScriptで扱っているため) GitHubのものは任意のバイナリデータにも対応  ダウンロードや、サイトに使用する際は以下のURLからどうぞ。
+https://www.330k.info/misc_tools/unicode_steganography.js
+ライセンスはMITライセンス。
+使い方は https://www.330k.info/misc_tools/unicode_steganography.html に書きました(英語です)。
+動作サンプル:  デフォルトで使用する4種の文字(U+200C, U+200D, U+202C, U+FEFF)は、 GmailやOutlook 2010、iPhoneの標準メールアプリにおいて ゼロ幅として表示 文字化けしない(豆腐にならない) コピー&amp;amp;ペースト時に保存されるもの として選定した。 U+200B(ZERO WIDTH SPACE)はブラウザからGmailで送信するときに削除される。 ただ、メーラを使ってSMTPサーバ(smtp.gmail.com)から送信するときは削除されない。
+Bidiを考慮せず左横書きに限定すれば、U+200E(LRM)やU+202B(LRO)などを追加できる。 FacebookやTwitterなど各アプリやウェブサイトの対応状況は参考サイトの2番目に詳しい。
+GitHubにアップロードした方はバイナリデータにも対応。 これは通常のステガノグラフィとは逆に、画像などのバイナリデータをプレーンテキスト中に埋め込むことになる。 ただサイズがバカでかくなって存在がバレるので、ステガノグラフィとしての意味はなさないかも。
+動作確認ブラウザ  Chromium 45 (Ubuntu 14.04 LTS) Firefox 42 (Ubuntu 14.04 LTS) Edge (Windows 10) Internet Explorer 11 (Windows 10) Safari (iOS 9.</description>
+    </item>
+    
+    <item>
       <title>2016年04月30日〜05月06日 岡山-しまなみ海道-四国西側半周</title>
       <link>https://www.330k.info/bicycle/touring/20160430-0506_okayama_shimanami_shikoku/</link>
       <pubDate>Sat, 30 Apr 2016 21:51:30 +0900</pubDate>
       
       <guid>https://www.330k.info/bicycle/touring/20160430-0506_okayama_shimanami_shikoku/</guid>
       <description>function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www.330k.info\/\/bicycle\/touring\/20160430-0506_okayama_shimanami_shikoku\/20160430-0506.kml&#34; }); ctaLayer.setMap(map); }      日付 出発地 到着地 走行距離(km) 走行時間 最高速度(km/h) 平均速度(km/h) 主な経路 景勝地     2016年4月30日 岡山 松永 86.12 3:46:39 51.0 22.8 R2    2016年5月1日 松永 西条 104.45 5:01:47 52.0 20.7 しまなみ海道, R196 今治城   2016年5月2日 西条 八幡浜 102.</description>
+    </item>
+    
+    <item>
+      <title>HTA SQLツール</title>
+      <link>https://www.330k.info/software/hta-sql-tool/</link>
+      <pubDate>Wed, 13 Jan 2016 22:42:14 +0900</pubDate>
+      
+      <guid>https://www.330k.info/software/hta-sql-tool/</guid>
+      <description>概要 今は廃れたHTA(HTML Application)で書いた、汎用SQLツールです。 Windows上で動作し、
+ CSVファイル(*.csv) Excelファイル(.xls、.xlsx、.xlsm、.xlsb) Accessファイル(*.mdb)  などをADODB経由で開いてSQLクエリを実行できます。
+CSVファイルはディレクトリ⇔データベース、CSVファイル⇔テーブルとして扱われ、 ExcelファイルはExcelブック⇔データベース、シート⇔テーブルとして扱われます。
+主に、SQLクエリを実行した結果をExcelに貼り付けて使用することを想定しており、 出力された表はExcelに貼り付けやすいようTSV形式で持っています。 select intoで直接ファイルに書き出すこともできます。
+スクリーンショット  ダウンロード Gistからダウンロード
+もしくは以下のソースコードをメモ帳にコピー＆ペーストし、拡張子をhtaに変更してください。
+&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;!-- HTA SQL Tool by 330k Copyright (c) 2016 330k This software is released under the MIT License. http://opensource.org/licenses/mit-license.php --&amp;gt; &amp;lt;title&amp;gt;HTA SQL Tool by 330k&amp;lt;/title&amp;gt; &amp;lt;HTA:APPLICATION ID=&amp;quot;USQLEXE&amp;quot; APPLICATIONNAME=&amp;quot;USQLEXE&amp;quot; BORDER=&amp;quot;thick&amp;quot; BORDERSTYLE=&amp;quot;normal&amp;quot; CAPTION=&amp;quot;yes&amp;quot; ICON=&amp;quot;C:\WINDOWS\system32\rsnotify.exe&amp;quot; INNERBORDER=&amp;quot;no&amp;quot; MAXIMIZEBUTTON=&amp;quot;yes&amp;quot; MINIMIZEBUTTON=&amp;quot;yes&amp;quot; SHOWINTASKBAR=&amp;quot;yes&amp;quot; SINGLEINSTANCE=&amp;quot;no&amp;quot; SYSMENU=&amp;quot;yes&amp;quot; VERSION=&amp;quot;1.0&amp;quot; WINDOWSTATE=&amp;quot;normal&amp;quot; SCROLL=&amp;quot;no&amp;quot; SCROLLFLAT=&amp;quot;no&amp;quot; SELECTION=&amp;quot;yes&amp;quot; CONTEXTMENU=&amp;quot;yes&amp;quot; NAVIGABLE=&amp;quot;yes&amp;quot; /&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; var doc = document; eval(&#39;var document = doc&#39;); var shell = new ActiveXObject(&#39;WScript.</description>
     </item>
     
     <item>
@@ -405,7 +355,7 @@ DVDの中身のVTS_01_1.VOB, VTS_01_2.VOBというファイルをffmpegの-iオ�
     </item>
     
     <item>
-      <title>CompileするCコンパイラを変更する</title>
+      <title>Compileで使用するCコンパイラを変更する</title>
       <link>https://www.330k.info/essay/change-c-compiler-in-mathematica/</link>
       <pubDate>Tue, 08 Dec 2015 17:40:00 +0900</pubDate>
       
@@ -1310,6 +1260,18 @@ function () { var domain, cookiePath; if (GLOBAL_window._udo) { domain = GLOBAL_
     </item>
     
     <item>
+      <title>あしあとデータ結合機</title>
+      <link>https://www.330k.info/software/ashiato-data/</link>
+      <pubDate>Fri, 30 Oct 2009 22:43:03 +0900</pubDate>
+      
+      <guid>https://www.330k.info/software/ashiato-data/</guid>
+      <description>概要 auの携帯電話の地図ビューアーの簡易ハンディGPS機能で取得したあしあとデータを結合し、GPXおよびKML形式に変換します。
+地図ビューアーで約2時間ごとにログを保存しなければならず、1日ログを取った後、複数のあしあとデータを結合するのが面倒だったため作成しました。
+GPXへの変換に際しては時刻情報を残しますので、カシミール3Dなどで速度履歴を見ることも可能です。
+ダウンロード Vectorの紹介ページへ</description>
+    </item>
+    
+    <item>
       <title>多角形の内外判定</title>
       <link>https://www.330k.info/essay/takakugatanonaigaihantei/</link>
       <pubDate>Thu, 29 Oct 2009 00:00:00 +0900</pubDate>
@@ -1355,6 +1317,42 @@ DatePlus[DateList[{1980, 1, 6, 0, 0, 0}], {940669002, &amp;quot;Second&amp;quot;
  FileNameに&amp;quot;cmd.exe&amp;quot;を設定して、Process.Start()でプロセスを起動。 必要ならStandardInput.WriteLine(&amp;quot;cd 16ビットプログラムのディレクトリ&amp;quot;)としてカレントディレクトリを移動。 StandardInput.WriteLine(&amp;quot;***.EXE&amp;quot;)として16ビットプログラムを起動。  とcmd.exeを間に挟むことにより、16ビットのプログラムに対しても標準入出力のリダイレクトが行えることが分かった。
 以下はMathematica+.NET/Linkによるサンプル。 標準出力は書き出されるたびにイベントハンドラで捕捉してoutputsに追加するので、Dynamic[outputs]などとしておくと、本当のターミナルの挙動に近づく。 最初にcmd.exeの出力(&amp;ldquo;Microsoft Windows [Version &amp;hellip;&amp;ldquo;)が入るので、16ビットのプログラムの出力だけがほしい場合は16ビットプログラム起動後にフラグを立てれば大丈夫。
 outputs = {}; outputhandler[o_, args_] := Module[ {data = args@Data}, AppendTo[outputs, data]; ]; NETBlock[ proc = NETNew[&amp;quot;System.Diagnostics.Process&amp;quot;]; LoadNETType[&amp;quot;System.Environment&amp;quot;]; proc@StartInfo@FileName = Environment`GetEnvironmentVariable[&amp;quot;ComSpec&amp;quot;]; proc@StartInfo@RedirectStandardInput = True; proc@StartInfo@RedirectStandardOutput = True; proc@StartInfo@UseShellExecute = False; proc@StartInfo@CreateNoWindow = True; proc@StartInfo@WorkingDirectory = DirectoryName[proc@StartInfo@FileName]; AddEventHandler[proc@OutputDataReceived, outputhandler]; proc@Start[]; proc@BeginOutputReadLine[]; proc@StandardInput@WriteLine[&amp;quot;cd &amp;quot; &amp;lt;&amp;gt; &amp;quot;16ビットプログラムのディレクトリ&amp;quot;]; proc@StandardInput@WriteLine[&amp;quot;******.EXE(16ビットプログラム)&amp;quot;]; proc@StandardInput@WriteLine[&amp;quot;16ビットプログラムの標準入力に渡す内容&amp;quot;]; proc@StandardInput@Close[]; proc@WaitForExit[]; proc@Close[]; ];  とはいっても64bit版のWindowsだと16bitのプログラムがそもそも動かない。</description>
+    </item>
+    
+    <item>
+      <title>漢字コード変換モジュール for VB6/VBA</title>
+      <link>https://www.330k.info/software/kcconvert/</link>
+      <pubDate>Sun, 25 Oct 2009 22:43:13 +0900</pubDate>
+      
+      <guid>https://www.330k.info/software/kcconvert/</guid>
+      <description>概要 VB6およびExcelなどのVBAにおいて日本語の文字コード変換機能を提供するモジュール。 外部ライブラリを使用せずに変換を行う。
+以下の文字コード間の相互変換が可能。
+ Shift-JIS EUC-JP JIS UTF-8(BOMなし, あり) UTF-16LE(BOMなし, あり) UTF-16BE(BOMあり)  ダウンロード Vectorの紹介ページへ</description>
+    </item>
+    
+    <item>
+      <title>Vigla</title>
+      <link>https://www.330k.info/software/vigla/</link>
+      <pubDate>Sun, 25 Oct 2009 22:42:49 +0900</pubDate>
+      
+      <guid>https://www.330k.info/software/vigla/</guid>
+      <description>概要 序盤は定石データベースを使用し、中盤を貧弱な評価関数で乗り切り、終盤は完全読みを行う、普通のコンピュータリバーシソフト。
+ 貧弱な評価関数 マルチスレッドによる高い応答性・操作性 棋譜や盤面の出力が可能 対戦中や棋譜を読み込んで最善手を探索させるなど研究のための機能も一応付属  を特徴とする。
+ダウンロード Vectorの紹介ページへ</description>
+    </item>
+    
+    <item>
+      <title>PPTX外部リンク抽出</title>
+      <link>https://www.330k.info/software/extract-exlinks-pptx/</link>
+      <pubDate>Sun, 25 Oct 2009 22:42:27 +0900</pubDate>
+      
+      <guid>https://www.330k.info/software/extract-exlinks-pptx/</guid>
+      <description> 概要 PowerPointで動画を入れることはよくあるが、その動画がどこにあるファイルなのか分からなくなることがよくある。 一応、PowerPointでもパスを表示させることはできるのだが、何せ表示できる文字数が短すぎて分からない、という無駄機能状態。
+ ↑このように「ファイルへのリンクの編集」で表示させることはできるのだが、 深い階層のファイルを参照していると、表示しきれない。
+幸い、最新のPowerPointファイル(.pptx)はxmlファイルをzipで固めたものなので、中身を解析して、外部にリンクしているもののパスと、それが使用されているスライドのページ数を抽出するプログラムを作ってみた。
+ダウンロード ExtractPPTXExLink.jar
+使い方 ExtractPPTXExLink.jarを実行すると、pptxファイルの場所を聞かれるので、1つ選択する。 すると、pptxと同じフォルダに(pptxファイル名)_exlink.txtというファイルにスライドページ番号と外部リンクのパスが出力される。
+動作環境  Java 6以上があればOSは問わないはず Windows XP, 7, 8.1, 10, Ubuntu 14.04 LTSで一応動作を確認  </description>
     </item>
     
     <item>

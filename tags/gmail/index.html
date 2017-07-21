@@ -58,11 +58,31 @@ ga('send', 'pageview');
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
+				<a href="/essay/detect_submittion_to_private_mail_from_gmail/" rel="bookmark">Gmail (G Suite)でフリーメールアドレスへの送信を検知</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2016-11-29T20:45:00">November 29, 2016</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			 会社ではG Suite(旧Google Apps for Works)を導入しているが、 ある社員が個人のGmailアドレスに会社の情報の入ったメールを送信していた。
+幸いPCで操作していたためPCのログ監視ソフト(SKYSEA Client View)で検知し、当該従業員に注意することができた。 ただ、同じことを会社支給のiPhoneでやられた場合に無力だったことに気づいたので、G Suite側でも対策を実施。
+設定方法は以下の通り。
+ 「管理コンソール」の「アプリ」→「Gmail」→「詳細設定」と進む 「コンテンツ コンプライアンス」を追加 影響を受けるメールは「送信」にチェック 「次の一部がメールに一致する場合」を選択 「任意のエンベロープ受信者」が「いずれかの単語に一致する」にhttp://powerbiz.jp/abiz/tips/archives/26/ などから検知対象とするドメイン一覧を取得してスペース区切りにしたものを設定する (1000文字を超える場合は1000文字以内に収まるよう複数に分けて登録)   「上記の表現に一致する場合は、次の処理を行います」には「メッセージを変更」を選択 「その他の送信先」「受信者を追加」で配信先に管理者用のメールアドレスを設定(エイリアスにしておくとフィルタ作成で便利)   設定ができたら保存する(※全ユーザに適用されるまで1時間程度かかる) 管理者用のGmailの設定で、8で設定したアドレスに来たものをフィルタしてラベルをつけるようにしておく  注意事項  設定ミスすると全ユーザのメールが影響を受けるので、テスト用のOUを作ってから検証してから全ユーザに適用する コンテンツコンプライアンスでは、クレジットカード番号やパスポート番号が含まれたメールを検知可能 残念ながら執筆時点(Nov. 29 2016)では日本のマイナンバーの検知機能はない  
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
 				<a href="/software/save-as-eml-for-gmail-chrome-extension/" rel="bookmark">Gmailをeml形式で保存するChrome拡張機能</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2017-06-27T22:34:45">June 27, 2017</time>
+				<time class="list__meta-date" datetime="2016-11-06T22:34:45">November 06, 2016</time>
 			</div>
 		</header>
 		<div class="list__excerpt">
@@ -76,26 +96,6 @@ Chromeウェブストア: EMLとして保存(Gmail)
 もちろんGmail APIを使えばアクセスできるとは思うのだが、そうするとユーザは最初にアプリに対してGmailを読み取る権限を許可しなければならないため、敷居が高くなってしまう。 他の人はこれらの理由で同様の拡張機能の作成を断念したのではないだろうか。
 また、Outlookのように保存されるファイル名を件名にしたかったが、ありとあらゆる文字コードに対応しなければならなくなるので単純にDateヘッダから日時を取得する仕様とした。
 関連リンク  gmailのメールをemlファイルにする | 今日覚えたことの覚え書き Gmail ヘルプ フォーラム Gmailを1件だけパソコンに保存したい  
-		</div>
-	</div>
-</article>
-
-				<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/essay/detect_submittion_to_private_mail_from_gmail/" rel="bookmark">Gmail (G Suite)でフリーメールアドレスへの送信を検知</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2016-11-29T20:45:00">November 29, 2016</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			 会社ではG Suite(旧Google Apps for Works)を導入しているが、 ある社員が個人のGmailアドレスに会社の情報の入ったメールを送信していた。
-幸いPCで操作していたためPCのログ監視ソフト(SKYSEA Client View)で検知し、当該従業員に注意することができた。 ただ、同じことを会社支給のiPhoneでやられた場合に無力だったことに気づいたので、G Suite側でも対策を実施。
-設定方法は以下の通り。
- 「管理コンソール」の「アプリ」→「Gmail」→「詳細設定」と進む 「コンテンツ コンプライアンス」を追加 影響を受けるメールは「送信」にチェック 「次の一部がメールに一致する場合」を選択 「任意のエンベロープ受信者」が「いずれかの単語に一致する」にhttp://powerbiz.jp/abiz/tips/archives/26/ などから検知対象とするドメイン一覧を取得してスペース区切りにしたものを設定する (1000文字を超える場合は1000文字以内に収まるよう複数に分けて登録)   「上記の表現に一致する場合は、次の処理を行います」には「メッセージを変更」を選択 「その他の送信先」「受信者を追加」で配信先に管理者用のメールアドレスを設定(エイリアスにしておくとフィルタ作成で便利)   設定ができたら保存する(※全ユーザに適用されるまで1時間程度かかる) 管理者用のGmailの設定で、8で設定したアドレスに来たものをフィルタしてラベルをつけるようにしておく  注意事項  設定ミスすると全ユーザのメールが影響を受けるので、テスト用のOUを作ってから検証してから全ユーザに適用する コンテンツコンプライアンスでは、クレジットカード番号やパスポート番号が含まれたメールを検知可能 残念ながら執筆時点(Nov. 29 2016)では日本のマイナンバーの検知機能はない  
 		</div>
 	</div>
 </article>

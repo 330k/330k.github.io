@@ -6,22 +6,10 @@
     <description>Recent content in Gpx on 330k info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Jun 2017 22:43:03 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 28 Sep 2016 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://www.330k.info/tags/gpx/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>あしあとデータ結合機</title>
-      <link>https://www.330k.info/software/ashiato-data/</link>
-      <pubDate>Tue, 27 Jun 2017 22:43:03 +0900</pubDate>
-      
-      <guid>https://www.330k.info/software/ashiato-data/</guid>
-      <description>概要 auの携帯電話の地図ビューアーの簡易ハンディGPS機能で取得したあしあとデータを結合し、GPXおよびKML形式に変換します。
-地図ビューアーで約2時間ごとにログを保存しなければならず、1日ログを取った後、複数のあしあとデータを結合するのが面倒だったため作成しました。
-GPXへの変換に際しては時刻情報を残しますので、カシミール3Dなどで速度履歴を見ることも可能です。
-ダウンロード Vectorの紹介ページへ</description>
-    </item>
     
     <item>
       <title>GPXトラックログを間引く・簡略化</title>
@@ -67,6 +55,18 @@ y = xの直線上にあれば正確ということだが、GeoDistanceの&amp;rd
 またヒュベニの式は実際よりも長く計算することが多く、そのような場合について調べてみると高緯度になるほど誤差が大きくなることが分かった。
 同じ計算結果を誤差についてプロットしたものが下図である。また表は各計算方法の最大誤差である。
     計算方法 誤差の絶対値     GeoDistance(&amp;ldquo;Vincenty75&amp;rdquo;) 7.119 * 10^-12   GeoDistance(&amp;ldquo;Robbin61&amp;rdquo;) 9.536 * 10^-1   GeoDistance(&amp;ldquo;ExtendedNewtonRaphson&amp;rdquo;) 1.247 * 10^-6   ヒュベニの式 2.022 * 10^1   測量計算サイト計算式 6.682 * 10^-3   完全球体モデル 6.</description>
+    </item>
+    
+    <item>
+      <title>あしあとデータ結合機</title>
+      <link>https://www.330k.info/software/ashiato-data/</link>
+      <pubDate>Fri, 30 Oct 2009 22:43:03 +0900</pubDate>
+      
+      <guid>https://www.330k.info/software/ashiato-data/</guid>
+      <description>概要 auの携帯電話の地図ビューアーの簡易ハンディGPS機能で取得したあしあとデータを結合し、GPXおよびKML形式に変換します。
+地図ビューアーで約2時間ごとにログを保存しなければならず、1日ログを取った後、複数のあしあとデータを結合するのが面倒だったため作成しました。
+GPXへの変換に際しては時刻情報を残しますので、カシミール3Dなどで速度履歴を見ることも可能です。
+ダウンロード Vectorの紹介ページへ</description>
     </item>
     
     <item>
