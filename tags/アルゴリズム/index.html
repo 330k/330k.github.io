@@ -58,6 +58,27 @@ ga('send', 'pageview');
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
+				<a href="/essay/random_distribution_sphere_surface/" rel="bookmark">球面上の一様分布</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2017-07-22T19:32:46">July 22, 2017</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			球面上に一様分布するランダムな点を生成したい時、 単純に極座標表示でθとφを一様分布させると、極付近に点が集まってしまう。
+data1 = Transpose[{Cos[f] Cos[t], Cos[f] Sin[t], Sin[f]} /. { t -&gt; RandomReal[{-2 Pi, Pi}, 2000], f -&gt; RandomReal[{-Pi, Pi}, 2000]}]; g1 = ListPointPlot3D[data1, BoxRatios -&gt; {1, 1, 1}]   球面上で一様分布させるには、下記のように緯度についてはArcSinを使う。
+data2 = Transpose[{Cos[f] Cos[t], Cos[f] Sin[t], Sin[f]} /. { t -&gt; RandomReal[{-2 Pi, Pi}, 2000], f -&gt; ArcSin[RandomReal[{-1, 1}, 2000]]}]; g2 = ListPointPlot3D[data2, BoxRatios -&gt; {1, 1, 1}]   なお、多次元球面上の一様分布は球面上に一様分布する乱数の生成にあるように、 多次元ガウス分布を正規化すると得られる。
+下記は3次元の場合。
+data3 = Normalize /@ Partition[RandomVariate[NormalDistribution[], 3*2000], 3]; g3 = ListPointPlot3D[data3, BoxRatios -&gt; {1, 1, 1}]   
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
 				<a href="/essay/implement-of-priority-queue-for-douglas-peucker-simplify-algorithm/" rel="bookmark">Douglas-Peucker向けの優先度付きキュー実装の検討</a>
 			</h3>
 			<div class="list__meta meta">
@@ -164,6 +185,7 @@ A = {ax, ay}; B = {bx, by}; P = {px, py}; H = {x, y}; Solve[{ (H - A).(P - H) ==
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/essay/random_distribution_sphere_surface/">球面上の一様分布</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/zabbix_ricoh_printer_template_xml/">RICOHプリンタ・複合機用のZabbix用テンプレート</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/create_uuid_vba/">VBAでUUIDを生成</a></li>
 			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170715-17_castella_yatsugatake_kogen/">2017年07月15日〜17日 カステラ工場〜軽井沢〜八ヶ岳高原〜甲府</a></li>
@@ -173,7 +195,6 @@ A = {ax, ay}; B = {bx, by}; P = {px, py}; H = {x, y}; Solve[{ (H - A).(P - H) ==
 			<li class="widget__item"><a class="widget__link" href="/essay/xubuntu1604_snort_base/">Xubuntu 16.04 &#43; Snortで簡易IDS構築</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/create_zip_file_with_wsh_jscript/">Windows標準機能でZIPファイルの作成</a></li>
 			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170429-0505_nagoya_shirakawago_noto_peninshula_kanazawa/">2017年04月29日〜05月05日 東京→名古屋→岐阜→能登半島→金沢→米原</a></li>
-			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170318-brm318chiba-2lakes/">2017年03月18日 BRM318千葉200km 2レイク</a></li>
 		</ul>
 	</div>
 </div>
@@ -205,13 +226,13 @@ A = {ax, ay}; B = {bx, by}; P = {px, py}; H = {x, y}; Solve[{ (H - A).(P - H) ==
 		<a class="widget__link widget__link--taglist" href="/tags/hta" title="hta">hta (1)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/java" title="java">java (2)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/javascript" title="javascript">javascript (3)</a>
-		<a class="widget__link widget__link--taglist" href="/tags/mathematica" title="mathematica">mathematica (17)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mathematica" title="mathematica">mathematica (18)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/powerpoint" title="powerpoint">powerpoint (1)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/sql" title="sql">sql (3)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/ubuntu" title="ubuntu">ubuntu (6)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/vba" title="vba">vba (2)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/wsh" title="wsh">wsh (2)</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e3%82%a2%e3%83%ab%e3%82%b4%e3%83%aa%e3%82%ba%e3%83%a0" title="アルゴリズム">アルゴリズム (4)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e3%82%a2%e3%83%ab%e3%82%b4%e3%83%aa%e3%82%ba%e3%83%a0" title="アルゴリズム">アルゴリズム (5)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%84%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0" title="ツーリング">ツーリング (41)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%91%e3%83%af%e3%83%8f%e3%83%a9" title="パワハラ">パワハラ (5)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e7%94%9f%e6%b4%bb" title="生活">生活 (1)</a>

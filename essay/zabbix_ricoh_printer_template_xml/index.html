@@ -72,6 +72,7 @@ SNMP v2cでRICOH製のプリンタ・複合機の各種情報を取得するXML�
 <ul>
 <li>SNMP Discoveryで英語のアイテム名を取得するように変更</li>
 <li>1分間あたりの印刷枚数のアイテムとグラフを追加</li>
+<li>Discoveryの間隔が長くした(短いとプリンタが応答しなくなる)</li>
 </ul>
 
 <p>確認している機種は社内にある以下の2機種のみ。</p>
@@ -80,6 +81,8 @@ SNMP v2cでRICOH製のプリンタ・複合機の各種情報を取得するXML�
 <li>RICOH MP C5503</li>
 <li>IPSiO SP 6320</li>
 </ul>
+
+<p>ダウンロードは<a href="zbx_ricoh_printer_templates.xml">zbx_ricoh_printer_templates.xml</a>。</p>
 
 <pre><code class="language-XML">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;zabbix_export&gt;
@@ -927,6 +930,9 @@ SNMP v2cでRICOH製のプリンタ・複合機の各種情報を取得するXML�
 	<div class="post-nav__item post-nav__item--prev col-1-2">
 		<a class="post-nav__link" href="/essay/create_uuid_vba/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">VBAでUUIDを生成</p></a>
 	</div>
+	<div class="post-nav__item post-nav__item--next col-1-2">
+		<a class="post-nav__link" href="/essay/random_distribution_sphere_surface/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">球面上の一様分布</p></a>
+	</div>
 </nav>
 
 	
@@ -939,6 +945,7 @@ SNMP v2cでRICOH製のプリンタ・複合機の各種情報を取得するXML�
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/essay/random_distribution_sphere_surface/">球面上の一様分布</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/zabbix_ricoh_printer_template_xml/">RICOHプリンタ・複合機用のZabbix用テンプレート</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/create_uuid_vba/">VBAでUUIDを生成</a></li>
 			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170715-17_castella_yatsugatake_kogen/">2017年07月15日〜17日 カステラ工場〜軽井沢〜八ヶ岳高原〜甲府</a></li>
@@ -948,7 +955,6 @@ SNMP v2cでRICOH製のプリンタ・複合機の各種情報を取得するXML�
 			<li class="widget__item"><a class="widget__link" href="/essay/xubuntu1604_snort_base/">Xubuntu 16.04 &#43; Snortで簡易IDS構築</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/create_zip_file_with_wsh_jscript/">Windows標準機能でZIPファイルの作成</a></li>
 			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170429-0505_nagoya_shirakawago_noto_peninshula_kanazawa/">2017年04月29日〜05月05日 東京→名古屋→岐阜→能登半島→金沢→米原</a></li>
-			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170318-brm318chiba-2lakes/">2017年03月18日 BRM318千葉200km 2レイク</a></li>
 		</ul>
 	</div>
 </div>
@@ -980,13 +986,13 @@ SNMP v2cでRICOH製のプリンタ・複合機の各種情報を取得するXML�
 		<a class="widget__link widget__link--taglist" href="/tags/hta" title="hta">hta (1)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/java" title="java">java (2)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/javascript" title="javascript">javascript (3)</a>
-		<a class="widget__link widget__link--taglist" href="/tags/mathematica" title="mathematica">mathematica (17)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mathematica" title="mathematica">mathematica (18)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/powerpoint" title="powerpoint">powerpoint (1)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/sql" title="sql">sql (3)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/ubuntu" title="ubuntu">ubuntu (6)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/vba" title="vba">vba (2)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/wsh" title="wsh">wsh (2)</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e3%82%a2%e3%83%ab%e3%82%b4%e3%83%aa%e3%82%ba%e3%83%a0" title="アルゴリズム">アルゴリズム (4)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e3%82%a2%e3%83%ab%e3%82%b4%e3%83%aa%e3%82%ba%e3%83%a0" title="アルゴリズム">アルゴリズム (5)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%84%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0" title="ツーリング">ツーリング (41)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%91%e3%83%af%e3%83%8f%e3%83%a9" title="パワハラ">パワハラ (5)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e7%94%9f%e6%b4%bb" title="生活">生活 (1)</a>

@@ -55,6 +55,27 @@ ga('send', 'pageview');
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
+				<a href="/essay/random_distribution_sphere_surface/" rel="bookmark">球面上の一様分布</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2017-07-22T19:32:46">July 22, 2017</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			球面上に一様分布するランダムな点を生成したい時、 単純に極座標表示でθとφを一様分布させると、極付近に点が集まってしまう。
+data1 = Transpose[{Cos[f] Cos[t], Cos[f] Sin[t], Sin[f]} /. { t -&gt; RandomReal[{-2 Pi, Pi}, 2000], f -&gt; RandomReal[{-Pi, Pi}, 2000]}]; g1 = ListPointPlot3D[data1, BoxRatios -&gt; {1, 1, 1}]   球面上で一様分布させるには、下記のように緯度についてはArcSinを使う。
+data2 = Transpose[{Cos[f] Cos[t], Cos[f] Sin[t], Sin[f]} /. { t -&gt; RandomReal[{-2 Pi, Pi}, 2000], f -&gt; ArcSin[RandomReal[{-1, 1}, 2000]]}]; g2 = ListPointPlot3D[data2, BoxRatios -&gt; {1, 1, 1}]   なお、多次元球面上の一様分布は球面上に一様分布する乱数の生成にあるように、 多次元ガウス分布を正規化すると得られる。
+下記は3次元の場合。
+data3 = Normalize /@ Partition[RandomVariate[NormalDistribution[], 3*2000], 3]; g3 = ListPointPlot3D[data3, BoxRatios -&gt; {1, 1, 1}]   
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
 				<a href="/essay/zabbix_ricoh_printer_template_xml/" rel="bookmark">RICOHプリンタ・複合機用のZabbix用テンプレート</a>
 			</h3>
 			<div class="list__meta meta">
@@ -65,8 +86,9 @@ ga('send', 'pageview');
 		<div class="list__excerpt">
 			社内で余っているサーバにZabbixを入れたので、 SNMP v2cでRICOH製のプリンタ・複合機の各種情報を取得するXMLテンプレートをhttps://github.com/coreyramirezgomez/Ricoh-Printers-Zabbix-Template/blob/master/Ricoh%20Printers%20SNMP%20Template.xml を元に作成した。
 変更箇所としては以下の通り。
- SNMP Discoveryで英語のアイテム名を取得するように変更 1分間あたりの印刷枚数のアイテムとグラフを追加  確認している機種は社内にある以下の2機種のみ。
- RICOH MP C5503 IPSiO SP 6320  &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;zabbix_export&gt; &lt;version&gt;3.2&lt;/version&gt; &lt;date&gt;2017-07-20T10:38:50Z&lt;/date&gt; &lt;groups&gt; &lt;group&gt; &lt;name&gt;Printers&lt;/name&gt; &lt;/group&gt; &lt;/groups&gt; &lt;templates&gt; &lt;template&gt; &lt;template&gt;Template SNMP Ricoh Printers&lt;/template&gt; &lt;name&gt;Template SNMP Ricoh Printers&lt;/name&gt; &lt;description/&gt; &lt;groups&gt; &lt;group&gt; &lt;name&gt;Printers&lt;/name&gt; &lt;/group&gt; &lt;/groups&gt; &lt;applications&gt; &lt;application&gt; &lt;name&gt;SNMP Enabled Printer&lt;/name&gt; &lt;/application&gt; &lt;/applications&gt; &lt;items&gt; &lt;item&gt; &lt;name&gt;Description&lt;/name&gt; &lt;type&gt;4&lt;/type&gt; &lt;snmp_community&gt;{$SNMP_COMMUNITY}&lt;/snmp_community&gt; &lt;multiplier&gt;0&lt;/multiplier&gt; &lt;snmp_oid&gt;.1.3.6.1.2.1.25.3.2.1.3.1&lt;/snmp_oid&gt; &lt;key&gt;Description&lt;/key&gt; &lt;delay&gt;60&lt;/delay&gt; &lt;history&gt;90&lt;/history&gt; &lt;trends&gt;0&lt;/trends&gt; &lt;status&gt;0&lt;/status&gt; &lt;value_type&gt;4&lt;/value_type&gt; &lt;allowed_hosts/&gt; &lt;units/&gt; &lt;delta&gt;0&lt;/delta&gt; &lt;snmpv3_contextname/&gt; &lt;snmpv3_securityname/&gt; &lt;snmpv3_securitylevel&gt;0&lt;/snmpv3_securitylevel&gt; &lt;snmpv3_authprotocol&gt;0&lt;/snmpv3_authprotocol&gt; &lt;snmpv3_authpassphrase/&gt; &lt;snmpv3_privprotocol&gt;0&lt;/snmpv3_privprotocol&gt; &lt;snmpv3_privpassphrase/&gt; &lt;formula&gt;1&lt;/formula&gt; &lt;delay_flex/&gt; &lt;params/&gt; &lt;ipmi_sensor/&gt; &lt;data_type&gt;0&lt;/data_type&gt; &lt;authtype&gt;0&lt;/authtype&gt; &lt;username/&gt; &lt;password/&gt; &lt;publickey/&gt; &lt;privatekey/&gt; &lt;port&gt;161&lt;/port&gt; &lt;description/&gt; &lt;inventory_link&gt;2&lt;/inventory_link&gt; &lt;applications&gt; &lt;application&gt; &lt;name&gt;SNMP Enabled Printer&lt;/name&gt; &lt;/application&gt; &lt;/applications&gt; &lt;valuemap/&gt; &lt;logtimefmt/&gt; &lt;/item&gt; &lt;item&gt; &lt;name&gt;Page Count&lt;/name&gt; &lt;type&gt;4&lt;/type&gt; &lt;snmp_community&gt;{$SNMP_COMMUNITY}&lt;/snmp_community&gt; &lt;multiplier&gt;0&lt;/multiplier&gt; &lt;snmp_oid&gt;.
+ SNMP Discoveryで英語のアイテム名を取得するように変更 1分間あたりの印刷枚数のアイテムとグラフを追加 Discoveryの間隔が長くした(短いとプリンタが応答しなくなる)  確認している機種は社内にある以下の2機種のみ。
+ RICOH MP C5503 IPSiO SP 6320  ダウンロードはzbx_ricoh_printer_templates.xml。
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;zabbix_export&gt; &lt;version&gt;3.2&lt;/version&gt; &lt;date&gt;2017-07-20T10:38:50Z&lt;/date&gt; &lt;groups&gt; &lt;group&gt; &lt;name&gt;Printers&lt;/name&gt; &lt;/group&gt; &lt;/groups&gt; &lt;templates&gt; &lt;template&gt; &lt;template&gt;Template SNMP Ricoh Printers&lt;/template&gt; &lt;name&gt;Template SNMP Ricoh Printers&lt;/name&gt; &lt;description/&gt; &lt;groups&gt; &lt;group&gt; &lt;name&gt;Printers&lt;/name&gt; &lt;/group&gt; &lt;/groups&gt; &lt;applications&gt; &lt;application&gt; &lt;name&gt;SNMP Enabled Printer&lt;/name&gt; &lt;/application&gt; &lt;/applications&gt; &lt;items&gt; &lt;item&gt; &lt;name&gt;Description&lt;/name&gt; &lt;type&gt;4&lt;/type&gt; &lt;snmp_community&gt;{$SNMP_COMMUNITY}&lt;/snmp_community&gt; &lt;multiplier&gt;0&lt;/multiplier&gt; &lt;snmp_oid&gt;.1.3.6.1.2.1.25.3.2.1.3.1&lt;/snmp_oid&gt; &lt;key&gt;Description&lt;/key&gt; &lt;delay&gt;60&lt;/delay&gt; &lt;history&gt;90&lt;/history&gt; &lt;trends&gt;0&lt;/trends&gt; &lt;status&gt;0&lt;/status&gt; &lt;value_type&gt;4&lt;/value_type&gt; &lt;allowed_hosts/&gt; &lt;units/&gt; &lt;delta&gt;0&lt;/delta&gt; &lt;snmpv3_contextname/&gt; &lt;snmpv3_securityname/&gt; &lt;snmpv3_securitylevel&gt;0&lt;/snmpv3_securitylevel&gt; &lt;snmpv3_authprotocol&gt;0&lt;/snmpv3_authprotocol&gt; &lt;snmpv3_authpassphrase/&gt; &lt;snmpv3_privprotocol&gt;0&lt;/snmpv3_privprotocol&gt; &lt;snmpv3_privpassphrase/&gt; &lt;formula&gt;1&lt;/formula&gt; &lt;delay_flex/&gt; &lt;params/&gt; &lt;ipmi_sensor/&gt; &lt;data_type&gt;0&lt;/data_type&gt; &lt;authtype&gt;0&lt;/authtype&gt; &lt;username/&gt; &lt;password/&gt; &lt;publickey/&gt; &lt;privatekey/&gt; &lt;port&gt;161&lt;/port&gt; &lt;description/&gt; &lt;inventory_link&gt;2&lt;/inventory_link&gt; &lt;applications&gt; &lt;application&gt; &lt;name&gt;SNMP Enabled Printer&lt;/name&gt; &lt;/application&gt; &lt;/applications&gt; &lt;valuemap/&gt; &lt;logtimefmt/&gt; &lt;/item&gt; &lt;item&gt; &lt;name&gt;Page Count&lt;/name&gt; &lt;type&gt;4&lt;/type&gt; &lt;snmp_community&gt;{$SNMP_COMMUNITY}&lt;/snmp_community&gt; &lt;multiplier&gt;0&lt;/multiplier&gt; &lt;snmp_oid&gt;.
 		</div>
 	</div>
 </article>
@@ -84,8 +106,9 @@ ga('send', 'pageview');
 		</header>
 		<div class="list__excerpt">
 			Excel VBAでUUID(GUID)を生成して使っている部分があったのだが、 先日のWindows Updateを適用してから、 CreateObject(&quot;Scriptlet.TypeLib&quot;)でエラーが出て使用できなくなってしまった。
-ただ単にランダムなUUIDが生成できれば良いので、 UUID v4を生成する関数を作った。
-VBの乱数の精度としては24ビットらしいので、1回の乱数生成では最大16ビット使用するようにはしているが、 乱数の品質はあまり高くないのでご注意を。
+参考 : 2017 年 7 月のセキュリティ更新適用後、VBA から一部のオブジェクトを作成できません
+私の場合はただ単にランダムなUUIDが生成できれば良いので、 UUID v4を生成する関数を作った。
+VBの乱数の精度としては24ビットらしいので、1回の乱数生成では最大16ビット使用するようにはしている。 とはいえ乱数の品質としてはあまり高くないのでご注意を。
 Public Function GetUUID() As String 'GetUUID = Mid$(CreateObject(&quot;Scriptlet.TypeLib&quot;).GUID, 2, 36) GetUUID = Right$(&quot;0000&quot; &amp; Hex(Rnd() * 65536), 4) &amp; Right$(&quot;0000&quot; &amp; Hex(Rnd() * 65536), 4) GetUUID = GetUUID &amp; &quot;-&quot; &amp; Right$(&quot;0000&quot; &amp; Hex(Rnd() * 65536), 4) GetUUID = GetUUID &amp; &quot;-4&quot; &amp; Right$(&quot;0000&quot; &amp; Hex(Rnd() * 65536), 3) GetUUID = GetUUID &amp; &quot;-&quot; &amp; Right$(&quot;0000&quot; &amp; Hex(32768 + Rnd() * 16384), 4) GetUUID = GetUUID &amp; &quot;-&quot; &amp; Right$(&quot;0000&quot; &amp; Hex(Rnd() * 65536), 4) &amp; Right$(&quot;0000&quot; &amp; Hex(Rnd() * 65536), 4) &amp; Right$(&quot;0000&quot; &amp; Hex(Rnd() * 65536), 4) End Function  
 		</div>
 	</div>
@@ -241,33 +264,6 @@ createZipFile( &quot;zipファイルのパス&quot;, [&quot;圧縮対象ファ�
 	</div>
 </article>
 
-				<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/bicycle/touring/20170318-brm318chiba-2lakes/" rel="bookmark">2017年03月18日 BRM318千葉200km 2レイク</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2017-03-18T21:53:04">March 18, 2017</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			「ロングライドしてます」と一応言えるようになるため、初ブルベ参加してきた。 他人が作るコースを正確に辿ることに不慣れなため、難易度低目のコースのBRM318千葉200kmに申し込み。
-  function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById("map-canvas"), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: "https:\/\/www.330k.info\/\/bicycle\/touring\/20170318-brm318chiba-2lakes\/20170318.kml" }); ctaLayer.setMap(map); }   前日 スタートの大洗海岸に当日朝に到着する方法がないので、 前日の仕事を早めに切り上げて常磐線に乗り、勝田のビジネスホテルで前泊。 しかも2泊することで当日スタート地点に持っていく荷物を減らして万端の準備。
-当日 朝6時45分にホテルを出て、11km離れたスタート地点まで走行。7時15分頃に到着。 スタッフの方に捺印済みの権利放棄書を渡し、名簿に名前を記入、ブルベカードを受取って出走番号を記入。 安全ピンと黒いフェルト布(20mm×60mmくらい)を渡されて、 何に使うものなのか分からずスタッフに質問したところ、「喪章です」との回答が。
-その後ブリーフィング時にブルベの稲垣会長という方がNZで1200kmブルベ参加中に事故で亡くなったとの説明が。 15日に起きた事故とのことだが、事前準備で精一杯で何も知らなかった。 そういう理由で今回のブルベは全員が喪章を着けての走行をすることになったそうだ。
-写真は8:00スタートの車検。私は8:10スタート。ブレーキ、前後ライトとベルの確認をしてスタート。
- スタート直後は「まずは大洗鳥居下交差点を左、その次はマリンタワー交差点を右・・・」と唱えていたが、 次第にグループが形成されていったため、前に人がいる限りはルートは安心・・・と思っていたら、 ある交差点で2つ前の人が直進し、1つ前の人が左折した。 事前にGarminにルートを作成しておいたので、私は左折した。 直進した人は戻れたのだろうか・・・。
-PC1までは人が多かったが、休憩時間の配分が各々違うようで、PC2に着く頃にはだんだんとバラけてきた。
-   霞ヶ浦沿いの平坦な道路を淡々と進む。右は通過チェックポイントのかすみがうら市水族館。 回りの人の動きに従い、スタッフの人に自分の名前を告げればよいようだ。 スタート前に自分が書いた名簿がある、ということはスタッフの人が大急ぎで持ってきている、ということか。
-その後は写真を撮る余裕もないまま、17時頃にゴール地点到着。 スタッフの人にブルベカードを返してサインをしてゴール。
-認定タイムは8:50。途中ミスコースを2回したので走行距離は202.40kmだった。
- さすがに走りやすいルートが選ばれていて、走りやすい200kmだった。 ゴール後、スタッフの人に「次は400kmどうですか？」と誘われたが、装備をもっと整えないと400kmは無理だな・・・。
-		</div>
-	</div>
-</article>
-
 		
 
 		
@@ -285,6 +281,7 @@ PC1までは人が多かったが、休憩時間の配分が各々違うよう�
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/essay/random_distribution_sphere_surface/">球面上の一様分布</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/zabbix_ricoh_printer_template_xml/">RICOHプリンタ・複合機用のZabbix用テンプレート</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/create_uuid_vba/">VBAでUUIDを生成</a></li>
 			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170715-17_castella_yatsugatake_kogen/">2017年07月15日〜17日 カステラ工場〜軽井沢〜八ヶ岳高原〜甲府</a></li>
@@ -294,7 +291,6 @@ PC1までは人が多かったが、休憩時間の配分が各々違うよう�
 			<li class="widget__item"><a class="widget__link" href="/essay/xubuntu1604_snort_base/">Xubuntu 16.04 &#43; Snortで簡易IDS構築</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/create_zip_file_with_wsh_jscript/">Windows標準機能でZIPファイルの作成</a></li>
 			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170429-0505_nagoya_shirakawago_noto_peninshula_kanazawa/">2017年04月29日〜05月05日 東京→名古屋→岐阜→能登半島→金沢→米原</a></li>
-			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170318-brm318chiba-2lakes/">2017年03月18日 BRM318千葉200km 2レイク</a></li>
 		</ul>
 	</div>
 </div>
@@ -326,13 +322,13 @@ PC1までは人が多かったが、休憩時間の配分が各々違うよう�
 		<a class="widget__link widget__link--taglist" href="/tags/hta" title="hta">hta (1)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/java" title="java">java (2)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/javascript" title="javascript">javascript (3)</a>
-		<a class="widget__link widget__link--taglist" href="/tags/mathematica" title="mathematica">mathematica (17)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mathematica" title="mathematica">mathematica (18)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/powerpoint" title="powerpoint">powerpoint (1)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/sql" title="sql">sql (3)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/ubuntu" title="ubuntu">ubuntu (6)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/vba" title="vba">vba (2)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/wsh" title="wsh">wsh (2)</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e3%82%a2%e3%83%ab%e3%82%b4%e3%83%aa%e3%82%ba%e3%83%a0" title="アルゴリズム">アルゴリズム (4)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e3%82%a2%e3%83%ab%e3%82%b4%e3%83%aa%e3%82%ba%e3%83%a0" title="アルゴリズム">アルゴリズム (5)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%84%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0" title="ツーリング">ツーリング (41)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%91%e3%83%af%e3%83%8f%e3%83%a9" title="パワハラ">パワハラ (5)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e7%94%9f%e6%b4%bb" title="生活">生活 (1)</a>

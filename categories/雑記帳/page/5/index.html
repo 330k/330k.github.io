@@ -58,6 +58,30 @@ ga('send', 'pageview');
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
+				<a href="/essay/explicit-runge-kutta-butcher-tableau/" rel="bookmark">陽的Runge-Kutta法のButcher tableau</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2009-12-05T00:00:00">December 05, 2009</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			 Explicit Runge-Kutta法の公式はいくつか知られているが、高次の公式になるほどButcher配列の項数が増えるため論文に誤植が多くなる。 それに気づかないまま実際に使うと、プログラムは正しく組めているはずなのに思うように精度が上がらないという落とし穴にはまってしまう。
+覚書として、以下に代表的と思われる公式のButcher tableauをまとめる。
+以下のButcher tableauはMathematica 8のNumericalDifferentialEquationAnalysisパッケージに含まれるRungeKuttaOrderConditionsで所定の次数条件を達成していることを確認しており、誤植が入り込まないようにそのままMathematica上で画像化している。
+使用したMathematicaノートブックはこちら。 必要な人はダウンロードして自分で計算して確認した後に使用してほしい。
+MathematicaにCやFortranのソースコード形式で吐かせるのが確実。
+※注意事項
+公式の名前や出典に関しては自信がないので、鵜呑みにしないこと。
+1段1次 Euler法  2段2次 修正Euler法  Heun法  Ralston法 3段3次 Heunの3次法  Kuttaの3次法  Ralstonの3次法 4段4次 古典的Runge-Kutta法  6段5次 Runge-Kutta-Fehlberg法のうち5次の部分  Runge-Kutta-Nystroemのうち5次の部分  Butcherによる5次公式を3つ     7段6次 Hammudによるもの  9段7次 Shanksによるもの  CooperとVernerによる7次公式  11段8次 CooperとVernerによる8次公式  16段9次 Vernerによる埋め込み型公式のうち9次のもの  
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
 				<a href="/essay/extend-import-and-export-of-mathematica7/" rel="bookmark">Mathematica 7でImportおよびExportを拡張する</a>
 			</h3>
 			<div class="list__meta meta">
@@ -266,6 +290,7 @@ A = {ax, ay}; B = {bx, by}; P = {px, py}; H = {x, y}; Solve[{ (H - A).(P - H) ==
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/essay/random_distribution_sphere_surface/">球面上の一様分布</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/zabbix_ricoh_printer_template_xml/">RICOHプリンタ・複合機用のZabbix用テンプレート</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/create_uuid_vba/">VBAでUUIDを生成</a></li>
 			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170715-17_castella_yatsugatake_kogen/">2017年07月15日〜17日 カステラ工場〜軽井沢〜八ヶ岳高原〜甲府</a></li>
@@ -275,7 +300,6 @@ A = {ax, ay}; B = {bx, by}; P = {px, py}; H = {x, y}; Solve[{ (H - A).(P - H) ==
 			<li class="widget__item"><a class="widget__link" href="/essay/xubuntu1604_snort_base/">Xubuntu 16.04 &#43; Snortで簡易IDS構築</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/create_zip_file_with_wsh_jscript/">Windows標準機能でZIPファイルの作成</a></li>
 			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170429-0505_nagoya_shirakawago_noto_peninshula_kanazawa/">2017年04月29日〜05月05日 東京→名古屋→岐阜→能登半島→金沢→米原</a></li>
-			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170318-brm318chiba-2lakes/">2017年03月18日 BRM318千葉200km 2レイク</a></li>
 		</ul>
 	</div>
 </div>
@@ -307,13 +331,13 @@ A = {ax, ay}; B = {bx, by}; P = {px, py}; H = {x, y}; Solve[{ (H - A).(P - H) ==
 		<a class="widget__link widget__link--taglist" href="/tags/hta" title="hta">hta (1)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/java" title="java">java (2)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/javascript" title="javascript">javascript (3)</a>
-		<a class="widget__link widget__link--taglist" href="/tags/mathematica" title="mathematica">mathematica (17)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mathematica" title="mathematica">mathematica (18)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/powerpoint" title="powerpoint">powerpoint (1)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/sql" title="sql">sql (3)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/ubuntu" title="ubuntu">ubuntu (6)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/vba" title="vba">vba (2)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/wsh" title="wsh">wsh (2)</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e3%82%a2%e3%83%ab%e3%82%b4%e3%83%aa%e3%82%ba%e3%83%a0" title="アルゴリズム">アルゴリズム (4)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e3%82%a2%e3%83%ab%e3%82%b4%e3%83%aa%e3%82%ba%e3%83%a0" title="アルゴリズム">アルゴリズム (5)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%84%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0" title="ツーリング">ツーリング (41)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%91%e3%83%af%e3%83%8f%e3%83%a9" title="パワハラ">パワハラ (5)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e7%94%9f%e6%b4%bb" title="生活">生活 (1)</a>
