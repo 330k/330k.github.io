@@ -67,8 +67,8 @@ ga('send', 'pageview');
 単純に極座標表示でθとφを一様分布させると、極付近に点が集まってしまう。</p>
 
 <pre><code class="language-Mathematica">data1 = Transpose[{Cos[f] Cos[t], Cos[f] Sin[t], Sin[f]} /. {
-     t -&gt; RandomReal[{-2 Pi, Pi}, 2000],
-     f -&gt; RandomReal[{-Pi, Pi}, 2000]}];
+     t -&gt; RandomReal[{-Pi, Pi}, 2000],
+     f -&gt; RandomReal[{-Pi/2, Pi/2}, 2000]}];
 g1 = ListPointPlot3D[data1, BoxRatios -&gt; {1, 1, 1}]
 </code></pre>
 
@@ -84,7 +84,7 @@ g1 = ListPointPlot3D[data1, BoxRatios -&gt; {1, 1, 1}]
 <p>球面上で一様分布させるには、下記のように緯度についてはArcSinを使う。</p>
 
 <pre><code class="language-Mathematica">data2 = Transpose[{Cos[f] Cos[t], Cos[f] Sin[t], Sin[f]} /. {
-     t -&gt; RandomReal[{-2 Pi, Pi}, 2000],
+     t -&gt; RandomReal[{-Pi, Pi}, 2000],
      f -&gt; ArcSin[RandomReal[{-1, 1}, 2000]]}];
 g2 = ListPointPlot3D[data2, BoxRatios -&gt; {1, 1, 1}]
 </code></pre>
