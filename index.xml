@@ -32,7 +32,7 @@ data3 = Normalize /@ Partition[RandomVariate[NormalDistribution[], 3*2000], 3]; 
       <guid>https://www.330k.info/essay/zabbix_ricoh_printer_template_xml/</guid>
       <description>社内で余っているサーバにZabbixを入れたので、 SNMP v2cでRICOH製のプリンタ・複合機の各種情報を取得するXMLテンプレートをhttps://github.com/coreyramirezgomez/Ricoh-Printers-Zabbix-Template/blob/master/Ricoh%20Printers%20SNMP%20Template.xml を元に作成した。
 変更箇所としては以下の通り。
- SNMP Discoveryで英語のアイテム名を取得するように変更 1分間あたりの印刷枚数のアイテムとグラフを追加 Discoveryの間隔が長くした(短いとプリンタが応答しなくなる)  確認している機種は社内にある以下の2機種のみ。
+ SNMP Discoveryで英語のアイテム名を取得するように変更 1分間あたりの印刷枚数のアイテムとグラフを追加 Discoveryの間隔が長くした(負荷でプリンタが応答しなくなるため)  確認している機種は社内にある以下の2機種のみ。
  RICOH MP C5503 IPSiO SP 6320  ダウンロードはzbx_ricoh_printer_templates.xml。
 &amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt; &amp;lt;zabbix_export&amp;gt; &amp;lt;version&amp;gt;3.2&amp;lt;/version&amp;gt; &amp;lt;date&amp;gt;2017-07-20T10:38:50Z&amp;lt;/date&amp;gt; &amp;lt;groups&amp;gt; &amp;lt;group&amp;gt; &amp;lt;name&amp;gt;Printers&amp;lt;/name&amp;gt; &amp;lt;/group&amp;gt; &amp;lt;/groups&amp;gt; &amp;lt;templates&amp;gt; &amp;lt;template&amp;gt; &amp;lt;template&amp;gt;Template SNMP Ricoh Printers&amp;lt;/template&amp;gt; &amp;lt;name&amp;gt;Template SNMP Ricoh Printers&amp;lt;/name&amp;gt; &amp;lt;description/&amp;gt; &amp;lt;groups&amp;gt; &amp;lt;group&amp;gt; &amp;lt;name&amp;gt;Printers&amp;lt;/name&amp;gt; &amp;lt;/group&amp;gt; &amp;lt;/groups&amp;gt; &amp;lt;applications&amp;gt; &amp;lt;application&amp;gt; &amp;lt;name&amp;gt;SNMP Enabled Printer&amp;lt;/name&amp;gt; &amp;lt;/application&amp;gt; &amp;lt;/applications&amp;gt; &amp;lt;items&amp;gt; &amp;lt;item&amp;gt; &amp;lt;name&amp;gt;Description&amp;lt;/name&amp;gt; &amp;lt;type&amp;gt;4&amp;lt;/type&amp;gt; &amp;lt;snmp_community&amp;gt;{$SNMP_COMMUNITY}&amp;lt;/snmp_community&amp;gt; &amp;lt;multiplier&amp;gt;0&amp;lt;/multiplier&amp;gt; &amp;lt;snmp_oid&amp;gt;.1.3.6.1.2.1.25.3.2.1.3.1&amp;lt;/snmp_oid&amp;gt; &amp;lt;key&amp;gt;Description&amp;lt;/key&amp;gt; &amp;lt;delay&amp;gt;60&amp;lt;/delay&amp;gt; &amp;lt;history&amp;gt;90&amp;lt;/history&amp;gt; &amp;lt;trends&amp;gt;0&amp;lt;/trends&amp;gt; &amp;lt;status&amp;gt;0&amp;lt;/status&amp;gt; &amp;lt;value_type&amp;gt;4&amp;lt;/value_type&amp;gt; &amp;lt;allowed_hosts/&amp;gt; &amp;lt;units/&amp;gt; &amp;lt;delta&amp;gt;0&amp;lt;/delta&amp;gt; &amp;lt;snmpv3_contextname/&amp;gt; &amp;lt;snmpv3_securityname/&amp;gt; &amp;lt;snmpv3_securitylevel&amp;gt;0&amp;lt;/snmpv3_securitylevel&amp;gt; &amp;lt;snmpv3_authprotocol&amp;gt;0&amp;lt;/snmpv3_authprotocol&amp;gt; &amp;lt;snmpv3_authpassphrase/&amp;gt; &amp;lt;snmpv3_privprotocol&amp;gt;0&amp;lt;/snmpv3_privprotocol&amp;gt; &amp;lt;snmpv3_privpassphrase/&amp;gt; &amp;lt;formula&amp;gt;1&amp;lt;/formula&amp;gt; &amp;lt;delay_flex/&amp;gt; &amp;lt;params/&amp;gt; &amp;lt;ipmi_sensor/&amp;gt; &amp;lt;data_type&amp;gt;0&amp;lt;/data_type&amp;gt; &amp;lt;authtype&amp;gt;0&amp;lt;/authtype&amp;gt; &amp;lt;username/&amp;gt; &amp;lt;password/&amp;gt; &amp;lt;publickey/&amp;gt; &amp;lt;privatekey/&amp;gt; &amp;lt;port&amp;gt;161&amp;lt;/port&amp;gt; &amp;lt;description/&amp;gt; &amp;lt;inventory_link&amp;gt;2&amp;lt;/inventory_link&amp;gt; &amp;lt;applications&amp;gt; &amp;lt;application&amp;gt; &amp;lt;name&amp;gt;SNMP Enabled Printer&amp;lt;/name&amp;gt; &amp;lt;/application&amp;gt; &amp;lt;/applications&amp;gt; &amp;lt;valuemap/&amp;gt; &amp;lt;logtimefmt/&amp;gt; &amp;lt;/item&amp;gt; &amp;lt;item&amp;gt; &amp;lt;name&amp;gt;Page Count&amp;lt;/name&amp;gt; &amp;lt;type&amp;gt;4&amp;lt;/type&amp;gt; &amp;lt;snmp_community&amp;gt;{$SNMP_COMMUNITY}&amp;lt;/snmp_community&amp;gt; &amp;lt;multiplier&amp;gt;0&amp;lt;/multiplier&amp;gt; &amp;lt;snmp_oid&amp;gt;.</description>
     </item>
@@ -56,7 +56,7 @@ Public Function GetUUID() As String &#39;GetUUID = Mid$(CreateObject(&amp;quot;S
       <pubDate>Sat, 15 Jul 2017 21:28:44 +0900</pubDate>
       
       <guid>https://www.330k.info/bicycle/touring/20170715-17_castella_yatsugatake_kogen/</guid>
-      <description>function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www.330k.info\/\/bicycle\/touring\/20170715-17_castella_yatsugatake_kogen\/20170715.kml&#34; }); ctaLayer.setMap(map); }      日付 出発地 到着地 走行距離(km) 走行時間 最高速度(km/h) 平均速度(km/h) 主な経路 景勝地     2017年07月15日 東京 安中 140.33 5:54:26 50.9 23.8 荒川CR, R254 文明堂浦和工場、富岡製糸場   2017年07月16日 安中 甲府 133.05 5:34:37 66.8 23.9 R18, R140 野辺山高原   2017年07月17日 甲府 東京 144.</description>
+      <description>function initMap(){ var map, ctaLayer; map = new google.maps.Map(document.getElementById(&#34;map-canvas&#34;), { center: {lat: 35.6832581, lng: 139.7555827}, zoom: 8 }); ctaLayer = new google.maps.KmlLayer({ url: &#34;https:\/\/www.330k.info\/\/bicycle\/touring\/20170715-17_castella_yatsugatake_kogen\/20170715.kml&#34; }); ctaLayer.setMap(map); }      日付 出発地 到着地 走行距離(km) 走行時間 最高速度(km/h) 平均速度(km/h) 主な経路 景勝地     2017年07月15日 東京 安中 140.33 5:54:26 50.9 23.8 荒川CR, R254 文明堂浦和工場、富岡製糸場   2017年07月16日 安中 甲府 133.05 5:34:37 66.8 23.9 R18, R141 野辺山高原   2017年07月17日 甲府 東京 144.</description>
     </item>
     
     <item>
@@ -259,7 +259,9 @@ sp_updatestats  としたところ、1秒程度で処理が完了するように
 また、ツーリング中には事前に作成しておいたGPXファイルをAndroidのRMapsや地図ロイドに読み込ませて走行ルートを確認しているのだが、 GPXファイルに余分な要素があると、処理に時間がかかってしまう(あまりに重いと処理できないこともある)。
 トラックログを間引くアルゴリズムは折れ線を間引くに記載した点数を指定するタイプのDouglas-Peuckerを実装している。 メルカトル図法に投影した座標で間引いているので、Google Mapsなどメルカトル図法の地図で見た時に形状をよく保存する。
 使い方  ボタンを押してGPXファイルを選択 一括処理する内容をチェックして選択 「処理実行」ボタンをクリックして少し待つ 表示されたリンクをクリックしてGPXファイルをダウンロード  注意事項  Chrome 53、Firefox 49、Edge、IE 11にて動作を確認 IE8では動作しません IE 9, 10は環境が無いため確認できません 重いGPXファイルを処理しようとすると固まります(WorkerではXMLParserが使えないため) 複数ファイルを選択した時の並び順はOSやブラウザ、選択時の操作に依存します  なお、カシミール3DではGPXファイルをXMLとしてパースして読み込んでいるわけではないようで、 空要素(&amp;lt;trkpt lat=&amp;quot;***&amp;quot; lon=&amp;quot;***&amp;quot; /&amp;gt;)の形を認識できない。 そのため&amp;lt;trkpt lat=&amp;quot;***&amp;quot; lon=&amp;quot;***&amp;quot;&amp;gt;&amp;lt;/trkpt&amp;gt;の形に修正したものを出力している。
-使用例 元のGPSログをカシミール3Dで読み込んだ画面  デフォルト設定で一括処理した後のGPXファイルを読み込んだ画面 (このデータの場合は、6時間途切れたらトラック分割するので1日毎に分割され、それぞれが400点に間引きされている)  更新履歴  カシミール3Dでも読めるよう、空要素の場合は&amp;lt;trkpt ***&amp;gt;&amp;lt;/trkpt&amp;gt;の形に置換するようにした。 (May 4 2014) 優先度付きキューの実装を変更して高速化。(May 28 2014) プログラムを全面書き直し。トラックの自動分割・結合機能追加。 (Sep. 24 2016) 標高をGoogle Maps Elevations APIから取得する機能を追加して統合。 (Sep. 28 2016)  </description>
+使用例 元のGPSログをカシミール3Dで読み込んだ画面
+ デフォルト設定で一括処理した後のGPXファイルを読み込んだ画面 (このデータの場合は、6時間途切れたらトラック分割するので1日毎に分割され、それぞれが400点に間引きされている)
+ 更新履歴  カシミール3Dでも読めるよう、空要素の場合は&amp;lt;trkpt ***&amp;gt;&amp;lt;/trkpt&amp;gt;の形に置換するようにした。 (May 4 2014) 優先度付きキューの実装を変更して高速化。(May 28 2014) プログラムを全面書き直し。トラックの自動分割・結合機能追加。 (Sep. 24 2016) 標高をGoogle Maps Elevations APIから取得する機能を追加して統合。 (Sep. 28 2016)  </description>
     </item>
     
     <item>
@@ -336,10 +338,12 @@ lockPref(&amp;quot;loop.enabled&amp;quot;, false); lockPref(&amp;quot;services.s
 https://www.330k.info/misc_tools/unicode_steganography.js
 ライセンスはMITライセンス。
 使い方は https://www.330k.info/misc_tools/unicode_steganography.html に書きました(英語です)。
-動作サンプル:  デフォルトで使用する4種の文字(U+200C, U+200D, U+202C, U+FEFF)は、 GmailやOutlook 2010、iPhoneの標準メールアプリにおいて ゼロ幅として表示 文字化けしない(豆腐にならない) コピー&amp;amp;ペースト時に保存されるもの として選定した。 U+200B(ZERO WIDTH SPACE)はブラウザからGmailで送信するときに削除される。 ただ、メーラを使ってSMTPサーバ(smtp.gmail.com)から送信するときは削除されない。
+動作サンプル:  デフォルトで使用する4種の文字(U+200C, U+200D, U+202C, U+FEFF)は、 GmailやOutlook 2010、iPhoneの標準メールアプリにおいて
+ ゼロ幅として表示 文字化けしない(豆腐にならない) コピー&amp;amp;ペースト時に保存されるもの  として選定した。
+U+200B(ZERO WIDTH SPACE)はブラウザからGmailで送信するときに削除される。 ただ、メーラを使ってSMTPサーバ(smtp.gmail.com)から送信するときは削除されない。
 Bidiを考慮せず左横書きに限定すれば、U+200E(LRM)やU+202B(LRO)などを追加できる。 FacebookやTwitterなど各アプリやウェブサイトの対応状況は参考サイトの2番目に詳しい。
 GitHubにアップロードした方はバイナリデータにも対応。 これは通常のステガノグラフィとは逆に、画像などのバイナリデータをプレーンテキスト中に埋め込むことになる。 ただサイズがバカでかくなって存在がバレるので、ステガノグラフィとしての意味はなさないかも。
-動作確認ブラウザ  Chromium 45 (Ubuntu 14.04 LTS) Firefox 42 (Ubuntu 14.04 LTS) Edge (Windows 10) Internet Explorer 11 (Windows 10) Safari (iOS 9.</description>
+動作確認ブラウザ  Chromium 45 (Ubuntu 14.04 LTS) Firefox 42 (Ubuntu 14.</description>
     </item>
     
     <item>
