@@ -21,7 +21,7 @@
 data1 = Transpose[{Sin[t] Cos[f], Sin[t] Sin[f], Cos[t]} /. { f -&amp;gt; RandomReal[{0, 2 Pi}, 2000], t -&amp;gt; RandomReal[{0, Pi}, 2000]}]; g1 = ListPointPlot3D[data1, BoxRatios -&amp;gt; {1, 1, 1}]   球面上で一様分布させるには、下記のようにθにArcCosを使う。
 data2 = Transpose[{Sin[t] Cos[f], Sin[t] Sin[f], Cos[t]} /. { f -&amp;gt; RandomReal[{0, 2 Pi}, 2000], t -&amp;gt; ArcCos[RandomReal[{-1, 1}, 2000]]}]; g2 = ListPointPlot3D[data2, BoxRatios -&amp;gt; {1, 1, 1}]   なお、多次元球面上の一様分布は球面上に一様分布する乱数の生成にあるように、 多次元ガウス分布を正規化すると得られる。
 下記は3次元の場合。
-data3 = Normalize /@ Partition[RandomVariate[NormalDistribution[], 3*2000], 3]; g3 = ListPointPlot3D[data3, BoxRatios -&amp;gt; {1, 1, 1}]   </description>
+data3 = Normalize /@ RandomReal[NormalDistribution[], {2000, 3}]; g3 = ListPointPlot3D[data3, BoxRatios -&amp;gt; {1, 1, 1}]   </description>
     </item>
     
     <item>

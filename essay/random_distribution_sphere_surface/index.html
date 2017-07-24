@@ -103,7 +103,7 @@ g2 = ListPointPlot3D[data2, BoxRatios -&gt; {1, 1, 1}]
 
 <p>下記は3次元の場合。</p>
 
-<pre><code class="language-Mathematica">data3 = Normalize /@ Partition[RandomVariate[NormalDistribution[], 3*2000], 3];
+<pre><code class="language-Mathematica">data3 = Normalize /@ RandomReal[NormalDistribution[], {2000, 3}];
 g3 = ListPointPlot3D[data3, BoxRatios -&gt; {1, 1, 1}]
 </code></pre>
 
