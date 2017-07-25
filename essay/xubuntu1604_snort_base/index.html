@@ -78,6 +78,17 @@ ga('send', 'pageview');
 <li>LetsNote自体にアクセスするときには無線LANを使用する</li>
 </ul>
 
+<h2 id="図-適当">図(適当)</h2>
+
+
+<figure >
+    
+        <img src="snort001.png" />
+    
+    
+</figure>
+
+
 <h2 id="手順">手順</h2>
 
 <p>基本的に、以下のドキュメント通りでOK。</p>
@@ -106,9 +117,9 @@ NetworkManagerを使って適当に固定IPを設定。</p>
 を参照してミラーポートを設定。</p>
 
 <ul>
-<li>設定(ポート1と2をポート4にミラー)
+<li>設定(ポート1と2の送信および受信フレームをポート4にミラー)<br/>
 <code>lan port-mirroring lan1 4 in 1 2 out 1 2</code></li>
-<li>解除
+<li>解除<br/>
 <code>no lan port-mirroring lan1</code></li>
 </ul>
 
