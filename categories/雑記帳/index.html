@@ -58,6 +58,39 @@ ga('send', 'pageview');
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
+				<a href="/essay/author_dvd_from_movie_file_on_windows/" rel="bookmark">動画ファイルからDVDオーサリング</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2017-07-27T21:21:29">July 27, 2017</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			「この動画ファイルでDVD焼いて。簡単でしょ。」
+ いやいや、DVD-Video規格に沿った動画ファイルとファイル構造にしないといけないんですけど。
+Windows用のオーサリングソフトはフリーでも色々あるが、どれが良いのかよくわからないので、 ffmpeg + dvdauthor + mkisofsでISOファイルを作成するバッチファイルを作成した。
+参考サイト : http://d.hatena.ne.jp/hikaen2/20150201/1422773879
+前準備 ffmpeg 適当にWindows用バイナリを落としてPATHを設定しておく。
+dvdauthor Windows用のバイナリをダウンロードし、PATHの通ったところに設置。
+http://www.paehl.com/open_source/?DVDAuthor
+これの下部の「From Box.net」または「From Google Drive」からダウンロード。
+mkisofs 他のソフト(cdrfde)にくっついてくるmkisofs.exeを抜き出す。
+https://cdrtfe.sourceforge.io/cdrtfe/download_en.html
+これのcdrtfe 1.5.7 zip archiveをダウンロードし、展開したファイルの中から、
+ tools\cdrtools\mkisofs.exe tools\cygwin\cygwin1.dll tools\cygwin\cygwin.ini  をPATHの通ったフォルダに移動。
+環境変数の設定 Windowsの環境変数を設定する。 変数VIDEO_FORMATに値NTSCを設定。
+※コントロールパネル→システムとセキュリティ→システム→システムの詳細設定→詳細設定→環境変数
+バッチファイル 下記の内容のバッチファイルを作成。 CPU数に合わせてthreadsの値は変更する。
+DVDにしたい動画ファイルをドラッグ&amp;ドロップ。
+@ECHO OFF REM 動画ファイルからDVDのISOファイルを作成 REM 環境変数VIDEO_FORMAT=NTSCの設定が必須 ffmpeg.exe -i &quot;%1&quot; -threads 4 -vf yadif=1,scale=720:480,tinterlace=4 -target ntsc-dvd -flags +ilme+ildct &quot;%~dpn1_dvd.mpeg&quot; dvdauthor -o &quot;%~dpn1_dvd&quot; -t &quot;%~dpn1_dvd.mpeg&quot; dvdauthor -o &quot;%~dpn1_dvd&quot; -T mkisofs -dvd-video -o &quot;%~dpn1_dvd.
+		</div>
+	</div>
+</article>
+
+				<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
 				<a href="/essay/random_distribution_sphere_surface/" rel="bookmark">球面上の一様分布</a>
 			</h3>
 			<div class="list__meta meta">
@@ -257,28 +290,6 @@ sp_updatestats  としたところ、1秒程度で処理が完了するように
 	</div>
 </article>
 
-				<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/essay/rescue_gps_log_from_binary_data_of_holux_m241/" rel="bookmark">m-241のバイナリデータからトラックログを吸い出す</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2016-09-22T07:14:00">September 22, 2016</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			GPSロガー(Holux m-241)のメモリが破損しているのか、 実は6月30日と7月3日の軽井沢→直江津ツーリングと、9月の西九州→佐多岬ツーリングでは、 ログが破損していたため、Googleのロケーション履歴を代用している。
-バイナリデータは一応吸い出せているようなので、その構造を調べると、 HOLUX m-241 LoggerUtility .trlファイル構造の覚書 より以下のような構造になっている。
- 1レコード20バイトの固定長 時刻4バイト 緯度4バイト 経度4バイト 高度3バイト 速度4バイト チェックサム1バイト  また、m-241は時折書き込み先のメモリアドレスがずれることがあるようだ、との情報も見つかったため、 バイナリエディタで除いてみると、どうも4バイトずつずれて記録されたデータがあるようだった。
-そこで
- レコードの先頭バイトを4バイトずつオフセットさせて読み込んでみる 緯度と経度が日本付近のものと思われるものを片っ端から拾う 時刻は整数型なのでとりあえず読み込む 高度、速度のデータは無視！  という方針でMathematicaのプログラムを書いてみた。
-data = Table[Module[{str, ret}, str = OpenRead[&quot;2016091200.bin&quot;, BinaryFormat -&gt; True]; (* 最初に余分にiバイト読み込んで先頭をずらす *) Do[ BinaryRead[str, &quot;Byte&quot;], {i} ]; (* バイナリ形式で読み込む *) ret = Cases[ MapIndexed[ {First[#2], Sequence @@ #1} &amp;, BinaryReadList[ str, {&quot;Integer32&quot;, &quot;Real32&quot;, &quot;Real32&quot;, &quot;Byte&quot;, &quot;Byte&quot;, &quot;Byte&quot;, &quot;Real32&quot;, &quot;Byte&quot;}] ], {count_, d_Integer, lat_Real, lon_Real, __} /; (30 &lt; lat &lt; 40 &amp;&amp; 125 &lt; lon &lt; 140) :&gt; {count, DateString[DatePlus[{1970, 1, 1, 0, 0, 0}, {d, &quot;Second&quot;}], {&quot;Year&quot;, &quot;-&quot;, &quot;Month&quot;, &quot;-&quot;, &quot;Day&quot;, &quot;T&quot;, &quot;Time&quot;, &quot;Z&quot;}], lat, lon}]; Close[str]; ret ], {i, 0, 19, 4}];  ※ 2016091200.
-		</div>
-	</div>
-</article>
-
 
 		
 <div class="pagination clearfix">
@@ -295,6 +306,7 @@ data = Table[Module[{str, ret}, str = OpenRead[&quot;2016091200.bin&quot;, Binar
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/essay/author_dvd_from_movie_file_on_windows/">動画ファイルからDVDオーサリング</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/random_distribution_sphere_surface/">球面上の一様分布</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/zabbix_ricoh_printer_template_xml/">RICOHプリンタ・複合機用のZabbix用テンプレート</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/create_uuid_vba/">VBAでUUIDを生成</a></li>
@@ -304,7 +316,6 @@ data = Table[Module[{str, ret}, str = OpenRead[&quot;2016091200.bin&quot;, Binar
 			<li class="widget__item"><a class="widget__link" href="/essay/input_backslach_with_us_keyboard_layout/">英語版Windows PE環境でバックスラッシュを入力</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/xubuntu1604_snort_base/">Xubuntu 16.04 &#43; Snortで簡易IDS構築</a></li>
 			<li class="widget__item"><a class="widget__link" href="/essay/create_zip_file_with_wsh_jscript/">Windows標準機能でZIPファイルの作成</a></li>
-			<li class="widget__item"><a class="widget__link" href="/bicycle/touring/20170429-0505_nagoya_shirakawago_noto_peninshula_kanazawa/">2017年04月29日〜05月05日 東京→名古屋→岐阜→能登半島→金沢→米原</a></li>
 		</ul>
 	</div>
 </div>
@@ -327,7 +338,7 @@ data = Table[Module[{str, ret}, str = OpenRead[&quot;2016091200.bin&quot;, Binar
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
 		<a class="widget__link widget__link--taglist" href="/tags/.net" title=".net">.net (1)</a>
-		<a class="widget__link widget__link--taglist" href="/tags/bat" title="bat">bat (1)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/bat" title="bat">bat (2)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/chrome" title="chrome">chrome (1)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/gmail" title="gmail">gmail (2)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/google-maps" title="google-maps">google-maps (1)</a>
@@ -346,7 +357,7 @@ data = Table[Module[{str, ret}, str = OpenRead[&quot;2016091200.bin&quot;, Binar
 		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%84%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0" title="ツーリング">ツーリング (41)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%91%e3%83%af%e3%83%8f%e3%83%a9" title="パワハラ">パワハラ (5)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e7%94%9f%e6%b4%bb" title="生活">生活 (1)</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e7%a4%be%e5%86%85se" title="社内se">社内se (11)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e7%a4%be%e5%86%85se" title="社内se">社内se (12)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e8%87%aa%e8%bb%a2%e8%bb%8a" title="自転車">自転車 (9)</a>
 	</div>
 </div>

@@ -6,10 +6,35 @@
     <description>Recent content in Bat on 330k info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Dec 2015 20:49:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 27 Jul 2017 21:21:29 +0900</lastBuildDate>
     
 	<atom:link href="https://www.330k.info/tags/bat/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>動画ファイルからDVDオーサリング</title>
+      <link>https://www.330k.info/essay/author_dvd_from_movie_file_on_windows/</link>
+      <pubDate>Thu, 27 Jul 2017 21:21:29 +0900</pubDate>
+      
+      <guid>https://www.330k.info/essay/author_dvd_from_movie_file_on_windows/</guid>
+      <description>「この動画ファイルでDVD焼いて。簡単でしょ。」
+ いやいや、DVD-Video規格に沿った動画ファイルとファイル構造にしないといけないんですけど。
+Windows用のオーサリングソフトはフリーでも色々あるが、どれが良いのかよくわからないので、 ffmpeg + dvdauthor + mkisofsでISOファイルを作成するバッチファイルを作成した。
+参考サイト : http://d.hatena.ne.jp/hikaen2/20150201/1422773879
+前準備 ffmpeg 適当にWindows用バイナリを落としてPATHを設定しておく。
+dvdauthor Windows用のバイナリをダウンロードし、PATHの通ったところに設置。
+http://www.paehl.com/open_source/?DVDAuthor
+これの下部の「From Box.net」または「From Google Drive」からダウンロード。
+mkisofs 他のソフト(cdrfde)にくっついてくるmkisofs.exeを抜き出す。
+https://cdrtfe.sourceforge.io/cdrtfe/download_en.html
+これのcdrtfe 1.5.7 zip archiveをダウンロードし、展開したファイルの中から、
+ tools\cdrtools\mkisofs.exe tools\cygwin\cygwin1.dll tools\cygwin\cygwin.ini  をPATHの通ったフォルダに移動。
+環境変数の設定 Windowsの環境変数を設定する。 変数VIDEO_FORMATに値NTSCを設定。
+※コントロールパネル→システムとセキュリティ→システム→システムの詳細設定→詳細設定→環境変数
+バッチファイル 下記の内容のバッチファイルを作成。 CPU数に合わせてthreadsの値は変更する。
+DVDにしたい動画ファイルをドラッグ&amp;amp;ドロップ。
+@ECHO OFF REM 動画ファイルからDVDのISOファイルを作成 REM 環境変数VIDEO_FORMAT=NTSCの設定が必須 ffmpeg.exe -i &amp;quot;%1&amp;quot; -threads 4 -vf yadif=1,scale=720:480,tinterlace=4 -target ntsc-dvd -flags +ilme+ildct &amp;quot;%~dpn1_dvd.mpeg&amp;quot; dvdauthor -o &amp;quot;%~dpn1_dvd&amp;quot; -t &amp;quot;%~dpn1_dvd.mpeg&amp;quot; dvdauthor -o &amp;quot;%~dpn1_dvd&amp;quot; -T mkisofs -dvd-video -o &amp;quot;%~dpn1_dvd.</description>
+    </item>
     
     <item>
       <title>ffmpegでDVDをMPEGファイルに変換</title>
