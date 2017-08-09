@@ -1400,9 +1400,10 @@ outputs = {}; outputhandler[o_, args_] := Module[ {data = args@Data}, AppendTo[o
       <pubDate>Sun, 25 Oct 2009 22:42:49 +0900</pubDate>
       
       <guid>https://www.330k.info/software/vigla/</guid>
-      <description>概要 序盤は定石データベースを使用し、中盤を貧弱な評価関数で乗り切り、終盤は完全読みを行う、普通のコンピュータリバーシソフト。
+      <description> 概要 序盤は定石データベースを使用し、中盤を貧弱な評価関数で乗り切り、終盤は完全読みを行う、普通のコンピュータリバーシソフト。
  貧弱な評価関数 マルチスレッドによる高い応答性・操作性 棋譜や盤面の出力が可能 対戦中や棋譜を読み込んで最善手を探索させるなど研究のための機能も一応付属  を特徴とする。
-ダウンロード Vectorの紹介ページへ</description>
+ダウンロード Vectorの紹介ページへ
+スクリーンショット  </description>
     </item>
     
     <item>
