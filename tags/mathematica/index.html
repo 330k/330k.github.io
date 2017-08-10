@@ -289,7 +289,7 @@ ImportWithJLink[filepath_?(FileExistsQ[FindFile[#]] &amp;), format_] := ( Needs[
 そこで、ffmpeg(avconv)と併用することでメモリ使用量を抑えつつ、長編の動画ファイルを制作する。 具体的には、
  ffmpegで標準入力から読み込ませるOutputStreamオブジェクトを作成する BinaryWriteでそのストリームに各フレームの画像を書き込む 終わったらCloseでストリームを閉じる  とする。ここで、各フレーム画像の形式をPPMにしないとうまく動作しなかった(BMP、PNGなどではなぜか動作せず)。
 例えば、以下のようにするとtest001.aviができあがる。
-s = OpenWrite[ &quot;!ffmpeg -y -vcodec ppm -f image2pipe -i - -vcodec rawvideo test001.avi&quot;, BinaryFormat -&gt; True]; Do[ BinaryWrite[s, ExportString[ Plot[Sin[x + i], {x, 0, 2 Pi} , ImageSize -&gt; {640, 480} , PlotRange -&gt; {{0, 2 Pi}, {-1, 1}} , Frame -&gt; True] , &quot;PPM&quot;]] , {i, 0, 2 Pi, Pi/50} ]; Close[s]  Exportと同じような使い勝手の関数ExportMovieを作るとこんな感じになる。
+s = OpenWrite[ &quot;!avconv -y -vcodec ppm -f image2pipe -i - -vcodec rawvideo test001.avi&quot;, BinaryFormat -&gt; True]; Do[ BinaryWrite[s, ExportString[ Plot[Sin[x + i], {x, 0, 2 Pi} , ImageSize -&gt; {640, 480} , PlotRange -&gt; {{0, 2 Pi}, {-1, 1}} , Frame -&gt; True] , &quot;PPM&quot;]] , {i, 0, 2 Pi, Pi/50} ]; Close[s]  Exportと同じような使い勝手の関数ExportMovieを作るとこんな感じになる。
 Options[ExportMovie] = { &quot;FrameRate&quot; -&gt; 25, &quot;VideoCodecOption&quot; -&gt; &quot;-vcodec rawvideo&quot;, &quot;ExportOptions&quot; -&gt; {} }; ExportMovie[outputfilepath_String, expr_, {i_Symbol, imin_: 1, imax_, di_: 1}, OptionsPattern[]] := Module[{stream}, stream = OpenWrite[ ToString[ StringForm[ &quot;!
 		</div>
 	</div>
@@ -388,7 +388,8 @@ ImportSQLiteString[str_] := FromCharacterCode[ToCharacterCode[str], &quot;UTF8&q
 		<a class="widget__link widget__link--taglist" href="/tags/powerpoint" title="powerpoint">powerpoint (1)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/sql" title="sql">sql (3)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/ubuntu" title="ubuntu">ubuntu (6)</a>
-		<a class="widget__link widget__link--taglist" href="/tags/vba" title="vba">vba (2)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/vba" title="vba">vba (3)</a>
+		<a class="widget__link widget__link--taglist" href="/tags/windows" title="windows">windows (9)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/wsh" title="wsh">wsh (2)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e3%82%a2%e3%83%ab%e3%82%b4%e3%83%aa%e3%82%ba%e3%83%a0" title="アルゴリズム">アルゴリズム (5)</a>
 		<a class="widget__link widget__link--taglist" href="/tags/%e3%83%84%e3%83%bc%e3%83%aa%e3%83%b3%e3%82%b0" title="ツーリング">ツーリング (42)</a>

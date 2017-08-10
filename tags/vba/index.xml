@@ -34,5 +34,16 @@ Public Function GetUUID() As String &#39;GetUUID = Mid$(CreateObject(&amp;quot;S
 使い方  以下のソースをOfficeのマクロで標準モジュールとしてプロジェクトへ追加する。 ReadBitmap(&amp;ldquo;C:***.bmp&amp;rdquo;)で、RGBTRIPLE型の2次元配列が返る。 読み込みは一応1, 4, 8, 24, 32ビットのビットマップファイルに対応。 WriteBitmap24(&amp;ldquo;C:***.bmp&amp;rdquo;)で24ビットのビットマップファイルを書き込む。 おまけ機能として、ReadGIFJPEGでGIFとJPEGファイルも読み込みにも対応。  &#39; Bitmap module by 330k &#39; Copyright (C) 2010 330k, All rights reserved. Option Explicit Public Type RGBTRIPLE rgbBlue As Byte rgbGreen As Byte rgbRed As Byte End Type Private Type RGBQUAD rgbBlue As Byte rgbGreen As Byte rgbRed As Byte rgbReserved As Byte End Type Private Type BITMAPFILEHEADER bfType As String * 2 bfSize As Long bfReserved1 As Integer bfReserved2 As Integer bjOffBits As Long End Type Private Type BitmapInfoHeader biSize As Long biWidth As Long biHeight As Long biPlanes As Integer biBitCount As Integer biCompression As Long biSizeImaze As Long biXPixPerMeter As Long biYPixPerMeter As Long biClrUsed As Long biClrImporant As Long End Type &#39; Read a bitmap file (1, 4, 8, 24 and 32 bit) and return image as 2-dimension array of RGBTriple Public Function ReadBitmap(strFileName As String) As RGBTRIPLE() Dim i As Long Dim j As Long Dim n As Long Dim intFileNumber As Integer Dim bjHeader As BITMAPFILEHEADER Dim biHeader As BitmapInfoHeader Dim lngColors As Long Dim rgbData() As RGBTRIPLE Dim rgbTemp As RGBTRIPLE Dim rgbTable3() As RGBTRIPLE Dim rgbTable4() As RGBQUAD Dim bytTemp As Byte intFileNumber = FreeFile() Open strFileName For Binary As intFileNumber Get intFileNumber, , bjHeader Get intFileNumber, , biHeader ReDim rgbData(0 To biHeader.</description>
     </item>
     
+    <item>
+      <title>漢字コード変換モジュール for VB6/VBA</title>
+      <link>https://www.330k.info/software/kcconvert/</link>
+      <pubDate>Sun, 25 Oct 2009 22:43:13 +0900</pubDate>
+      
+      <guid>https://www.330k.info/software/kcconvert/</guid>
+      <description>概要 VB6およびExcelなどのVBAにおいて日本語の文字コード変換機能を提供するモジュール。 外部ライブラリを使用せずに変換を行う。
+以下の文字コード間の相互変換が可能。
+ Shift-JIS EUC-JP JIS UTF-8(BOMなし, あり) UTF-16LE(BOMなし, あり) UTF-16BE(BOMあり)  ダウンロード Vectorの紹介ページへ</description>
+    </item>
+    
   </channel>
 </rss>
