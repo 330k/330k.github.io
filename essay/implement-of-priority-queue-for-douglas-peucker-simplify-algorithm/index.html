@@ -112,8 +112,7 @@ Douglas-Peuckerアルゴリズムを改良して指定した点数まで点を�
 <li>Pairing Heap: <a href="http://en.wikipedia.org/wiki/Pairing_heap">ペアリングヒープ(wikipedia: en)</a>での実装。gcc(libstdc++)のpriority_queueはこれらしい。enqueue: O(log(n)), dequeue: O(log(n))。実装には<a href="http://topcoder.g.hatena.ne.jp/spaghetti_source/20120929/1348886107">これ</a>を参考にした。</li>
 </ol>
 
-<p>いずれもJavaScriptで実装した。
-実装したものは<a href="priority_queue.html">priority_queue.html</a>。</p>
+<p>いずれもJavaScriptで実装した。</p>
 
 <h2 id="ベンチマーク結果">ベンチマーク結果</h2>
 
@@ -320,22 +319,35 @@ Douglas-Peuckerアルゴリズムを改良して指定した点数まで点を�
 </tbody>
 </table>
 
-<p>
+<table>
+<thead>
+<tr>
+<th>Sequential</th>
+<th>Dauglas-Peucker</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>
 <figure >
     
         <img src="priority_queue_test_001.png" />
     
     
 </figure>
-
-
+</td>
+<td>
 <figure >
     
         <img src="priority_queue_test_002.png" />
     
     
 </figure>
-</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 <h3 id="chromium-34-on-ubuntu-12-04-lts-64bit">Chromium 34 on Ubuntu 12.04 LTS 64bit</h3>
 
@@ -537,22 +549,35 @@ Douglas-Peuckerアルゴリズムを改良して指定した点数まで点を�
 </tbody>
 </table>
 
-<p>
+<table>
+<thead>
+<tr>
+<th>Sequential</th>
+<th>Dauglas-Peucker</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>
 <figure >
     
         <img src="priority_queue_test_003.png" />
     
     
 </figure>
-
-
+</td>
+<td>
 <figure >
     
         <img src="priority_queue_test_004.png" />
     
     
 </figure>
-</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 <p>ということで、上記の表からわかるのは、</p>
 
