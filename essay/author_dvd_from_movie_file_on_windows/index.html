@@ -106,13 +106,6 @@ ffmpeg + dvdauthor + mkisofsでISOファイルを作成するバッチファイ�
 
 <p>をPATHの通ったフォルダに移動。</p>
 
-<h3 id="環境変数の設定">環境変数の設定</h3>
-
-<p>Windowsの環境変数を設定する。
-変数<code>VIDEO_FORMAT</code>に値<code>NTSC</code>を設定。</p>
-
-<p>※コントロールパネル→システムとセキュリティ→システム→システムの詳細設定→詳細設定→環境変数</p>
-
 <h2 id="バッチファイル">バッチファイル</h2>
 
 <p>下記の内容のバッチファイルを作成。
@@ -122,7 +115,8 @@ CPU数に合わせてthreadsの値は変更する。</p>
 
 <pre><code class="language-DOS">@ECHO OFF
 REM 動画ファイルからDVDのISOファイルを作成
-REM 環境変数VIDEO_FORMAT=NTSCの設定が必須
+
+SET VIDEO_FORMAT=NTSC
 
 ffmpeg.exe -i &quot;%1&quot; -threads 4 -vf yadif=1,scale=720:480,tinterlace=4 -target ntsc-dvd -flags +ilme+ildct &quot;%~dpn1_dvd.mpeg&quot;
 dvdauthor -o &quot;%~dpn1_dvd&quot; -t &quot;%~dpn1_dvd.mpeg&quot;

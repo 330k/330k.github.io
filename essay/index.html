@@ -78,11 +78,9 @@ mkisofs 他のソフト(cdrfde)にくっついてくるmkisofs.exeを抜き出�
 https://cdrtfe.sourceforge.io/cdrtfe/download_en.html
 これのcdrtfe 1.5.7 zip archiveをダウンロードし、展開したファイルの中から、
  tools\cdrtools\mkisofs.exe tools\cygwin\cygwin1.dll tools\cygwin\cygwin.ini  をPATHの通ったフォルダに移動。
-環境変数の設定 Windowsの環境変数を設定する。 変数VIDEO_FORMATに値NTSCを設定。
-※コントロールパネル→システムとセキュリティ→システム→システムの詳細設定→詳細設定→環境変数
 バッチファイル 下記の内容のバッチファイルを作成。 CPU数に合わせてthreadsの値は変更する。
 DVDにしたい動画ファイルをドラッグ&amp;ドロップ。
-@ECHO OFF REM 動画ファイルからDVDのISOファイルを作成 REM 環境変数VIDEO_FORMAT=NTSCの設定が必須 ffmpeg.exe -i &quot;%1&quot; -threads 4 -vf yadif=1,scale=720:480,tinterlace=4 -target ntsc-dvd -flags +ilme+ildct &quot;%~dpn1_dvd.mpeg&quot; dvdauthor -o &quot;%~dpn1_dvd&quot; -t &quot;%~dpn1_dvd.mpeg&quot; dvdauthor -o &quot;%~dpn1_dvd&quot; -T mkisofs -dvd-video -o &quot;%~dpn1_dvd.
+@ECHO OFF REM 動画ファイルからDVDのISOファイルを作成 SET VIDEO_FORMAT=NTSC ffmpeg.exe -i &quot;%1&quot; -threads 4 -vf yadif=1,scale=720:480,tinterlace=4 -target ntsc-dvd -flags +ilme+ildct &quot;%~dpn1_dvd.mpeg&quot; dvdauthor -o &quot;%~dpn1_dvd&quot; -t &quot;%~dpn1_dvd.mpeg&quot; dvdauthor -o &quot;%~dpn1_dvd&quot; -T mkisofs -dvd-video -o &quot;%~dpn1_dvd.
 		</div>
 	</div>
 </article>
